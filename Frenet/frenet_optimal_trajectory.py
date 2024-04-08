@@ -14,33 +14,34 @@ Ref:
 
 """
 
-import numpy as np
-import matplotlib.pyplot as plt
 import copy
 import math
-import sys
 import pathlib
+import sys
+
+import matplotlib.pyplot as plt
+import numpy as np
+
 sys.path.append(str(pathlib.Path(__file__).parent.parent))
 
-from QuinticPolynomialsPlanner.quintic_polynomials_planner import \
-    QuinticPolynomial
 from CubicSpline import cubic_spline_planner
+from QuinticPolynomialsPlanner.quintic_polynomials_planner import QuinticPolynomial
 
 SIM_LOOP = 500
 
 # Parameter
-MAX_SPEED = 50.0 / 3.6  # maximum speed [m/s]
-MAX_ACCEL = 2.0  # maximum acceleration [m/ss]
-MAX_CURVATURE = 1.0  # maximum curvature [1/m]
+MAX_SPEED = 1.0  # maximum speed [m/s]
+MAX_ACCEL = 1.0  # maximum acceleration [m/ss]
+MAX_CURVATURE = 1 / 0.4  # maximum curvature [1/m]
 MAX_ROAD_WIDTH = 7.0  # maximum road width [m]
 D_ROAD_W = 1.0  # road width sampling length [m]
 DT = 0.2  # time tick [s]
 MAX_T = 5.0  # max prediction time [m]
 MIN_T = 4.0  # min prediction time [m]
-TARGET_SPEED = 10.0 / 3.6  # target speed [m/s]
+TARGET_SPEED = 0.5  # target speed [m/s]
 D_T_S = 5.0 / 3.6  # target speed sampling length [m/s]
 N_S_SAMPLE = 1  # sampling number of target speed
-ROBOT_RADIUS = 2.0  # robot radius [m]
+ROBOT_RADIUS = 0.2  # robot radius [m]
 
 # cost weights
 K_J = 0.1
@@ -61,29 +62,25 @@ class QuarticPolynomial:
         self.a1 = vxs
         self.a2 = axs / 2.0
 
-        A = np.array([[3 * time ** 2, 4 * time ** 3],
-                      [6 * time, 12 * time ** 2]])
-        b = np.array([vxe - self.a1 - 2 * self.a2 * time,
-                      axe - 2 * self.a2])
+        A = np.array([[3 * time**2, 4 * time**3], [6 * time, 12 * time**2]])
+        b = np.array([vxe - self.a1 - 2 * self.a2 * time, axe - 2 * self.a2])
         x = np.linalg.solve(A, b)
 
         self.a3 = x[0]
         self.a4 = x[1]
 
     def calc_point(self, t):
-        xt = self.a0 + self.a1 * t + self.a2 * t ** 2 + \
-             self.a3 * t ** 3 + self.a4 * t ** 4
+        xt = self.a0 + self.a1 * t + self.a2 * t**2 + self.a3 * t**3 + self.a4 * t**4
 
         return xt
 
     def calc_first_derivative(self, t):
-        xt = self.a1 + 2 * self.a2 * t + \
-             3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
+        xt = self.a1 + 2 * self.a2 * t + 3 * self.a3 * t**2 + 4 * self.a4 * t**3
 
         return xt
 
     def calc_second_derivative(self, t):
-        xt = 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
+        xt = 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t**2
 
         return xt
 
@@ -136,8 +133,11 @@ def calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0):
             fp.d_ddd = [lat_qp.calc_third_derivative(t) for t in fp.t]
 
             # Longitudinal motion planning (Velocity keeping)
-            for tv in np.arange(TARGET_SPEED - D_T_S * N_S_SAMPLE,
-                                TARGET_SPEED + D_T_S * N_S_SAMPLE, D_T_S):
+            for tv in np.arange(
+                TARGET_SPEED - D_T_S * N_S_SAMPLE,
+                TARGET_SPEED + D_T_S * N_S_SAMPLE,
+                D_T_S,
+            ):
                 tfp = copy.deepcopy(fp)
                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)
 
@@ -195,10 +195,12 @@ def calc_global_paths(fplist, csp):
 
 def check_collision(fp, ob):
     for i in range(len(ob[:, 0])):
-        d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2)
-             for (ix, iy) in zip(fp.x, fp.y)]
+        d = [
+            ((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2)
+            for (ix, iy) in zip(fp.x, fp.y)
+        ]
 
-        collision = any([di <= ROBOT_RADIUS ** 2 for di in d])
+        collision = any([di <= ROBOT_RADIUS**2 for di in d])
 
         if collision:
             return False
@@ -211,11 +213,9 @@ def check_paths(fplist, ob):
     for i, _ in enumerate(fplist):
         if any([v > MAX_SPEED for v in fplist[i].s_d]):  # Max speed check
             continue
-        elif any([abs(a) > MAX_ACCEL for a in
-                  fplist[i].s_dd]):  # Max accel check
+        elif any([abs(a) > MAX_ACCEL for a in fplist[i].s_dd]):  # Max accel check
             continue
-        elif any([abs(c) > MAX_CURVATURE for c in
-                  fplist[i].c]):  # Max curvature check
+        elif any([abs(c) > MAX_CURVATURE for c in fplist[i].c]):  # Max curvature check
             continue
         elif not check_collision(fplist[i], ob):
             continue
@@ -263,12 +263,7 @@ def main():
     wx = [0.0, 10.0, 20.5, 35.0, 70.5]
     wy = [0.0, -6.0, 5.0, 6.5, 0.0]
     # obstacle lists
-    ob = np.array([[20.0, 10.0],
-                   [30.0, 6.0],
-                   [30.0, 8.0],
-                   [35.0, 8.0],
-                   [50.0, 3.0]
-                   ])
+    ob = np.array([[20.0, 10.0], [30.0, 6.0], [30.0, 8.0], [35.0, 8.0], [50.0, 3.0]])
 
     tx, ty, tyaw, tc, csp = generate_target_course(wx, wy)
 
@@ -284,7 +279,8 @@ def main():
 
     for i in range(SIM_LOOP):
         path = frenet_optimal_planning(
-            csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob)
+            csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob
+        )
 
         s0 = path.s[1]
         c_d = path.d[1]
@@ -297,10 +293,13 @@ def main():
         acceleration = path.s_dd[0]  # Longitudinal acceleration
         curvature = path.c[0]  # Curvature at each point
         wheelbase = 2.5  # Example wheelbase of the vehicle in meters
-        steering_angle = math.atan2(wheelbase * curvature, 1.0)  # Steering angle in radians
+        steering_angle = math.atan2(
+            wheelbase * curvature, 1.0
+        )  # Steering angle in radians
 
-        print(f"Acceleration = {acceleration:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians")
-
+        print(
+            f"Acceleration = {acceleration:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians"
+        )
 
         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
             print("Goal")
@@ -310,8 +309,9 @@ def main():
             plt.cla()
             # for stopping simulation with the esc key.
             plt.gcf().canvas.mpl_connect(
-                'key_release_event',
-                lambda event: [exit(0) if event.key == 'escape' else None])
+                "key_release_event",
+                lambda event: [exit(0) if event.key == "escape" else None],
+            )
             plt.plot(tx, ty)
             plt.plot(ob[:, 0], ob[:, 1], "xk")
             plt.plot(path.x[1:], path.y[1:], "-or")
@@ -329,5 +329,5 @@ def main():
         plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
