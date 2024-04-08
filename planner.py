@@ -17,7 +17,9 @@ show_animation = True
 ROBOT_RADIUS = 0.2  # robot radius [m]
 SIM_LOOP = 500
 
-obstacleList = [(x, y, ROBOT_RADIUS) for x, y in [(10, 10)]]
+obstacleList = [
+    (x, y, ROBOT_RADIUS) for x, y in [(2, 5), (2.4, 5), (0, 7), (-3, 4), (-2.6, 4)]
+]
 goal = [3.0, 3.0, np.deg2rad(-45.0)]
 
 
