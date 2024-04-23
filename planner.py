@@ -12,32 +12,80 @@ from Frenet.frenet_optimal_trajectory import (
 from RRTStarDubins.rrt_star_dubins import RRTStarDubins
 from utils.plot import plot_arrow
 
+file_path = "data/scan.txt"
+
 show_animation = True
 
 ROBOT_RADIUS = 0.2  # robot radius [m]
 SIM_LOOP = 500
 
+
+def convert_lidar_data_to_2d_points(file_path):
+    # Read data from file
+    with open(file_path, "r") as file:
+        lines = file.readlines()
+
+    # Initialize parameters
+    angle_min = angle_max = angle_increment = 0.0
+    ranges = []
+
+    # Extract parameters from file
+    for line in lines:
+        if "angle_min:" in line:
+            angle_min = float(line.split(":")[1].strip())
+        elif "angle_max:" in line:
+            angle_max = float(line.split(":")[1].strip())
+        elif "angle_increment:" in line:
+            angle_increment = float(line.split(":")[1].strip())
+        elif "ranges:" in line:
+            # Extracting the ranges list, considering both digit and float values
+            ranges_str = line.split(":", 1)[1].strip().strip("[]")
+            ranges = [
+                float(x)
+                for x in ranges_str.split(",")
+                if x.strip().replace(".", "", 1).isdigit()
+            ]
+
+    # Calculate 2D points from ranges
+    points_2d = []
+    current_angle = angle_min
+
+    for range_value in ranges:
+        if range_value > 0:  # Ignoring 0 values which indicate no measurement
+            x = range_value * math.cos(current_angle)
+            y = range_value * math.sin(current_angle)
+            points_2d.append((x, y))
+
+        current_angle += angle_increment
+
+    return points_2d
+
+
 obstacleList = [
-    (x, y, ROBOT_RADIUS) for x, y in [(2, 5), (2.4, 5), (0, 7), (-3, 4), (-2.6, 4)]
+    (-y, x, ROBOT_RADIUS) for x, y in convert_lidar_data_to_2d_points(file_path)
 ]
-goal = [3.0, 3.0, np.deg2rad(-45.0)]
+
+start = [0.0, 0.0, np.deg2rad(45.0)]
+goal = [3.0, 2.5, np.deg2rad(90.0)]
 
 
 def main_dubins():
     print("Dubins path planner sample start!!")
 
-    start_x = 0.0  # [m]
-    start_y = 0.0  # [m]
-    start_yaw = np.deg2rad(90.0)  # [rad]
+    start_x = start[0]  # [m]
+    start_y = start[1]  # [m]
+    start_yaw = start[2]  # [rad]
 
     end_x, end_y, end_yaw = goal
 
-    curvature = 0.4
+    curvature = 1 / 0.4
+
+    step_size = 0.5  # [m]
 
     start_time = time.time()
 
     path_x, path_y, path_yaw, mode, lengths = plan_dubins_path(
-        start_x, start_y, start_yaw, end_x, end_y, end_yaw, curvature
+        start_x, start_y, start_yaw, end_x, end_y, end_yaw, curvature, step_size
     )
 
     end_time = time.time()
@@ -170,5 +218,6 @@ def main_frenet(path):
 
 if __name__ == "__main__":
     path = main_dubins()
+    print(path)
     # main_rrt_star_dubins()
     main_frenet(path)
