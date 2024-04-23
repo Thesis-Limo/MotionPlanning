@@ -61,7 +61,7 @@ class MotionPlanner:
             start.x, start.y, start.yaw, goal.x, goal.y, goal.yaw, curvature, step_size
         )
 
-        return [[x, y] for x, y in zip(path_x, path_y)]
+        return zip(path_x, path_y)
 
     def calculate_frenet(self, path, show_animation=True):
         wx, wy = zip(*path)
@@ -112,7 +112,9 @@ class MotionPlanner:
                     lambda event: [exit(0) if event.key == "escape" else None],
                 )
                 plt.plot(tx, ty)
-                plt.plot(obstacleList[:, 0], obstacleList[:, 1], "xk")
+                for x, y in obstacleList:
+                    circle = plt.Circle((x, y), 0.2, color="k", fill=False)
+                    plt.gca().add_patch(circle)
                 plt.plot(path.x[1:], path.y[1:], "-or")
                 plt.plot(path.x[1], path.y[1], "vc")
                 plt.xlim(path.x[1] - area, path.x[1] + area)
