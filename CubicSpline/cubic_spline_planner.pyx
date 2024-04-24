@@ -7,8 +7,6 @@ cimport numpy as cnp
 from libc.stdlib cimport malloc, free
 
 cdef class CubicSpline1D:
-    cdef int nx
-    cdef double[:] x, y, a, b, c, d
 
     def __init__(self, double[:] x, double[:] y):
         self.x = x
@@ -90,8 +88,6 @@ cdef class CubicSpline1D:
         return idx
 
 cdef class CubicSpline2D:
-    cdef CubicSpline1D sx, sy
-    cdef double[:] s
 
     def __init__(self, double[:] x, double[:] y):
         self.s = self.__calc_s(x, y)

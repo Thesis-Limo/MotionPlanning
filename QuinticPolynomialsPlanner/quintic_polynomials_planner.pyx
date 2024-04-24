@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 cnp.import_array()
 
 cdef class QuinticPolynomial:
-    cdef double a0, a1, a2, a3, a4, a5
 
     def __init__(self, double xs, double vxs, double axs, double xe, double vxe, double axe, double time):
         self.a0 = xs

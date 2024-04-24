@@ -3,22 +3,13 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "depends": [
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/arrayscalars.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/ufuncobject.h"
-        ],
-        "include_dirs": [
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include"
-        ],
-        "name": "quintic_polynomials_planner",
+        "depends": [],
+        "name": "QuinticPolynomialsPlanner.quintic_polynomials_planner",
         "sources": [
             "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx"
         ]
     },
-    "module_name": "quintic_polynomials_planner"
+    "module_name": "QuinticPolynomialsPlanner.quintic_polynomials_planner"
 }
 END: Cython Metadata */
 
@@ -1238,8 +1229,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__quintic_polynomials_planner
-#define __PYX_HAVE_API__quintic_polynomials_planner
+#define __PYX_HAVE__QuinticPolynomialsPlanner__quintic_polynomials_planner
+#define __PYX_HAVE_API__QuinticPolynomialsPlanner__quintic_polynomials_planner
 /* Early includes */
 #include <math.h>
 #include <string.h>
@@ -1871,7 +1862,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 /* #### Code section: type_declarations ### */
 
 /*--- Type declarations ---*/
-struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial;
+struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
 struct __pyx_array_obj;
 struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
@@ -1913,16 +1904,16 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "quintic_polynomials_planner.pyx":14
- * cnp.import_array()
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pxd":3
+ * # cython: language_level=3
  * 
  * cdef class QuinticPolynomial:             # <<<<<<<<<<<<<<
  *     cdef double a0, a1, a2, a3, a4, a5
- * 
+ *     cpdef double calc_point(self, double t)
  */
-struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial {
+struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial {
   PyObject_HEAD
-  struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *__pyx_vtab;
+  struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_vtab;
   double a0;
   double a1;
   double a2;
@@ -2009,21 +2000,21 @@ struct __pyx_memoryviewslice_obj {
 
 
 
-/* "quintic_polynomials_planner.pyx":14
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":14
  * cnp.import_array()
  * 
  * cdef class QuinticPolynomial:             # <<<<<<<<<<<<<<
- *     cdef double a0, a1, a2, a3, a4, a5
  * 
+ *     def __init__(self, double xs, double vxs, double axs, double xe, double vxe, double axe, double time):
  */
 
-struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial {
-  double (*calc_point)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
-  double (*calc_first_derivative)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
-  double (*calc_second_derivative)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
-  double (*calc_third_derivative)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial {
+  double (*calc_point)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
+  double (*calc_first_derivative)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
+  double (*calc_second_derivative)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
+  double (*calc_third_derivative)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *__pyx_vtabptr_27quintic_polynomials_planner_QuinticPolynomial;
+static struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_vtabptr_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
 
 
 /* "View.MemoryView":114
@@ -3184,10 +3175,10 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self); /* proto*/
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self); /* proto*/
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self); /* proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_point(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_point(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
 
 /* Module declarations from "libc.math" */
 
@@ -3210,10 +3201,10 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_thi
 /* Module declarations from "numpy" */
 static CYTHON_INLINE int __pyx_f_5numpy_import_array(void); /*proto*/
 
-/* Module declarations from "quintic_polynomials_planner" */
-static double __pyx_v_27quintic_polynomials_planner_MIN_T;
-static double __pyx_v_27quintic_polynomials_planner_MAX_T;
-static int __pyx_v_27quintic_polynomials_planner_show_animation;
+/* Module declarations from "QuinticPolynomialsPlanner.quintic_polynomials_planner" */
+static double __pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_MIN_T;
+static double __pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_MAX_T;
+static int __pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_show_animation;
 static PyObject *__pyx_collections_abc_Sequence = 0;
 static PyObject *generic = 0;
 static PyObject *strided = 0;
@@ -3222,7 +3213,7 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static PyObject *__pyx_f_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, PyObject *); /*proto*/
+static PyObject *__pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, PyObject *); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -3260,11 +3251,11 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, 
 /* #### Code section: typeinfo ### */
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "quintic_polynomials_planner"
-extern int __pyx_module_is_main_quintic_polynomials_planner;
-int __pyx_module_is_main_quintic_polynomials_planner = 0;
+#define __Pyx_MODULE_NAME "QuinticPolynomialsPlanner.quintic_polynomials_planner"
+extern int __pyx_module_is_main_QuinticPolynomialsPlanner__quintic_polynomials_planner;
+int __pyx_module_is_main_QuinticPolynomialsPlanner__quintic_polynomials_planner = 0;
 
-/* Implementation of "quintic_polynomials_planner" */
+/* Implementation of "QuinticPolynomialsPlanner.quintic_polynomials_planner" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_max;
 static PyObject *__pyx_builtin_print;
@@ -3526,6 +3517,7 @@ static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __red
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_2[] = "Incompatible checksums (0x%x vs (0x55ac9b1, 0x247524e, 0xe16bb74) = (a0, a1, a2, a3, a4, a5))";
+static const char __pyx_k_QuinticPolynomialsPlanner_quinti_2[] = "QuinticPolynomialsPlanner.quintic_polynomials_planner";
 /* #### Code section: decls ### */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
@@ -3568,18 +3560,18 @@ static void __pyx_memoryviewslice___pyx_pf_15View_dot_MemoryView_16_memoryviewsl
 static PyObject *__pyx_pf___pyx_memoryviewslice___reduce_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf___pyx_memoryviewslice_2__setstate_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_15View_dot_MemoryView___pyx_unpickle_Enum(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_xs, double __pyx_v_vxs, double __pyx_v_axs, double __pyx_v_xe, double __pyx_v_vxe, double __pyx_v_axe, double __pyx_v_time); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_2calc_point(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_4calc_first_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_6calc_second_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_8calc_third_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_10__reduce_cython__(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_12__setstate_cython__(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_planner(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_sx, double __pyx_v_sy, double __pyx_v_syaw, double __pyx_v_sv, double __pyx_v_sa, double __pyx_v_gx, double __pyx_v_gy, double __pyx_v_gyaw, double __pyx_v_gv, double __pyx_v_ga, double __pyx_v_max_accel, double __pyx_v_max_jerk, double __pyx_v_dt); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y, double __pyx_v_yaw, double __pyx_v_length, double __pyx_v_width, PyObject *__pyx_v_fc, PyObject *__pyx_v_ec); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_27quintic_polynomials_planner_6__pyx_unpickle_QuinticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_tp_new_27quintic_polynomials_planner_QuinticPolynomial(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static int __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial___init__(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_xs, double __pyx_v_vxs, double __pyx_v_axs, double __pyx_v_xe, double __pyx_v_vxe, double __pyx_v_axe, double __pyx_v_time); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_2calc_point(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_4calc_first_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_6calc_second_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_8calc_third_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_10__reduce_cython__(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_12__setstate_cython__(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_quintic_polynomials_planner(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_sx, double __pyx_v_sy, double __pyx_v_syaw, double __pyx_v_sv, double __pyx_v_sa, double __pyx_v_gx, double __pyx_v_gy, double __pyx_v_gyaw, double __pyx_v_gv, double __pyx_v_ga, double __pyx_v_max_accel, double __pyx_v_max_jerk, double __pyx_v_dt); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y, double __pyx_v_yaw, double __pyx_v_length, double __pyx_v_width, PyObject *__pyx_v_fc, PyObject *__pyx_v_ec); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_6__pyx_unpickle_QuinticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_tp_new_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_Enum(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -3648,13 +3640,13 @@ typedef struct {
   PyTypeObject *__pyx_ptype_5numpy_character;
   PyTypeObject *__pyx_ptype_5numpy_ufunc;
   #if CYTHON_USE_MODULE_STATE
-  PyObject *__pyx_type_27quintic_polynomials_planner_QuinticPolynomial;
+  PyObject *__pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
   PyObject *__pyx_type___pyx_array;
   PyObject *__pyx_type___pyx_MemviewEnum;
   PyObject *__pyx_type___pyx_memoryview;
   PyObject *__pyx_type___pyx_memoryviewslice;
   #endif
-  PyTypeObject *__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial;
+  PyTypeObject *__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
   PyTypeObject *__pyx_array_type;
   PyTypeObject *__pyx_MemviewEnum_type;
   PyTypeObject *__pyx_memoryview_type;
@@ -3699,6 +3691,7 @@ typedef struct {
   PyObject *__pyx_n_s_QuinticPolynomial_calc_second_de;
   PyObject *__pyx_n_s_QuinticPolynomial_calc_third_der;
   PyObject *__pyx_kp_s_QuinticPolynomialsPlanner_quinti;
+  PyObject *__pyx_n_s_QuinticPolynomialsPlanner_quinti_2;
   PyObject *__pyx_kp_u_Quintic_Polynomial_Planner_start;
   PyObject *__pyx_kp_u_Quintic_Polynomial_Trajectory;
   PyObject *__pyx_n_s_Sequence;
@@ -4014,8 +4007,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_flexible);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_character);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_ufunc);
-  Py_CLEAR(clear_module_state->__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
-  Py_CLEAR(clear_module_state->__pyx_type_27quintic_polynomials_planner_QuinticPolynomial);
+  Py_CLEAR(clear_module_state->__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
+  Py_CLEAR(clear_module_state->__pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
   Py_CLEAR(clear_module_state->__pyx_array_type);
   Py_CLEAR(clear_module_state->__pyx_type___pyx_array);
   Py_CLEAR(clear_module_state->__pyx_MemviewEnum_type);
@@ -4064,6 +4057,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_QuinticPolynomial_calc_second_de);
   Py_CLEAR(clear_module_state->__pyx_n_s_QuinticPolynomial_calc_third_der);
   Py_CLEAR(clear_module_state->__pyx_kp_s_QuinticPolynomialsPlanner_quinti);
+  Py_CLEAR(clear_module_state->__pyx_n_s_QuinticPolynomialsPlanner_quinti_2);
   Py_CLEAR(clear_module_state->__pyx_kp_u_Quintic_Polynomial_Planner_start);
   Py_CLEAR(clear_module_state->__pyx_kp_u_Quintic_Polynomial_Trajectory);
   Py_CLEAR(clear_module_state->__pyx_n_s_Sequence);
@@ -4357,8 +4351,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_flexible);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_character);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_ufunc);
-  Py_VISIT(traverse_module_state->__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
-  Py_VISIT(traverse_module_state->__pyx_type_27quintic_polynomials_planner_QuinticPolynomial);
+  Py_VISIT(traverse_module_state->__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
+  Py_VISIT(traverse_module_state->__pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
   Py_VISIT(traverse_module_state->__pyx_array_type);
   Py_VISIT(traverse_module_state->__pyx_type___pyx_array);
   Py_VISIT(traverse_module_state->__pyx_MemviewEnum_type);
@@ -4407,6 +4401,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_QuinticPolynomial_calc_second_de);
   Py_VISIT(traverse_module_state->__pyx_n_s_QuinticPolynomial_calc_third_der);
   Py_VISIT(traverse_module_state->__pyx_kp_s_QuinticPolynomialsPlanner_quinti);
+  Py_VISIT(traverse_module_state->__pyx_n_s_QuinticPolynomialsPlanner_quinti_2);
   Py_VISIT(traverse_module_state->__pyx_kp_u_Quintic_Polynomial_Planner_start);
   Py_VISIT(traverse_module_state->__pyx_kp_u_Quintic_Polynomial_Trajectory);
   Py_VISIT(traverse_module_state->__pyx_n_s_Sequence);
@@ -4729,13 +4724,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_ptype_5numpy_character __pyx_mstate_global->__pyx_ptype_5numpy_character
 #define __pyx_ptype_5numpy_ufunc __pyx_mstate_global->__pyx_ptype_5numpy_ufunc
 #if CYTHON_USE_MODULE_STATE
-#define __pyx_type_27quintic_polynomials_planner_QuinticPolynomial __pyx_mstate_global->__pyx_type_27quintic_polynomials_planner_QuinticPolynomial
+#define __pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial __pyx_mstate_global->__pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial
 #define __pyx_type___pyx_array __pyx_mstate_global->__pyx_type___pyx_array
 #define __pyx_type___pyx_MemviewEnum __pyx_mstate_global->__pyx_type___pyx_MemviewEnum
 #define __pyx_type___pyx_memoryview __pyx_mstate_global->__pyx_type___pyx_memoryview
 #define __pyx_type___pyx_memoryviewslice __pyx_mstate_global->__pyx_type___pyx_memoryviewslice
 #endif
-#define __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial __pyx_mstate_global->__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial
+#define __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial __pyx_mstate_global->__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial
 #define __pyx_array_type __pyx_mstate_global->__pyx_array_type
 #define __pyx_MemviewEnum_type __pyx_mstate_global->__pyx_MemviewEnum_type
 #define __pyx_memoryview_type __pyx_mstate_global->__pyx_memoryview_type
@@ -4780,6 +4775,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_QuinticPolynomial_calc_second_de __pyx_mstate_global->__pyx_n_s_QuinticPolynomial_calc_second_de
 #define __pyx_n_s_QuinticPolynomial_calc_third_der __pyx_mstate_global->__pyx_n_s_QuinticPolynomial_calc_third_der
 #define __pyx_kp_s_QuinticPolynomialsPlanner_quinti __pyx_mstate_global->__pyx_kp_s_QuinticPolynomialsPlanner_quinti
+#define __pyx_n_s_QuinticPolynomialsPlanner_quinti_2 __pyx_mstate_global->__pyx_n_s_QuinticPolynomialsPlanner_quinti_2
 #define __pyx_kp_u_Quintic_Polynomial_Planner_start __pyx_mstate_global->__pyx_kp_u_Quintic_Polynomial_Planner_start
 #define __pyx_kp_u_Quintic_Polynomial_Trajectory __pyx_mstate_global->__pyx_kp_u_Quintic_Polynomial_Trajectory
 #define __pyx_n_s_Sequence __pyx_mstate_global->__pyx_n_s_Sequence
@@ -19927,8 +19923,8 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":17
- *     cdef double a0, a1, a2, a3, a4, a5
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":16
+ * cdef class QuinticPolynomial:
  * 
  *     def __init__(self, double xs, double vxs, double axs, double xe, double vxe, double axe, double time):             # <<<<<<<<<<<<<<
  *         self.a0 = xs
@@ -19936,8 +19932,8 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
  */
 
 /* Python wrapper */
-static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_xs;
   double __pyx_v_vxs;
   double __pyx_v_axs;
@@ -19989,7 +19985,7 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
           (void)__Pyx_Arg_NewRef_VARARGS(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -19997,9 +19993,9 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
           (void)__Pyx_Arg_NewRef_VARARGS(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 1); __PYX_ERR(0, 17, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 1); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -20007,9 +20003,9 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
           (void)__Pyx_Arg_NewRef_VARARGS(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 2); __PYX_ERR(0, 17, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 2); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -20017,9 +20013,9 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
           (void)__Pyx_Arg_NewRef_VARARGS(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 3); __PYX_ERR(0, 17, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 3); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -20027,9 +20023,9 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
           (void)__Pyx_Arg_NewRef_VARARGS(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 4); __PYX_ERR(0, 17, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 4); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -20037,9 +20033,9 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
           (void)__Pyx_Arg_NewRef_VARARGS(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 5); __PYX_ERR(0, 17, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 5); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
@@ -20047,14 +20043,14 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
           (void)__Pyx_Arg_NewRef_VARARGS(values[6]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 6); __PYX_ERR(0, 17, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, 6); __PYX_ERR(0, 16, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 17, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 16, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 7)) {
       goto __pyx_L5_argtuple_error;
@@ -20067,17 +20063,17 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
       values[5] = __Pyx_Arg_VARARGS(__pyx_args, 5);
       values[6] = __Pyx_Arg_VARARGS(__pyx_args, 6);
     }
-    __pyx_v_xs = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_xs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
-    __pyx_v_vxs = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_vxs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
-    __pyx_v_axs = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_axs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
-    __pyx_v_xe = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_xe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
-    __pyx_v_vxe = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_vxe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
-    __pyx_v_axe = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_axe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
-    __pyx_v_time = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_time == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_xs = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_xs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_vxs = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_vxs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_axs = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_axs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_xe = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_xe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_vxe = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_vxe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_axe = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_axe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_time = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_time == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, __pyx_nargs); __PYX_ERR(0, 17, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 7, 7, __pyx_nargs); __PYX_ERR(0, 16, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -20087,11 +20083,11 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
       __Pyx_Arg_XDECREF_VARARGS(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_xs, __pyx_v_vxs, __pyx_v_axs, __pyx_v_xe, __pyx_v_vxe, __pyx_v_axe, __pyx_v_time);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial___init__(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_xs, __pyx_v_vxs, __pyx_v_axs, __pyx_v_xe, __pyx_v_vxe, __pyx_v_axe, __pyx_v_time);
 
   /* function exit code */
   {
@@ -20104,7 +20100,7 @@ static int __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__(
   return __pyx_r;
 }
 
-static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_xs, double __pyx_v_vxs, double __pyx_v_axs, double __pyx_v_xe, double __pyx_v_vxe, double __pyx_v_axe, double __pyx_v_time) {
+static int __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial___init__(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_xs, double __pyx_v_vxs, double __pyx_v_axs, double __pyx_v_xe, double __pyx_v_vxe, double __pyx_v_axe, double __pyx_v_time) {
   __Pyx_memviewslice __pyx_v_A = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_b = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_x = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -20126,7 +20122,7 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "quintic_polynomials_planner.pyx":18
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":17
  * 
  *     def __init__(self, double xs, double vxs, double axs, double xe, double vxe, double axe, double time):
  *         self.a0 = xs             # <<<<<<<<<<<<<<
@@ -20135,7 +20131,7 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
  */
   __pyx_v_self->a0 = __pyx_v_xs;
 
-  /* "quintic_polynomials_planner.pyx":19
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":18
  *     def __init__(self, double xs, double vxs, double axs, double xe, double vxe, double axe, double time):
  *         self.a0 = xs
  *         self.a1 = vxs             # <<<<<<<<<<<<<<
@@ -20144,7 +20140,7 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
  */
   __pyx_v_self->a1 = __pyx_v_vxs;
 
-  /* "quintic_polynomials_planner.pyx":20
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":19
  *         self.a0 = xs
  *         self.a1 = vxs
  *         self.a2 = axs / 2.0             # <<<<<<<<<<<<<<
@@ -20153,257 +20149,257 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
  */
   __pyx_v_self->a2 = (__pyx_v_axs / 2.0);
 
-  /* "quintic_polynomials_planner.pyx":22
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":21
  *         self.a2 = axs / 2.0
  * 
  *         cdef double[:, :] A = np.array([[time ** 3, time ** 4, time ** 5],             # <<<<<<<<<<<<<<
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyFloat_FromDouble(pow(__pyx_v_time, 3.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(pow(__pyx_v_time, 3.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyFloat_FromDouble(pow(__pyx_v_time, 4.0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(pow(__pyx_v_time, 4.0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyFloat_FromDouble(pow(__pyx_v_time, 5.0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(pow(__pyx_v_time, 5.0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 2, __pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 2, __pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
 
-  /* "quintic_polynomials_planner.pyx":23
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":22
  * 
  *         cdef double[:, :] A = np.array([[time ** 3, time ** 4, time ** 5],
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],             # <<<<<<<<<<<<<<
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,
  */
-  __pyx_t_4 = PyFloat_FromDouble((3.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble((3.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyFloat_FromDouble((4.0 * pow(__pyx_v_time, 3.0))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble((4.0 * pow(__pyx_v_time, 3.0))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyFloat_FromDouble((5.0 * pow(__pyx_v_time, 4.0))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((5.0 * pow(__pyx_v_time, 4.0))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyList_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 0, __pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 0, __pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 1, __pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 1, __pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 2, __pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 2, __pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error);
   __pyx_t_4 = 0;
   __pyx_t_3 = 0;
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":24
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":23
  *         cdef double[:, :] A = np.array([[time ** 3, time ** 4, time ** 5],
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  */
-  __pyx_t_1 = PyFloat_FromDouble((6.0 * __pyx_v_time)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((6.0 * __pyx_v_time)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyFloat_FromDouble((12.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble((12.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyFloat_FromDouble((20.0 * pow(__pyx_v_time, 3.0))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble((20.0 * pow(__pyx_v_time, 3.0))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = PyList_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_7 = PyList_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 2, __pyx_t_4)) __PYX_ERR(0, 24, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 2, __pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
 
-  /* "quintic_polynomials_planner.pyx":22
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":21
  *         self.a2 = axs / 2.0
  * 
  *         cdef double[:, :] A = np.array([[time ** 3, time ** 4, time ** 5],             # <<<<<<<<<<<<<<
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  */
-  __pyx_t_4 = PyList_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 22, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_6);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_6)) __PYX_ERR(0, 22, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 2, __pyx_t_7)) __PYX_ERR(0, 22, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 2, __pyx_t_7)) __PYX_ERR(0, 21, __pyx_L1_error);
   __pyx_t_5 = 0;
   __pyx_t_6 = 0;
   __pyx_t_7 = 0;
-  __pyx_t_7 = PyTuple_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_7 = PyTuple_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error);
   __pyx_t_4 = 0;
 
-  /* "quintic_polynomials_planner.pyx":24
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":23
  *         cdef double[:, :] A = np.array([[time ** 3, time ** 4, time ** 5],
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  */
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "quintic_polynomials_planner.pyx":22
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":21
  *         self.a2 = axs / 2.0
  * 
  *         cdef double[:, :] A = np.array([[time ** 3, time ** 4, time ** 5],             # <<<<<<<<<<<<<<
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_A = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "quintic_polynomials_planner.pyx":25
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":24
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,             # <<<<<<<<<<<<<<
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  *                                      axe - 2 * self.a2], dtype=np.float64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyFloat_FromDouble((((__pyx_v_xe - __pyx_v_self->a0) - (__pyx_v_self->a1 * __pyx_v_time)) - (__pyx_v_self->a2 * pow(__pyx_v_time, 2.0)))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_5 = PyFloat_FromDouble((((__pyx_v_xe - __pyx_v_self->a0) - (__pyx_v_self->a1 * __pyx_v_time)) - (__pyx_v_self->a2 * pow(__pyx_v_time, 2.0)))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "quintic_polynomials_planner.pyx":26
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":25
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,
  *                                      vxe - self.a1 - 2 * self.a2 * time,             # <<<<<<<<<<<<<<
  *                                      axe - 2 * self.a2], dtype=np.float64)
  *         cdef double[:] x = np.linalg.solve(A, b)
  */
-  __pyx_t_7 = PyFloat_FromDouble(((__pyx_v_vxe - __pyx_v_self->a1) - ((2.0 * __pyx_v_self->a2) * __pyx_v_time))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 26, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble(((__pyx_v_vxe - __pyx_v_self->a1) - ((2.0 * __pyx_v_self->a2) * __pyx_v_time))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "quintic_polynomials_planner.pyx":27
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":26
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  *                                      axe - 2 * self.a2], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double[:] x = np.linalg.solve(A, b)
  * 
  */
-  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_axe - (2.0 * __pyx_v_self->a2))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_axe - (2.0 * __pyx_v_self->a2))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "quintic_polynomials_planner.pyx":25
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":24
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,             # <<<<<<<<<<<<<<
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  *                                      axe - 2 * self.a2], dtype=np.float64)
  */
-  __pyx_t_6 = PyList_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 0, __pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 0, __pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 1, __pyx_t_7)) __PYX_ERR(0, 25, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 1, __pyx_t_7)) __PYX_ERR(0, 24, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 2, __pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 2, __pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error);
   __pyx_t_5 = 0;
   __pyx_t_7 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_6);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6)) __PYX_ERR(0, 25, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6)) __PYX_ERR(0, 24, __pyx_L1_error);
   __pyx_t_6 = 0;
 
-  /* "quintic_polynomials_planner.pyx":27
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":26
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  *                                      axe - 2 * self.a2], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double[:] x = np.linalg.solve(A, b)
  * 
  */
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "quintic_polynomials_planner.pyx":25
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":24
  *                                         [3 * time ** 2, 4 * time ** 3, 5 * time ** 4],
  *                                         [6 * time, 12 * time ** 2, 20 * time ** 3]], dtype=np.float64)
  *         cdef double[:] b = np.array([xe - self.a0 - self.a1 * time - self.a2 * time ** 2,             # <<<<<<<<<<<<<<
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  *                                      axe - 2 * self.a2], dtype=np.float64)
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_9 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_9.memview)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_9.memview)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_b = __pyx_t_9;
   __pyx_t_9.memview = NULL;
   __pyx_t_9.data = NULL;
 
-  /* "quintic_polynomials_planner.pyx":28
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":27
  *                                      vxe - self.a1 - 2 * self.a2 * time,
  *                                      axe - 2 * self.a2], dtype=np.float64)
  *         cdef double[:] x = np.linalg.solve(A, b)             # <<<<<<<<<<<<<<
  * 
  *         self.a3 = x[0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_linalg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_linalg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_solve); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_solve); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_A, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_A, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_b, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_b, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_7 = NULL;
   __pyx_t_10 = 0;
@@ -20425,17 +20421,17 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 28, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 27, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
-  __pyx_t_9 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_9.memview)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_9.memview)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_x = __pyx_t_9;
   __pyx_t_9.memview = NULL;
   __pyx_t_9.data = NULL;
 
-  /* "quintic_polynomials_planner.pyx":30
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":29
  *         cdef double[:] x = np.linalg.solve(A, b)
  * 
  *         self.a3 = x[0]             # <<<<<<<<<<<<<<
@@ -20450,11 +20446,11 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
   } else if (unlikely(__pyx_t_11 >= __pyx_v_x.shape[0])) __pyx_t_10 = 0;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 30, __pyx_L1_error)
+    __PYX_ERR(0, 29, __pyx_L1_error)
   }
   __pyx_v_self->a3 = (*((double *) ( /* dim=0 */ (__pyx_v_x.data + __pyx_t_11 * __pyx_v_x.strides[0]) )));
 
-  /* "quintic_polynomials_planner.pyx":31
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":30
  * 
  *         self.a3 = x[0]
  *         self.a4 = x[1]             # <<<<<<<<<<<<<<
@@ -20469,11 +20465,11 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
   } else if (unlikely(__pyx_t_11 >= __pyx_v_x.shape[0])) __pyx_t_10 = 0;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 31, __pyx_L1_error)
+    __PYX_ERR(0, 30, __pyx_L1_error)
   }
   __pyx_v_self->a4 = (*((double *) ( /* dim=0 */ (__pyx_v_x.data + __pyx_t_11 * __pyx_v_x.strides[0]) )));
 
-  /* "quintic_polynomials_planner.pyx":32
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":31
  *         self.a3 = x[0]
  *         self.a4 = x[1]
  *         self.a5 = x[2]             # <<<<<<<<<<<<<<
@@ -20488,12 +20484,12 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
   } else if (unlikely(__pyx_t_11 >= __pyx_v_x.shape[0])) __pyx_t_10 = 0;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 32, __pyx_L1_error)
+    __PYX_ERR(0, 31, __pyx_L1_error)
   }
   __pyx_v_self->a5 = (*((double *) ( /* dim=0 */ (__pyx_v_x.data + __pyx_t_11 * __pyx_v_x.strides[0]) )));
 
-  /* "quintic_polynomials_planner.pyx":17
- *     cdef double a0, a1, a2, a3, a4, a5
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":16
+ * cdef class QuinticPolynomial:
  * 
  *     def __init__(self, double xs, double vxs, double axs, double xe, double vxe, double axe, double time):             # <<<<<<<<<<<<<<
  *         self.a0 = xs
@@ -20513,7 +20509,7 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
   __Pyx_XDECREF(__pyx_t_7);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_8, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_9, 1);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_A, 1);
@@ -20523,7 +20519,7 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":34
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":33
  *         self.a5 = x[2]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
@@ -20531,14 +20527,14 @@ static int __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial___init__(s
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)
  */
 
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_point(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_point(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
   double __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -20561,10 +20557,10 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_poi
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_point); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_point); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -20586,11 +20582,11 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_poi
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -20609,7 +20605,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_poi
     #endif
   }
 
-  /* "quintic_polynomials_planner.pyx":36
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":35
  *     cpdef double calc_point(self, double t):
  *         return (self.a0 + self.a1 * t + self.a2 * t ** 2 +
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)             # <<<<<<<<<<<<<<
@@ -20619,7 +20615,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_poi
   __pyx_r = (((((__pyx_v_self->a0 + (__pyx_v_self->a1 * __pyx_v_t)) + (__pyx_v_self->a2 * pow(__pyx_v_t, 2.0))) + (__pyx_v_self->a3 * pow(__pyx_v_t, 3.0))) + (__pyx_v_self->a4 * pow(__pyx_v_t, 4.0))) + (__pyx_v_self->a5 * pow(__pyx_v_t, 5.0)));
   goto __pyx_L0;
 
-  /* "quintic_polynomials_planner.pyx":34
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":33
  *         self.a5 = x[2]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
@@ -20634,7 +20630,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_poi
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_point", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_point", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -20642,15 +20638,15 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_poi
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point = {"calc_point", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point = {"calc_point", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -20694,23 +20690,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_point") < 0)) __PYX_ERR(0, 34, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_point") < 0)) __PYX_ERR(0, 33, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_point", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 34, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_point", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 33, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -20720,11 +20716,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_point", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_point", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_2calc_point(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_2calc_point(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
 
   /* function exit code */
   {
@@ -20737,7 +20733,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_2calc_point(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_2calc_point(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -20747,8 +20743,8 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_2cal
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_point", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_point(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_point(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -20757,7 +20753,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_2cal
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_point", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_point", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -20765,7 +20761,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_2cal
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":38
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":37
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -20773,14 +20769,14 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_2cal
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)
  */
 
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
   double __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -20803,10 +20799,10 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_fir
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_first_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_first_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 37, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -20828,11 +20824,11 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_fir
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 38, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -20851,7 +20847,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_fir
     #endif
   }
 
-  /* "quintic_polynomials_planner.pyx":40
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":39
  *     cpdef double calc_first_derivative(self, double t):
  *         return (self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 +
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)             # <<<<<<<<<<<<<<
@@ -20861,7 +20857,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_fir
   __pyx_r = ((((__pyx_v_self->a1 + ((2.0 * __pyx_v_self->a2) * __pyx_v_t)) + ((3.0 * __pyx_v_self->a3) * pow(__pyx_v_t, 2.0))) + ((4.0 * __pyx_v_self->a4) * pow(__pyx_v_t, 3.0))) + ((5.0 * __pyx_v_self->a5) * pow(__pyx_v_t, 4.0)));
   goto __pyx_L0;
 
-  /* "quintic_polynomials_planner.pyx":38
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":37
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -20876,7 +20872,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_fir
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -20884,15 +20880,15 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_fir
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative = {"calc_first_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative = {"calc_first_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -20936,23 +20932,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 38, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_first_derivative") < 0)) __PYX_ERR(0, 38, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_first_derivative") < 0)) __PYX_ERR(0, 37, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 38, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_first_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 38, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_first_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 37, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -20962,11 +20958,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_4calc_first_derivative(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_4calc_first_derivative(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
 
   /* function exit code */
   {
@@ -20979,7 +20975,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_4calc_first_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_4calc_first_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -20989,8 +20985,8 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_4cal
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_first_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 38, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -20999,7 +20995,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_4cal
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21007,7 +21003,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_4cal
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":42
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":41
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21015,14 +21011,14 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_4cal
  * 
  */
 
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
   double __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -21045,10 +21041,10 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_sec
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_second_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_second_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21070,11 +21066,11 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_sec
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 41, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21093,7 +21089,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_sec
     #endif
   }
 
-  /* "quintic_polynomials_planner.pyx":43
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":42
  * 
  *     cpdef double calc_second_derivative(self, double t):
  *         return (2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2 + 20 * self.a5 * t ** 3)             # <<<<<<<<<<<<<<
@@ -21103,7 +21099,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_sec
   __pyx_r = ((((2.0 * __pyx_v_self->a2) + ((6.0 * __pyx_v_self->a3) * __pyx_v_t)) + ((12.0 * __pyx_v_self->a4) * pow(__pyx_v_t, 2.0))) + ((20.0 * __pyx_v_self->a5) * pow(__pyx_v_t, 3.0)));
   goto __pyx_L0;
 
-  /* "quintic_polynomials_planner.pyx":42
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":41
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21118,7 +21114,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_sec
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -21126,15 +21122,15 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_sec
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative = {"calc_second_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative = {"calc_second_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21178,23 +21174,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 41, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_second_derivative") < 0)) __PYX_ERR(0, 42, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_second_derivative") < 0)) __PYX_ERR(0, 41, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 41, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_second_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 42, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_second_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 41, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21204,11 +21200,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_6calc_second_derivative(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_6calc_second_derivative(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
 
   /* function exit code */
   {
@@ -21221,7 +21217,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_6calc_second_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_6calc_second_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -21231,8 +21227,8 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_6cal
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_second_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 42, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -21241,7 +21237,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_6cal
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21249,7 +21245,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_6cal
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":45
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":44
  *         return (2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2 + 20 * self.a5 * t ** 3)
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21257,14 +21253,14 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_6cal
  * 
  */
 
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
+static double __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
   double __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -21287,10 +21283,10 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_thi
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_third_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 45, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_third_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 45, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21312,11 +21308,11 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_thi
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21335,7 +21331,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_thi
     #endif
   }
 
-  /* "quintic_polynomials_planner.pyx":46
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":45
  * 
  *     cpdef double calc_third_derivative(self, double t):
  *         return (6 * self.a3 + 24 * self.a4 * t + 60 * self.a5 * t ** 2)             # <<<<<<<<<<<<<<
@@ -21345,7 +21341,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_thi
   __pyx_r = (((6.0 * __pyx_v_self->a3) + ((24.0 * __pyx_v_self->a4) * __pyx_v_t)) + ((60.0 * __pyx_v_self->a5) * pow(__pyx_v_t, 2.0)));
   goto __pyx_L0;
 
-  /* "quintic_polynomials_planner.pyx":45
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":44
  *         return (2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2 + 20 * self.a5 * t ** 3)
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21360,7 +21356,7 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_thi
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_third_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_third_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -21368,15 +21364,15 @@ static double __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_thi
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative = {"calc_third_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative = {"calc_third_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21420,23 +21416,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_third_derivative") < 0)) __PYX_ERR(0, 45, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_third_derivative") < 0)) __PYX_ERR(0, 44, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_third_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 45, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_third_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 44, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21446,11 +21442,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_third_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_third_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_8calc_third_derivative(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_8calc_third_derivative(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v_t);
 
   /* function exit code */
   {
@@ -21463,7 +21459,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_8calc_third_derivative(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_8calc_third_derivative(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, double __pyx_v_t) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -21473,8 +21469,8 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_8cal
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_third_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -21483,7 +21479,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_8cal
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.calc_third_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.calc_third_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21498,15 +21494,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_8cal
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21531,14 +21527,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_10__reduce_cython__(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self));
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_10__reduce_cython__(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_10__reduce_cython__(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_10__reduce_cython__(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -21774,7 +21770,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_10__
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -21792,15 +21788,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_10__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21870,11 +21866,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_12__setstate_cython__(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_12__setstate_cython__(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -21887,7 +21883,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_12__setstate_cython__(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_12__setstate_cython__(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -21902,7 +21898,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_12__
  *     __pyx_unpickle_QuinticPolynomial__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -21918,7 +21914,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_12__
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("quintic_polynomials_planner.QuinticPolynomial.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21926,7 +21922,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_12__
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":48
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":47
  *         return (6 * self.a3 + 24 * self.a4 * t + 60 * self.a5 * t ** 2)
  * 
  * def quintic_polynomials_planner(double sx, double sy, double syaw, double sv, double sa,             # <<<<<<<<<<<<<<
@@ -21935,15 +21931,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_17QuinticPolynomial_12__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_1quintic_polynomials_planner(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_1quintic_polynomials_planner(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_1quintic_polynomials_planner = {"quintic_polynomials_planner", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_1quintic_polynomials_planner, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_1quintic_polynomials_planner(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_1quintic_polynomials_planner = {"quintic_polynomials_planner", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_1quintic_polynomials_planner, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_1quintic_polynomials_planner(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -22023,7 +22019,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -22031,9 +22027,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 1); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 1); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -22041,9 +22037,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 2); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 2); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -22051,9 +22047,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 3); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 3); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -22061,9 +22057,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 4); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 4); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -22071,9 +22067,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 5); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 5); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
@@ -22081,9 +22077,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 6); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 6); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
@@ -22091,9 +22087,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[7]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 7); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 7); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
@@ -22101,9 +22097,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[8]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 8); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 8); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
@@ -22111,9 +22107,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[9]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 9); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 9); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
@@ -22121,9 +22117,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[10]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 10); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 10); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
@@ -22131,9 +22127,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[11]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 11); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 11); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
@@ -22141,14 +22137,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[12]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 12); __PYX_ERR(0, 48, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, 12); __PYX_ERR(0, 47, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "quintic_polynomials_planner") < 0)) __PYX_ERR(0, 48, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "quintic_polynomials_planner") < 0)) __PYX_ERR(0, 47, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 13)) {
       goto __pyx_L5_argtuple_error;
@@ -22167,23 +22163,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[11] = __Pyx_Arg_FASTCALL(__pyx_args, 11);
       values[12] = __Pyx_Arg_FASTCALL(__pyx_args, 12);
     }
-    __pyx_v_sx = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_sx == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
-    __pyx_v_sy = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_sy == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
-    __pyx_v_syaw = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_syaw == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
-    __pyx_v_sv = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_sv == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
-    __pyx_v_sa = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_sa == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
-    __pyx_v_gx = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_gx == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
-    __pyx_v_gy = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_gy == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
-    __pyx_v_gyaw = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_gyaw == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
-    __pyx_v_gv = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_gv == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
-    __pyx_v_ga = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_ga == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
-    __pyx_v_max_accel = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_max_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L3_error)
-    __pyx_v_max_jerk = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_max_jerk == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L3_error)
-    __pyx_v_dt = __pyx_PyFloat_AsDouble(values[12]); if (unlikely((__pyx_v_dt == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L3_error)
+    __pyx_v_sx = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_sx == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
+    __pyx_v_sy = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_sy == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
+    __pyx_v_syaw = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_syaw == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
+    __pyx_v_sv = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_sv == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
+    __pyx_v_sa = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_sa == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
+    __pyx_v_gx = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_gx == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+    __pyx_v_gy = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_gy == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+    __pyx_v_gyaw = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_gyaw == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+    __pyx_v_gv = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_gv == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+    __pyx_v_ga = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_ga == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+    __pyx_v_max_accel = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_max_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
+    __pyx_v_max_jerk = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_max_jerk == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
+    __pyx_v_dt = __pyx_PyFloat_AsDouble(values[12]); if (unlikely((__pyx_v_dt == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, __pyx_nargs); __PYX_ERR(0, 48, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("quintic_polynomials_planner", 1, 13, 13, __pyx_nargs); __PYX_ERR(0, 47, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -22193,11 +22189,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.quintic_polynomials_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.quintic_polynomials_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_quintic_polynomials_planner(__pyx_self, __pyx_v_sx, __pyx_v_sy, __pyx_v_syaw, __pyx_v_sv, __pyx_v_sa, __pyx_v_gx, __pyx_v_gy, __pyx_v_gyaw, __pyx_v_gv, __pyx_v_ga, __pyx_v_max_accel, __pyx_v_max_jerk, __pyx_v_dt);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_quintic_polynomials_planner(__pyx_self, __pyx_v_sx, __pyx_v_sy, __pyx_v_syaw, __pyx_v_sv, __pyx_v_sa, __pyx_v_gx, __pyx_v_gy, __pyx_v_gyaw, __pyx_v_gv, __pyx_v_ga, __pyx_v_max_accel, __pyx_v_max_jerk, __pyx_v_dt);
 
   /* function exit code */
   {
@@ -22210,7 +22206,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_planner(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_sx, double __pyx_v_sy, double __pyx_v_syaw, double __pyx_v_sv, double __pyx_v_sa, double __pyx_v_gx, double __pyx_v_gy, double __pyx_v_gyaw, double __pyx_v_gv, double __pyx_v_ga, double __pyx_v_max_accel, double __pyx_v_max_jerk, double __pyx_v_dt) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_quintic_polynomials_planner(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_sx, double __pyx_v_sy, double __pyx_v_syaw, double __pyx_v_sv, double __pyx_v_sa, double __pyx_v_gx, double __pyx_v_gy, double __pyx_v_gyaw, double __pyx_v_gv, double __pyx_v_ga, double __pyx_v_max_accel, double __pyx_v_max_jerk, double __pyx_v_dt) {
   double __pyx_v_vxs;
   double __pyx_v_vys;
   double __pyx_v_vxg;
@@ -22219,8 +22215,8 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
   double __pyx_v_ays;
   double __pyx_v_axg;
   double __pyx_v_ayg;
-  struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_xqp = 0;
-  struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_yqp = 0;
+  struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_xqp = 0;
+  struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v_yqp = 0;
   double __pyx_v_T;
   double __pyx_v_t;
   double __pyx_v_vx;
@@ -22268,7 +22264,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("quintic_polynomials_planner", 1);
 
-  /* "quintic_polynomials_planner.pyx":51
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":50
  *                                 double gx, double gy, double gyaw, double gv, double ga,
  *                                 double max_accel, double max_jerk, double dt):
  *     cdef double vxs = sv * cos(syaw)             # <<<<<<<<<<<<<<
@@ -22277,7 +22273,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_vxs = (__pyx_v_sv * cos(__pyx_v_syaw));
 
-  /* "quintic_polynomials_planner.pyx":52
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":51
  *                                 double max_accel, double max_jerk, double dt):
  *     cdef double vxs = sv * cos(syaw)
  *     cdef double vys = sv * sin(syaw)             # <<<<<<<<<<<<<<
@@ -22286,7 +22282,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_vys = (__pyx_v_sv * sin(__pyx_v_syaw));
 
-  /* "quintic_polynomials_planner.pyx":53
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":52
  *     cdef double vxs = sv * cos(syaw)
  *     cdef double vys = sv * sin(syaw)
  *     cdef double vxg = gv * cos(gyaw)             # <<<<<<<<<<<<<<
@@ -22295,7 +22291,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_vxg = (__pyx_v_gv * cos(__pyx_v_gyaw));
 
-  /* "quintic_polynomials_planner.pyx":54
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":53
  *     cdef double vys = sv * sin(syaw)
  *     cdef double vxg = gv * cos(gyaw)
  *     cdef double vyg = gv * sin(gyaw)             # <<<<<<<<<<<<<<
@@ -22304,7 +22300,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_vyg = (__pyx_v_gv * sin(__pyx_v_gyaw));
 
-  /* "quintic_polynomials_planner.pyx":56
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":55
  *     cdef double vyg = gv * sin(gyaw)
  * 
  *     cdef double axs = sa * cos(syaw)             # <<<<<<<<<<<<<<
@@ -22313,7 +22309,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_axs = (__pyx_v_sa * cos(__pyx_v_syaw));
 
-  /* "quintic_polynomials_planner.pyx":57
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":56
  * 
  *     cdef double axs = sa * cos(syaw)
  *     cdef double ays = sa * sin(syaw)             # <<<<<<<<<<<<<<
@@ -22322,7 +22318,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_ays = (__pyx_v_sa * sin(__pyx_v_syaw));
 
-  /* "quintic_polynomials_planner.pyx":58
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":57
  *     cdef double axs = sa * cos(syaw)
  *     cdef double ays = sa * sin(syaw)
  *     cdef double axg = ga * cos(gyaw)             # <<<<<<<<<<<<<<
@@ -22331,7 +22327,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_axg = (__pyx_v_ga * cos(__pyx_v_gyaw));
 
-  /* "quintic_polynomials_planner.pyx":59
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":58
  *     cdef double ays = sa * sin(syaw)
  *     cdef double axg = ga * cos(gyaw)
  *     cdef double ayg = ga * sin(gyaw)             # <<<<<<<<<<<<<<
@@ -22340,23 +22336,23 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
   __pyx_v_ayg = (__pyx_v_ga * sin(__pyx_v_gyaw));
 
-  /* "quintic_polynomials_planner.pyx":65
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":64
  *     cdef list time, rx, ry, ryaw, rv, ra, rj
  * 
  *     for T in np.arange(MIN_T, MAX_T, MIN_T):             # <<<<<<<<<<<<<<
  *         xqp = QuinticPolynomial(sx, vxs, axs, gx, vxg, axg, T)
  *         yqp = QuinticPolynomial(sy, vys, ays, gy, vyg, ayg, T)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_27quintic_polynomials_planner_MIN_T); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_MIN_T); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_27quintic_polynomials_planner_MAX_T); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_MAX_T); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_27quintic_polynomials_planner_MIN_T); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_MIN_T); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = NULL;
   __pyx_t_7 = 0;
@@ -22379,7 +22375,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
@@ -22388,9 +22384,9 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
     __pyx_t_8 = 0;
     __pyx_t_9 = NULL;
   } else {
-    __pyx_t_8 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 65, __pyx_L1_error)
+    __pyx_t_8 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_9 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 65, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 64, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -22399,28 +22395,28 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 65, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 64, __pyx_L1_error)
           #endif
           if (__pyx_t_8 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 65, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 64, __pyx_L1_error)
         #else
-        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 65, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 64, __pyx_L1_error)
           #endif
           if (__pyx_t_8 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 65, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 64, __pyx_L1_error)
         #else
-        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -22430,53 +22426,53 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 65, __pyx_L1_error)
+          else __PYX_ERR(0, 64, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_1);
     }
-    __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 65, __pyx_L1_error)
+    __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_T = __pyx_t_10;
 
-    /* "quintic_polynomials_planner.pyx":66
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":65
  * 
  *     for T in np.arange(MIN_T, MAX_T, MIN_T):
  *         xqp = QuinticPolynomial(sx, vxs, axs, gx, vxg, axg, T)             # <<<<<<<<<<<<<<
  *         yqp = QuinticPolynomial(sy, vys, ays, gy, vyg, ayg, T)
  * 
  */
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_sx); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_sx); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_vxs); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_vxs); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_axs); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_axs); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_gx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_gx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_vxg); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_vxg); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_11 = PyFloat_FromDouble(__pyx_v_axg); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_11 = PyFloat_FromDouble(__pyx_v_axg); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_12 = PyFloat_FromDouble(__pyx_v_T); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_12 = PyFloat_FromDouble(__pyx_v_T); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = PyTuple_New(7); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_13 = PyTuple_New(7); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_GIVEREF(__pyx_t_1);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_5);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_t_5)) __PYX_ERR(0, 65, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_4);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 2, __pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 2, __pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_2);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 3, __pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 3, __pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_6);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 4, __pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 4, __pyx_t_6)) __PYX_ERR(0, 65, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_11);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 5, __pyx_t_11)) __PYX_ERR(0, 66, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 5, __pyx_t_11)) __PYX_ERR(0, 65, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_12);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 6, __pyx_t_12)) __PYX_ERR(0, 66, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 6, __pyx_t_12)) __PYX_ERR(0, 65, __pyx_L1_error);
     __pyx_t_1 = 0;
     __pyx_t_5 = 0;
     __pyx_t_4 = 0;
@@ -22484,49 +22480,49 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
     __pyx_t_6 = 0;
     __pyx_t_11 = 0;
     __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial), __pyx_t_13, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial), __pyx_t_13, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_xqp, ((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_t_12));
+    __Pyx_XDECREF_SET(__pyx_v_xqp, ((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_t_12));
     __pyx_t_12 = 0;
 
-    /* "quintic_polynomials_planner.pyx":67
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":66
  *     for T in np.arange(MIN_T, MAX_T, MIN_T):
  *         xqp = QuinticPolynomial(sx, vxs, axs, gx, vxg, axg, T)
  *         yqp = QuinticPolynomial(sy, vys, ays, gy, vyg, ayg, T)             # <<<<<<<<<<<<<<
  * 
  *         time = []
  */
-    __pyx_t_12 = PyFloat_FromDouble(__pyx_v_sy); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_12 = PyFloat_FromDouble(__pyx_v_sy); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = PyFloat_FromDouble(__pyx_v_vys); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_13 = PyFloat_FromDouble(__pyx_v_vys); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_11 = PyFloat_FromDouble(__pyx_v_ays); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_11 = PyFloat_FromDouble(__pyx_v_ays); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_gy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_gy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_vyg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_vyg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_ayg); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_ayg); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_T); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_T); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = PyTuple_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_12);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_12)) __PYX_ERR(0, 67, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_12)) __PYX_ERR(0, 66, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_13);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_13)) __PYX_ERR(0, 67, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_13)) __PYX_ERR(0, 66, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_11);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_t_11)) __PYX_ERR(0, 67, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_t_11)) __PYX_ERR(0, 66, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_6);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_t_6)) __PYX_ERR(0, 67, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_2);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_4);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 5, __pyx_t_4)) __PYX_ERR(0, 67, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 5, __pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_5);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 6, __pyx_t_5)) __PYX_ERR(0, 67, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 6, __pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error);
     __pyx_t_12 = 0;
     __pyx_t_13 = 0;
     __pyx_t_11 = 0;
@@ -22534,111 +22530,111 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
     __pyx_t_2 = 0;
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial), __pyx_t_1, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 67, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial), __pyx_t_1, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_yqp, ((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_t_5));
+    __Pyx_XDECREF_SET(__pyx_v_yqp, ((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":69
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":68
  *         yqp = QuinticPolynomial(sy, vys, ays, gy, vyg, ayg, T)
  * 
  *         time = []             # <<<<<<<<<<<<<<
  *         rx = []
  *         ry = []
  */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_time, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":70
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":69
  * 
  *         time = []
  *         rx = []             # <<<<<<<<<<<<<<
  *         ry = []
  *         ryaw = []
  */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_rx, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":71
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":70
  *         time = []
  *         rx = []
  *         ry = []             # <<<<<<<<<<<<<<
  *         ryaw = []
  *         rv = []
  */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_ry, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":72
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":71
  *         rx = []
  *         ry = []
  *         ryaw = []             # <<<<<<<<<<<<<<
  *         rv = []
  *         ra = []
  */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 72, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_ryaw, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":73
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":72
  *         ry = []
  *         ryaw = []
  *         rv = []             # <<<<<<<<<<<<<<
  *         ra = []
  *         rj = []
  */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 72, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_rv, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":74
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":73
  *         ryaw = []
  *         rv = []
  *         ra = []             # <<<<<<<<<<<<<<
  *         rj = []
  * 
  */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 74, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 73, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_ra, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":75
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":74
  *         rv = []
  *         ra = []
  *         rj = []             # <<<<<<<<<<<<<<
  * 
  *         for t in np.arange(0.0, T + dt, dt):
  */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 74, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_rj, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":77
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":76
  *         rj = []
  * 
  *         for t in np.arange(0.0, T + dt, dt):             # <<<<<<<<<<<<<<
  *             time.append(t)
  *             rx.append(xqp.calc_point(t))
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_arange); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_arange); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyFloat_FromDouble((__pyx_v_T + __pyx_v_dt)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble((__pyx_v_T + __pyx_v_dt)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_dt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_dt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_6 = NULL;
     __pyx_t_7 = 0;
@@ -22660,7 +22656,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 77, __pyx_L1_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -22669,9 +22665,9 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
       __pyx_t_14 = 0;
       __pyx_t_15 = NULL;
     } else {
-      __pyx_t_14 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_14 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_15 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 76, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     for (;;) {
@@ -22680,28 +22676,28 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 77, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 76, __pyx_L1_error)
             #endif
             if (__pyx_t_14 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_5); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 77, __pyx_L1_error)
+          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_5); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 76, __pyx_L1_error)
           #else
-          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 77, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         } else {
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 77, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 76, __pyx_L1_error)
             #endif
             if (__pyx_t_14 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_5); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 77, __pyx_L1_error)
+          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_5); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 76, __pyx_L1_error)
           #else
-          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 77, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         }
@@ -22711,75 +22707,75 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 77, __pyx_L1_error)
+            else __PYX_ERR(0, 76, __pyx_L1_error)
           }
           break;
         }
         __Pyx_GOTREF(__pyx_t_5);
       }
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_v_t = __pyx_t_10;
 
-      /* "quintic_polynomials_planner.pyx":78
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":77
  * 
  *         for t in np.arange(0.0, T + dt, dt):
  *             time.append(t)             # <<<<<<<<<<<<<<
  *             rx.append(xqp.calc_point(t))
  *             ry.append(yqp.calc_point(t))
  */
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 78, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_time, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 78, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_time, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "quintic_polynomials_planner.pyx":79
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":78
  *         for t in np.arange(0.0, T + dt, dt):
  *             time.append(t)
  *             rx.append(xqp.calc_point(t))             # <<<<<<<<<<<<<<
  *             ry.append(yqp.calc_point(t))
  * 
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_point(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L1_error)
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 79, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_point(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 78, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 79, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 78, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "quintic_polynomials_planner.pyx":80
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":79
  *             time.append(t)
  *             rx.append(xqp.calc_point(t))
  *             ry.append(yqp.calc_point(t))             # <<<<<<<<<<<<<<
  * 
  *             vx = xqp.calc_first_derivative(t)
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_point(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 80, __pyx_L1_error)
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 80, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_point(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 79, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 80, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 79, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "quintic_polynomials_planner.pyx":82
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":81
  *             ry.append(yqp.calc_point(t))
  * 
  *             vx = xqp.calc_first_derivative(t)             # <<<<<<<<<<<<<<
  *             vy = yqp.calc_first_derivative(t)
  *             v = hypot(vx, vy)
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_first_derivative(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_first_derivative(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
       __pyx_v_vx = __pyx_t_10;
 
-      /* "quintic_polynomials_planner.pyx":83
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":82
  * 
  *             vx = xqp.calc_first_derivative(t)
  *             vy = yqp.calc_first_derivative(t)             # <<<<<<<<<<<<<<
  *             v = hypot(vx, vy)
  *             yaw = atan2(vy, vx)
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_first_derivative(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_first_derivative(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
       __pyx_v_vy = __pyx_t_10;
 
-      /* "quintic_polynomials_planner.pyx":84
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":83
  *             vx = xqp.calc_first_derivative(t)
  *             vy = yqp.calc_first_derivative(t)
  *             v = hypot(vx, vy)             # <<<<<<<<<<<<<<
@@ -22788,7 +22784,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
       __pyx_v_v = hypot(__pyx_v_vx, __pyx_v_vy);
 
-      /* "quintic_polynomials_planner.pyx":85
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":84
  *             vy = yqp.calc_first_derivative(t)
  *             v = hypot(vx, vy)
  *             yaw = atan2(vy, vx)             # <<<<<<<<<<<<<<
@@ -22797,51 +22793,51 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
       __pyx_v_yaw = atan2(__pyx_v_vy, __pyx_v_vx);
 
-      /* "quintic_polynomials_planner.pyx":86
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":85
  *             v = hypot(vx, vy)
  *             yaw = atan2(vy, vx)
  *             rv.append(v)             # <<<<<<<<<<<<<<
  *             ryaw.append(yaw)
  * 
  */
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_v); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 86, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_v); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 85, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_rv, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 86, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_rv, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 85, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "quintic_polynomials_planner.pyx":87
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":86
  *             yaw = atan2(vy, vx)
  *             rv.append(v)
  *             ryaw.append(yaw)             # <<<<<<<<<<<<<<
  * 
  *             ax = xqp.calc_second_derivative(t)
  */
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_yaw); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_yaw); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 86, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 86, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "quintic_polynomials_planner.pyx":89
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":88
  *             ryaw.append(yaw)
  * 
  *             ax = xqp.calc_second_derivative(t)             # <<<<<<<<<<<<<<
  *             ay = yqp.calc_second_derivative(t)
  *             a = hypot(ax, ay)
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_second_derivative(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_second_derivative(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 88, __pyx_L1_error)
       __pyx_v_ax = __pyx_t_10;
 
-      /* "quintic_polynomials_planner.pyx":90
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":89
  * 
  *             ax = xqp.calc_second_derivative(t)
  *             ay = yqp.calc_second_derivative(t)             # <<<<<<<<<<<<<<
  *             a = hypot(ax, ay)
  *             if len(rv) >= 2 and rv[-1] - rv[-2] < 0.0:
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_second_derivative(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 90, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_second_derivative(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 89, __pyx_L1_error)
       __pyx_v_ay = __pyx_t_10;
 
-      /* "quintic_polynomials_planner.pyx":91
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":90
  *             ax = xqp.calc_second_derivative(t)
  *             ay = yqp.calc_second_derivative(t)
  *             a = hypot(ax, ay)             # <<<<<<<<<<<<<<
@@ -22850,37 +22846,37 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
       __pyx_v_a = hypot(__pyx_v_ax, __pyx_v_ay);
 
-      /* "quintic_polynomials_planner.pyx":92
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":91
  *             ay = yqp.calc_second_derivative(t)
  *             a = hypot(ax, ay)
  *             if len(rv) >= 2 and rv[-1] - rv[-2] < 0.0:             # <<<<<<<<<<<<<<
  *                 a *= -1
  *             ra.append(a)
  */
-      __pyx_t_18 = __Pyx_PyList_GET_SIZE(__pyx_v_rv); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyList_GET_SIZE(__pyx_v_rv); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 91, __pyx_L1_error)
       __pyx_t_19 = (__pyx_t_18 >= 2);
       if (__pyx_t_19) {
       } else {
         __pyx_t_17 = __pyx_t_19;
         goto __pyx_L8_bool_binop_done;
       }
-      __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_rv, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_rv, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_rv, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_rv, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = PyNumber_Subtract(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Subtract(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_float_0_0, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_float_0_0, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_17 = __pyx_t_19;
       __pyx_L8_bool_binop_done:;
       if (__pyx_t_17) {
 
-        /* "quintic_polynomials_planner.pyx":93
+        /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":92
  *             a = hypot(ax, ay)
  *             if len(rv) >= 2 and rv[-1] - rv[-2] < 0.0:
  *                 a *= -1             # <<<<<<<<<<<<<<
@@ -22889,7 +22885,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
         __pyx_v_a = (__pyx_v_a * -1.0);
 
-        /* "quintic_polynomials_planner.pyx":92
+        /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":91
  *             ay = yqp.calc_second_derivative(t)
  *             a = hypot(ax, ay)
  *             if len(rv) >= 2 and rv[-1] - rv[-2] < 0.0:             # <<<<<<<<<<<<<<
@@ -22898,39 +22894,39 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
       }
 
-      /* "quintic_polynomials_planner.pyx":94
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":93
  *             if len(rv) >= 2 and rv[-1] - rv[-2] < 0.0:
  *                 a *= -1
  *             ra.append(a)             # <<<<<<<<<<<<<<
  * 
  *             jx = xqp.calc_third_derivative(t)
  */
-      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_a); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_a); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_ra, __pyx_t_2); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_ra, __pyx_t_2); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 93, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "quintic_polynomials_planner.pyx":96
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":95
  *             ra.append(a)
  * 
  *             jx = xqp.calc_third_derivative(t)             # <<<<<<<<<<<<<<
  *             jy = yqp.calc_third_derivative(t)
  *             j = hypot(jx, jy)
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_third_derivative(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_xqp->__pyx_vtab)->calc_third_derivative(__pyx_v_xqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 95, __pyx_L1_error)
       __pyx_v_jx = __pyx_t_10;
 
-      /* "quintic_polynomials_planner.pyx":97
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":96
  * 
  *             jx = xqp.calc_third_derivative(t)
  *             jy = yqp.calc_third_derivative(t)             # <<<<<<<<<<<<<<
  *             j = hypot(jx, jy)
  *             if len(ra) >= 2 and ra[-1] - ra[-2] < 0.0:
  */
-      __pyx_t_10 = ((struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_third_derivative(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L1_error)
+      __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_yqp->__pyx_vtab)->calc_third_derivative(__pyx_v_yqp, __pyx_v_t, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L1_error)
       __pyx_v_jy = __pyx_t_10;
 
-      /* "quintic_polynomials_planner.pyx":98
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":97
  *             jx = xqp.calc_third_derivative(t)
  *             jy = yqp.calc_third_derivative(t)
  *             j = hypot(jx, jy)             # <<<<<<<<<<<<<<
@@ -22939,37 +22935,37 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
       __pyx_v_j = hypot(__pyx_v_jx, __pyx_v_jy);
 
-      /* "quintic_polynomials_planner.pyx":99
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":98
  *             jy = yqp.calc_third_derivative(t)
  *             j = hypot(jx, jy)
  *             if len(ra) >= 2 and ra[-1] - ra[-2] < 0.0:             # <<<<<<<<<<<<<<
  *                 j *= -1
  *             rj.append(j)
  */
-      __pyx_t_18 = __Pyx_PyList_GET_SIZE(__pyx_v_ra); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 99, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyList_GET_SIZE(__pyx_v_ra); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 98, __pyx_L1_error)
       __pyx_t_19 = (__pyx_t_18 >= 2);
       if (__pyx_t_19) {
       } else {
         __pyx_t_17 = __pyx_t_19;
         goto __pyx_L11_bool_binop_done;
       }
-      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_ra, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_ra, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_ra, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_ra, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_5 = PyNumber_Subtract(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 99, __pyx_L1_error)
+      __pyx_t_5 = PyNumber_Subtract(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 98, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_5, __pyx_float_0_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_5, __pyx_float_0_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 99, __pyx_L1_error)
+      __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 98, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_17 = __pyx_t_19;
       __pyx_L11_bool_binop_done:;
       if (__pyx_t_17) {
 
-        /* "quintic_polynomials_planner.pyx":100
+        /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":99
  *             j = hypot(jx, jy)
  *             if len(ra) >= 2 and ra[-1] - ra[-2] < 0.0:
  *                 j *= -1             # <<<<<<<<<<<<<<
@@ -22978,7 +22974,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
         __pyx_v_j = (__pyx_v_j * -1.0);
 
-        /* "quintic_polynomials_planner.pyx":99
+        /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":98
  *             jy = yqp.calc_third_derivative(t)
  *             j = hypot(jx, jy)
  *             if len(ra) >= 2 and ra[-1] - ra[-2] < 0.0:             # <<<<<<<<<<<<<<
@@ -22987,19 +22983,19 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
       }
 
-      /* "quintic_polynomials_planner.pyx":101
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":100
  *             if len(ra) >= 2 and ra[-1] - ra[-2] < 0.0:
  *                 j *= -1
  *             rj.append(j)             # <<<<<<<<<<<<<<
  * 
  *         if max([fabs(i) for i in ra]) <= max_accel and max([fabs(i) for i in rj]) <= max_jerk:
  */
-      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_rj, __pyx_t_1); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 101, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_rj, __pyx_t_1); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 100, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "quintic_polynomials_planner.pyx":77
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":76
  *         rj = []
  * 
  *         for t in np.arange(0.0, T + dt, dt):             # <<<<<<<<<<<<<<
@@ -23009,7 +23005,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "quintic_polynomials_planner.pyx":103
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":102
  *             rj.append(j)
  * 
  *         if max([fabs(i) for i in ra]) <= max_accel and max([fabs(i) for i in rj]) <= max_jerk:             # <<<<<<<<<<<<<<
@@ -23017,7 +23013,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  *             break
  */
     { /* enter inner scope */
-      __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 103, __pyx_L19_error)
+      __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L19_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_1 = __pyx_v_ra; __Pyx_INCREF(__pyx_t_1);
       __pyx_t_14 = 0;
@@ -23025,22 +23021,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 103, __pyx_L19_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 102, __pyx_L19_error)
           #endif
           if (__pyx_t_14 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_14); __Pyx_INCREF(__pyx_t_5); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 103, __pyx_L19_error)
+        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_14); __Pyx_INCREF(__pyx_t_5); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 102, __pyx_L19_error)
         #else
-        __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L19_error)
+        __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L19_error)
         __Pyx_GOTREF(__pyx_t_5);
         #endif
         __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_i, __pyx_t_5);
         __pyx_t_5 = 0;
-        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_7genexpr__pyx_v_i); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 103, __pyx_L19_error)
-        __pyx_t_5 = PyFloat_FromDouble(fabs(__pyx_t_10)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L19_error)
+        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_7genexpr__pyx_v_i); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L19_error)
+        __pyx_t_5 = PyFloat_FromDouble(fabs(__pyx_t_10)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L19_error)
         __Pyx_GOTREF(__pyx_t_5);
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 103, __pyx_L19_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 102, __pyx_L19_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -23051,15 +23047,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
       goto __pyx_L1_error;
       __pyx_L23_exit_scope:;
     } /* exit inner scope */
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_max_accel); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_max_accel); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_LE); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_LE); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_19) {
     } else {
@@ -23067,7 +23063,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
       goto __pyx_L15_bool_binop_done;
     }
     { /* enter inner scope */
-      __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L26_error)
+      __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L26_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_4 = __pyx_v_rj; __Pyx_INCREF(__pyx_t_4);
       __pyx_t_14 = 0;
@@ -23075,22 +23071,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 103, __pyx_L26_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 102, __pyx_L26_error)
           #endif
           if (__pyx_t_14 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_1); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 103, __pyx_L26_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_1); __pyx_t_14++; if (unlikely((0 < 0))) __PYX_ERR(0, 102, __pyx_L26_error)
         #else
-        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L26_error)
+        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L26_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
         __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_i, __pyx_t_1);
         __pyx_t_1 = 0;
-        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr1__pyx_v_i); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 103, __pyx_L26_error)
-        __pyx_t_1 = PyFloat_FromDouble(fabs(__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L26_error)
+        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr1__pyx_v_i); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L26_error)
+        __pyx_t_1 = PyFloat_FromDouble(fabs(__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L26_error)
         __Pyx_GOTREF(__pyx_t_1);
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_5, (PyObject*)__pyx_t_1))) __PYX_ERR(0, 103, __pyx_L26_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_5, (PyObject*)__pyx_t_1))) __PYX_ERR(0, 102, __pyx_L26_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -23101,32 +23097,32 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
       goto __pyx_L1_error;
       __pyx_L30_exit_scope:;
     } /* exit inner scope */
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_max_jerk); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_max_jerk); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, __pyx_t_5, Py_LE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, __pyx_t_5, Py_LE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_19 < 0))) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_17 = __pyx_t_19;
     __pyx_L15_bool_binop_done:;
     if (__pyx_t_17) {
 
-      /* "quintic_polynomials_planner.pyx":104
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":103
  * 
  *         if max([fabs(i) for i in ra]) <= max_accel and max([fabs(i) for i in rj]) <= max_jerk:
  *             print("find path!!")             # <<<<<<<<<<<<<<
  *             break
  * 
  */
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "quintic_polynomials_planner.pyx":105
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":104
  *         if max([fabs(i) for i in ra]) <= max_accel and max([fabs(i) for i in rj]) <= max_jerk:
  *             print("find path!!")
  *             break             # <<<<<<<<<<<<<<
@@ -23135,7 +23131,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
       goto __pyx_L4_break;
 
-      /* "quintic_polynomials_planner.pyx":103
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":102
  *             rj.append(j)
  * 
  *         if max([fabs(i) for i in ra]) <= max_accel and max([fabs(i) for i in rj]) <= max_jerk:             # <<<<<<<<<<<<<<
@@ -23144,7 +23140,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
     }
 
-    /* "quintic_polynomials_planner.pyx":65
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":64
  *     cdef list time, rx, ry, ryaw, rv, ra, rj
  * 
  *     for T in np.arange(MIN_T, MAX_T, MIN_T):             # <<<<<<<<<<<<<<
@@ -23159,7 +23155,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
   goto __pyx_L31_for_end;
   __pyx_L31_for_end:;
 
-  /* "quintic_polynomials_planner.pyx":107
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":106
  *             break
  * 
  *     return time, rx, ry, ryaw, rv, ra, rj             # <<<<<<<<<<<<<<
@@ -23167,41 +23163,41 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_time)) { __Pyx_RaiseUnboundLocalError("time"); __PYX_ERR(0, 107, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_rx)) { __Pyx_RaiseUnboundLocalError("rx"); __PYX_ERR(0, 107, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_ry)) { __Pyx_RaiseUnboundLocalError("ry"); __PYX_ERR(0, 107, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_ryaw)) { __Pyx_RaiseUnboundLocalError("ryaw"); __PYX_ERR(0, 107, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_rv)) { __Pyx_RaiseUnboundLocalError("rv"); __PYX_ERR(0, 107, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_ra)) { __Pyx_RaiseUnboundLocalError("ra"); __PYX_ERR(0, 107, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_rj)) { __Pyx_RaiseUnboundLocalError("rj"); __PYX_ERR(0, 107, __pyx_L1_error) }
-  __pyx_t_3 = PyTuple_New(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
+  if (unlikely(!__pyx_v_time)) { __Pyx_RaiseUnboundLocalError("time"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_rx)) { __Pyx_RaiseUnboundLocalError("rx"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_ry)) { __Pyx_RaiseUnboundLocalError("ry"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_ryaw)) { __Pyx_RaiseUnboundLocalError("ryaw"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_rv)) { __Pyx_RaiseUnboundLocalError("rv"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_ra)) { __Pyx_RaiseUnboundLocalError("ra"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_rj)) { __Pyx_RaiseUnboundLocalError("rj"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  __pyx_t_3 = PyTuple_New(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_time);
   __Pyx_GIVEREF(__pyx_v_time);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_time)) __PYX_ERR(0, 107, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_time)) __PYX_ERR(0, 106, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_rx);
   __Pyx_GIVEREF(__pyx_v_rx);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_rx)) __PYX_ERR(0, 107, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_rx)) __PYX_ERR(0, 106, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ry);
   __Pyx_GIVEREF(__pyx_v_ry);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_ry)) __PYX_ERR(0, 107, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_ry)) __PYX_ERR(0, 106, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ryaw);
   __Pyx_GIVEREF(__pyx_v_ryaw);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_v_ryaw)) __PYX_ERR(0, 107, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_v_ryaw)) __PYX_ERR(0, 106, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_rv);
   __Pyx_GIVEREF(__pyx_v_rv);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 4, __pyx_v_rv)) __PYX_ERR(0, 107, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 4, __pyx_v_rv)) __PYX_ERR(0, 106, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ra);
   __Pyx_GIVEREF(__pyx_v_ra);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 5, __pyx_v_ra)) __PYX_ERR(0, 107, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 5, __pyx_v_ra)) __PYX_ERR(0, 106, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_rj);
   __Pyx_GIVEREF(__pyx_v_rj);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 6, __pyx_v_rj)) __PYX_ERR(0, 107, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 6, __pyx_v_rj)) __PYX_ERR(0, 106, __pyx_L1_error);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "quintic_polynomials_planner.pyx":48
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":47
  *         return (6 * self.a3 + 24 * self.a4 * t + 60 * self.a5 * t ** 2)
  * 
  * def quintic_polynomials_planner(double sx, double sy, double syaw, double sv, double sa,             # <<<<<<<<<<<<<<
@@ -23220,7 +23216,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("quintic_polynomials_planner.quintic_polynomials_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.quintic_polynomials_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_xqp);
@@ -23239,7 +23235,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":109
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":108
  *     return time, rx, ry, ryaw, rv, ra, rj
  * 
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):             # <<<<<<<<<<<<<<
@@ -23248,15 +23244,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_quintic_polynomials_plan
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_3plot_arrow(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_3plot_arrow(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_3plot_arrow = {"plot_arrow", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_3plot_arrow, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_3plot_arrow(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_3plot_arrow = {"plot_arrow", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_3plot_arrow, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_3plot_arrow(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -23320,7 +23316,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -23328,9 +23324,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("plot_arrow", 0, 3, 7, 1); __PYX_ERR(0, 109, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("plot_arrow", 0, 3, 7, 1); __PYX_ERR(0, 108, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -23338,42 +23334,42 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("plot_arrow", 0, 3, 7, 2); __PYX_ERR(0, 109, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("plot_arrow", 0, 3, 7, 2); __PYX_ERR(0, 108, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_length);
           if (value) { values[3] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_width);
           if (value) { values[4] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_fc);
           if (value) { values[5] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_ec);
           if (value) { values[6] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "plot_arrow") < 0)) __PYX_ERR(0, 109, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "plot_arrow") < 0)) __PYX_ERR(0, 108, __pyx_L3_error)
       }
     } else {
       switch (__pyx_nargs) {
@@ -23392,16 +23388,16 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
-    __pyx_v_y = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_y == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
-    __pyx_v_yaw = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_yaw == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
+    __pyx_v_y = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_y == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
+    __pyx_v_yaw = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_yaw == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
     if (values[3]) {
-      __pyx_v_length = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_length == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+      __pyx_v_length = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_length == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
     } else {
       __pyx_v_length = ((double)((double)1.0));
     }
     if (values[4]) {
-      __pyx_v_width = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_width == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
+      __pyx_v_width = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_width == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
     } else {
       __pyx_v_width = ((double)((double)0.5));
     }
@@ -23410,7 +23406,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("plot_arrow", 0, 3, 7, __pyx_nargs); __PYX_ERR(0, 109, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("plot_arrow", 0, 3, 7, __pyx_nargs); __PYX_ERR(0, 108, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -23420,11 +23416,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.plot_arrow", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.plot_arrow", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_2plot_arrow(__pyx_self, __pyx_v_x, __pyx_v_y, __pyx_v_yaw, __pyx_v_length, __pyx_v_width, __pyx_v_fc, __pyx_v_ec);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_2plot_arrow(__pyx_self, __pyx_v_x, __pyx_v_y, __pyx_v_yaw, __pyx_v_length, __pyx_v_width, __pyx_v_fc, __pyx_v_ec);
 
   /* function exit code */
   {
@@ -23437,7 +23433,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y, double __pyx_v_yaw, double __pyx_v_length, double __pyx_v_width, PyObject *__pyx_v_fc, PyObject *__pyx_v_ec) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y, double __pyx_v_yaw, double __pyx_v_length, double __pyx_v_width, PyObject *__pyx_v_fc, PyObject *__pyx_v_ec) {
   PyObject *__pyx_v_ix = NULL;
   PyObject *__pyx_v_iy = NULL;
   PyObject *__pyx_v_iyaw = NULL;
@@ -23460,45 +23456,45 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("plot_arrow", 1);
 
-  /* "quintic_polynomials_planner.pyx":110
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":109
  * 
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):
  *     if not isinstance(x, float):             # <<<<<<<<<<<<<<
  *         for ix, iy, iyaw in zip(x, y, yaw):
  *             plot_arrow(ix, iy, iyaw)
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = PyFloat_Check(__pyx_t_1); 
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (!__pyx_t_2);
   if (__pyx_t_3) {
 
-    /* "quintic_polynomials_planner.pyx":111
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":110
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):
  *     if not isinstance(x, float):
  *         for ix, iy, iyaw in zip(x, y, yaw):             # <<<<<<<<<<<<<<
  *             plot_arrow(ix, iy, iyaw)
  *     else:
  */
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_yaw); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_yaw); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_1);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_4);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_4)) __PYX_ERR(0, 110, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_5);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_5)) __PYX_ERR(0, 110, __pyx_L1_error);
     __pyx_t_1 = 0;
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_6, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_6, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 110, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
@@ -23506,9 +23502,9 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
       __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
     } else {
-      __pyx_t_7 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __pyx_t_7 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 110, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_8 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_6); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_6); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 110, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     for (;;) {
@@ -23517,28 +23513,28 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_6);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 111, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 110, __pyx_L1_error)
             #endif
             if (__pyx_t_7 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 111, __pyx_L1_error)
+          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 110, __pyx_L1_error)
           #else
-          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_6, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_6, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 110, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         } else {
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_6);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 111, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 110, __pyx_L1_error)
             #endif
             if (__pyx_t_7 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 111, __pyx_L1_error)
+          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 110, __pyx_L1_error)
           #else
-          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_6, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_6, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 110, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         }
@@ -23548,7 +23544,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 111, __pyx_L1_error)
+            else __PYX_ERR(0, 110, __pyx_L1_error)
           }
           break;
         }
@@ -23560,7 +23556,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
         if (unlikely(size != 3)) {
           if (size > 3) __Pyx_RaiseTooManyValuesError(3);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 111, __pyx_L1_error)
+          __PYX_ERR(0, 110, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -23576,17 +23572,17 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
         __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_9);
         #else
-        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 110, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_9 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 111, __pyx_L1_error)
+        __pyx_t_9 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 110, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         #endif
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_10 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 111, __pyx_L1_error)
+        __pyx_t_10 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 110, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __pyx_t_11 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_10);
@@ -23596,7 +23592,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
         __Pyx_GOTREF(__pyx_t_1);
         index = 2; __pyx_t_9 = __pyx_t_11(__pyx_t_10); if (unlikely(!__pyx_t_9)) goto __pyx_L6_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_9);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_11(__pyx_t_10), 3) < 0) __PYX_ERR(0, 111, __pyx_L1_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_11(__pyx_t_10), 3) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
         __pyx_t_11 = NULL;
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         goto __pyx_L7_unpacking_done;
@@ -23604,7 +23600,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __pyx_t_11 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 111, __pyx_L1_error)
+        __PYX_ERR(0, 110, __pyx_L1_error)
         __pyx_L7_unpacking_done:;
       }
       __Pyx_XDECREF_SET(__pyx_v_ix, __pyx_t_4);
@@ -23614,14 +23610,14 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
       __Pyx_XDECREF_SET(__pyx_v_iyaw, __pyx_t_9);
       __pyx_t_9 = 0;
 
-      /* "quintic_polynomials_planner.pyx":112
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":111
  *     if not isinstance(x, float):
  *         for ix, iy, iyaw in zip(x, y, yaw):
  *             plot_arrow(ix, iy, iyaw)             # <<<<<<<<<<<<<<
  *     else:
  *         plt.arrow(x, y, length * cos(yaw), length * sin(yaw), fc=fc, ec=ec, head_width=width, head_length=width)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_plot_arrow); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 112, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_plot_arrow); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 111, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __pyx_t_1 = NULL;
       __pyx_t_12 = 0;
@@ -23641,13 +23637,13 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
         PyObject *__pyx_callargs[4] = {__pyx_t_1, __pyx_v_ix, __pyx_v_iy, __pyx_v_iyaw};
         __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+1-__pyx_t_12, 3+__pyx_t_12);
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 112, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "quintic_polynomials_planner.pyx":111
+      /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":110
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):
  *     if not isinstance(x, float):
  *         for ix, iy, iyaw in zip(x, y, yaw):             # <<<<<<<<<<<<<<
@@ -23657,7 +23653,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "quintic_polynomials_planner.pyx":110
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":109
  * 
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):
  *     if not isinstance(x, float):             # <<<<<<<<<<<<<<
@@ -23667,7 +23663,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
     goto __pyx_L3;
   }
 
-  /* "quintic_polynomials_planner.pyx":114
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":113
  *             plot_arrow(ix, iy, iyaw)
  *     else:
  *         plt.arrow(x, y, length * cos(yaw), length * sin(yaw), fc=fc, ec=ec, head_width=width, head_length=width)             # <<<<<<<<<<<<<<
@@ -23675,67 +23671,67 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
  * 
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_arrow); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_arrow); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_9 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_9 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_1 = PyFloat_FromDouble((__pyx_v_length * cos(__pyx_v_yaw))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble((__pyx_v_length * cos(__pyx_v_yaw))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = PyFloat_FromDouble((__pyx_v_length * sin(__pyx_v_yaw))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble((__pyx_v_length * sin(__pyx_v_yaw))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_10 = PyTuple_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_10 = PyTuple_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_GIVEREF(__pyx_t_6);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_9);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_t_9)) __PYX_ERR(0, 114, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_t_9)) __PYX_ERR(0, 113, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_1);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 2, __pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 2, __pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_4);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 3, __pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 3, __pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error);
     __pyx_t_6 = 0;
     __pyx_t_9 = 0;
     __pyx_t_1 = 0;
     __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_fc, __pyx_v_fc) < 0) __PYX_ERR(0, 114, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ec, __pyx_v_ec) < 0) __PYX_ERR(0, 114, __pyx_L1_error)
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_fc, __pyx_v_fc) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ec, __pyx_v_ec) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_head_width, __pyx_t_1) < 0) __PYX_ERR(0, 114, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_head_width, __pyx_t_1) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_head_length, __pyx_t_1) < 0) __PYX_ERR(0, 114, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_head_length, __pyx_t_1) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_10, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_10, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "quintic_polynomials_planner.pyx":115
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":114
  *     else:
  *         plt.arrow(x, y, length * cos(yaw), length * sin(yaw), fc=fc, ec=ec, head_width=width, head_length=width)
  *         plt.plot(x, y)             # <<<<<<<<<<<<<<
  * 
  * def main():
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_plot); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_plot); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 114, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 115, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 114, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_9 = NULL;
     __pyx_t_12 = 0;
@@ -23757,7 +23753,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     }
@@ -23765,7 +23761,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
   }
   __pyx_L3:;
 
-  /* "quintic_polynomials_planner.pyx":109
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":108
  *     return time, rx, ry, ryaw, rv, ra, rj
  * 
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):             # <<<<<<<<<<<<<<
@@ -23783,7 +23779,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("quintic_polynomials_planner.plot_arrow", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.plot_arrow", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_ix);
@@ -23794,7 +23790,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "quintic_polynomials_planner.pyx":117
+/* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":116
  *         plt.plot(x, y)
  * 
  * def main():             # <<<<<<<<<<<<<<
@@ -23803,22 +23799,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_2plot_arrow(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_5main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_5main = {"main", (PyCFunction)__pyx_pw_27quintic_polynomials_planner_5main, METH_NOARGS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_5main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_5main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_5main = {"main", (PyCFunction)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_5main, METH_NOARGS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_5main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("main (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_4main(__pyx_self);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_4main(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyObject *__pyx_self) {
   double __pyx_v_sx;
   double __pyx_v_sy;
   double __pyx_v_syaw;
@@ -23867,18 +23863,18 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("main", 1);
 
-  /* "quintic_polynomials_planner.pyx":118
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":117
  * 
  * def main():
  *     print("Quintic Polynomial Planner start!!")             # <<<<<<<<<<<<<<
  * 
  *     # Define start and goal states
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":121
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":120
  * 
  *     # Define start and goal states
  *     cdef double sx = 10.0  # start x position [m]             # <<<<<<<<<<<<<<
@@ -23887,7 +23883,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_sx = 10.0;
 
-  /* "quintic_polynomials_planner.pyx":122
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":121
  *     # Define start and goal states
  *     cdef double sx = 10.0  # start x position [m]
  *     cdef double sy = 10.0  # start y position [m]             # <<<<<<<<<<<<<<
@@ -23896,16 +23892,16 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_sy = 10.0;
 
-  /* "quintic_polynomials_planner.pyx":123
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":122
  *     cdef double sx = 10.0  # start x position [m]
  *     cdef double sy = 10.0  # start y position [m]
  *     cdef double syaw = np.deg2rad(10.0)  # start yaw angle [rad]             # <<<<<<<<<<<<<<
  *     cdef double sv = 0  # start speed [m/s]
  *     cdef double sa = 0  # start acceleration [m/ss]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_deg2rad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_deg2rad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -23926,15 +23922,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
     PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_float_10_0};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_syaw = __pyx_t_5;
 
-  /* "quintic_polynomials_planner.pyx":124
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":123
  *     cdef double sy = 10.0  # start y position [m]
  *     cdef double syaw = np.deg2rad(10.0)  # start yaw angle [rad]
  *     cdef double sv = 0  # start speed [m/s]             # <<<<<<<<<<<<<<
@@ -23943,7 +23939,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_sv = 0.0;
 
-  /* "quintic_polynomials_planner.pyx":125
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":124
  *     cdef double syaw = np.deg2rad(10.0)  # start yaw angle [rad]
  *     cdef double sv = 0  # start speed [m/s]
  *     cdef double sa = 0  # start acceleration [m/ss]             # <<<<<<<<<<<<<<
@@ -23952,7 +23948,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_sa = 0.0;
 
-  /* "quintic_polynomials_planner.pyx":126
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":125
  *     cdef double sv = 0  # start speed [m/s]
  *     cdef double sa = 0  # start acceleration [m/ss]
  *     cdef double gx = 100.0  # goal x position [m]             # <<<<<<<<<<<<<<
@@ -23961,7 +23957,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_gx = 100.0;
 
-  /* "quintic_polynomials_planner.pyx":127
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":126
  *     cdef double sa = 0  # start acceleration [m/ss]
  *     cdef double gx = 100.0  # goal x position [m]
  *     cdef double gy = 10.0  # goal y position [m]             # <<<<<<<<<<<<<<
@@ -23970,16 +23966,16 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_gy = 10.0;
 
-  /* "quintic_polynomials_planner.pyx":128
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":127
  *     cdef double gx = 100.0  # goal x position [m]
  *     cdef double gy = 10.0  # goal y position [m]
  *     cdef double gyaw = np.deg2rad(20.0)  # goal yaw angle [rad]             # <<<<<<<<<<<<<<
  *     cdef double gv = 0  # goal speed [m/s]
  *     cdef double ga = 0  # goal acceleration [m/ss]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_deg2rad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_deg2rad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -24000,15 +23996,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_float_20_0};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_gyaw = __pyx_t_5;
 
-  /* "quintic_polynomials_planner.pyx":129
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":128
  *     cdef double gy = 10.0  # goal y position [m]
  *     cdef double gyaw = np.deg2rad(20.0)  # goal yaw angle [rad]
  *     cdef double gv = 0  # goal speed [m/s]             # <<<<<<<<<<<<<<
@@ -24017,7 +24013,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_gv = 0.0;
 
-  /* "quintic_polynomials_planner.pyx":130
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":129
  *     cdef double gyaw = np.deg2rad(20.0)  # goal yaw angle [rad]
  *     cdef double gv = 0  # goal speed [m/s]
  *     cdef double ga = 0  # goal acceleration [m/ss]             # <<<<<<<<<<<<<<
@@ -24026,7 +24022,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_ga = 0.0;
 
-  /* "quintic_polynomials_planner.pyx":131
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":130
  *     cdef double gv = 0  # goal speed [m/s]
  *     cdef double ga = 0  # goal acceleration [m/ss]
  *     cdef double max_accel = 1.0  # maximum acceleration [m/ss]             # <<<<<<<<<<<<<<
@@ -24035,7 +24031,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_max_accel = 1.0;
 
-  /* "quintic_polynomials_planner.pyx":132
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":131
  *     cdef double ga = 0  # goal acceleration [m/ss]
  *     cdef double max_accel = 1.0  # maximum acceleration [m/ss]
  *     cdef double max_jerk = 10000.0  # maximum jerk [m/sss]             # <<<<<<<<<<<<<<
@@ -24044,7 +24040,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_max_jerk = 10000.0;
 
-  /* "quintic_polynomials_planner.pyx":133
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":132
  *     cdef double max_accel = 1.0  # maximum acceleration [m/ss]
  *     cdef double max_jerk = 10000.0  # maximum jerk [m/sss]
  *     cdef double dt = 0.1  # time tick [s]             # <<<<<<<<<<<<<<
@@ -24053,40 +24049,40 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   __pyx_v_dt = 0.1;
 
-  /* "quintic_polynomials_planner.pyx":136
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":135
  * 
  *     # Compute the quintic polynomial path
  *     cdef tuple result = quintic_polynomials_planner(sx, sy, syaw, sv, sa, gx, gy, gyaw, gv, ga, max_accel, max_jerk, dt)             # <<<<<<<<<<<<<<
  *     cdef list time = result[0]
  *     cdef list x = result[1]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_quintic_polynomials_planner); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_quintic_polynomials_planner); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_sx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_sx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_sy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_sy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_syaw); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_syaw); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_sv); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_sv); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_sa); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_sa); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_gx); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_gx); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_gy); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_gy); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_gyaw); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_gyaw); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_gv); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_gv); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_ga); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_ga); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_max_accel); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_max_accel); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_16 = PyFloat_FromDouble(__pyx_v_max_jerk); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_16 = PyFloat_FromDouble(__pyx_v_max_jerk); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_16);
-  __pyx_t_17 = PyFloat_FromDouble(__pyx_v_dt); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_17 = PyFloat_FromDouble(__pyx_v_dt); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_17);
   __pyx_t_18 = NULL;
   __pyx_t_4 = 0;
@@ -24119,15 +24115,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
     __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  if (!(likely(PyTuple_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_t_1))) __PYX_ERR(0, 136, __pyx_L1_error)
+  if (!(likely(PyTuple_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_t_1))) __PYX_ERR(0, 135, __pyx_L1_error)
   __pyx_v_result = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":137
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":136
  *     # Compute the quintic polynomial path
  *     cdef tuple result = quintic_polynomials_planner(sx, sy, syaw, sv, sa, gx, gy, gyaw, gv, ga, max_accel, max_jerk, dt)
  *     cdef list time = result[0]             # <<<<<<<<<<<<<<
@@ -24136,15 +24132,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   if (unlikely(__pyx_v_result == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 137, __pyx_L1_error)
+    __PYX_ERR(0, 136, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 137, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 136, __pyx_L1_error)
   __pyx_v_time = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":138
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":137
  *     cdef tuple result = quintic_polynomials_planner(sx, sy, syaw, sv, sa, gx, gy, gyaw, gv, ga, max_accel, max_jerk, dt)
  *     cdef list time = result[0]
  *     cdef list x = result[1]             # <<<<<<<<<<<<<<
@@ -24153,15 +24149,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   if (unlikely(__pyx_v_result == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 138, __pyx_L1_error)
+    __PYX_ERR(0, 137, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 138, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 137, __pyx_L1_error)
   __pyx_v_x = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":139
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":138
  *     cdef list time = result[0]
  *     cdef list x = result[1]
  *     cdef list y = result[2]             # <<<<<<<<<<<<<<
@@ -24170,15 +24166,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   if (unlikely(__pyx_v_result == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 139, __pyx_L1_error)
+    __PYX_ERR(0, 138, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 139, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 138, __pyx_L1_error)
   __pyx_v_y = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":140
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":139
  *     cdef list x = result[1]
  *     cdef list y = result[2]
  *     cdef list yaw = result[3]             # <<<<<<<<<<<<<<
@@ -24187,15 +24183,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   if (unlikely(__pyx_v_result == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 140, __pyx_L1_error)
+    __PYX_ERR(0, 139, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 140, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 139, __pyx_L1_error)
   __pyx_v_yaw = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":141
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":140
  *     cdef list y = result[2]
  *     cdef list yaw = result[3]
  *     cdef list v = result[4]             # <<<<<<<<<<<<<<
@@ -24204,15 +24200,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   if (unlikely(__pyx_v_result == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 141, __pyx_L1_error)
+    __PYX_ERR(0, 140, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 141, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 140, __pyx_L1_error)
   __pyx_v_v = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":142
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":141
  *     cdef list yaw = result[3]
  *     cdef list v = result[4]
  *     cdef list a = result[5]             # <<<<<<<<<<<<<<
@@ -24221,15 +24217,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   if (unlikely(__pyx_v_result == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 142, __pyx_L1_error)
+    __PYX_ERR(0, 141, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 5, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 5, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 142, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 141, __pyx_L1_error)
   __pyx_v_a = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":143
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":142
  *     cdef list v = result[4]
  *     cdef list a = result[5]
  *     cdef list j = result[6]             # <<<<<<<<<<<<<<
@@ -24238,33 +24234,33 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   if (unlikely(__pyx_v_result == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 143, __pyx_L1_error)
+    __PYX_ERR(0, 142, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 6, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_result, 6, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 142, __pyx_L1_error)
   __pyx_v_j = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "quintic_polynomials_planner.pyx":145
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":144
  *     cdef list j = result[6]
  * 
  *     if show_animation:             # <<<<<<<<<<<<<<
  *         plt.figure()
  * 
  */
-  if (__pyx_v_27quintic_polynomials_planner_show_animation) {
+  if (__pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_show_animation) {
 
-    /* "quintic_polynomials_planner.pyx":146
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":145
  * 
  *     if show_animation:
  *         plt.figure()             # <<<<<<<<<<<<<<
  * 
  *         # Plot trajectory
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 145, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_17);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24285,55 +24281,55 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_17, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "quintic_polynomials_planner.pyx":149
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":148
  * 
  *         # Plot trajectory
  *         plt.plot(x, y, "-r", label="Path")             # <<<<<<<<<<<<<<
  *         plt.legend()
  *         plt.xlabel("x [m]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 149, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_17);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_x);
     __Pyx_GIVEREF(__pyx_v_x);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_x)) __PYX_ERR(0, 149, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_x)) __PYX_ERR(0, 148, __pyx_L1_error);
     __Pyx_INCREF(__pyx_v_y);
     __Pyx_GIVEREF(__pyx_v_y);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_y)) __PYX_ERR(0, 149, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_y)) __PYX_ERR(0, 148, __pyx_L1_error);
     __Pyx_INCREF(__pyx_kp_u_r_2);
     __Pyx_GIVEREF(__pyx_kp_u_r_2);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_r_2)) __PYX_ERR(0, 149, __pyx_L1_error);
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_r_2)) __PYX_ERR(0, 148, __pyx_L1_error);
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_label, __pyx_n_u_Path) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
-    __pyx_t_16 = __Pyx_PyObject_Call(__pyx_t_17, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 149, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_label, __pyx_n_u_Path) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyObject_Call(__pyx_t_17, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
     __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":150
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":149
  *         # Plot trajectory
  *         plt.plot(x, y, "-r", label="Path")
  *         plt.legend()             # <<<<<<<<<<<<<<
  *         plt.xlabel("x [m]")
  *         plt.ylabel("y [m]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_legend); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_legend); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24354,22 +24350,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 150, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 149, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":151
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":150
  *         plt.plot(x, y, "-r", label="Path")
  *         plt.legend()
  *         plt.xlabel("x [m]")             # <<<<<<<<<<<<<<
  *         plt.ylabel("y [m]")
  *         plt.title("Quintic Polynomial Trajectory")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 151, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -24390,22 +24386,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_u_x_m};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 151, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 150, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":152
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":151
  *         plt.legend()
  *         plt.xlabel("x [m]")
  *         plt.ylabel("y [m]")             # <<<<<<<<<<<<<<
  *         plt.title("Quintic Polynomial Trajectory")
  *         plt.grid(True)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 152, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 152, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24426,22 +24422,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_y_m};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 152, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 151, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":153
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":152
  *         plt.xlabel("x [m]")
  *         plt.ylabel("y [m]")
  *         plt.title("Quintic Polynomial Trajectory")             # <<<<<<<<<<<<<<
  *         plt.grid(True)
  *         plt.axis("equal")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 153, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_title); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 153, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_title); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -24462,22 +24458,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_u_Quintic_Polynomial_Trajectory};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 153, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 152, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":154
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":153
  *         plt.ylabel("y [m]")
  *         plt.title("Quintic Polynomial Trajectory")
  *         plt.grid(True)             # <<<<<<<<<<<<<<
  *         plt.axis("equal")
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_grid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_grid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24498,22 +24494,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, Py_True};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 154, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 153, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":155
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":154
  *         plt.title("Quintic Polynomial Trajectory")
  *         plt.grid(True)
  *         plt.axis("equal")             # <<<<<<<<<<<<<<
  * 
  *         # Plot yaw
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_axis); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_axis); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -24534,22 +24530,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_n_u_equal};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 155, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":158
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":157
  * 
  *         # Plot yaw
  *         plt.figure()             # <<<<<<<<<<<<<<
  *         plt.plot(time, [np.rad2deg(iyaw) for iyaw in yaw], "-r")
  *         plt.xlabel("Time [s]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24570,30 +24566,30 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 158, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 157, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":159
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":158
  *         # Plot yaw
  *         plt.figure()
  *         plt.plot(time, [np.rad2deg(iyaw) for iyaw in yaw], "-r")             # <<<<<<<<<<<<<<
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Yaw [deg]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     { /* enter inner scope */
-      __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L6_error)
+      __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L6_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (unlikely(__pyx_v_yaw == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-        __PYX_ERR(0, 159, __pyx_L6_error)
+        __PYX_ERR(0, 158, __pyx_L6_error)
       }
       __pyx_t_17 = __pyx_v_yaw; __Pyx_INCREF(__pyx_t_17);
       __pyx_t_19 = 0;
@@ -24601,21 +24597,21 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_17);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 159, __pyx_L6_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 158, __pyx_L6_error)
           #endif
           if (__pyx_t_19 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_15 = PyList_GET_ITEM(__pyx_t_17, __pyx_t_19); __Pyx_INCREF(__pyx_t_15); __pyx_t_19++; if (unlikely((0 < 0))) __PYX_ERR(0, 159, __pyx_L6_error)
+        __pyx_t_15 = PyList_GET_ITEM(__pyx_t_17, __pyx_t_19); __Pyx_INCREF(__pyx_t_15); __pyx_t_19++; if (unlikely((0 < 0))) __PYX_ERR(0, 158, __pyx_L6_error)
         #else
-        __pyx_t_15 = __Pyx_PySequence_ITEM(__pyx_t_17, __pyx_t_19); __pyx_t_19++; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 159, __pyx_L6_error)
+        __pyx_t_15 = __Pyx_PySequence_ITEM(__pyx_t_17, __pyx_t_19); __pyx_t_19++; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 158, __pyx_L6_error)
         __Pyx_GOTREF(__pyx_t_15);
         #endif
         __Pyx_XDECREF_SET(__pyx_8genexpr2__pyx_v_iyaw, __pyx_t_15);
         __pyx_t_15 = 0;
-        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 159, __pyx_L6_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 158, __pyx_L6_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_rad2deg); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 159, __pyx_L6_error)
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_rad2deg); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 158, __pyx_L6_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __pyx_t_14 = NULL;
@@ -24636,11 +24632,11 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
           PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_8genexpr2__pyx_v_iyaw};
           __pyx_t_15 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
           __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-          if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 159, __pyx_L6_error)
+          if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 158, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_15);
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         }
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_15))) __PYX_ERR(0, 159, __pyx_L6_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_15))) __PYX_ERR(0, 158, __pyx_L6_error)
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
       }
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
@@ -24670,22 +24666,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 159, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 158, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":160
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":159
  *         plt.figure()
  *         plt.plot(time, [np.rad2deg(iyaw) for iyaw in yaw], "-r")
  *         plt.xlabel("Time [s]")             # <<<<<<<<<<<<<<
  *         plt.ylabel("Yaw [deg]")
  *         plt.title("Yaw over Time")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24706,22 +24702,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Time_s};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 160, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 159, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":161
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":160
  *         plt.plot(time, [np.rad2deg(iyaw) for iyaw in yaw], "-r")
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Yaw [deg]")             # <<<<<<<<<<<<<<
  *         plt.title("Yaw over Time")
  *         plt.grid(True)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 161, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -24742,22 +24738,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_u_Yaw_deg};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 161, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 160, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":162
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":161
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Yaw [deg]")
  *         plt.title("Yaw over Time")             # <<<<<<<<<<<<<<
  *         plt.grid(True)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 161, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24778,22 +24774,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Yaw_over_Time};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 162, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 161, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":163
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":162
  *         plt.ylabel("Yaw [deg]")
  *         plt.title("Yaw over Time")
  *         plt.grid(True)             # <<<<<<<<<<<<<<
  * 
  *         # Plot speed
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -24814,22 +24810,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, Py_True};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 163, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 162, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":166
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":165
  * 
  *         # Plot speed
  *         plt.figure()             # <<<<<<<<<<<<<<
  *         plt.plot(time, v, "-r")
  *         plt.xlabel("Time [s]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24850,22 +24846,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 166, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 165, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":167
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":166
  *         # Plot speed
  *         plt.figure()
  *         plt.plot(time, v, "-r")             # <<<<<<<<<<<<<<
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Speed [m/s]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -24886,22 +24882,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[4] = {__pyx_t_1, __pyx_v_time, __pyx_v_v, __pyx_kp_u_r_2};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 167, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 166, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":168
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":167
  *         plt.figure()
  *         plt.plot(time, v, "-r")
  *         plt.xlabel("Time [s]")             # <<<<<<<<<<<<<<
  *         plt.ylabel("Speed [m/s]")
  *         plt.title("Speed over Time")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24922,22 +24918,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Time_s};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 168, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 167, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":169
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":168
  *         plt.plot(time, v, "-r")
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Speed [m/s]")             # <<<<<<<<<<<<<<
  *         plt.title("Speed over Time")
  *         plt.grid(True)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -24958,22 +24954,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_u_Speed_m_s};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 169, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 168, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":170
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":169
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Speed [m/s]")
  *         plt.title("Speed over Time")             # <<<<<<<<<<<<<<
  *         plt.grid(True)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -24994,22 +24990,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Speed_over_Time};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 170, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":171
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":170
  *         plt.ylabel("Speed [m/s]")
  *         plt.title("Speed over Time")
  *         plt.grid(True)             # <<<<<<<<<<<<<<
  * 
  *         # Plot acceleration
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -25030,22 +25026,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, Py_True};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 171, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":174
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":173
  * 
  *         # Plot acceleration
  *         plt.figure()             # <<<<<<<<<<<<<<
  *         plt.plot(time, a, "-r")
  *         plt.xlabel("Time [s]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -25066,22 +25062,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 174, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 173, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":175
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":174
  *         # Plot acceleration
  *         plt.figure()
  *         plt.plot(time, a, "-r")             # <<<<<<<<<<<<<<
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Acceleration [m/ss]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -25102,22 +25098,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[4] = {__pyx_t_1, __pyx_v_time, __pyx_v_a, __pyx_kp_u_r_2};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 175, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 174, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":176
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":175
  *         plt.figure()
  *         plt.plot(time, a, "-r")
  *         plt.xlabel("Time [s]")             # <<<<<<<<<<<<<<
  *         plt.ylabel("Acceleration [m/ss]")
  *         plt.title("Acceleration over Time")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -25138,22 +25134,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Time_s};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 176, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 175, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":177
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":176
  *         plt.plot(time, a, "-r")
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Acceleration [m/ss]")             # <<<<<<<<<<<<<<
  *         plt.title("Acceleration over Time")
  *         plt.grid(True)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -25174,22 +25170,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_u_Acceleration_m_ss};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 177, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 176, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":178
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":177
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Acceleration [m/ss]")
  *         plt.title("Acceleration over Time")             # <<<<<<<<<<<<<<
  *         plt.grid(True)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -25210,22 +25206,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Acceleration_over_Time};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 178, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":179
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":178
  *         plt.ylabel("Acceleration [m/ss]")
  *         plt.title("Acceleration over Time")
  *         plt.grid(True)             # <<<<<<<<<<<<<<
  * 
  *         # Plot jerk
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -25246,22 +25242,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, Py_True};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 179, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 178, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":182
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":181
  * 
  *         # Plot jerk
  *         plt.figure()             # <<<<<<<<<<<<<<
  *         plt.plot(time, j, "-r")
  *         plt.xlabel("Time [s]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -25282,22 +25278,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 182, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 181, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":183
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":182
  *         # Plot jerk
  *         plt.figure()
  *         plt.plot(time, j, "-r")             # <<<<<<<<<<<<<<
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Jerk [m/sss]")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 183, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -25318,22 +25314,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[4] = {__pyx_t_1, __pyx_v_time, __pyx_v_j, __pyx_kp_u_r_2};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 183, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 182, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":184
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":183
  *         plt.figure()
  *         plt.plot(time, j, "-r")
  *         plt.xlabel("Time [s]")             # <<<<<<<<<<<<<<
  *         plt.ylabel("Jerk [m/sss]")
  *         plt.title("Jerk over Time")
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 183, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -25354,22 +25350,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Time_s};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 184, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 183, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":185
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":184
  *         plt.plot(time, j, "-r")
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Jerk [m/sss]")             # <<<<<<<<<<<<<<
  *         plt.title("Jerk over Time")
  *         plt.grid(True)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 185, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 185, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -25390,22 +25386,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_u_Jerk_m_sss};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 185, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":186
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":185
  *         plt.xlabel("Time [s]")
  *         plt.ylabel("Jerk [m/sss]")
  *         plt.title("Jerk over Time")             # <<<<<<<<<<<<<<
  *         plt.grid(True)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 185, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 185, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -25426,22 +25422,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_Jerk_over_Time};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 186, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 185, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":187
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":186
  *         plt.ylabel("Jerk [m/sss]")
  *         plt.title("Jerk over Time")
  *         plt.grid(True)             # <<<<<<<<<<<<<<
  * 
  *         plt.show()
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 186, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -25462,22 +25458,22 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_1, Py_True};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 187, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 186, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":189
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":188
  *         plt.grid(True)
  * 
  *         plt.show()             # <<<<<<<<<<<<<<
  * 
  * if __name__ == "__main__":
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_show); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_show); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -25498,13 +25494,13 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_16 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 189, __pyx_L1_error)
+      if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 188, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-    /* "quintic_polynomials_planner.pyx":145
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":144
  *     cdef list j = result[6]
  * 
  *     if show_animation:             # <<<<<<<<<<<<<<
@@ -25513,7 +25509,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "quintic_polynomials_planner.pyx":117
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":116
  *         plt.plot(x, y)
  * 
  * def main():             # <<<<<<<<<<<<<<
@@ -25541,7 +25537,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_18);
-  __Pyx_AddTraceback("quintic_polynomials_planner.main", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.main", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_result);
@@ -25565,15 +25561,15 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_4main(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial = {"__pyx_unpickle_QuinticPolynomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial = {"__pyx_unpickle_QuinticPolynomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -25673,11 +25669,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("quintic_polynomials_planner.__pyx_unpickle_QuinticPolynomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.__pyx_unpickle_QuinticPolynomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27quintic_polynomials_planner_6__pyx_unpickle_QuinticPolynomial(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_6__pyx_unpickle_QuinticPolynomial(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -25690,7 +25686,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27quintic_polynomials_planner_6__pyx_unpickle_QuinticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_6__pyx_unpickle_QuinticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -25772,7 +25768,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_6__pyx_unpickle_QuinticP
  *     if __pyx_state is not None:
  *         __pyx_unpickle_QuinticPolynomial__set_state(<QuinticPolynomial> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -25817,7 +25813,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_6__pyx_unpickle_QuinticP
  * cdef __pyx_unpickle_QuinticPolynomial__set_state(QuinticPolynomial __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -25853,7 +25849,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_6__pyx_unpickle_QuinticP
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("quintic_polynomials_planner.__pyx_unpickle_QuinticPolynomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.__pyx_unpickle_QuinticPolynomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -25871,7 +25867,7 @@ static PyObject *__pyx_pf_27quintic_polynomials_planner_6__pyx_unpickle_QuinticP
  *     if len(__pyx_state) > 6 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner___pyx_unpickle_QuinticPolynomial__set_state(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -26037,17 +26033,17 @@ static PyObject *__pyx_f_27quintic_polynomials_planner___pyx_unpickle_QuinticPol
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("quintic_polynomials_planner.__pyx_unpickle_QuinticPolynomial__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("QuinticPolynomialsPlanner.quintic_polynomials_planner.__pyx_unpickle_QuinticPolynomial__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_27quintic_polynomials_planner_QuinticPolynomial __pyx_vtable_27quintic_polynomials_planner_QuinticPolynomial;
+static struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial __pyx_vtable_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
 
-static PyObject *__pyx_tp_new_27quintic_polynomials_planner_QuinticPolynomial(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *p;
+static PyObject *__pyx_tp_new_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -26060,15 +26056,15 @@ static PyObject *__pyx_tp_new_27quintic_polynomials_planner_QuinticPolynomial(Py
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *)o);
-  p->__pyx_vtab = __pyx_vtabptr_27quintic_polynomials_planner_QuinticPolynomial;
+  p = ((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)o);
+  p->__pyx_vtab = __pyx_vtabptr_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
   return o;
 }
 
-static void __pyx_tp_dealloc_27quintic_polynomials_planner_QuinticPolynomial(PyObject *o) {
+static void __pyx_tp_dealloc_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial(PyObject *o) {
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_27quintic_polynomials_planner_QuinticPolynomial) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -26083,34 +26079,34 @@ static void __pyx_tp_dealloc_27quintic_polynomials_planner_QuinticPolynomial(PyO
   #endif
 }
 
-static PyMethodDef __pyx_methods_27quintic_polynomials_planner_QuinticPolynomial[] = {
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial[] = {
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_27quintic_polynomials_planner_QuinticPolynomial_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_27quintic_polynomials_planner_QuinticPolynomial},
-  {Py_tp_methods, (void *)__pyx_methods_27quintic_polynomials_planner_QuinticPolynomial},
-  {Py_tp_init, (void *)__pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_27quintic_polynomials_planner_QuinticPolynomial},
+static PyType_Slot __pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial},
+  {Py_tp_methods, (void *)__pyx_methods_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial},
+  {Py_tp_init, (void *)__pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial},
   {0, 0},
 };
-static PyType_Spec __pyx_type_27quintic_polynomials_planner_QuinticPolynomial_spec = {
-  "quintic_polynomials_planner.QuinticPolynomial",
-  sizeof(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial),
+static PyType_Spec __pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial_spec = {
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.QuinticPolynomial",
+  sizeof(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE,
-  __pyx_type_27quintic_polynomials_planner_QuinticPolynomial_slots,
+  __pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_27quintic_polynomials_planner_QuinticPolynomial = {
+static PyTypeObject __pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial = {
   PyVarObject_HEAD_INIT(0, 0)
-  "quintic_polynomials_planner.""QuinticPolynomial", /*tp_name*/
-  sizeof(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial), /*tp_basicsize*/
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.""QuinticPolynomial", /*tp_name*/
+  sizeof(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_27quintic_polynomials_planner_QuinticPolynomial, /*tp_dealloc*/
+  __pyx_tp_dealloc_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -26143,7 +26139,7 @@ static PyTypeObject __pyx_type_27quintic_polynomials_planner_QuinticPolynomial =
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_27quintic_polynomials_planner_QuinticPolynomial, /*tp_methods*/
+  __pyx_methods_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -26153,9 +26149,9 @@ static PyTypeObject __pyx_type_27quintic_polynomials_planner_QuinticPolynomial =
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_27quintic_polynomials_planner_17QuinticPolynomial_1__init__, /*tp_init*/
+  __pyx_pw_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_27quintic_polynomials_planner_QuinticPolynomial, /*tp_new*/
+  __pyx_tp_new_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -26324,7 +26320,7 @@ static PyType_Slot __pyx_type___pyx_array_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_array_spec = {
-  "quintic_polynomials_planner.array",
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.array",
   sizeof(struct __pyx_array_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_SEQUENCE,
@@ -26370,7 +26366,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "quintic_polynomials_planner.""array", /*tp_name*/
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.""array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -26530,7 +26526,7 @@ static PyType_Slot __pyx_type___pyx_MemviewEnum_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
-  "quintic_polynomials_planner.Enum",
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.Enum",
   sizeof(struct __pyx_MemviewEnum_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -26540,7 +26536,7 @@ static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "quintic_polynomials_planner.""Enum", /*tp_name*/
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.""Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -26837,7 +26833,7 @@ static PyType_Slot __pyx_type___pyx_memoryview_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryview_spec = {
-  "quintic_polynomials_planner.memoryview",
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.memoryview",
   sizeof(struct __pyx_memoryview_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -26883,7 +26879,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "quintic_polynomials_planner.""memoryview", /*tp_name*/
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.""memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -27035,7 +27031,7 @@ static PyType_Slot __pyx_type___pyx_memoryviewslice_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
-  "quintic_polynomials_planner._memoryviewslice",
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner._memoryviewslice",
   sizeof(struct __pyx_memoryviewslice_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_SEQUENCE,
@@ -27045,7 +27041,7 @@ static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "quintic_polynomials_planner.""_memoryviewslice", /*tp_name*/
+  "QuinticPolynomialsPlanner.quintic_polynomials_planner.""_memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -27189,6 +27185,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_QuinticPolynomial_calc_second_de, __pyx_k_QuinticPolynomial_calc_second_de, sizeof(__pyx_k_QuinticPolynomial_calc_second_de), 0, 0, 1, 1},
     {&__pyx_n_s_QuinticPolynomial_calc_third_der, __pyx_k_QuinticPolynomial_calc_third_der, sizeof(__pyx_k_QuinticPolynomial_calc_third_der), 0, 0, 1, 1},
     {&__pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_k_QuinticPolynomialsPlanner_quinti, sizeof(__pyx_k_QuinticPolynomialsPlanner_quinti), 0, 0, 1, 0},
+    {&__pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_k_QuinticPolynomialsPlanner_quinti_2, sizeof(__pyx_k_QuinticPolynomialsPlanner_quinti_2), 0, 0, 1, 1},
     {&__pyx_kp_u_Quintic_Polynomial_Planner_start, __pyx_k_Quintic_Polynomial_Planner_start, sizeof(__pyx_k_Quintic_Polynomial_Planner_start), 0, 1, 0, 0},
     {&__pyx_kp_u_Quintic_Polynomial_Trajectory, __pyx_k_Quintic_Polynomial_Trajectory, sizeof(__pyx_k_Quintic_Polynomial_Trajectory), 0, 1, 0, 0},
     {&__pyx_n_s_Sequence, __pyx_k_Sequence, sizeof(__pyx_k_Sequence), 0, 0, 1, 1},
@@ -27403,9 +27400,9 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 103, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 104, __pyx_L1_error)
-  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 110, __pyx_L1_error)
   __pyx_builtin___import__ = __Pyx_GetBuiltinName(__pyx_n_s_import); if (!__pyx_builtin___import__) __PYX_ERR(1, 100, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 141, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 156, __pyx_L1_error)
@@ -27485,25 +27482,25 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "quintic_polynomials_planner.pyx":104
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":103
  * 
  *         if max([fabs(i) for i in ra]) <= max_accel and max([fabs(i) for i in rj]) <= max_jerk:
  *             print("find path!!")             # <<<<<<<<<<<<<<
  *             break
  * 
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_find_path); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_find_path); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 103, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "quintic_polynomials_planner.pyx":118
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":117
  * 
  * def main():
  *     print("Quintic Polynomial Planner start!!")             # <<<<<<<<<<<<<<
  * 
  *     # Define start and goal states
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_u_Quintic_Polynomial_Planner_start); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_u_Quintic_Polynomial_Planner_start); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
@@ -27619,7 +27616,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__23);
   __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(1, 1, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":10
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":10
  * import numpy as np
  * cimport numpy as cnp
  * import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -27630,44 +27627,44 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
 
-  /* "quintic_polynomials_planner.pyx":34
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":33
  *         self.a5 = x[2]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
  *         return (self.a0 + self.a1 * t + self.a2 * t ** 2 +
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)
  */
-  __pyx_tuple__26 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_t); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_tuple__26 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_t); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_point, 34, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_point, 33, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 33, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":38
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":37
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return (self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 +
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)
  */
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_first_derivative, 38, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_first_derivative, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 37, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":42
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":41
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return (2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2 + 20 * self.a5 * t ** 3)
  * 
  */
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_second_derivative, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_second_derivative, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 41, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":45
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":44
  *         return (2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2 + 20 * self.a5 * t ** 3)
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return (6 * self.a3 + 24 * self.a4 * t + 60 * self.a5 * t ** 2)
  * 
  */
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_third_derivative, 45, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_calc_third_derivative, 44, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 44, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -27690,41 +27687,41 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__33);
   __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":48
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":47
  *         return (6 * self.a3 + 24 * self.a4 * t + 60 * self.a5 * t ** 2)
  * 
  * def quintic_polynomials_planner(double sx, double sy, double syaw, double sv, double sa,             # <<<<<<<<<<<<<<
  *                                 double gx, double gy, double gyaw, double gv, double ga,
  *                                 double max_accel, double max_jerk, double dt):
  */
-  __pyx_tuple__35 = PyTuple_Pack(44, __pyx_n_s_sx, __pyx_n_s_sy, __pyx_n_s_syaw, __pyx_n_s_sv, __pyx_n_s_sa, __pyx_n_s_gx, __pyx_n_s_gy, __pyx_n_s_gyaw, __pyx_n_s_gv, __pyx_n_s_ga, __pyx_n_s_max_accel, __pyx_n_s_max_jerk, __pyx_n_s_dt, __pyx_n_s_vxs, __pyx_n_s_vys, __pyx_n_s_vxg, __pyx_n_s_vyg, __pyx_n_s_axs, __pyx_n_s_ays, __pyx_n_s_axg, __pyx_n_s_ayg, __pyx_n_s_xqp, __pyx_n_s_yqp, __pyx_n_s_T, __pyx_n_s_t, __pyx_n_s_vx, __pyx_n_s_vy, __pyx_n_s_v, __pyx_n_s_yaw, __pyx_n_s_ax, __pyx_n_s_ay, __pyx_n_s_a, __pyx_n_s_jx, __pyx_n_s_jy, __pyx_n_s_j, __pyx_n_s_time, __pyx_n_s_rx, __pyx_n_s_ry, __pyx_n_s_ryaw, __pyx_n_s_rv, __pyx_n_s_ra, __pyx_n_s_rj, __pyx_n_s_i, __pyx_n_s_i); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_tuple__35 = PyTuple_Pack(44, __pyx_n_s_sx, __pyx_n_s_sy, __pyx_n_s_syaw, __pyx_n_s_sv, __pyx_n_s_sa, __pyx_n_s_gx, __pyx_n_s_gy, __pyx_n_s_gyaw, __pyx_n_s_gv, __pyx_n_s_ga, __pyx_n_s_max_accel, __pyx_n_s_max_jerk, __pyx_n_s_dt, __pyx_n_s_vxs, __pyx_n_s_vys, __pyx_n_s_vxg, __pyx_n_s_vyg, __pyx_n_s_axs, __pyx_n_s_ays, __pyx_n_s_axg, __pyx_n_s_ayg, __pyx_n_s_xqp, __pyx_n_s_yqp, __pyx_n_s_T, __pyx_n_s_t, __pyx_n_s_vx, __pyx_n_s_vy, __pyx_n_s_v, __pyx_n_s_yaw, __pyx_n_s_ax, __pyx_n_s_ay, __pyx_n_s_a, __pyx_n_s_jx, __pyx_n_s_jy, __pyx_n_s_j, __pyx_n_s_time, __pyx_n_s_rx, __pyx_n_s_ry, __pyx_n_s_ryaw, __pyx_n_s_rv, __pyx_n_s_ra, __pyx_n_s_rj, __pyx_n_s_i, __pyx_n_s_i); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(13, 0, 0, 44, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_quintic_polynomials_planner, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(13, 0, 0, 44, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_quintic_polynomials_planner, 47, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 47, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":109
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":108
  *     return time, rx, ry, ryaw, rv, ra, rj
  * 
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):             # <<<<<<<<<<<<<<
  *     if not isinstance(x, float):
  *         for ix, iy, iyaw in zip(x, y, yaw):
  */
-  __pyx_tuple__37 = PyTuple_Pack(10, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_yaw, __pyx_n_s_length, __pyx_n_s_width, __pyx_n_s_fc, __pyx_n_s_ec, __pyx_n_s_ix, __pyx_n_s_iy, __pyx_n_s_iyaw); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(10, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_yaw, __pyx_n_s_length, __pyx_n_s_width, __pyx_n_s_fc, __pyx_n_s_ec, __pyx_n_s_ix, __pyx_n_s_iy, __pyx_n_s_iyaw); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_plot_arrow, 109, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_plot_arrow, 108, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 108, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":117
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":116
  *         plt.plot(x, y)
  * 
  * def main():             # <<<<<<<<<<<<<<
  *     print("Quintic Polynomial Planner start!!")
  * 
  */
-  __pyx_tuple__39 = PyTuple_Pack(22, __pyx_n_s_sx, __pyx_n_s_sy, __pyx_n_s_syaw, __pyx_n_s_sv, __pyx_n_s_sa, __pyx_n_s_gx, __pyx_n_s_gy, __pyx_n_s_gyaw, __pyx_n_s_gv, __pyx_n_s_ga, __pyx_n_s_max_accel, __pyx_n_s_max_jerk, __pyx_n_s_dt, __pyx_n_s_result, __pyx_n_s_time, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_yaw, __pyx_n_s_v, __pyx_n_s_a, __pyx_n_s_j, __pyx_n_s_iyaw); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(22, __pyx_n_s_sx, __pyx_n_s_sy, __pyx_n_s_syaw, __pyx_n_s_sv, __pyx_n_s_sa, __pyx_n_s_gx, __pyx_n_s_gy, __pyx_n_s_gyaw, __pyx_n_s_gv, __pyx_n_s_ga, __pyx_n_s_max_accel, __pyx_n_s_max_jerk, __pyx_n_s_dt, __pyx_n_s_result, __pyx_n_s_time, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_yaw, __pyx_n_s_v, __pyx_n_s_a, __pyx_n_s_j, __pyx_n_s_iyaw); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_main_2, 117, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_QuinticPolynomialsPlanner_quinti, __pyx_n_s_main_2, 116, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 116, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_QuinticPolynomial(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
@@ -27819,37 +27816,37 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  __pyx_vtabptr_27quintic_polynomials_planner_QuinticPolynomial = &__pyx_vtable_27quintic_polynomials_planner_QuinticPolynomial;
-  __pyx_vtable_27quintic_polynomials_planner_QuinticPolynomial.calc_point = (double (*)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_point;
-  __pyx_vtable_27quintic_polynomials_planner_QuinticPolynomial.calc_first_derivative = (double (*)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative;
-  __pyx_vtable_27quintic_polynomials_planner_QuinticPolynomial.calc_second_derivative = (double (*)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative;
-  __pyx_vtable_27quintic_polynomials_planner_QuinticPolynomial.calc_third_derivative = (double (*)(struct __pyx_obj_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative;
+  __pyx_vtabptr_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial = &__pyx_vtable_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
+  __pyx_vtable_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial.calc_point = (double (*)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_point;
+  __pyx_vtable_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial.calc_first_derivative = (double (*)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_first_derivative;
+  __pyx_vtable_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial.calc_second_derivative = (double (*)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_second_derivative;
+  __pyx_vtable_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial.calc_third_derivative = (double (*)(struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_calc_third_derivative;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_27quintic_polynomials_planner_QuinticPolynomial_spec, NULL); if (unlikely(!__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial)) __PYX_ERR(0, 14, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_27quintic_polynomials_planner_QuinticPolynomial_spec, __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial_spec, NULL); if (unlikely(!__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial)) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial_spec, __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   #else
-  __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial = &__pyx_type_27quintic_polynomials_planner_QuinticPolynomial;
+  __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial = &__pyx_type_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial->tp_print = 0;
+  __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial->tp_dictoffset && __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial->tp_dictoffset && __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial, __pyx_vtabptr_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, __pyx_vtabptr_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_QuinticPolynomial, (PyObject *) __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_QuinticPolynomial, (PyObject *) __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   #endif
   __pyx_vtabptr_array = &__pyx_vtable_array;
   __pyx_vtable_array.get_memview = (PyObject *(*)(struct __pyx_array_obj *))__pyx_array_get_memview;
@@ -28318,14 +28315,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_quintic_polynomials_planner) {
+  if (__pyx_module_is_main_QuinticPolynomialsPlanner__quintic_polynomials_planner) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "quintic_polynomials_planner")) {
-      if (unlikely((PyDict_SetItemString(modules, "quintic_polynomials_planner", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "QuinticPolynomialsPlanner.quintic_polynomials_planner")) {
+      if (unlikely((PyDict_SetItemString(modules, "QuinticPolynomialsPlanner.quintic_polynomials_planner", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -28859,34 +28856,34 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_Enum, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "quintic_polynomials_planner.pyx":3
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":3
  * # cython: language_level=3
  * 
  * cdef double MIN_T = 5.0  # minimum time to the goal [s]             # <<<<<<<<<<<<<<
  * cdef double MAX_T = 100.0  # maximum time to the goal [s]
  * cdef bint show_animation = True  # boolean, use 'bint' for Cython boolean type
  */
-  __pyx_v_27quintic_polynomials_planner_MIN_T = 5.0;
+  __pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_MIN_T = 5.0;
 
-  /* "quintic_polynomials_planner.pyx":4
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":4
  * 
  * cdef double MIN_T = 5.0  # minimum time to the goal [s]
  * cdef double MAX_T = 100.0  # maximum time to the goal [s]             # <<<<<<<<<<<<<<
  * cdef bint show_animation = True  # boolean, use 'bint' for Cython boolean type
  * 
  */
-  __pyx_v_27quintic_polynomials_planner_MAX_T = 100.0;
+  __pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_MAX_T = 100.0;
 
-  /* "quintic_polynomials_planner.pyx":5
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":5
  * cdef double MIN_T = 5.0  # minimum time to the goal [s]
  * cdef double MAX_T = 100.0  # maximum time to the goal [s]
  * cdef bint show_animation = True  # boolean, use 'bint' for Cython boolean type             # <<<<<<<<<<<<<<
  * 
  * from libc.math cimport cos, sin, atan2, hypot, pow, fabs
  */
-  __pyx_v_27quintic_polynomials_planner_show_animation = 1;
+  __pyx_v_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_show_animation = 1;
 
-  /* "quintic_polynomials_planner.pyx":8
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":8
  * 
  * from libc.math cimport cos, sin, atan2, hypot, pow, fabs
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -28898,7 +28895,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_7) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "quintic_polynomials_planner.pyx":10
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":10
  * import numpy as np
  * cimport numpy as cnp
  * import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -28910,7 +28907,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plt, __pyx_t_7) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "quintic_polynomials_planner.pyx":12
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":12
  * import matplotlib.pyplot as plt
  * 
  * cnp.import_array()             # <<<<<<<<<<<<<<
@@ -28919,68 +28916,68 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_9 = __pyx_f_5numpy_import_array(); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 12, __pyx_L1_error)
 
-  /* "quintic_polynomials_planner.pyx":34
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":33
  *         self.a5 = x[2]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
  *         return (self.a0 + self.a1 * t + self.a2 * t ** 2 +
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_point, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_3calc_point, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_point, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_point, __pyx_t_7) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_point, __pyx_t_7) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
+  PyType_Modified(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
 
-  /* "quintic_polynomials_planner.pyx":38
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":37
  *                 self.a3 * t ** 3 + self.a4 * t ** 4 + self.a5 * t ** 5)
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return (self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 +
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_first_der, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_first_der, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_first_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_first_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
+  PyType_Modified(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
 
-  /* "quintic_polynomials_planner.pyx":42
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":41
  *                 4 * self.a4 * t ** 3 + 5 * self.a5 * t ** 4)
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return (2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2 + 20 * self.a5 * t ** 3)
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_second_de, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_second_de, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_second_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_second_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
+  PyType_Modified(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
 
-  /* "quintic_polynomials_planner.pyx":45
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":44
  *         return (2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2 + 20 * self.a5 * t ** 3)
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return (6 * self.a3 + 24 * self.a4 * t + 60 * self.a5 * t ** 2)
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_third_der, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_9calc_third_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial_calc_third_der, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_third_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_calc_third_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
+  PyType_Modified(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial___reduce_cytho, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_11__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial___reduce_cytho, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
+  PyType_Modified(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
 
   /* "(tree fragment)":16
  *     else:
@@ -28988,93 +28985,93 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_QuinticPolynomial__set_state(self, __pyx_state)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial___setstate_cyt, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_17QuinticPolynomial_13__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuinticPolynomial___setstate_cyt, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_27quintic_polynomials_planner_QuinticPolynomial);
+  PyType_Modified(__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial);
 
-  /* "quintic_polynomials_planner.pyx":48
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":47
  *         return (6 * self.a3 + 24 * self.a4 * t + 60 * self.a5 * t ** 2)
  * 
  * def quintic_polynomials_planner(double sx, double sy, double syaw, double sv, double sa,             # <<<<<<<<<<<<<<
  *                                 double gx, double gy, double gyaw, double gv, double ga,
  *                                 double max_accel, double max_jerk, double dt):
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_1quintic_polynomials_planner, 0, __pyx_n_s_quintic_polynomials_planner, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_1quintic_polynomials_planner, 0, __pyx_n_s_quintic_polynomials_planner, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_quintic_polynomials_planner, __pyx_t_7) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_quintic_polynomials_planner, __pyx_t_7) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "quintic_polynomials_planner.pyx":109
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":108
  *     return time, rx, ry, ryaw, rv, ra, rj
  * 
  * def plot_arrow(double x, double y, double yaw, double length=1.0, double width=0.5, fc="r", ec="k"):             # <<<<<<<<<<<<<<
  *     if not isinstance(x, float):
  *         for ix, iy, iyaw in zip(x, y, yaw):
  */
-  __pyx_t_7 = PyFloat_FromDouble(((double)1.0)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble(((double)1.0)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_4 = PyFloat_FromDouble(((double)0.5)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(((double)0.5)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 109, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 108, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4)) __PYX_ERR(0, 108, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_n_u_r));
   __Pyx_GIVEREF(((PyObject*)__pyx_n_u_r));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 2, ((PyObject*)__pyx_n_u_r))) __PYX_ERR(0, 109, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 2, ((PyObject*)__pyx_n_u_r))) __PYX_ERR(0, 108, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_n_u_k));
   __Pyx_GIVEREF(((PyObject*)__pyx_n_u_k));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 3, ((PyObject*)__pyx_n_u_k))) __PYX_ERR(0, 109, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 3, ((PyObject*)__pyx_n_u_k))) __PYX_ERR(0, 108, __pyx_L1_error);
   __pyx_t_7 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_3plot_arrow, 0, __pyx_n_s_plot_arrow, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_3plot_arrow, 0, __pyx_n_s_plot_arrow, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_4, __pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_plot_arrow, __pyx_t_4) < 0) __PYX_ERR(0, 109, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_plot_arrow, __pyx_t_4) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "quintic_polynomials_planner.pyx":117
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":116
  *         plt.plot(x, y)
  * 
  * def main():             # <<<<<<<<<<<<<<
  *     print("Quintic Polynomial Planner start!!")
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_5main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_5main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_4) < 0) __PYX_ERR(0, 117, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_4) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "quintic_polynomials_planner.pyx":191
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":190
  *         plt.show()
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
  *     main()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_name_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_name_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = (__Pyx_PyUnicode_Equals(__pyx_t_4, __pyx_n_u_main, Py_EQ)); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_6 = (__Pyx_PyUnicode_Equals(__pyx_t_4, __pyx_n_u_main, Py_EQ)); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_6) {
 
-    /* "quintic_polynomials_planner.pyx":192
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":191
  * 
  * if __name__ == "__main__":
  *     main()             # <<<<<<<<<<<<<<
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_main_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_main_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "quintic_polynomials_planner.pyx":191
+    /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":190
  *         plt.show()
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
@@ -29087,12 +29084,12 @@ if (!__Pyx_RefNanny) {
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial, 0, __pyx_n_s_pyx_unpickle_QuinticPolynomial, NULL, __pyx_n_s_quintic_polynomials_planner, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_7__pyx_unpickle_QuinticPolynomial, 0, __pyx_n_s_pyx_unpickle_QuinticPolynomial, NULL, __pyx_n_s_QuinticPolynomialsPlanner_quinti_2, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_QuinticPolynomial, __pyx_t_5) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "quintic_polynomials_planner.pyx":1
+  /* "QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * 
  * cdef double MIN_T = 5.0  # minimum time to the goal [s]
@@ -29111,7 +29108,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_7);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init quintic_polynomials_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init QuinticPolynomialsPlanner.quintic_polynomials_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -29125,7 +29122,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init quintic_polynomials_planner");
+    PyErr_SetString(PyExc_ImportError, "init QuinticPolynomialsPlanner.quintic_polynomials_planner");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

@@ -3,22 +3,13 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "depends": [
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/arrayscalars.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include/numpy/ufuncobject.h"
-        ],
-        "include_dirs": [
-            "/home/njal/School/Master/MotionPlanning/.venv/lib/python3.11/site-packages/numpy/core/include"
-        ],
-        "name": "cubic_spline_planner",
+        "depends": [],
+        "name": "CubicSpline.cubic_spline_planner",
         "sources": [
             "CubicSpline/cubic_spline_planner.pyx"
         ]
     },
-    "module_name": "cubic_spline_planner"
+    "module_name": "CubicSpline.cubic_spline_planner"
 }
 END: Cython Metadata */
 
@@ -1238,11 +1229,12 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cubic_spline_planner
-#define __PYX_HAVE_API__cubic_spline_planner
+#define __PYX_HAVE__CubicSpline__cubic_spline_planner
+#define __PYX_HAVE_API__CubicSpline__cubic_spline_planner
 /* Early includes */
-#include <math.h>
 #include <string.h>
+#include <stdlib.h>
+#include <math.h>
 #include <stdio.h>
 
     /* Using NumPy API declarations from "numpy/__init__.cython-30.pxd" */
@@ -1252,7 +1244,6 @@ static CYTHON_INLINE float __PYX_NAN() {
 #include "numpy/ndarraytypes.h"
 #include "numpy/arrayscalars.h"
 #include "numpy/ufuncobject.h"
-#include <stdlib.h>
 #include "pythread.h"
 #ifdef _OPENMP
 #include <omp.h>
@@ -1527,6 +1518,7 @@ static const char *__pyx_f[] = {
   "CubicSpline/cubic_spline_planner.pyx",
   "<stringsource>",
   ".venv/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd",
+  "./CubicSpline/cubic_spline_planner.pxd",
   ".venv/lib/python3.11/site-packages/Cython/Includes/cpython/type.pxd",
 };
 /* #### Code section: utility_code_proto_before_types ### */
@@ -1871,8 +1863,8 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 /* #### Code section: type_declarations ### */
 
 /*--- Type declarations ---*/
-struct __pyx_obj_20cubic_spline_planner_CubicSpline1D;
-struct __pyx_obj_20cubic_spline_planner_CubicSpline2D;
+struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
+struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
 struct __pyx_array_obj;
 struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
@@ -1914,16 +1906,16 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "cubic_spline_planner.pyx":9
- * from libc.stdlib cimport malloc, free
+/* "CubicSpline/cubic_spline_planner.pxd":6
+ * import numpy as cnp
  * 
  * cdef class CubicSpline1D:             # <<<<<<<<<<<<<<
- *     cdef int nx
- *     cdef double[:] x, y, a, b, c, d
+ *     cdef public int nx
+ *     cdef public double[:] x, y, a, b, c, d
  */
-struct __pyx_obj_20cubic_spline_planner_CubicSpline1D {
+struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D {
   PyObject_HEAD
-  struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *__pyx_vtab;
+  struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_vtab;
   int nx;
   __Pyx_memviewslice x;
   __Pyx_memviewslice y;
@@ -1934,18 +1926,18 @@ struct __pyx_obj_20cubic_spline_planner_CubicSpline1D {
 };
 
 
-/* "cubic_spline_planner.pyx":92
- *         return idx
+/* "CubicSpline/cubic_spline_planner.pxd":15
+ *     cdef int __search_index(self, double x)
  * 
  * cdef class CubicSpline2D:             # <<<<<<<<<<<<<<
- *     cdef CubicSpline1D sx, sy
- *     cdef double[:] s
+ *     cdef public CubicSpline1D sx, sy
+ *     cdef public double[:] s
  */
-struct __pyx_obj_20cubic_spline_planner_CubicSpline2D {
+struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D {
   PyObject_HEAD
-  struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D *__pyx_vtab;
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *sx;
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *sy;
+  struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_vtab;
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *sx;
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *sy;
   __Pyx_memviewslice s;
 };
 
@@ -2027,39 +2019,39 @@ struct __pyx_memoryviewslice_obj {
 
 
 
-/* "cubic_spline_planner.pyx":9
+/* "CubicSpline/cubic_spline_planner.pyx":9
  * from libc.stdlib cimport malloc, free
  * 
  * cdef class CubicSpline1D:             # <<<<<<<<<<<<<<
- *     cdef int nx
- *     cdef double[:] x, y, a, b, c, d
+ * 
+ *     def __init__(self, double[:] x, double[:] y):
  */
 
-struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D {
-  void (*_CubicSpline1D__calc_coefficients)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *);
-  double (*calc_position)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch);
-  double (*calc_first_derivative)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch);
-  double (*calc_second_derivative)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch);
-  int (*_CubicSpline1D__search_index)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double);
+struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D {
+  void (*_CubicSpline1D__calc_coefficients)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *);
+  double (*calc_position)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch);
+  double (*calc_first_derivative)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch);
+  double (*calc_second_derivative)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch);
+  int (*_CubicSpline1D__search_index)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double);
 };
-static struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *__pyx_vtabptr_20cubic_spline_planner_CubicSpline1D;
+static struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
 
 
-/* "cubic_spline_planner.pyx":92
+/* "CubicSpline/cubic_spline_planner.pyx":90
  *         return idx
  * 
  * cdef class CubicSpline2D:             # <<<<<<<<<<<<<<
- *     cdef CubicSpline1D sx, sy
- *     cdef double[:] s
+ * 
+ *     def __init__(self, double[:] x, double[:] y):
  */
 
-struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D {
-  __Pyx_memviewslice (*_CubicSpline2D__calc_s)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, __Pyx_memviewslice, __Pyx_memviewslice);
-  PyObject *(*calc_position)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch);
-  double (*calc_curvature)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch);
-  double (*calc_yaw)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D {
+  __Pyx_memviewslice (*_CubicSpline2D__calc_s)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, __Pyx_memviewslice, __Pyx_memviewslice);
+  PyObject *(*calc_position)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch);
+  double (*calc_curvature)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch);
+  double (*calc_yaw)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D *__pyx_vtabptr_20cubic_spline_planner_CubicSpline2D;
+static struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
 
 
 /* "View.MemoryView":114
@@ -3387,19 +3379,21 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self); /* proto*/
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self); /* proto*/
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self); /* proto*/
-static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_coefficients(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch); /* proto*/
-static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search_index(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto*/
-static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicSpline2D__calc_s(CYTHON_UNUSED struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y); /* proto*/
-static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch); /* proto*/
-
-/* Module declarations from "libc.math" */
+static void __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_coefficients(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto*/
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch); /* proto*/
+static int __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search_index(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto*/
+static __Pyx_memviewslice __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D__CubicSpline2D__calc_s(CYTHON_UNUSED struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y); /* proto*/
+static PyObject *__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_curvature(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch); /* proto*/
 
 /* Module declarations from "libc.string" */
+
+/* Module declarations from "libc.stdlib" */
+
+/* Module declarations from "libc.math" */
 
 /* Module declarations from "libc.stdio" */
 
@@ -3417,9 +3411,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __p
 
 /* Module declarations from "numpy" */
 
-/* Module declarations from "libc.stdlib" */
-
-/* Module declarations from "cubic_spline_planner" */
+/* Module declarations from "CubicSpline.cubic_spline_planner" */
 static PyObject *__pyx_collections_abc_Sequence = 0;
 static PyObject *generic = 0;
 static PyObject *strided = 0;
@@ -3428,8 +3420,8 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, PyObject *); /*proto*/
-static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, PyObject *); /*proto*/
+static PyObject *__pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, PyObject *); /*proto*/
+static PyObject *__pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, PyObject *); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -3467,11 +3459,11 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, 
 /* #### Code section: typeinfo ### */
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "cubic_spline_planner"
-extern int __pyx_module_is_main_cubic_spline_planner;
-int __pyx_module_is_main_cubic_spline_planner = 0;
+#define __Pyx_MODULE_NAME "CubicSpline.cubic_spline_planner"
+extern int __pyx_module_is_main_CubicSpline__cubic_spline_planner;
+int __pyx_module_is_main_CubicSpline__cubic_spline_planner = 0;
 
-/* Implementation of "cubic_spline_planner" */
+/* Implementation of "CubicSpline.cubic_spline_planner" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_print;
@@ -3635,7 +3627,6 @@ static const char __pyx_k_CubicSpline2D_test[] = "CubicSpline2D test";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
-static const char __pyx_k_cubic_spline_planner[] = "cubic_spline_planner";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
 static const char __pyx_k_Invalid_shape_in_axis[] = "Invalid shape in axis ";
 static const char __pyx_k_calc_first_derivative[] = "calc_first_derivative";
@@ -3682,6 +3673,7 @@ static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing ex
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
+static const char __pyx_k_CubicSpline_cubic_spline_planner_2[] = "CubicSpline.cubic_spline_planner";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_2[] = "Incompatible checksums (0x%x vs (0x02f601e, 0xcf8c8c7, 0x25134b1) = (a, b, c, d, nx, x, y))";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_3[] = "Incompatible checksums (0x%x vs (0xa694689, 0x6c761ec, 0x379a8fb) = (s, sx, sy))";
 /* #### Code section: decls ### */
@@ -3726,24 +3718,46 @@ static void __pyx_memoryviewslice___pyx_pf_15View_dot_MemoryView_16_memoryviewsl
 static PyObject *__pyx_pf___pyx_memoryviewslice___reduce_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf___pyx_memoryviewslice_2__setstate_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_15View_dot_MemoryView___pyx_unpickle_Enum(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_2calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_4calc_first_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_6calc_second_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_8__reduce_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_10__setstate_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_20cubic_spline_planner_13CubicSpline2D___init__(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_2calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_4calc_curvature(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_8__reduce_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_10__setstate_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_tp_new_20cubic_spline_planner_CubicSpline1D(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_20cubic_spline_planner_CubicSpline2D(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_4calc_first_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_6calc_second_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_8__reduce_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_10__setstate_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D___init__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_4calc_curvature(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_4__del__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_4__del__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self); /* proto */
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_8__reduce_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_10__setstate_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline1D(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline2D(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_Enum(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -3785,6 +3799,8 @@ typedef struct {
   #endif
   #if CYTHON_USE_MODULE_STATE
   #endif
+  #if CYTHON_USE_MODULE_STATE
+  #endif
   PyTypeObject *__pyx_ptype_7cpython_4type_type;
   #if CYTHON_USE_MODULE_STATE
   #endif
@@ -3812,17 +3828,15 @@ typedef struct {
   PyTypeObject *__pyx_ptype_5numpy_character;
   PyTypeObject *__pyx_ptype_5numpy_ufunc;
   #if CYTHON_USE_MODULE_STATE
-  #endif
-  #if CYTHON_USE_MODULE_STATE
-  PyObject *__pyx_type_20cubic_spline_planner_CubicSpline1D;
-  PyObject *__pyx_type_20cubic_spline_planner_CubicSpline2D;
+  PyObject *__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
+  PyObject *__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
   PyObject *__pyx_type___pyx_array;
   PyObject *__pyx_type___pyx_MemviewEnum;
   PyObject *__pyx_type___pyx_memoryview;
   PyObject *__pyx_type___pyx_memoryviewslice;
   #endif
-  PyTypeObject *__pyx_ptype_20cubic_spline_planner_CubicSpline1D;
-  PyTypeObject *__pyx_ptype_20cubic_spline_planner_CubicSpline2D;
+  PyTypeObject *__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
+  PyTypeObject *__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
   PyTypeObject *__pyx_array_type;
   PyTypeObject *__pyx_MemviewEnum_type;
   PyTypeObject *__pyx_memoryview_type;
@@ -3852,6 +3866,7 @@ typedef struct {
   PyObject *__pyx_n_s_CubicSpline2D_calc_yaw;
   PyObject *__pyx_kp_u_CubicSpline2D_test;
   PyObject *__pyx_kp_s_CubicSpline_cubic_spline_planner;
+  PyObject *__pyx_n_s_CubicSpline_cubic_spline_planner_2;
   PyObject *__pyx_kp_u_Cubic_spline_interpolation;
   PyObject *__pyx_kp_u_Cubic_spline_path;
   PyObject *__pyx_kp_u_Data_points;
@@ -3908,7 +3923,6 @@ typedef struct {
   PyObject *__pyx_kp_s_contiguous_and_direct;
   PyObject *__pyx_kp_s_contiguous_and_indirect;
   PyObject *__pyx_n_s_count;
-  PyObject *__pyx_n_s_cubic_spline_planner;
   PyObject *__pyx_n_s_cumsum;
   PyObject *__pyx_n_s_dict;
   PyObject *__pyx_n_s_dict_2;
@@ -4155,10 +4169,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_flexible);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_character);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_ufunc);
-  Py_CLEAR(clear_module_state->__pyx_ptype_20cubic_spline_planner_CubicSpline1D);
-  Py_CLEAR(clear_module_state->__pyx_type_20cubic_spline_planner_CubicSpline1D);
-  Py_CLEAR(clear_module_state->__pyx_ptype_20cubic_spline_planner_CubicSpline2D);
-  Py_CLEAR(clear_module_state->__pyx_type_20cubic_spline_planner_CubicSpline2D);
+  Py_CLEAR(clear_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
+  Py_CLEAR(clear_module_state->__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
+  Py_CLEAR(clear_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
+  Py_CLEAR(clear_module_state->__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
   Py_CLEAR(clear_module_state->__pyx_array_type);
   Py_CLEAR(clear_module_state->__pyx_type___pyx_array);
   Py_CLEAR(clear_module_state->__pyx_MemviewEnum_type);
@@ -4192,6 +4206,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_CubicSpline2D_calc_yaw);
   Py_CLEAR(clear_module_state->__pyx_kp_u_CubicSpline2D_test);
   Py_CLEAR(clear_module_state->__pyx_kp_s_CubicSpline_cubic_spline_planner);
+  Py_CLEAR(clear_module_state->__pyx_n_s_CubicSpline_cubic_spline_planner_2);
   Py_CLEAR(clear_module_state->__pyx_kp_u_Cubic_spline_interpolation);
   Py_CLEAR(clear_module_state->__pyx_kp_u_Cubic_spline_path);
   Py_CLEAR(clear_module_state->__pyx_kp_u_Data_points);
@@ -4248,7 +4263,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_s_contiguous_and_direct);
   Py_CLEAR(clear_module_state->__pyx_kp_s_contiguous_and_indirect);
   Py_CLEAR(clear_module_state->__pyx_n_s_count);
-  Py_CLEAR(clear_module_state->__pyx_n_s_cubic_spline_planner);
   Py_CLEAR(clear_module_state->__pyx_n_s_cumsum);
   Py_CLEAR(clear_module_state->__pyx_n_s_dict);
   Py_CLEAR(clear_module_state->__pyx_n_s_dict_2);
@@ -4473,10 +4487,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_flexible);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_character);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_ufunc);
-  Py_VISIT(traverse_module_state->__pyx_ptype_20cubic_spline_planner_CubicSpline1D);
-  Py_VISIT(traverse_module_state->__pyx_type_20cubic_spline_planner_CubicSpline1D);
-  Py_VISIT(traverse_module_state->__pyx_ptype_20cubic_spline_planner_CubicSpline2D);
-  Py_VISIT(traverse_module_state->__pyx_type_20cubic_spline_planner_CubicSpline2D);
+  Py_VISIT(traverse_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
+  Py_VISIT(traverse_module_state->__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
+  Py_VISIT(traverse_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
+  Py_VISIT(traverse_module_state->__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
   Py_VISIT(traverse_module_state->__pyx_array_type);
   Py_VISIT(traverse_module_state->__pyx_type___pyx_array);
   Py_VISIT(traverse_module_state->__pyx_MemviewEnum_type);
@@ -4510,6 +4524,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_CubicSpline2D_calc_yaw);
   Py_VISIT(traverse_module_state->__pyx_kp_u_CubicSpline2D_test);
   Py_VISIT(traverse_module_state->__pyx_kp_s_CubicSpline_cubic_spline_planner);
+  Py_VISIT(traverse_module_state->__pyx_n_s_CubicSpline_cubic_spline_planner_2);
   Py_VISIT(traverse_module_state->__pyx_kp_u_Cubic_spline_interpolation);
   Py_VISIT(traverse_module_state->__pyx_kp_u_Cubic_spline_path);
   Py_VISIT(traverse_module_state->__pyx_kp_u_Data_points);
@@ -4566,7 +4581,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_s_contiguous_and_direct);
   Py_VISIT(traverse_module_state->__pyx_kp_s_contiguous_and_indirect);
   Py_VISIT(traverse_module_state->__pyx_n_s_count);
-  Py_VISIT(traverse_module_state->__pyx_n_s_cubic_spline_planner);
   Py_VISIT(traverse_module_state->__pyx_n_s_cumsum);
   Py_VISIT(traverse_module_state->__pyx_n_s_dict);
   Py_VISIT(traverse_module_state->__pyx_n_s_dict_2);
@@ -4793,6 +4807,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #if CYTHON_USE_MODULE_STATE
 #endif
+#if CYTHON_USE_MODULE_STATE
+#endif
 #define __pyx_ptype_7cpython_4type_type __pyx_mstate_global->__pyx_ptype_7cpython_4type_type
 #if CYTHON_USE_MODULE_STATE
 #endif
@@ -4820,17 +4836,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_ptype_5numpy_character __pyx_mstate_global->__pyx_ptype_5numpy_character
 #define __pyx_ptype_5numpy_ufunc __pyx_mstate_global->__pyx_ptype_5numpy_ufunc
 #if CYTHON_USE_MODULE_STATE
-#endif
-#if CYTHON_USE_MODULE_STATE
-#define __pyx_type_20cubic_spline_planner_CubicSpline1D __pyx_mstate_global->__pyx_type_20cubic_spline_planner_CubicSpline1D
-#define __pyx_type_20cubic_spline_planner_CubicSpline2D __pyx_mstate_global->__pyx_type_20cubic_spline_planner_CubicSpline2D
+#define __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D __pyx_mstate_global->__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D
+#define __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D __pyx_mstate_global->__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D
 #define __pyx_type___pyx_array __pyx_mstate_global->__pyx_type___pyx_array
 #define __pyx_type___pyx_MemviewEnum __pyx_mstate_global->__pyx_type___pyx_MemviewEnum
 #define __pyx_type___pyx_memoryview __pyx_mstate_global->__pyx_type___pyx_memoryview
 #define __pyx_type___pyx_memoryviewslice __pyx_mstate_global->__pyx_type___pyx_memoryviewslice
 #endif
-#define __pyx_ptype_20cubic_spline_planner_CubicSpline1D __pyx_mstate_global->__pyx_ptype_20cubic_spline_planner_CubicSpline1D
-#define __pyx_ptype_20cubic_spline_planner_CubicSpline2D __pyx_mstate_global->__pyx_ptype_20cubic_spline_planner_CubicSpline2D
+#define __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D __pyx_mstate_global->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D
+#define __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D __pyx_mstate_global->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D
 #define __pyx_array_type __pyx_mstate_global->__pyx_array_type
 #define __pyx_MemviewEnum_type __pyx_mstate_global->__pyx_MemviewEnum_type
 #define __pyx_memoryview_type __pyx_mstate_global->__pyx_memoryview_type
@@ -4860,6 +4874,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_CubicSpline2D_calc_yaw __pyx_mstate_global->__pyx_n_s_CubicSpline2D_calc_yaw
 #define __pyx_kp_u_CubicSpline2D_test __pyx_mstate_global->__pyx_kp_u_CubicSpline2D_test
 #define __pyx_kp_s_CubicSpline_cubic_spline_planner __pyx_mstate_global->__pyx_kp_s_CubicSpline_cubic_spline_planner
+#define __pyx_n_s_CubicSpline_cubic_spline_planner_2 __pyx_mstate_global->__pyx_n_s_CubicSpline_cubic_spline_planner_2
 #define __pyx_kp_u_Cubic_spline_interpolation __pyx_mstate_global->__pyx_kp_u_Cubic_spline_interpolation
 #define __pyx_kp_u_Cubic_spline_path __pyx_mstate_global->__pyx_kp_u_Cubic_spline_path
 #define __pyx_kp_u_Data_points __pyx_mstate_global->__pyx_kp_u_Data_points
@@ -4916,7 +4931,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_s_contiguous_and_direct __pyx_mstate_global->__pyx_kp_s_contiguous_and_direct
 #define __pyx_kp_s_contiguous_and_indirect __pyx_mstate_global->__pyx_kp_s_contiguous_and_indirect
 #define __pyx_n_s_count __pyx_mstate_global->__pyx_n_s_count
-#define __pyx_n_s_cubic_spline_planner __pyx_mstate_global->__pyx_n_s_cubic_spline_planner
 #define __pyx_n_s_cumsum __pyx_mstate_global->__pyx_n_s_cumsum
 #define __pyx_n_s_dict __pyx_mstate_global->__pyx_n_s_dict
 #define __pyx_n_s_dict_2 __pyx_mstate_global->__pyx_n_s_dict_2
@@ -19995,8 +20009,8 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":13
- *     cdef double[:] x, y, a, b, c, d
+/* "CubicSpline/cubic_spline_planner.pyx":11
+ * cdef class CubicSpline1D:
  * 
  *     def __init__(self, double[:] x, double[:] y):             # <<<<<<<<<<<<<<
  *         self.x = x
@@ -20004,8 +20018,8 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
  */
 
 /* Python wrapper */
-static int __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_x = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_y = { 0, 0, { 0 }, { 0 }, { 0 } };
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
@@ -20042,7 +20056,7 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *_
           (void)__Pyx_Arg_NewRef_VARARGS(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 11, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -20050,14 +20064,14 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *_
           (void)__Pyx_Arg_NewRef_VARARGS(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 11, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 11, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 13, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 11, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -20065,12 +20079,12 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *_
       values[0] = __Pyx_Arg_VARARGS(__pyx_args, 0);
       values[1] = __Pyx_Arg_VARARGS(__pyx_args, 1);
     }
-    __pyx_v_x = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_x.memview)) __PYX_ERR(0, 13, __pyx_L3_error)
-    __pyx_v_y = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_y.memview)) __PYX_ERR(0, 13, __pyx_L3_error)
+    __pyx_v_x = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_x.memview)) __PYX_ERR(0, 11, __pyx_L3_error)
+    __pyx_v_y = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_y.memview)) __PYX_ERR(0, 11, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 13, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 11, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -20082,11 +20096,11 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *_
   }
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_x, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_y, 1);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x, __pyx_v_y);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D___init__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x, __pyx_v_y);
 
   /* function exit code */
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_x, 1);
@@ -20101,7 +20115,7 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__(PyObject *_
   return __pyx_r;
 }
 
-static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y) {
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -20116,7 +20130,7 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "cubic_spline_planner.pyx":14
+  /* "CubicSpline/cubic_spline_planner.pyx":12
  * 
  *     def __init__(self, double[:] x, double[:] y):
  *         self.x = x             # <<<<<<<<<<<<<<
@@ -20127,7 +20141,7 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx
   __PYX_INC_MEMVIEW(&__pyx_v_x, 1);
   __pyx_v_self->x = __pyx_v_x;
 
-  /* "cubic_spline_planner.pyx":15
+  /* "CubicSpline/cubic_spline_planner.pyx":13
  *     def __init__(self, double[:] x, double[:] y):
  *         self.x = x
  *         self.y = y             # <<<<<<<<<<<<<<
@@ -20138,7 +20152,7 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx
   __PYX_INC_MEMVIEW(&__pyx_v_y, 1);
   __pyx_v_self->y = __pyx_v_y;
 
-  /* "cubic_spline_planner.pyx":16
+  /* "CubicSpline/cubic_spline_planner.pyx":14
  *         self.x = x
  *         self.y = y
  *         self.nx = x.shape[0]             # <<<<<<<<<<<<<<
@@ -20147,150 +20161,150 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx
  */
   __pyx_v_self->nx = (__pyx_v_x.shape[0]);
 
-  /* "cubic_spline_planner.pyx":18
+  /* "CubicSpline/cubic_spline_planner.pyx":16
  *         self.nx = x.shape[0]
  * 
  *         self.a = y.copy()             # <<<<<<<<<<<<<<
  *         self.b = np.zeros(self.nx - 1, dtype=np.float64)
  *         self.c = np.zeros(self.nx, dtype=np.float64)
  */
-  __pyx_t_1 = __pyx_memoryview_copy_slice_dc_double_c(__pyx_v_y); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_copy_slice_dc_double_c(__pyx_v_y); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 16, __pyx_L1_error)
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->a, 0);
   __pyx_v_self->a = __pyx_t_1;
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "cubic_spline_planner.pyx":19
+  /* "CubicSpline/cubic_spline_planner.pyx":17
  * 
  *         self.a = y.copy()
  *         self.b = np.zeros(self.nx - 1, dtype=np.float64)             # <<<<<<<<<<<<<<
  *         self.c = np.zeros(self.nx, dtype=np.float64)
  *         self.d = np.zeros(self.nx - 1, dtype=np.float64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_self->nx - 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_self->nx - 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_6, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_6, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->b, 0);
   __pyx_v_self->b = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "cubic_spline_planner.pyx":20
+  /* "CubicSpline/cubic_spline_planner.pyx":18
  *         self.a = y.copy()
  *         self.b = np.zeros(self.nx - 1, dtype=np.float64)
  *         self.c = np.zeros(self.nx, dtype=np.float64)             # <<<<<<<<<<<<<<
  *         self.d = np.zeros(self.nx - 1, dtype=np.float64)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_6);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_6)) __PYX_ERR(0, 20, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_6)) __PYX_ERR(0, 18, __pyx_L1_error);
   __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->c, 0);
   __pyx_v_self->c = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "cubic_spline_planner.pyx":21
+  /* "CubicSpline/cubic_spline_planner.pyx":19
  *         self.b = np.zeros(self.nx - 1, dtype=np.float64)
  *         self.c = np.zeros(self.nx, dtype=np.float64)
  *         self.d = np.zeros(self.nx - 1, dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         self.__calc_coefficients()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_long((__pyx_v_self->nx - 1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long((__pyx_v_self->nx - 1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_3, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_3, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->d, 0);
   __pyx_v_self->d = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "cubic_spline_planner.pyx":23
+  /* "CubicSpline/cubic_spline_planner.pyx":21
  *         self.d = np.zeros(self.nx - 1, dtype=np.float64)
  * 
  *         self.__calc_coefficients()             # <<<<<<<<<<<<<<
  * 
  *     cdef void __calc_coefficients(self):
  */
-  ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__calc_coefficients(__pyx_v_self); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
+  ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__calc_coefficients(__pyx_v_self); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":13
- *     cdef double[:] x, y, a, b, c, d
+  /* "CubicSpline/cubic_spline_planner.pyx":11
+ * cdef class CubicSpline1D:
  * 
  *     def __init__(self, double[:] x, double[:] y):             # <<<<<<<<<<<<<<
  *         self.x = x
@@ -20308,14 +20322,14 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_7, 1);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":25
+/* "CubicSpline/cubic_spline_planner.pyx":23
  *         self.__calc_coefficients()
  * 
  *     cdef void __calc_coefficients(self):             # <<<<<<<<<<<<<<
@@ -20323,7 +20337,7 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline1D___init__(struct __pyx
  *         cdef double[:] h = np.diff(self.x)
  */
 
-static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_coefficients(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+static void __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_coefficients(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
   int __pyx_v_i;
   __Pyx_memviewslice __pyx_v_h = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_A = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -20353,20 +20367,20 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_CubicSpline1D__calc_coefficients", 1);
 
-  /* "cubic_spline_planner.pyx":27
+  /* "CubicSpline/cubic_spline_planner.pyx":25
  *     cdef void __calc_coefficients(self):
  *         cdef int i
  *         cdef double[:] h = np.diff(self.x)             # <<<<<<<<<<<<<<
  *         cdef double[:, :] A = np.zeros((self.nx, self.nx), dtype=np.float64)
  *         cdef double[:] B = np.zeros(self.nx, dtype=np.float64)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_diff); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_diff); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 27, __pyx_L1_error)}
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_self->x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 25, __pyx_L1_error)}
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_self->x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -20387,105 +20401,105 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_h = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":28
+  /* "CubicSpline/cubic_spline_planner.pyx":26
  *         cdef int i
  *         cdef double[:] h = np.diff(self.x)
  *         cdef double[:, :] A = np.zeros((self.nx, self.nx), dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double[:] B = np.zeros(self.nx, dtype=np.float64)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 26, __pyx_L1_error);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float64); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float64); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_7, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_7, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_A = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "cubic_spline_planner.pyx":29
+  /* "CubicSpline/cubic_spline_planner.pyx":27
  *         cdef double[:] h = np.diff(self.x)
  *         cdef double[:, :] A = np.zeros((self.nx, self.nx), dtype=np.float64)
  *         cdef double[:] B = np.zeros(self.nx, dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         A[0, 0] = 1.0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_7)) __PYX_ERR(0, 29, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_7)) __PYX_ERR(0, 27, __pyx_L1_error);
   __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_B = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":31
+  /* "CubicSpline/cubic_spline_planner.pyx":29
  *         cdef double[:] B = np.zeros(self.nx, dtype=np.float64)
  * 
  *         A[0, 0] = 1.0             # <<<<<<<<<<<<<<
@@ -20505,11 +20519,11 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   } else if (unlikely(__pyx_t_10 >= __pyx_v_A.shape[1])) __pyx_t_5 = 1;
   if (unlikely(__pyx_t_5 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_5);
-    __PYX_ERR(0, 31, __pyx_L1_error)
+    __PYX_ERR(0, 29, __pyx_L1_error)
   }
   *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_A.data + __pyx_t_9 * __pyx_v_A.strides[0]) ) + __pyx_t_10 * __pyx_v_A.strides[1]) )) = 1.0;
 
-  /* "cubic_spline_planner.pyx":32
+  /* "CubicSpline/cubic_spline_planner.pyx":30
  * 
  *         A[0, 0] = 1.0
  *         A[self.nx - 1, self.nx - 1] = 1.0             # <<<<<<<<<<<<<<
@@ -20529,11 +20543,11 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   } else if (unlikely(__pyx_t_9 >= __pyx_v_A.shape[1])) __pyx_t_5 = 1;
   if (unlikely(__pyx_t_5 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_5);
-    __PYX_ERR(0, 32, __pyx_L1_error)
+    __PYX_ERR(0, 30, __pyx_L1_error)
   }
   *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_A.data + __pyx_t_10 * __pyx_v_A.strides[0]) ) + __pyx_t_9 * __pyx_v_A.strides[1]) )) = 1.0;
 
-  /* "cubic_spline_planner.pyx":34
+  /* "CubicSpline/cubic_spline_planner.pyx":32
  *         A[self.nx - 1, self.nx - 1] = 1.0
  * 
  *         for i in range(1, self.nx - 1):             # <<<<<<<<<<<<<<
@@ -20545,7 +20559,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   for (__pyx_t_5 = 1; __pyx_t_5 < __pyx_t_12; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "cubic_spline_planner.pyx":35
+    /* "CubicSpline/cubic_spline_planner.pyx":33
  * 
  *         for i in range(1, self.nx - 1):
  *             A[i, i - 1] = h[i - 1]             # <<<<<<<<<<<<<<
@@ -20560,7 +20574,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_9 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 35, __pyx_L1_error)
+      __PYX_ERR(0, 33, __pyx_L1_error)
     }
     __pyx_t_10 = __pyx_v_i;
     __pyx_t_14 = (__pyx_v_i - 1);
@@ -20575,11 +20589,11 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_A.shape[1])) __pyx_t_13 = 1;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 35, __pyx_L1_error)
+      __PYX_ERR(0, 33, __pyx_L1_error)
     }
     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_A.data + __pyx_t_10 * __pyx_v_A.strides[0]) ) + __pyx_t_14 * __pyx_v_A.strides[1]) )) = (*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_9 * __pyx_v_h.strides[0]) )));
 
-    /* "cubic_spline_planner.pyx":36
+    /* "CubicSpline/cubic_spline_planner.pyx":34
  *         for i in range(1, self.nx - 1):
  *             A[i, i - 1] = h[i - 1]
  *             A[i, i] = 2.0 * (h[i - 1] + h[i])             # <<<<<<<<<<<<<<
@@ -20594,7 +20608,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_9 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 36, __pyx_L1_error)
+      __PYX_ERR(0, 34, __pyx_L1_error)
     }
     __pyx_t_14 = __pyx_v_i;
     __pyx_t_13 = -1;
@@ -20604,7 +20618,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 36, __pyx_L1_error)
+      __PYX_ERR(0, 34, __pyx_L1_error)
     }
     __pyx_t_10 = __pyx_v_i;
     __pyx_t_15 = __pyx_v_i;
@@ -20619,11 +20633,11 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_A.shape[1])) __pyx_t_13 = 1;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 36, __pyx_L1_error)
+      __PYX_ERR(0, 34, __pyx_L1_error)
     }
     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_A.data + __pyx_t_10 * __pyx_v_A.strides[0]) ) + __pyx_t_15 * __pyx_v_A.strides[1]) )) = (2.0 * ((*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_9 * __pyx_v_h.strides[0]) ))) + (*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_14 * __pyx_v_h.strides[0]) )))));
 
-    /* "cubic_spline_planner.pyx":37
+    /* "CubicSpline/cubic_spline_planner.pyx":35
  *             A[i, i - 1] = h[i - 1]
  *             A[i, i] = 2.0 * (h[i - 1] + h[i])
  *             A[i, i + 1] = h[i]             # <<<<<<<<<<<<<<
@@ -20638,7 +20652,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 37, __pyx_L1_error)
+      __PYX_ERR(0, 35, __pyx_L1_error)
     }
     __pyx_t_9 = __pyx_v_i;
     __pyx_t_15 = (__pyx_v_i + 1);
@@ -20653,12 +20667,12 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_A.shape[1])) __pyx_t_13 = 1;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 37, __pyx_L1_error)
+      __PYX_ERR(0, 35, __pyx_L1_error)
     }
     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_A.data + __pyx_t_9 * __pyx_v_A.strides[0]) ) + __pyx_t_15 * __pyx_v_A.strides[1]) )) = (*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_14 * __pyx_v_h.strides[0]) )));
   }
 
-  /* "cubic_spline_planner.pyx":39
+  /* "CubicSpline/cubic_spline_planner.pyx":37
  *             A[i, i + 1] = h[i]
  * 
  *         for i in range(self.nx - 2):             # <<<<<<<<<<<<<<
@@ -20670,14 +20684,14 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_12; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "cubic_spline_planner.pyx":40
+    /* "CubicSpline/cubic_spline_planner.pyx":38
  * 
  *         for i in range(self.nx - 2):
  *             B[i + 1] = 3.0 * (self.a[i + 2] - self.a[i + 1]) / h[i + 1] - 3.0 * (self.a[i + 1] - self.a[i]) / h[i]             # <<<<<<<<<<<<<<
  * 
  *         self.c = np.linalg.solve(A, B)
  */
-    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 40, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 38, __pyx_L1_error)}
     __pyx_t_14 = (__pyx_v_i + 2);
     __pyx_t_13 = -1;
     if (__pyx_t_14 < 0) {
@@ -20686,9 +20700,9 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_self->a.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 40, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 38, __pyx_L1_error)}
     __pyx_t_15 = (__pyx_v_i + 1);
     __pyx_t_13 = -1;
     if (__pyx_t_15 < 0) {
@@ -20697,7 +20711,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_self->a.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
     __pyx_t_16 = (3.0 * ((*((double *) ( /* dim=0 */ (__pyx_v_self->a.data + __pyx_t_14 * __pyx_v_self->a.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_self->a.data + __pyx_t_15 * __pyx_v_self->a.strides[0]) )))));
     __pyx_t_15 = (__pyx_v_i + 1);
@@ -20708,14 +20722,14 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
     __pyx_t_17 = (*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_15 * __pyx_v_h.strides[0]) )));
     if (unlikely(__pyx_t_17 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 40, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 38, __pyx_L1_error)}
     __pyx_t_15 = (__pyx_v_i + 1);
     __pyx_t_13 = -1;
     if (__pyx_t_15 < 0) {
@@ -20724,9 +20738,9 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_self->a.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 40, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 38, __pyx_L1_error)}
     __pyx_t_14 = __pyx_v_i;
     __pyx_t_13 = -1;
     if (__pyx_t_14 < 0) {
@@ -20735,7 +20749,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_self->a.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
     __pyx_t_18 = (3.0 * ((*((double *) ( /* dim=0 */ (__pyx_v_self->a.data + __pyx_t_15 * __pyx_v_self->a.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_self->a.data + __pyx_t_14 * __pyx_v_self->a.strides[0]) )))));
     __pyx_t_14 = __pyx_v_i;
@@ -20746,12 +20760,12 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
     __pyx_t_19 = (*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_14 * __pyx_v_h.strides[0]) )));
     if (unlikely(__pyx_t_19 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
     __pyx_t_14 = (__pyx_v_i + 1);
     __pyx_t_13 = -1;
@@ -20761,29 +20775,29 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_B.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
     *((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_14 * __pyx_v_B.strides[0]) )) = ((__pyx_t_16 / __pyx_t_17) - (__pyx_t_18 / __pyx_t_19));
   }
 
-  /* "cubic_spline_planner.pyx":42
+  /* "CubicSpline/cubic_spline_planner.pyx":40
  *             B[i + 1] = 3.0 * (self.a[i + 2] - self.a[i + 1]) / h[i + 1] - 3.0 * (self.a[i + 1] - self.a[i]) / h[i]
  * 
  *         self.c = np.linalg.solve(A, B)             # <<<<<<<<<<<<<<
  * 
  *         for i in range(self.nx - 1):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_linalg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_linalg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_solve); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_solve); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_A, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_A, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_B, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_B, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_3 = NULL;
   __pyx_t_5 = 0;
@@ -20805,18 +20819,18 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->c, 0);
   __pyx_v_self->c = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":44
+  /* "CubicSpline/cubic_spline_planner.pyx":42
  *         self.c = np.linalg.solve(A, B)
  * 
  *         for i in range(self.nx - 1):             # <<<<<<<<<<<<<<
@@ -20828,14 +20842,14 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_12; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "cubic_spline_planner.pyx":45
+    /* "CubicSpline/cubic_spline_planner.pyx":43
  * 
  *         for i in range(self.nx - 1):
  *             self.d[i] = (self.c[i + 1] - self.c[i]) / (3.0 * h[i])             # <<<<<<<<<<<<<<
  *             self.b[i] = (self.a[i + 1] - self.a[i]) / h[i] - h[i] * (2.0 * self.c[i] + self.c[i + 1]) / 3.0
  * 
  */
-    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 45, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 43, __pyx_L1_error)}
     __pyx_t_14 = (__pyx_v_i + 1);
     __pyx_t_13 = -1;
     if (__pyx_t_14 < 0) {
@@ -20844,9 +20858,9 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_self->c.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 43, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 45, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 43, __pyx_L1_error)}
     __pyx_t_15 = __pyx_v_i;
     __pyx_t_13 = -1;
     if (__pyx_t_15 < 0) {
@@ -20855,7 +20869,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_self->c.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 43, __pyx_L1_error)
     }
     __pyx_t_19 = ((*((double *) ( /* dim=0 */ (__pyx_v_self->c.data + __pyx_t_14 * __pyx_v_self->c.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_self->c.data + __pyx_t_15 * __pyx_v_self->c.strides[0]) ))));
     __pyx_t_15 = __pyx_v_i;
@@ -20866,14 +20880,14 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 43, __pyx_L1_error)
     }
     __pyx_t_18 = (3.0 * (*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_15 * __pyx_v_h.strides[0]) ))));
     if (unlikely(__pyx_t_18 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 43, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 45, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 43, __pyx_L1_error)}
     __pyx_t_15 = __pyx_v_i;
     __pyx_t_13 = -1;
     if (__pyx_t_15 < 0) {
@@ -20882,18 +20896,18 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_self->d.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 43, __pyx_L1_error)
     }
     *((double *) ( /* dim=0 */ (__pyx_v_self->d.data + __pyx_t_15 * __pyx_v_self->d.strides[0]) )) = (__pyx_t_19 / __pyx_t_18);
 
-    /* "cubic_spline_planner.pyx":46
+    /* "CubicSpline/cubic_spline_planner.pyx":44
  *         for i in range(self.nx - 1):
  *             self.d[i] = (self.c[i + 1] - self.c[i]) / (3.0 * h[i])
  *             self.b[i] = (self.a[i + 1] - self.a[i]) / h[i] - h[i] * (2.0 * self.c[i] + self.c[i + 1]) / 3.0             # <<<<<<<<<<<<<<
  * 
  *     cpdef double calc_position(self, double x):
  */
-    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 46, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 44, __pyx_L1_error)}
     __pyx_t_15 = (__pyx_v_i + 1);
     __pyx_t_13 = -1;
     if (__pyx_t_15 < 0) {
@@ -20902,9 +20916,9 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_self->a.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 46, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 44, __pyx_L1_error)}
     __pyx_t_14 = __pyx_v_i;
     __pyx_t_13 = -1;
     if (__pyx_t_14 < 0) {
@@ -20913,7 +20927,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_self->a.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
     __pyx_t_18 = ((*((double *) ( /* dim=0 */ (__pyx_v_self->a.data + __pyx_t_15 * __pyx_v_self->a.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_self->a.data + __pyx_t_14 * __pyx_v_self->a.strides[0]) ))));
     __pyx_t_14 = __pyx_v_i;
@@ -20924,12 +20938,12 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
     __pyx_t_19 = (*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_14 * __pyx_v_h.strides[0]) )));
     if (unlikely(__pyx_t_19 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
     __pyx_t_14 = __pyx_v_i;
     __pyx_t_13 = -1;
@@ -20939,9 +20953,9 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_14 >= __pyx_v_h.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 46, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 44, __pyx_L1_error)}
     __pyx_t_15 = __pyx_v_i;
     __pyx_t_13 = -1;
     if (__pyx_t_15 < 0) {
@@ -20950,9 +20964,9 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_15 >= __pyx_v_self->c.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 46, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 44, __pyx_L1_error)}
     __pyx_t_9 = (__pyx_v_i + 1);
     __pyx_t_13 = -1;
     if (__pyx_t_9 < 0) {
@@ -20961,9 +20975,9 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_9 >= __pyx_v_self->c.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
-    if (unlikely(!__pyx_v_self->b.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 46, __pyx_L1_error)}
+    if (unlikely(!__pyx_v_self->b.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 44, __pyx_L1_error)}
     __pyx_t_10 = __pyx_v_i;
     __pyx_t_13 = -1;
     if (__pyx_t_10 < 0) {
@@ -20972,12 +20986,12 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
     } else if (unlikely(__pyx_t_10 >= __pyx_v_self->b.shape[0])) __pyx_t_13 = 0;
     if (unlikely(__pyx_t_13 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_13);
-      __PYX_ERR(0, 46, __pyx_L1_error)
+      __PYX_ERR(0, 44, __pyx_L1_error)
     }
     *((double *) ( /* dim=0 */ (__pyx_v_self->b.data + __pyx_t_10 * __pyx_v_self->b.strides[0]) )) = ((__pyx_t_18 / __pyx_t_19) - (((*((double *) ( /* dim=0 */ (__pyx_v_h.data + __pyx_t_14 * __pyx_v_h.strides[0]) ))) * ((2.0 * (*((double *) ( /* dim=0 */ (__pyx_v_self->c.data + __pyx_t_15 * __pyx_v_self->c.strides[0]) )))) + (*((double *) ( /* dim=0 */ (__pyx_v_self->c.data + __pyx_t_9 * __pyx_v_self->c.strides[0]) ))))) / 3.0));
   }
 
-  /* "cubic_spline_planner.pyx":25
+  /* "CubicSpline/cubic_spline_planner.pyx":23
  *         self.__calc_coefficients()
  * 
  *     cdef void __calc_coefficients(self):             # <<<<<<<<<<<<<<
@@ -20995,7 +21009,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_6, 1);
   __Pyx_XDECREF(__pyx_t_7);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_8, 1);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D._CubicSpline1D__calc_coefficients", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D._CubicSpline1D__calc_coefficients", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_h, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_A, 1);
@@ -21003,7 +21017,7 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
   __Pyx_RefNannyFinishContext();
 }
 
-/* "cubic_spline_planner.pyx":48
+/* "CubicSpline/cubic_spline_planner.pyx":46
  *             self.b[i] = (self.a[i + 1] - self.a[i]) / h[i] - h[i] * (2.0 * self.c[i] + self.c[i + 1]) / 3.0
  * 
  *     cpdef double calc_position(self, double x):             # <<<<<<<<<<<<<<
@@ -21011,14 +21025,14 @@ static void __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_
  *         cdef double dx, position
  */
 
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_3calc_position(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_3calc_position(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch) {
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch) {
   int __pyx_v_i;
   double __pyx_v_dx;
   double __pyx_v_position;
@@ -21050,10 +21064,10 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_position); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_position); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_20cubic_spline_planner_13CubicSpline1D_3calc_position)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_3calc_position)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21075,11 +21089,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21098,14 +21112,14 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
     #endif
   }
 
-  /* "cubic_spline_planner.pyx":52
+  /* "CubicSpline/cubic_spline_planner.pyx":50
  *         cdef double dx, position
  * 
  *         if x < self.x[0] or x > self.x[-1]:             # <<<<<<<<<<<<<<
  *             return float('nan')
  * 
  */
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 52, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 50, __pyx_L1_error)}
   __pyx_t_9 = 0;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21114,7 +21128,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 52, __pyx_L1_error)
+    __PYX_ERR(0, 50, __pyx_L1_error)
   }
   __pyx_t_10 = (__pyx_v_x < (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
   if (!__pyx_t_10) {
@@ -21122,7 +21136,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
     __pyx_t_8 = __pyx_t_10;
     goto __pyx_L4_bool_binop_done;
   }
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 52, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 50, __pyx_L1_error)}
   __pyx_t_9 = -1L;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21131,25 +21145,25 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 52, __pyx_L1_error)
+    __PYX_ERR(0, 50, __pyx_L1_error)
   }
   __pyx_t_10 = (__pyx_v_x > (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
   __pyx_t_8 = __pyx_t_10;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_8) {
 
-    /* "cubic_spline_planner.pyx":53
+    /* "CubicSpline/cubic_spline_planner.pyx":51
  * 
  *         if x < self.x[0] or x > self.x[-1]:
  *             return float('nan')             # <<<<<<<<<<<<<<
  * 
  *         i = self.__search_index(x)
  */
-    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 51, __pyx_L1_error)
     __pyx_r = __pyx_t_7;
     goto __pyx_L0;
 
-    /* "cubic_spline_planner.pyx":52
+    /* "CubicSpline/cubic_spline_planner.pyx":50
  *         cdef double dx, position
  * 
  *         if x < self.x[0] or x > self.x[-1]:             # <<<<<<<<<<<<<<
@@ -21158,24 +21172,24 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
  */
   }
 
-  /* "cubic_spline_planner.pyx":55
+  /* "CubicSpline/cubic_spline_planner.pyx":53
  *             return float('nan')
  * 
  *         i = self.__search_index(x)             # <<<<<<<<<<<<<<
  *         dx = x - self.x[i]
  *         position = self.a[i] + self.b[i] * dx + self.c[i] * dx**2 + self.d[i] * dx**3
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__search_index(__pyx_v_self, __pyx_v_x); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_t_6 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__search_index(__pyx_v_self, __pyx_v_x); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L1_error)
   __pyx_v_i = __pyx_t_6;
 
-  /* "cubic_spline_planner.pyx":56
+  /* "CubicSpline/cubic_spline_planner.pyx":54
  * 
  *         i = self.__search_index(x)
  *         dx = x - self.x[i]             # <<<<<<<<<<<<<<
  *         position = self.a[i] + self.b[i] * dx + self.c[i] * dx**2 + self.d[i] * dx**3
  *         return position
  */
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 56, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 54, __pyx_L1_error)}
   __pyx_t_9 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21184,18 +21198,18 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 56, __pyx_L1_error)
+    __PYX_ERR(0, 54, __pyx_L1_error)
   }
   __pyx_v_dx = (__pyx_v_x - (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
 
-  /* "cubic_spline_planner.pyx":57
+  /* "CubicSpline/cubic_spline_planner.pyx":55
  *         i = self.__search_index(x)
  *         dx = x - self.x[i]
  *         position = self.a[i] + self.b[i] * dx + self.c[i] * dx**2 + self.d[i] * dx**3             # <<<<<<<<<<<<<<
  *         return position
  * 
  */
-  if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 57, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 55, __pyx_L1_error)}
   __pyx_t_9 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21204,9 +21218,9 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->a.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 57, __pyx_L1_error)
+    __PYX_ERR(0, 55, __pyx_L1_error)
   }
-  if (unlikely(!__pyx_v_self->b.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 57, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->b.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 55, __pyx_L1_error)}
   __pyx_t_11 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_11 < 0) {
@@ -21215,9 +21229,9 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   } else if (unlikely(__pyx_t_11 >= __pyx_v_self->b.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 57, __pyx_L1_error)
+    __PYX_ERR(0, 55, __pyx_L1_error)
   }
-  if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 57, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 55, __pyx_L1_error)}
   __pyx_t_12 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_12 < 0) {
@@ -21226,9 +21240,9 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   } else if (unlikely(__pyx_t_12 >= __pyx_v_self->c.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 57, __pyx_L1_error)
+    __PYX_ERR(0, 55, __pyx_L1_error)
   }
-  if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 57, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 55, __pyx_L1_error)}
   __pyx_t_13 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_13 < 0) {
@@ -21237,11 +21251,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   } else if (unlikely(__pyx_t_13 >= __pyx_v_self->d.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 57, __pyx_L1_error)
+    __PYX_ERR(0, 55, __pyx_L1_error)
   }
   __pyx_v_position = ((((*((double *) ( /* dim=0 */ (__pyx_v_self->a.data + __pyx_t_9 * __pyx_v_self->a.strides[0]) ))) + ((*((double *) ( /* dim=0 */ (__pyx_v_self->b.data + __pyx_t_11 * __pyx_v_self->b.strides[0]) ))) * __pyx_v_dx)) + ((*((double *) ( /* dim=0 */ (__pyx_v_self->c.data + __pyx_t_12 * __pyx_v_self->c.strides[0]) ))) * pow(__pyx_v_dx, 2.0))) + ((*((double *) ( /* dim=0 */ (__pyx_v_self->d.data + __pyx_t_13 * __pyx_v_self->d.strides[0]) ))) * pow(__pyx_v_dx, 3.0)));
 
-  /* "cubic_spline_planner.pyx":58
+  /* "CubicSpline/cubic_spline_planner.pyx":56
  *         dx = x - self.x[i]
  *         position = self.a[i] + self.b[i] * dx + self.c[i] * dx**2 + self.d[i] * dx**3
  *         return position             # <<<<<<<<<<<<<<
@@ -21251,7 +21265,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   __pyx_r = __pyx_v_position;
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":48
+  /* "CubicSpline/cubic_spline_planner.pyx":46
  *             self.b[i] = (self.a[i + 1] - self.a[i]) / h[i] - h[i] * (2.0 * self.c[i] + self.c[i + 1]) / 3.0
  * 
  *     cpdef double calc_position(self, double x):             # <<<<<<<<<<<<<<
@@ -21266,7 +21280,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -21274,15 +21288,15 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(struc
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_3calc_position(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_3calc_position(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline1D_3calc_position = {"calc_position", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_3calc_position, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_3calc_position(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_3calc_position = {"calc_position", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_3calc_position, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_3calc_position(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21326,23 +21340,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_position") < 0)) __PYX_ERR(0, 48, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_position") < 0)) __PYX_ERR(0, 46, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L3_error)
+    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_position", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 48, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_position", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 46, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21352,11 +21366,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline1D_2calc_position(((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2calc_position(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x);
 
   /* function exit code */
   {
@@ -21369,7 +21383,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_2calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -21379,8 +21393,8 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_2calc_position(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_position", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position(__pyx_v_self, __pyx_v_x, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_position(__pyx_v_self, __pyx_v_x, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -21389,7 +21403,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_2calc_position(
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21397,7 +21411,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_2calc_position(
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":60
+/* "CubicSpline/cubic_spline_planner.pyx":58
  *         return position
  * 
  *     cpdef double calc_first_derivative(self, double x):             # <<<<<<<<<<<<<<
@@ -21405,14 +21419,14 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_2calc_position(
  *         cdef double dx, dy
  */
 
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch) {
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch) {
   int __pyx_v_i;
   double __pyx_v_dx;
   double __pyx_v_dy;
@@ -21443,10 +21457,10 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_first_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_first_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 60, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21468,11 +21482,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 60, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 60, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21491,14 +21505,14 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
     #endif
   }
 
-  /* "cubic_spline_planner.pyx":64
+  /* "CubicSpline/cubic_spline_planner.pyx":62
  *         cdef double dx, dy
  * 
  *         if x < self.x[0] or x > self.x[-1]:             # <<<<<<<<<<<<<<
  *             return float('nan')
  * 
  */
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 64, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 62, __pyx_L1_error)}
   __pyx_t_9 = 0;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21507,7 +21521,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 64, __pyx_L1_error)
+    __PYX_ERR(0, 62, __pyx_L1_error)
   }
   __pyx_t_10 = (__pyx_v_x < (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
   if (!__pyx_t_10) {
@@ -21515,7 +21529,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
     __pyx_t_8 = __pyx_t_10;
     goto __pyx_L4_bool_binop_done;
   }
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 64, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 62, __pyx_L1_error)}
   __pyx_t_9 = -1L;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21524,25 +21538,25 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 64, __pyx_L1_error)
+    __PYX_ERR(0, 62, __pyx_L1_error)
   }
   __pyx_t_10 = (__pyx_v_x > (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
   __pyx_t_8 = __pyx_t_10;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_8) {
 
-    /* "cubic_spline_planner.pyx":65
+    /* "CubicSpline/cubic_spline_planner.pyx":63
  * 
  *         if x < self.x[0] or x > self.x[-1]:
  *             return float('nan')             # <<<<<<<<<<<<<<
  * 
  *         i = self.__search_index(x)
  */
-    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 65, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 63, __pyx_L1_error)
     __pyx_r = __pyx_t_7;
     goto __pyx_L0;
 
-    /* "cubic_spline_planner.pyx":64
+    /* "CubicSpline/cubic_spline_planner.pyx":62
  *         cdef double dx, dy
  * 
  *         if x < self.x[0] or x > self.x[-1]:             # <<<<<<<<<<<<<<
@@ -21551,24 +21565,24 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
  */
   }
 
-  /* "cubic_spline_planner.pyx":67
+  /* "CubicSpline/cubic_spline_planner.pyx":65
  *             return float('nan')
  * 
  *         i = self.__search_index(x)             # <<<<<<<<<<<<<<
  *         dx = x - self.x[i]
  *         dy = self.b[i] + 2 * self.c[i] * dx + 3 * self.d[i] * dx**2
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__search_index(__pyx_v_self, __pyx_v_x); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_6 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__search_index(__pyx_v_self, __pyx_v_x); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 65, __pyx_L1_error)
   __pyx_v_i = __pyx_t_6;
 
-  /* "cubic_spline_planner.pyx":68
+  /* "CubicSpline/cubic_spline_planner.pyx":66
  * 
  *         i = self.__search_index(x)
  *         dx = x - self.x[i]             # <<<<<<<<<<<<<<
  *         dy = self.b[i] + 2 * self.c[i] * dx + 3 * self.d[i] * dx**2
  *         return dy
  */
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 68, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 66, __pyx_L1_error)}
   __pyx_t_9 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21577,18 +21591,18 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 68, __pyx_L1_error)
+    __PYX_ERR(0, 66, __pyx_L1_error)
   }
   __pyx_v_dx = (__pyx_v_x - (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
 
-  /* "cubic_spline_planner.pyx":69
+  /* "CubicSpline/cubic_spline_planner.pyx":67
  *         i = self.__search_index(x)
  *         dx = x - self.x[i]
  *         dy = self.b[i] + 2 * self.c[i] * dx + 3 * self.d[i] * dx**2             # <<<<<<<<<<<<<<
  *         return dy
  * 
  */
-  if (unlikely(!__pyx_v_self->b.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 69, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->b.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 67, __pyx_L1_error)}
   __pyx_t_9 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21597,9 +21611,9 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->b.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 69, __pyx_L1_error)
+    __PYX_ERR(0, 67, __pyx_L1_error)
   }
-  if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 69, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 67, __pyx_L1_error)}
   __pyx_t_11 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_11 < 0) {
@@ -21608,9 +21622,9 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   } else if (unlikely(__pyx_t_11 >= __pyx_v_self->c.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 69, __pyx_L1_error)
+    __PYX_ERR(0, 67, __pyx_L1_error)
   }
-  if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 69, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 67, __pyx_L1_error)}
   __pyx_t_12 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_12 < 0) {
@@ -21619,11 +21633,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   } else if (unlikely(__pyx_t_12 >= __pyx_v_self->d.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 69, __pyx_L1_error)
+    __PYX_ERR(0, 67, __pyx_L1_error)
   }
   __pyx_v_dy = (((*((double *) ( /* dim=0 */ (__pyx_v_self->b.data + __pyx_t_9 * __pyx_v_self->b.strides[0]) ))) + ((2.0 * (*((double *) ( /* dim=0 */ (__pyx_v_self->c.data + __pyx_t_11 * __pyx_v_self->c.strides[0]) )))) * __pyx_v_dx)) + ((3.0 * (*((double *) ( /* dim=0 */ (__pyx_v_self->d.data + __pyx_t_12 * __pyx_v_self->d.strides[0]) )))) * pow(__pyx_v_dx, 2.0)));
 
-  /* "cubic_spline_planner.pyx":70
+  /* "CubicSpline/cubic_spline_planner.pyx":68
  *         dx = x - self.x[i]
  *         dy = self.b[i] + 2 * self.c[i] * dx + 3 * self.d[i] * dx**2
  *         return dy             # <<<<<<<<<<<<<<
@@ -21633,7 +21647,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   __pyx_r = __pyx_v_dy;
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":60
+  /* "CubicSpline/cubic_spline_planner.pyx":58
  *         return position
  * 
  *     cpdef double calc_first_derivative(self, double x):             # <<<<<<<<<<<<<<
@@ -21648,7 +21662,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -21656,15 +21670,15 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivati
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative = {"calc_first_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative = {"calc_first_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21708,23 +21722,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 60, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_first_derivative") < 0)) __PYX_ERR(0, 60, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_first_derivative") < 0)) __PYX_ERR(0, 58, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 60, __pyx_L3_error)
+    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_first_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 60, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_first_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 58, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21734,11 +21748,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline1D_4calc_first_derivative(((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_4calc_first_derivative(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x);
 
   /* function exit code */
   {
@@ -21751,7 +21765,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_4calc_first_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_4calc_first_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -21761,8 +21775,8 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_4calc_first_der
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_first_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative(__pyx_v_self, __pyx_v_x, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 60, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative(__pyx_v_self, __pyx_v_x, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -21771,7 +21785,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_4calc_first_der
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_first_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21779,7 +21793,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_4calc_first_der
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":72
+/* "CubicSpline/cubic_spline_planner.pyx":70
  *         return dy
  * 
  *     cpdef double calc_second_derivative(self, double x):             # <<<<<<<<<<<<<<
@@ -21787,14 +21801,14 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_4calc_first_der
  *         cdef double dx, ddy
  */
 
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch) {
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x, int __pyx_skip_dispatch) {
   int __pyx_v_i;
   double __pyx_v_dx;
   double __pyx_v_ddy;
@@ -21824,10 +21838,10 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_second_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_second_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21849,11 +21863,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 72, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 70, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21872,14 +21886,14 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
     #endif
   }
 
-  /* "cubic_spline_planner.pyx":76
+  /* "CubicSpline/cubic_spline_planner.pyx":74
  *         cdef double dx, ddy
  * 
  *         if x < self.x[0] or x > self.x[-1]:             # <<<<<<<<<<<<<<
  *             return float('nan')
  * 
  */
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 76, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 74, __pyx_L1_error)}
   __pyx_t_9 = 0;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21888,7 +21902,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 76, __pyx_L1_error)
+    __PYX_ERR(0, 74, __pyx_L1_error)
   }
   __pyx_t_10 = (__pyx_v_x < (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
   if (!__pyx_t_10) {
@@ -21896,7 +21910,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
     __pyx_t_8 = __pyx_t_10;
     goto __pyx_L4_bool_binop_done;
   }
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 76, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 74, __pyx_L1_error)}
   __pyx_t_9 = -1L;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21905,25 +21919,25 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 76, __pyx_L1_error)
+    __PYX_ERR(0, 74, __pyx_L1_error)
   }
   __pyx_t_10 = (__pyx_v_x > (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
   __pyx_t_8 = __pyx_t_10;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_8) {
 
-    /* "cubic_spline_planner.pyx":77
+    /* "CubicSpline/cubic_spline_planner.pyx":75
  * 
  *         if x < self.x[0] or x > self.x[-1]:
  *             return float('nan')             # <<<<<<<<<<<<<<
  * 
  *         i = self.__search_index(x)
  */
-    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 75, __pyx_L1_error)
     __pyx_r = __pyx_t_7;
     goto __pyx_L0;
 
-    /* "cubic_spline_planner.pyx":76
+    /* "CubicSpline/cubic_spline_planner.pyx":74
  *         cdef double dx, ddy
  * 
  *         if x < self.x[0] or x > self.x[-1]:             # <<<<<<<<<<<<<<
@@ -21932,24 +21946,24 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
  */
   }
 
-  /* "cubic_spline_planner.pyx":79
+  /* "CubicSpline/cubic_spline_planner.pyx":77
  *             return float('nan')
  * 
  *         i = self.__search_index(x)             # <<<<<<<<<<<<<<
  *         dx = x - self.x[i]
  *         ddy = 2 * self.c[i] + 6 * self.d[i] * dx
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__search_index(__pyx_v_self, __pyx_v_x); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_6 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->__pyx_vtab)->_CubicSpline1D__search_index(__pyx_v_self, __pyx_v_x); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
   __pyx_v_i = __pyx_t_6;
 
-  /* "cubic_spline_planner.pyx":80
+  /* "CubicSpline/cubic_spline_planner.pyx":78
  * 
  *         i = self.__search_index(x)
  *         dx = x - self.x[i]             # <<<<<<<<<<<<<<
  *         ddy = 2 * self.c[i] + 6 * self.d[i] * dx
  *         return ddy
  */
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 80, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 78, __pyx_L1_error)}
   __pyx_t_9 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21958,18 +21972,18 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->x.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 80, __pyx_L1_error)
+    __PYX_ERR(0, 78, __pyx_L1_error)
   }
   __pyx_v_dx = (__pyx_v_x - (*((double *) ( /* dim=0 */ (__pyx_v_self->x.data + __pyx_t_9 * __pyx_v_self->x.strides[0]) ))));
 
-  /* "cubic_spline_planner.pyx":81
+  /* "CubicSpline/cubic_spline_planner.pyx":79
  *         i = self.__search_index(x)
  *         dx = x - self.x[i]
  *         ddy = 2 * self.c[i] + 6 * self.d[i] * dx             # <<<<<<<<<<<<<<
  *         return ddy
  * 
  */
-  if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 81, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 79, __pyx_L1_error)}
   __pyx_t_9 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_9 < 0) {
@@ -21978,9 +21992,9 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
   } else if (unlikely(__pyx_t_9 >= __pyx_v_self->c.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 81, __pyx_L1_error)
+    __PYX_ERR(0, 79, __pyx_L1_error)
   }
-  if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 81, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 79, __pyx_L1_error)}
   __pyx_t_11 = __pyx_v_i;
   __pyx_t_6 = -1;
   if (__pyx_t_11 < 0) {
@@ -21989,11 +22003,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
   } else if (unlikely(__pyx_t_11 >= __pyx_v_self->d.shape[0])) __pyx_t_6 = 0;
   if (unlikely(__pyx_t_6 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_6);
-    __PYX_ERR(0, 81, __pyx_L1_error)
+    __PYX_ERR(0, 79, __pyx_L1_error)
   }
   __pyx_v_ddy = ((2.0 * (*((double *) ( /* dim=0 */ (__pyx_v_self->c.data + __pyx_t_9 * __pyx_v_self->c.strides[0]) )))) + ((6.0 * (*((double *) ( /* dim=0 */ (__pyx_v_self->d.data + __pyx_t_11 * __pyx_v_self->d.strides[0]) )))) * __pyx_v_dx));
 
-  /* "cubic_spline_planner.pyx":82
+  /* "CubicSpline/cubic_spline_planner.pyx":80
  *         dx = x - self.x[i]
  *         ddy = 2 * self.c[i] + 6 * self.d[i] * dx
  *         return ddy             # <<<<<<<<<<<<<<
@@ -22003,7 +22017,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
   __pyx_r = __pyx_v_ddy;
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":72
+  /* "CubicSpline/cubic_spline_planner.pyx":70
  *         return dy
  * 
  *     cpdef double calc_second_derivative(self, double x):             # <<<<<<<<<<<<<<
@@ -22018,7 +22032,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -22026,15 +22040,15 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivat
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative = {"calc_second_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative = {"calc_second_derivative", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -22078,23 +22092,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 72, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 70, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_second_derivative") < 0)) __PYX_ERR(0, 72, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_second_derivative") < 0)) __PYX_ERR(0, 70, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 72, __pyx_L3_error)
+    __pyx_v_x = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_x == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 70, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_second_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 72, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_second_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 70, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -22104,11 +22118,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline1D_6calc_second_derivative(((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_6calc_second_derivative(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v_x);
 
   /* function exit code */
   {
@@ -22121,7 +22135,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_6calc_second_derivative(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_6calc_second_derivative(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -22131,8 +22145,8 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_6calc_second_de
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_second_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative(__pyx_v_self, __pyx_v_x, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 72, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative(__pyx_v_self, __pyx_v_x, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -22141,7 +22155,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_6calc_second_de
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.calc_second_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -22149,7 +22163,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_6calc_second_de
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":84
+/* "CubicSpline/cubic_spline_planner.pyx":82
  *         return ddy
  * 
  *     cdef int __search_index(self, double x):             # <<<<<<<<<<<<<<
@@ -22157,7 +22171,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_6calc_second_de
  *         if idx < 0:
  */
 
-static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search_index(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
+static int __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search_index(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, double __pyx_v_x) {
   int __pyx_v_idx;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -22173,22 +22187,22 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_CubicSpline1D__search_index", 1);
 
-  /* "cubic_spline_planner.pyx":85
+  /* "CubicSpline/cubic_spline_planner.pyx":83
  * 
  *     cdef int __search_index(self, double x):
  *         cdef int idx = np.searchsorted(self.x, x) - 1             # <<<<<<<<<<<<<<
  *         if idx < 0:
  *             idx = 0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_searchsorted); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_searchsorted); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 85, __pyx_L1_error)}
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_self->x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 83, __pyx_L1_error)}
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_self->x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -22210,18 +22224,18 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_t_1, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_t_1, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_idx = __pyx_t_6;
 
-  /* "cubic_spline_planner.pyx":86
+  /* "CubicSpline/cubic_spline_planner.pyx":84
  *     cdef int __search_index(self, double x):
  *         cdef int idx = np.searchsorted(self.x, x) - 1
  *         if idx < 0:             # <<<<<<<<<<<<<<
@@ -22231,7 +22245,7 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
   __pyx_t_7 = (__pyx_v_idx < 0);
   if (__pyx_t_7) {
 
-    /* "cubic_spline_planner.pyx":87
+    /* "CubicSpline/cubic_spline_planner.pyx":85
  *         cdef int idx = np.searchsorted(self.x, x) - 1
  *         if idx < 0:
  *             idx = 0             # <<<<<<<<<<<<<<
@@ -22240,7 +22254,7 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
  */
     __pyx_v_idx = 0;
 
-    /* "cubic_spline_planner.pyx":86
+    /* "CubicSpline/cubic_spline_planner.pyx":84
  *     cdef int __search_index(self, double x):
  *         cdef int idx = np.searchsorted(self.x, x) - 1
  *         if idx < 0:             # <<<<<<<<<<<<<<
@@ -22250,7 +22264,7 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
     goto __pyx_L3;
   }
 
-  /* "cubic_spline_planner.pyx":88
+  /* "CubicSpline/cubic_spline_planner.pyx":86
  *         if idx < 0:
  *             idx = 0
  *         elif idx >= self.nx - 1:             # <<<<<<<<<<<<<<
@@ -22260,7 +22274,7 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
   __pyx_t_7 = (__pyx_v_idx >= (__pyx_v_self->nx - 1));
   if (__pyx_t_7) {
 
-    /* "cubic_spline_planner.pyx":89
+    /* "CubicSpline/cubic_spline_planner.pyx":87
  *             idx = 0
  *         elif idx >= self.nx - 1:
  *             idx = self.nx - 2             # <<<<<<<<<<<<<<
@@ -22269,7 +22283,7 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
  */
     __pyx_v_idx = (__pyx_v_self->nx - 2);
 
-    /* "cubic_spline_planner.pyx":88
+    /* "CubicSpline/cubic_spline_planner.pyx":86
  *         if idx < 0:
  *             idx = 0
  *         elif idx >= self.nx - 1:             # <<<<<<<<<<<<<<
@@ -22279,7 +22293,7 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
   }
   __pyx_L3:;
 
-  /* "cubic_spline_planner.pyx":90
+  /* "CubicSpline/cubic_spline_planner.pyx":88
  *         elif idx >= self.nx - 1:
  *             idx = self.nx - 2
  *         return idx             # <<<<<<<<<<<<<<
@@ -22289,7 +22303,7 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
   __pyx_r = __pyx_v_idx;
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":84
+  /* "CubicSpline/cubic_spline_planner.pyx":82
  *         return ddy
  * 
  *     cdef int __search_index(self, double x):             # <<<<<<<<<<<<<<
@@ -22304,10 +22318,581 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D._CubicSpline1D__search_index", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D._CubicSpline1D__search_index", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "CubicSpline/cubic_spline_planner.pxd":7
+ * 
+ * cdef class CubicSpline1D:
+ *     cdef public int nx             # <<<<<<<<<<<<<<
+ *     cdef public double[:] x, y, a, b, c, d
+ *     cdef void __calc_coefficients(self)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->nx); if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 7, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.nx.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  int __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(3, 7, __pyx_L1_error)
+  __pyx_v_self->nx = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.nx.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* "CubicSpline/cubic_spline_planner.pxd":8
+ * cdef class CubicSpline1D:
+ *     cdef public int nx
+ *     cdef public double[:] x, y, a, b, c, d             # <<<<<<<<<<<<<<
+ *     cdef void __calc_coefficients(self)
+ *     cpdef double calc_position(self, double x)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_v_self->x.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(3, 8, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.x.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_value, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->x, 0);
+  __pyx_v_self->x = __pyx_t_1;
+  __pyx_t_1.memview = NULL;
+  __pyx_t_1.data = NULL;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.x.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_v_self->y.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(3, 8, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.y.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_value, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->y, 0);
+  __pyx_v_self->y = __pyx_t_1;
+  __pyx_t_1.memview = NULL;
+  __pyx_t_1.data = NULL;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.y.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_v_self->a.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(3, 8, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->a, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.a.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_value, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->a, 0);
+  __pyx_v_self->a = __pyx_t_1;
+  __pyx_t_1.memview = NULL;
+  __pyx_t_1.data = NULL;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.a.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_v_self->b.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(3, 8, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->b, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.b.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_value, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->b, 0);
+  __pyx_v_self->b = __pyx_t_1;
+  __pyx_t_1.memview = NULL;
+  __pyx_t_1.data = NULL;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.b.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_v_self->c.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(3, 8, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->c, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.c.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_value, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->c, 0);
+  __pyx_v_self->c = __pyx_t_1;
+  __pyx_t_1.memview = NULL;
+  __pyx_t_1.data = NULL;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.c.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_v_self->d.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(3, 8, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->d, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.d.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_value, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(3, 8, __pyx_L1_error)
+  __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->d, 0);
+  __pyx_v_self->d = __pyx_t_1;
+  __pyx_t_1.memview = NULL;
+  __pyx_t_1.data = NULL;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.d.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
   return __pyx_r;
 }
 
@@ -22318,15 +22903,15 @@ static int __pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -22351,14 +22936,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline1D_8__reduce_cython__(((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_8__reduce_cython__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_8__reduce_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_8__reduce_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -22607,7 +23192,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_8__reduce_cytho
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -22625,15 +23210,15 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_8__reduce_cytho
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -22703,11 +23288,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline1D_10__setstate_cython__(((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_10__setstate_cython__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -22720,7 +23305,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_10__setstate_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_10__setstate_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -22735,7 +23320,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_10__setstate_cy
  *     __pyx_unpickle_CubicSpline1D__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -22751,7 +23336,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_10__setstate_cy
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline1D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline1D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -22759,8 +23344,8 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_10__setstate_cy
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":96
- *     cdef double[:] s
+/* "CubicSpline/cubic_spline_planner.pyx":92
+ * cdef class CubicSpline2D:
  * 
  *     def __init__(self, double[:] x, double[:] y):             # <<<<<<<<<<<<<<
  *         self.s = self.__calc_s(x, y)
@@ -22768,8 +23353,8 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline1D_10__setstate_cy
  */
 
 /* Python wrapper */
-static int __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_x = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_y = { 0, 0, { 0 }, { 0 }, { 0 } };
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
@@ -22806,7 +23391,7 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *_
           (void)__Pyx_Arg_NewRef_VARARGS(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -22814,14 +23399,14 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *_
           (void)__Pyx_Arg_NewRef_VARARGS(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 96, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 92, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 96, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 92, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -22829,12 +23414,12 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *_
       values[0] = __Pyx_Arg_VARARGS(__pyx_args, 0);
       values[1] = __Pyx_Arg_VARARGS(__pyx_args, 1);
     }
-    __pyx_v_x = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_x.memview)) __PYX_ERR(0, 96, __pyx_L3_error)
-    __pyx_v_y = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_y.memview)) __PYX_ERR(0, 96, __pyx_L3_error)
+    __pyx_v_x = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_x.memview)) __PYX_ERR(0, 92, __pyx_L3_error)
+    __pyx_v_y = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_y.memview)) __PYX_ERR(0, 92, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 96, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 92, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -22846,11 +23431,11 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *_
   }
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_x, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_y, 1);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline2D___init__(((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_x, __pyx_v_y);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D___init__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_x, __pyx_v_y);
 
   /* function exit code */
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_x, 1);
@@ -22865,7 +23450,7 @@ static int __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__(PyObject *_
   return __pyx_r;
 }
 
-static int __pyx_pf_20cubic_spline_planner_13CubicSpline2D___init__(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y) {
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D___init__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -22877,79 +23462,79 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline2D___init__(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "cubic_spline_planner.pyx":97
+  /* "CubicSpline/cubic_spline_planner.pyx":93
  * 
  *     def __init__(self, double[:] x, double[:] y):
  *         self.s = self.__calc_s(x, y)             # <<<<<<<<<<<<<<
  *         self.sx = CubicSpline1D(self.s, x)
  *         self.sy = CubicSpline1D(self.s, y)
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self->__pyx_vtab)->_CubicSpline2D__calc_s(__pyx_v_self, __pyx_v_x, __pyx_v_y); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self->__pyx_vtab)->_CubicSpline2D__calc_s(__pyx_v_self, __pyx_v_x, __pyx_v_y); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 93, __pyx_L1_error)
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->s, 0);
   __pyx_v_self->s = __pyx_t_1;
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "cubic_spline_planner.pyx":98
+  /* "CubicSpline/cubic_spline_planner.pyx":94
  *     def __init__(self, double[:] x, double[:] y):
  *         self.s = self.__calc_s(x, y)
  *         self.sx = CubicSpline1D(self.s, x)             # <<<<<<<<<<<<<<
  *         self.sy = CubicSpline1D(self.s, y)
  * 
  */
-  if (unlikely(!__pyx_v_self->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 98, __pyx_L1_error)}
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_self->s, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
+  if (unlikely(!__pyx_v_self->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 94, __pyx_L1_error)}
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_self->s, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D), __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D), __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF((PyObject *)__pyx_v_self->sx);
   __Pyx_DECREF((PyObject *)__pyx_v_self->sx);
-  __pyx_v_self->sx = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_t_3);
+  __pyx_v_self->sx = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "cubic_spline_planner.pyx":99
+  /* "CubicSpline/cubic_spline_planner.pyx":95
  *         self.s = self.__calc_s(x, y)
  *         self.sx = CubicSpline1D(self.s, x)
  *         self.sy = CubicSpline1D(self.s, y)             # <<<<<<<<<<<<<<
  * 
  *     cdef double[:] __calc_s(self, double[:] x, double[:] y):
  */
-  if (unlikely(!__pyx_v_self->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 99, __pyx_L1_error)}
-  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_self->s, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
+  if (unlikely(!__pyx_v_self->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 95, __pyx_L1_error)}
+  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_self->s, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_4)) __PYX_ERR(0, 99, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D), __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D), __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF((PyObject *)__pyx_v_self->sy);
   __Pyx_DECREF((PyObject *)__pyx_v_self->sy);
-  __pyx_v_self->sy = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_t_4);
+  __pyx_v_self->sy = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":96
- *     cdef double[:] s
+  /* "CubicSpline/cubic_spline_planner.pyx":92
+ * cdef class CubicSpline2D:
  * 
  *     def __init__(self, double[:] x, double[:] y):             # <<<<<<<<<<<<<<
  *         self.s = self.__calc_s(x, y)
@@ -22964,14 +23549,14 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline2D___init__(struct __pyx
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":101
+/* "CubicSpline/cubic_spline_planner.pyx":97
  *         self.sy = CubicSpline1D(self.s, y)
  * 
  *     cdef double[:] __calc_s(self, double[:] x, double[:] y):             # <<<<<<<<<<<<<<
@@ -22979,7 +23564,7 @@ static int __pyx_pf_20cubic_spline_planner_13CubicSpline2D___init__(struct __pyx
  *         cdef double[:] dy = np.diff(y)
  */
 
-static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicSpline2D__calc_s(CYTHON_UNUSED struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y) {
+static __Pyx_memviewslice __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D__CubicSpline2D__calc_s(CYTHON_UNUSED struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, __Pyx_memviewslice __pyx_v_x, __Pyx_memviewslice __pyx_v_y) {
   __Pyx_memviewslice __pyx_v_dx = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_dy = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_ds = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -23000,19 +23585,19 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_CubicSpline2D__calc_s", 1);
 
-  /* "cubic_spline_planner.pyx":102
+  /* "CubicSpline/cubic_spline_planner.pyx":98
  * 
  *     cdef double[:] __calc_s(self, double[:] x, double[:] y):
  *         cdef double[:] dx = np.diff(x)             # <<<<<<<<<<<<<<
  *         cdef double[:] dy = np.diff(y)
  *         cdef double[:] ds = np.hypot(dx, dy)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_diff); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_diff); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -23033,29 +23618,29 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_dx = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":103
+  /* "CubicSpline/cubic_spline_planner.pyx":99
  *     cdef double[:] __calc_s(self, double[:] x, double[:] y):
  *         cdef double[:] dx = np.diff(x)
  *         cdef double[:] dy = np.diff(y)             # <<<<<<<<<<<<<<
  *         cdef double[:] ds = np.hypot(dx, dy)
  *         cdef double[:] s = np.concatenate(([0.0], np.cumsum(ds)))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_diff); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_diff); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -23076,31 +23661,31 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_dy = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":104
+  /* "CubicSpline/cubic_spline_planner.pyx":100
  *         cdef double[:] dx = np.diff(x)
  *         cdef double[:] dy = np.diff(y)
  *         cdef double[:] ds = np.hypot(dx, dy)             # <<<<<<<<<<<<<<
  *         cdef double[:] s = np.concatenate(([0.0], np.cumsum(ds)))
  *         return s
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_hypot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_hypot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_dx, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_dx, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_dy, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_dy, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_7 = NULL;
   __pyx_t_5 = 0;
@@ -23122,39 +23707,39 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ds = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":105
+  /* "CubicSpline/cubic_spline_planner.pyx":101
  *         cdef double[:] dy = np.diff(y)
  *         cdef double[:] ds = np.hypot(dx, dy)
  *         cdef double[:] s = np.concatenate(([0.0], np.cumsum(ds)))             # <<<<<<<<<<<<<<
  *         return s
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_concatenate); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_concatenate); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_float_0_0);
   __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_0_0)) __PYX_ERR(0, 105, __pyx_L1_error);
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_0_0)) __PYX_ERR(0, 101, __pyx_L1_error);
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_cumsum); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_cumsum); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __pyx_memoryview_fromslice(__pyx_v_ds, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_7 = __pyx_memoryview_fromslice(__pyx_v_ds, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_t_9 = NULL;
   __pyx_t_5 = 0;
@@ -23175,16 +23760,16 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_8, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
-  __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -23206,17 +23791,17 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_s = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":106
+  /* "CubicSpline/cubic_spline_planner.pyx":102
  *         cdef double[:] ds = np.hypot(dx, dy)
  *         cdef double[:] s = np.concatenate(([0.0], np.cumsum(ds)))
  *         return s             # <<<<<<<<<<<<<<
@@ -23227,7 +23812,7 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
   __pyx_r = __pyx_v_s;
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":101
+  /* "CubicSpline/cubic_spline_planner.pyx":97
  *         self.sy = CubicSpline1D(self.s, y)
  * 
  *     cdef double[:] __calc_s(self, double[:] x, double[:] y):             # <<<<<<<<<<<<<<
@@ -23247,7 +23832,7 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
   __Pyx_XDECREF(__pyx_t_9);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D._CubicSpline2D__calc_s", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D._CubicSpline2D__calc_s", __pyx_clineno, __pyx_lineno, __pyx_filename);
   goto __pyx_L2;
   __pyx_L0:;
   if (unlikely(!__pyx_r.memview)) {
@@ -23262,7 +23847,7 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":108
+/* "CubicSpline/cubic_spline_planner.pyx":104
  *         return s
  * 
  *     cpdef tuple calc_position(self, double s):             # <<<<<<<<<<<<<<
@@ -23270,14 +23855,14 @@ static __Pyx_memviewslice __pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicS
  *         cdef double y = self.sy.calc_position(s)
  */
 
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_3calc_position(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_3calc_position(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch) {
+static PyObject *__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch) {
   double __pyx_v_x;
   double __pyx_v_y;
   PyObject *__pyx_r = NULL;
@@ -23302,11 +23887,11 @@ static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(st
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_position); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_position); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_20cubic_spline_planner_13CubicSpline2D_3calc_position)) {
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_3calc_position)) {
         __Pyx_XDECREF(__pyx_r);
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -23328,11 +23913,11 @@ static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(st
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_t_2))) __PYX_ERR(0, 108, __pyx_L1_error)
+        if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_t_2))) __PYX_ERR(0, 104, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -23351,27 +23936,27 @@ static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(st
     #endif
   }
 
-  /* "cubic_spline_planner.pyx":109
+  /* "CubicSpline/cubic_spline_planner.pyx":105
  * 
  *     cpdef tuple calc_position(self, double s):
  *         cdef double x = self.sx.calc_position(s)             # <<<<<<<<<<<<<<
  *         cdef double y = self.sy.calc_position(s)
  *         return (x, y)
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_position(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_position(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 105, __pyx_L1_error)
   __pyx_v_x = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":110
+  /* "CubicSpline/cubic_spline_planner.pyx":106
  *     cpdef tuple calc_position(self, double s):
  *         cdef double x = self.sx.calc_position(s)
  *         cdef double y = self.sy.calc_position(s)             # <<<<<<<<<<<<<<
  *         return (x, y)
  * 
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_position(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_position(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 106, __pyx_L1_error)
   __pyx_v_y = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":111
+  /* "CubicSpline/cubic_spline_planner.pyx":107
  *         cdef double x = self.sx.calc_position(s)
  *         cdef double y = self.sy.calc_position(s)
  *         return (x, y)             # <<<<<<<<<<<<<<
@@ -23379,23 +23964,23 @@ static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(st
  *     cpdef double calc_curvature(self, double s):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
   __pyx_r = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":108
+  /* "CubicSpline/cubic_spline_planner.pyx":104
  *         return s
  * 
  *     cpdef tuple calc_position(self, double s):             # <<<<<<<<<<<<<<
@@ -23410,7 +23995,7 @@ static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(st
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -23419,15 +24004,15 @@ static PyObject *__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(st
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_3calc_position(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_3calc_position(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline2D_3calc_position = {"calc_position", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_3calc_position, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_3calc_position(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_3calc_position = {"calc_position", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_3calc_position, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_3calc_position(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -23471,23 +24056,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_position") < 0)) __PYX_ERR(0, 108, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_position") < 0)) __PYX_ERR(0, 104, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_s = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_position", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 108, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_position", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 104, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -23497,11 +24082,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline2D_2calc_position(((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_s);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2calc_position(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_s);
 
   /* function exit code */
   {
@@ -23514,7 +24099,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_2calc_position(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2calc_position(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -23523,7 +24108,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_2calc_position(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_position", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position(__pyx_v_self, __pyx_v_s, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_position(__pyx_v_self, __pyx_v_s, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -23532,7 +24117,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_2calc_position(
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -23540,7 +24125,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_2calc_position(
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":113
+/* "CubicSpline/cubic_spline_planner.pyx":109
  *         return (x, y)
  * 
  *     cpdef double calc_curvature(self, double s):             # <<<<<<<<<<<<<<
@@ -23548,14 +24133,14 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_2calc_position(
  *         cdef double dy = self.sy.calc_first_derivative(s)
  */
 
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_5calc_curvature(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_5calc_curvature(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch) {
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_curvature(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch) {
   double __pyx_v_dx;
   double __pyx_v_dy;
   double __pyx_v_ddx;
@@ -23584,10 +24169,10 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_curvature); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_curvature); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_20cubic_spline_planner_13CubicSpline2D_5calc_curvature)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_5calc_curvature)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 109, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -23609,11 +24194,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -23632,47 +24217,47 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
     #endif
   }
 
-  /* "cubic_spline_planner.pyx":114
+  /* "CubicSpline/cubic_spline_planner.pyx":110
  * 
  *     cpdef double calc_curvature(self, double s):
  *         cdef double dx = self.sx.calc_first_derivative(s)             # <<<<<<<<<<<<<<
  *         cdef double dy = self.sy.calc_first_derivative(s)
  *         cdef double ddx = self.sx.calc_second_derivative(s)
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L1_error)
   __pyx_v_dx = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":115
+  /* "CubicSpline/cubic_spline_planner.pyx":111
  *     cpdef double calc_curvature(self, double s):
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)             # <<<<<<<<<<<<<<
  *         cdef double ddx = self.sx.calc_second_derivative(s)
  *         cdef double ddy = self.sy.calc_second_derivative(s)
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
   __pyx_v_dy = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":116
+  /* "CubicSpline/cubic_spline_planner.pyx":112
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)
  *         cdef double ddx = self.sx.calc_second_derivative(s)             # <<<<<<<<<<<<<<
  *         cdef double ddy = self.sy.calc_second_derivative(s)
  *         if dx**2 + dy**2 == 0:
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_second_derivative(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_second_derivative(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L1_error)
   __pyx_v_ddx = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":117
+  /* "CubicSpline/cubic_spline_planner.pyx":113
  *         cdef double dy = self.sy.calc_first_derivative(s)
  *         cdef double ddx = self.sx.calc_second_derivative(s)
  *         cdef double ddy = self.sy.calc_second_derivative(s)             # <<<<<<<<<<<<<<
  *         if dx**2 + dy**2 == 0:
  *             return float('nan')
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_second_derivative(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_second_derivative(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
   __pyx_v_ddy = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":118
+  /* "CubicSpline/cubic_spline_planner.pyx":114
  *         cdef double ddx = self.sx.calc_second_derivative(s)
  *         cdef double ddy = self.sy.calc_second_derivative(s)
  *         if dx**2 + dy**2 == 0:             # <<<<<<<<<<<<<<
@@ -23682,18 +24267,18 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
   __pyx_t_8 = ((pow(__pyx_v_dx, 2.0) + pow(__pyx_v_dy, 2.0)) == 0.0);
   if (__pyx_t_8) {
 
-    /* "cubic_spline_planner.pyx":119
+    /* "CubicSpline/cubic_spline_planner.pyx":115
  *         cdef double ddy = self.sy.calc_second_derivative(s)
  *         if dx**2 + dy**2 == 0:
  *             return float('nan')             # <<<<<<<<<<<<<<
  *         return (ddy * dx - ddx * dy) / pow(dx**2 + dy**2, 1.5)
  * 
  */
-    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 119, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_nan); if (unlikely(__pyx_t_7 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L1_error)
     __pyx_r = __pyx_t_7;
     goto __pyx_L0;
 
-    /* "cubic_spline_planner.pyx":118
+    /* "CubicSpline/cubic_spline_planner.pyx":114
  *         cdef double ddx = self.sx.calc_second_derivative(s)
  *         cdef double ddy = self.sy.calc_second_derivative(s)
  *         if dx**2 + dy**2 == 0:             # <<<<<<<<<<<<<<
@@ -23702,7 +24287,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
  */
   }
 
-  /* "cubic_spline_planner.pyx":120
+  /* "CubicSpline/cubic_spline_planner.pyx":116
  *         if dx**2 + dy**2 == 0:
  *             return float('nan')
  *         return (ddy * dx - ddx * dy) / pow(dx**2 + dy**2, 1.5)             # <<<<<<<<<<<<<<
@@ -23713,12 +24298,12 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
   __pyx_t_9 = pow((pow(__pyx_v_dx, 2.0) + pow(__pyx_v_dy, 2.0)), 1.5);
   if (unlikely(__pyx_t_9 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 120, __pyx_L1_error)
+    __PYX_ERR(0, 116, __pyx_L1_error)
   }
   __pyx_r = (__pyx_t_7 / __pyx_t_9);
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":113
+  /* "CubicSpline/cubic_spline_planner.pyx":109
  *         return (x, y)
  * 
  *     cpdef double calc_curvature(self, double s):             # <<<<<<<<<<<<<<
@@ -23733,7 +24318,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_curvature", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_curvature", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -23741,15 +24326,15 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(stru
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_5calc_curvature(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_5calc_curvature(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline2D_5calc_curvature = {"calc_curvature", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_5calc_curvature, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_5calc_curvature(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_5calc_curvature = {"calc_curvature", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_5calc_curvature, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_5calc_curvature(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -23793,23 +24378,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_curvature") < 0)) __PYX_ERR(0, 113, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_curvature") < 0)) __PYX_ERR(0, 109, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_s = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_curvature", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 113, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_curvature", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 109, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -23819,11 +24404,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_curvature", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_curvature", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline2D_4calc_curvature(((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_s);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_4calc_curvature(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_s);
 
   /* function exit code */
   {
@@ -23836,7 +24421,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_4calc_curvature(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_4calc_curvature(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -23846,8 +24431,8 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_4calc_curvature
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_curvature", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature(__pyx_v_self, __pyx_v_s, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_curvature(__pyx_v_self, __pyx_v_s, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -23856,7 +24441,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_4calc_curvature
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_curvature", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_curvature", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -23864,7 +24449,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_4calc_curvature
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":122
+/* "CubicSpline/cubic_spline_planner.pyx":118
  *         return (ddy * dx - ddx * dy) / pow(dx**2 + dy**2, 1.5)
  * 
  *     cpdef double calc_yaw(self, double s):             # <<<<<<<<<<<<<<
@@ -23872,14 +24457,14 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_4calc_curvature
  *         cdef double dy = self.sy.calc_first_derivative(s)
  */
 
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_7calc_yaw(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_7calc_yaw(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch) {
+static double __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s, int __pyx_skip_dispatch) {
   double __pyx_v_dx;
   double __pyx_v_dy;
   double __pyx_r;
@@ -23904,10 +24489,10 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __p
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_yaw); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_yaw); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_20cubic_spline_planner_13CubicSpline2D_7calc_yaw)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 122, __pyx_L1_error)
+      if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_7calc_yaw)) {
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 118, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -23929,11 +24514,11 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __p
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 122, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 118, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 122, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 118, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -23952,27 +24537,27 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __p
     #endif
   }
 
-  /* "cubic_spline_planner.pyx":123
+  /* "CubicSpline/cubic_spline_planner.pyx":119
  * 
  *     cpdef double calc_yaw(self, double s):
  *         cdef double dx = self.sx.calc_first_derivative(s)             # <<<<<<<<<<<<<<
  *         cdef double dy = self.sy.calc_first_derivative(s)
  *         return atan2(dy, dx)
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sx->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sx, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 119, __pyx_L1_error)
   __pyx_v_dx = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":124
+  /* "CubicSpline/cubic_spline_planner.pyx":120
  *     cpdef double calc_yaw(self, double s):
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)             # <<<<<<<<<<<<<<
  *         return atan2(dy, dx)
  * 
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_self->sy->__pyx_vtab)->calc_first_derivative(__pyx_v_self->sy, __pyx_v_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 120, __pyx_L1_error)
   __pyx_v_dy = __pyx_t_7;
 
-  /* "cubic_spline_planner.pyx":125
+  /* "CubicSpline/cubic_spline_planner.pyx":121
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)
  *         return atan2(dy, dx)             # <<<<<<<<<<<<<<
@@ -23982,7 +24567,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __p
   __pyx_r = atan2(__pyx_v_dy, __pyx_v_dx);
   goto __pyx_L0;
 
-  /* "cubic_spline_planner.pyx":122
+  /* "CubicSpline/cubic_spline_planner.pyx":118
  *         return (ddy * dx - ddx * dy) / pow(dx**2 + dy**2, 1.5)
  * 
  *     cpdef double calc_yaw(self, double s):             # <<<<<<<<<<<<<<
@@ -23997,7 +24582,7 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __p
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_yaw", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_yaw", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -24005,15 +24590,15 @@ static double __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(struct __p
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_7calc_yaw(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_7calc_yaw(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline2D_7calc_yaw = {"calc_yaw", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_7calc_yaw, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_7calc_yaw(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_7calc_yaw = {"calc_yaw", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_7calc_yaw, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_7calc_yaw(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -24057,23 +24642,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 122, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 118, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_yaw") < 0)) __PYX_ERR(0, 122, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_yaw") < 0)) __PYX_ERR(0, 118, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_s = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 122, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 118, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_yaw", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 122, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_yaw", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 118, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -24083,11 +24668,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_yaw", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_yaw", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_s);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v_s);
 
   /* function exit code */
   {
@@ -24100,7 +24685,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, double __pyx_v_s) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -24110,8 +24695,8 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_yaw", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw(__pyx_v_self, __pyx_v_s, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 122, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_yaw(__pyx_v_self, __pyx_v_s, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -24120,11 +24705,319 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(struc
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.calc_yaw", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.calc_yaw", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "CubicSpline/cubic_spline_planner.pxd":16
+ * 
+ * cdef class CubicSpline2D:
+ *     cdef public CubicSpline1D sx, sy             # <<<<<<<<<<<<<<
+ *     cdef public double[:] s
+ *     cdef double[:] __calc_s(self, double[:] x, double[:] y)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF((PyObject *)__pyx_v_self->sx);
+  __pyx_r = ((PyObject *)__pyx_v_self->sx);
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 1);
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D))))) __PYX_ERR(3, 16, __pyx_L1_error)
+  __pyx_t_1 = __pyx_v_value;
+  __Pyx_INCREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF((PyObject *)__pyx_v_self->sx);
+  __Pyx_DECREF((PyObject *)__pyx_v_self->sx);
+  __pyx_v_self->sx = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.sx.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_5__del__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_4__del__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_4__del__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 1);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF((PyObject *)__pyx_v_self->sx);
+  __Pyx_DECREF((PyObject *)__pyx_v_self->sx);
+  __pyx_v_self->sx = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)Py_None);
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF((PyObject *)__pyx_v_self->sy);
+  __pyx_r = ((PyObject *)__pyx_v_self->sy);
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 1);
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D))))) __PYX_ERR(3, 16, __pyx_L1_error)
+  __pyx_t_1 = __pyx_v_value;
+  __Pyx_INCREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF((PyObject *)__pyx_v_self->sy);
+  __Pyx_DECREF((PyObject *)__pyx_v_self->sy);
+  __pyx_v_self->sy = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.sy.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_5__del__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_4__del__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_4__del__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 1);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF((PyObject *)__pyx_v_self->sy);
+  __Pyx_DECREF((PyObject *)__pyx_v_self->sy);
+  __pyx_v_self->sy = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)Py_None);
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "CubicSpline/cubic_spline_planner.pxd":17
+ * cdef class CubicSpline2D:
+ *     cdef public CubicSpline1D sx, sy
+ *     cdef public double[:] s             # <<<<<<<<<<<<<<
+ *     cdef double[:] __calc_s(self, double[:] x, double[:] y)
+ *     cpdef tuple calc_position(self, double s)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_1__get__(PyObject *__pyx_v_self) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s___get__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s___get__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 1);
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_v_self->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(3, 17, __pyx_L1_error)}
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_self->s, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 17, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.s.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_2__set__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_2__set__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_value, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(3, 17, __pyx_L1_error)
+  __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->s, 0);
+  __pyx_v_self->s = __pyx_t_1;
+  __pyx_t_1.memview = NULL;
+  __pyx_t_1.data = NULL;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.s.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
   return __pyx_r;
 }
 
@@ -24135,15 +25028,15 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_6calc_yaw(struc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -24168,14 +25061,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline2D_8__reduce_cython__(((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self));
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_8__reduce_cython__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_8__reduce_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_8__reduce_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -24395,7 +25288,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_8__reduce_cytho
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -24413,15 +25306,15 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_8__reduce_cytho
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -24491,11 +25384,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_13CubicSpline2D_10__setstate_cython__(((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_10__setstate_cython__(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -24508,7 +25401,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_10__setstate_cython__(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_10__setstate_cython__(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -24523,7 +25416,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_10__setstate_cy
  *     __pyx_unpickle_CubicSpline2D__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -24539,7 +25432,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_10__setstate_cy
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("cubic_spline_planner.CubicSpline2D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.CubicSpline2D.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -24547,7 +25440,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_10__setstate_cy
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":127
+/* "CubicSpline/cubic_spline_planner.pyx":123
  *         return atan2(dy, dx)
  * 
  * def main_1d():             # <<<<<<<<<<<<<<
@@ -24556,25 +25449,25 @@ static PyObject *__pyx_pf_20cubic_spline_planner_13CubicSpline2D_10__setstate_cy
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_1main_1d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_1main_1d = {"main_1d", (PyCFunction)__pyx_pw_20cubic_spline_planner_1main_1d, METH_NOARGS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_1main_1d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_1main_1d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_1main_1d = {"main_1d", (PyCFunction)__pyx_pw_11CubicSpline_20cubic_spline_planner_1main_1d, METH_NOARGS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_1main_1d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("main_1d (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_20cubic_spline_planner_main_1d(__pyx_self);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_main_1d(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_y = NULL;
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v_sp = NULL;
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v_sp = NULL;
   PyObject *__pyx_v_xi = NULL;
   PyObject *__pyx_v_yi = NULL;
   PyObject *__pyx_7genexpr__pyx_v_x = NULL;
@@ -24595,89 +25488,89 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("main_1d", 1);
 
-  /* "cubic_spline_planner.pyx":128
+  /* "CubicSpline/cubic_spline_planner.pyx":124
  * 
  * def main_1d():
  *     print("CubicSpline1D test")             # <<<<<<<<<<<<<<
  *     x = np.arange(5.0, dtype=np.float64)
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cubic_spline_planner.pyx":129
+  /* "CubicSpline/cubic_spline_planner.pyx":125
  * def main_1d():
  *     print("CubicSpline1D test")
  *     x = np.arange(5.0, dtype=np.float64)             # <<<<<<<<<<<<<<
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)
  *     sp = CubicSpline1D(x, y)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_arange); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_arange); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 129, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__12, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__12, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_x = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":130
+  /* "CubicSpline/cubic_spline_planner.pyx":126
  *     print("CubicSpline1D test")
  *     x = np.arange(5.0, dtype=np.float64)
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)             # <<<<<<<<<<<<<<
  *     sp = CubicSpline1D(x, y)
  *     xi = np.linspace(0.0, 5.0, 100)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyList_New(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_float_1_7);
   __Pyx_GIVEREF(__pyx_float_1_7);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_float_1_7)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_float_1_7)) __PYX_ERR(0, 126, __pyx_L1_error);
   __Pyx_INCREF(__pyx_int_neg_6);
   __Pyx_GIVEREF(__pyx_int_neg_6);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_int_neg_6)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_int_neg_6)) __PYX_ERR(0, 126, __pyx_L1_error);
   __Pyx_INCREF(__pyx_int_5);
   __Pyx_GIVEREF(__pyx_int_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 2, __pyx_int_5)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 2, __pyx_int_5)) __PYX_ERR(0, 126, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_6_5);
   __Pyx_GIVEREF(__pyx_float_6_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 3, __pyx_float_6_5)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 3, __pyx_float_6_5)) __PYX_ERR(0, 126, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_0_0);
   __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 4, __pyx_float_0_0)) __PYX_ERR(0, 130, __pyx_L1_error);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 4, __pyx_float_0_0)) __PYX_ERR(0, 126, __pyx_L1_error);
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 126, __pyx_L1_error);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -24685,46 +25578,46 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
   __pyx_v_y = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "cubic_spline_planner.pyx":131
+  /* "CubicSpline/cubic_spline_planner.pyx":127
  *     x = np.arange(5.0, dtype=np.float64)
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)
  *     sp = CubicSpline1D(x, y)             # <<<<<<<<<<<<<<
  *     xi = np.linspace(0.0, 5.0, 100)
  *     yi = [sp.calc_position(x) for x in xi]
  */
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_x);
   __Pyx_GIVEREF(__pyx_v_x);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_x)) __PYX_ERR(0, 131, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_x)) __PYX_ERR(0, 127, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_y);
   __Pyx_GIVEREF(__pyx_v_y);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_y)) __PYX_ERR(0, 131, __pyx_L1_error);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_y)) __PYX_ERR(0, 127, __pyx_L1_error);
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_v_sp = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_t_4);
+  __pyx_v_sp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":132
+  /* "CubicSpline/cubic_spline_planner.pyx":128
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)
  *     sp = CubicSpline1D(x, y)
  *     xi = np.linspace(0.0, 5.0, 100)             # <<<<<<<<<<<<<<
  *     yi = [sp.calc_position(x) for x in xi]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_linspace); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_linspace); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_xi = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":133
+  /* "CubicSpline/cubic_spline_planner.pyx":129
  *     sp = CubicSpline1D(x, y)
  *     xi = np.linspace(0.0, 5.0, 100)
  *     yi = [sp.calc_position(x) for x in xi]             # <<<<<<<<<<<<<<
@@ -24732,16 +25625,16 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
  *     plt.figure()
  */
   { /* enter inner scope */
-    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 133, __pyx_L5_error)
+    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 129, __pyx_L5_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (likely(PyList_CheckExact(__pyx_v_xi)) || PyTuple_CheckExact(__pyx_v_xi)) {
       __pyx_t_5 = __pyx_v_xi; __Pyx_INCREF(__pyx_t_5);
       __pyx_t_6 = 0;
       __pyx_t_7 = NULL;
     } else {
-      __pyx_t_6 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_v_xi); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 133, __pyx_L5_error)
+      __pyx_t_6 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_v_xi); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 129, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_7 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 133, __pyx_L5_error)
+      __pyx_t_7 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 129, __pyx_L5_error)
     }
     for (;;) {
       if (likely(!__pyx_t_7)) {
@@ -24749,28 +25642,28 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_5);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 133, __pyx_L5_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 129, __pyx_L5_error)
             #endif
             if (__pyx_t_6 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 133, __pyx_L5_error)
+          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 129, __pyx_L5_error)
           #else
-          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L5_error)
+          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L5_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         } else {
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_5);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 133, __pyx_L5_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 129, __pyx_L5_error)
             #endif
             if (__pyx_t_6 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 133, __pyx_L5_error)
+          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 129, __pyx_L5_error)
           #else
-          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L5_error)
+          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L5_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         }
@@ -24780,7 +25673,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 133, __pyx_L5_error)
+            else __PYX_ERR(0, 129, __pyx_L5_error)
           }
           break;
         }
@@ -24788,11 +25681,11 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
       }
       __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_x, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_7genexpr__pyx_v_x); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L5_error)
-      __pyx_t_9 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D *)__pyx_v_sp->__pyx_vtab)->calc_position(__pyx_v_sp, __pyx_t_8, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L5_error)
-      __pyx_t_2 = PyFloat_FromDouble(__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L5_error)
+      __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_7genexpr__pyx_v_x); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 129, __pyx_L5_error)
+      __pyx_t_9 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v_sp->__pyx_vtab)->calc_position(__pyx_v_sp, __pyx_t_8, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 129, __pyx_L5_error)
+      __pyx_t_2 = PyFloat_FromDouble(__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_2);
-      if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_2))) __PYX_ERR(0, 133, __pyx_L5_error)
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_2))) __PYX_ERR(0, 129, __pyx_L5_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -24806,16 +25699,16 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
   __pyx_v_yi = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":135
+  /* "CubicSpline/cubic_spline_planner.pyx":131
  *     yi = [sp.calc_position(x) for x in xi]
  * 
  *     plt.figure()             # <<<<<<<<<<<<<<
  *     plt.plot(x, y, "xb", label="Data points")
  *     plt.plot(xi, yi, "r", label="Cubic spline interpolation")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_figure); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_figure); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -24836,88 +25729,88 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
     PyObject *__pyx_callargs[2] = {__pyx_t_5, NULL};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_10, 0+__pyx_t_10);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 135, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":136
+  /* "CubicSpline/cubic_spline_planner.pyx":132
  * 
  *     plt.figure()
  *     plt.plot(x, y, "xb", label="Data points")             # <<<<<<<<<<<<<<
  *     plt.plot(xi, yi, "r", label="Cubic spline interpolation")
  *     plt.grid(True)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_x);
   __Pyx_GIVEREF(__pyx_v_x);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_x)) __PYX_ERR(0, 136, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_x)) __PYX_ERR(0, 132, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_y);
   __Pyx_GIVEREF(__pyx_v_y);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_y)) __PYX_ERR(0, 136, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_y)) __PYX_ERR(0, 132, __pyx_L1_error);
   __Pyx_INCREF(__pyx_n_u_xb);
   __Pyx_GIVEREF(__pyx_n_u_xb);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_n_u_xb)) __PYX_ERR(0, 136, __pyx_L1_error);
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 136, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_n_u_xb)) __PYX_ERR(0, 132, __pyx_L1_error);
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_label, __pyx_kp_u_Data_points) < 0) __PYX_ERR(0, 136, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_label, __pyx_kp_u_Data_points) < 0) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cubic_spline_planner.pyx":137
+  /* "CubicSpline/cubic_spline_planner.pyx":133
  *     plt.figure()
  *     plt.plot(x, y, "xb", label="Data points")
  *     plt.plot(xi, yi, "r", label="Cubic spline interpolation")             # <<<<<<<<<<<<<<
  *     plt.grid(True)
  *     plt.legend()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_xi);
   __Pyx_GIVEREF(__pyx_v_xi);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_xi)) __PYX_ERR(0, 137, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_xi)) __PYX_ERR(0, 133, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_yi);
   __Pyx_GIVEREF(__pyx_v_yi);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_yi)) __PYX_ERR(0, 137, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_yi)) __PYX_ERR(0, 133, __pyx_L1_error);
   __Pyx_INCREF(__pyx_n_u_r);
   __Pyx_GIVEREF(__pyx_n_u_r);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_n_u_r)) __PYX_ERR(0, 137, __pyx_L1_error);
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 137, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_n_u_r)) __PYX_ERR(0, 133, __pyx_L1_error);
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_label, __pyx_kp_u_Cubic_spline_interpolation) < 0) __PYX_ERR(0, 137, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_label, __pyx_kp_u_Cubic_spline_interpolation) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cubic_spline_planner.pyx":138
+  /* "CubicSpline/cubic_spline_planner.pyx":134
  *     plt.plot(x, y, "xb", label="Data points")
  *     plt.plot(xi, yi, "r", label="Cubic spline interpolation")
  *     plt.grid(True)             # <<<<<<<<<<<<<<
  *     plt.legend()
  *     plt.show()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_grid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_grid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -24938,22 +25831,22 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
     PyObject *__pyx_callargs[2] = {__pyx_t_4, Py_True};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_10, 1+__pyx_t_10);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cubic_spline_planner.pyx":139
+  /* "CubicSpline/cubic_spline_planner.pyx":135
  *     plt.plot(xi, yi, "r", label="Cubic spline interpolation")
  *     plt.grid(True)
  *     plt.legend()             # <<<<<<<<<<<<<<
  *     plt.show()
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_legend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_legend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -24974,22 +25867,22 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
     PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_10, 0+__pyx_t_10);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cubic_spline_planner.pyx":140
+  /* "CubicSpline/cubic_spline_planner.pyx":136
  *     plt.grid(True)
  *     plt.legend()
  *     plt.show()             # <<<<<<<<<<<<<<
  * 
  * def main_2d():
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_show); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_show); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -25010,13 +25903,13 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
     PyObject *__pyx_callargs[2] = {__pyx_t_4, NULL};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_10, 0+__pyx_t_10);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cubic_spline_planner.pyx":127
+  /* "CubicSpline/cubic_spline_planner.pyx":123
  *         return atan2(dy, dx)
  * 
  * def main_1d():             # <<<<<<<<<<<<<<
@@ -25033,7 +25926,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cubic_spline_planner.main_1d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.main_1d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_x);
@@ -25047,7 +25940,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "cubic_spline_planner.pyx":142
+/* "CubicSpline/cubic_spline_planner.pyx":138
  *     plt.show()
  * 
  * def main_2d():             # <<<<<<<<<<<<<<
@@ -25056,26 +25949,26 @@ static PyObject *__pyx_pf_20cubic_spline_planner_main_1d(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_3main_2d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_3main_2d = {"main_2d", (PyCFunction)__pyx_pw_20cubic_spline_planner_3main_2d, METH_NOARGS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_3main_2d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_3main_2d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_3main_2d = {"main_2d", (PyCFunction)__pyx_pw_11CubicSpline_20cubic_spline_planner_3main_2d, METH_NOARGS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_3main_2d(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("main_2d (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_20cubic_spline_planner_2main_2d(__pyx_self);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_2main_2d(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject *__pyx_self) {
   __Pyx_memviewslice __pyx_v_x = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_y = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_v_ds;
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v_sp = 0;
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_sp = 0;
   __Pyx_memviewslice __pyx_v_s = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_v_rx = 0;
   PyObject *__pyx_v_ry = 0;
@@ -25106,138 +25999,138 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("main_2d", 1);
 
-  /* "cubic_spline_planner.pyx":143
+  /* "CubicSpline/cubic_spline_planner.pyx":139
  * 
  * def main_2d():
  *     print("CubicSpline2D test")             # <<<<<<<<<<<<<<
  *     cdef double[:] x = np.array([-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0], dtype=np.float64)
  *     cdef double[:] y = np.array([0.7, -6, 5, 6.5, 0.0, 5.0, -2.0], dtype=np.float64)
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cubic_spline_planner.pyx":144
+  /* "CubicSpline/cubic_spline_planner.pyx":140
  * def main_2d():
  *     print("CubicSpline2D test")
  *     cdef double[:] x = np.array([-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0], dtype=np.float64)             # <<<<<<<<<<<<<<
  *     cdef double[:] y = np.array([0.7, -6, 5, 6.5, 0.0, 5.0, -2.0], dtype=np.float64)
  *     cdef double ds = 0.1  # [m] distance of each interpolated points
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyList_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_float_neg_2_5);
   __Pyx_GIVEREF(__pyx_float_neg_2_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_neg_2_5)) __PYX_ERR(0, 144, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_neg_2_5)) __PYX_ERR(0, 140, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_0_0);
   __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_0_0)) __PYX_ERR(0, 144, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_0_0)) __PYX_ERR(0, 140, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_2_5);
   __Pyx_GIVEREF(__pyx_float_2_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_2_5)) __PYX_ERR(0, 144, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_2_5)) __PYX_ERR(0, 140, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_5_0);
   __Pyx_GIVEREF(__pyx_float_5_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_5_0)) __PYX_ERR(0, 144, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_5_0)) __PYX_ERR(0, 140, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_7_5);
   __Pyx_GIVEREF(__pyx_float_7_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_7_5)) __PYX_ERR(0, 144, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_7_5)) __PYX_ERR(0, 140, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_3_0);
   __Pyx_GIVEREF(__pyx_float_3_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 5, __pyx_float_3_0)) __PYX_ERR(0, 144, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 5, __pyx_float_3_0)) __PYX_ERR(0, 140, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_neg_1_0);
   __Pyx_GIVEREF(__pyx_float_neg_1_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 6, __pyx_float_neg_1_0)) __PYX_ERR(0, 144, __pyx_L1_error);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 6, __pyx_float_neg_1_0)) __PYX_ERR(0, 140, __pyx_L1_error);
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_x = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":145
+  /* "CubicSpline/cubic_spline_planner.pyx":141
  *     print("CubicSpline2D test")
  *     cdef double[:] x = np.array([-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0], dtype=np.float64)
  *     cdef double[:] y = np.array([0.7, -6, 5, 6.5, 0.0, 5.0, -2.0], dtype=np.float64)             # <<<<<<<<<<<<<<
  *     cdef double ds = 0.1  # [m] distance of each interpolated points
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyList_New(7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_float_0_7);
   __Pyx_GIVEREF(__pyx_float_0_7);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_float_0_7)) __PYX_ERR(0, 145, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_float_0_7)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_INCREF(__pyx_int_neg_6);
   __Pyx_GIVEREF(__pyx_int_neg_6);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_int_neg_6)) __PYX_ERR(0, 145, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_int_neg_6)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_INCREF(__pyx_int_5);
   __Pyx_GIVEREF(__pyx_int_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 2, __pyx_int_5)) __PYX_ERR(0, 145, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 2, __pyx_int_5)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_6_5);
   __Pyx_GIVEREF(__pyx_float_6_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 3, __pyx_float_6_5)) __PYX_ERR(0, 145, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 3, __pyx_float_6_5)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_0_0);
   __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 4, __pyx_float_0_0)) __PYX_ERR(0, 145, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 4, __pyx_float_0_0)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_5_0);
   __Pyx_GIVEREF(__pyx_float_5_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 5, __pyx_float_5_0)) __PYX_ERR(0, 145, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 5, __pyx_float_5_0)) __PYX_ERR(0, 141, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_neg_2_0);
   __Pyx_GIVEREF(__pyx_float_neg_2_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 6, __pyx_float_neg_2_0)) __PYX_ERR(0, 145, __pyx_L1_error);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 6, __pyx_float_neg_2_0)) __PYX_ERR(0, 141, __pyx_L1_error);
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5)) __PYX_ERR(0, 145, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5)) __PYX_ERR(0, 141, __pyx_L1_error);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_y = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":146
+  /* "CubicSpline/cubic_spline_planner.pyx":142
  *     cdef double[:] x = np.array([-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0], dtype=np.float64)
  *     cdef double[:] y = np.array([0.7, -6, 5, 6.5, 0.0, 5.0, -2.0], dtype=np.float64)
  *     cdef double ds = 0.1  # [m] distance of each interpolated points             # <<<<<<<<<<<<<<
@@ -25246,44 +26139,44 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
  */
   __pyx_v_ds = 0.1;
 
-  /* "cubic_spline_planner.pyx":148
+  /* "CubicSpline/cubic_spline_planner.pyx":144
  *     cdef double ds = 0.1  # [m] distance of each interpolated points
  * 
  *     cdef CubicSpline2D sp = CubicSpline2D(x, y)             # <<<<<<<<<<<<<<
  *     cdef double[:] s = np.arange(0, sp.s[-1], ds)
  *     cdef list rx = [], ry = [], ryaw = [], rk = []
  */
-  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_5)) __PYX_ERR(0, 148, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_5)) __PYX_ERR(0, 144, __pyx_L1_error);
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline2D), __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D), __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_sp = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_t_5);
+  __pyx_v_sp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "cubic_spline_planner.pyx":149
+  /* "CubicSpline/cubic_spline_planner.pyx":145
  * 
  *     cdef CubicSpline2D sp = CubicSpline2D(x, y)
  *     cdef double[:] s = np.arange(0, sp.s[-1], ds)             # <<<<<<<<<<<<<<
  *     cdef list rx = [], ry = [], ryaw = [], rk = []
  *     cdef double ix, iy, i_s
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_arange); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_arange); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_v_sp->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 149, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_sp->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 145, __pyx_L1_error)}
   __pyx_t_7 = -1L;
   __pyx_t_8 = -1;
   if (__pyx_t_7 < 0) {
@@ -25292,11 +26185,11 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
   } else if (unlikely(__pyx_t_7 >= __pyx_v_sp->s.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 149, __pyx_L1_error)
+    __PYX_ERR(0, 145, __pyx_L1_error)
   }
-  __pyx_t_3 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_sp->s.data + __pyx_t_7 * __pyx_v_sp->s.strides[0]) )))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_sp->s.data + __pyx_t_7 * __pyx_v_sp->s.strides[0]) )))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_ds); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_ds); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = NULL;
   __pyx_t_8 = 0;
@@ -25318,41 +26211,41 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 149, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 145, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_s = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":150
+  /* "CubicSpline/cubic_spline_planner.pyx":146
  *     cdef CubicSpline2D sp = CubicSpline2D(x, y)
  *     cdef double[:] s = np.arange(0, sp.s[-1], ds)
  *     cdef list rx = [], ry = [], ryaw = [], rk = []             # <<<<<<<<<<<<<<
  *     cdef double ix, iy, i_s
  * 
  */
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_rx = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_ry = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_ryaw = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_rk = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "cubic_spline_planner.pyx":153
+  /* "CubicSpline/cubic_spline_planner.pyx":149
  *     cdef double ix, iy, i_s
  * 
  *     for i_s in s:             # <<<<<<<<<<<<<<
@@ -25361,7 +26254,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
  */
   if (unlikely(((PyObject *) __pyx_v_s.memview) == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' is not iterable");
-    __PYX_ERR(0, 153, __pyx_L1_error)
+    __PYX_ERR(0, 149, __pyx_L1_error)
   }
   __PYX_INC_MEMVIEW(&__pyx_v_s, 1);
   __pyx_t_6 = __pyx_v_s;
@@ -25371,14 +26264,14 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     __pyx_t_7 = __pyx_t_10;
     __pyx_v_i_s = (*((double *) ( /* dim=0 */ (__pyx_t_6.data + __pyx_t_7 * __pyx_t_6.strides[0]) )));
 
-    /* "cubic_spline_planner.pyx":154
+    /* "CubicSpline/cubic_spline_planner.pyx":150
  * 
  *     for i_s in s:
  *         ix, iy = sp.calc_position(i_s)             # <<<<<<<<<<<<<<
  *         rx.append(ix)
  *         ry.append(iy)
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D *)__pyx_v_sp->__pyx_vtab)->calc_position(__pyx_v_sp, __pyx_v_i_s, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_5 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_sp->__pyx_vtab)->calc_position(__pyx_v_sp, __pyx_v_i_s, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (likely(__pyx_t_5 != Py_None)) {
       PyObject* sequence = __pyx_t_5;
@@ -25386,7 +26279,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 154, __pyx_L1_error)
+        __PYX_ERR(0, 150, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       __pyx_t_4 = PyTuple_GET_ITEM(sequence, 0); 
@@ -25394,85 +26287,85 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
       __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(__pyx_t_1);
       #else
-      __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 154, __pyx_L1_error)
+      __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 150, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
+      __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       #endif
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else {
-      __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 154, __pyx_L1_error)
+      __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 150, __pyx_L1_error)
     }
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_ix = __pyx_t_12;
     __pyx_v_iy = __pyx_t_13;
 
-    /* "cubic_spline_planner.pyx":155
+    /* "CubicSpline/cubic_spline_planner.pyx":151
  *     for i_s in s:
  *         ix, iy = sp.calc_position(i_s)
  *         rx.append(ix)             # <<<<<<<<<<<<<<
  *         ry.append(iy)
  *         ryaw.append(sp.calc_yaw(i_s))
  */
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_ix); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_ix); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 155, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "cubic_spline_planner.pyx":156
+    /* "CubicSpline/cubic_spline_planner.pyx":152
  *         ix, iy = sp.calc_position(i_s)
  *         rx.append(ix)
  *         ry.append(iy)             # <<<<<<<<<<<<<<
  *         ryaw.append(sp.calc_yaw(i_s))
  *         rk.append(sp.calc_curvature(i_s))
  */
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_iy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_iy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "cubic_spline_planner.pyx":157
+    /* "CubicSpline/cubic_spline_planner.pyx":153
  *         rx.append(ix)
  *         ry.append(iy)
  *         ryaw.append(sp.calc_yaw(i_s))             # <<<<<<<<<<<<<<
  *         rk.append(sp.calc_curvature(i_s))
  * 
  */
-    __pyx_t_13 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D *)__pyx_v_sp->__pyx_vtab)->calc_yaw(__pyx_v_sp, __pyx_v_i_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L1_error)
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_t_13); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_13 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_sp->__pyx_vtab)->calc_yaw(__pyx_v_sp, __pyx_v_i_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 153, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_t_13); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "cubic_spline_planner.pyx":158
+    /* "CubicSpline/cubic_spline_planner.pyx":154
  *         ry.append(iy)
  *         ryaw.append(sp.calc_yaw(i_s))
  *         rk.append(sp.calc_curvature(i_s))             # <<<<<<<<<<<<<<
  * 
  *     plt.figure()
  */
-    __pyx_t_13 = ((struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D *)__pyx_v_sp->__pyx_vtab)->calc_curvature(__pyx_v_sp, __pyx_v_i_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L1_error)
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_t_13); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_13 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_sp->__pyx_vtab)->calc_curvature(__pyx_v_sp, __pyx_v_i_s, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_t_13); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_rk, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_rk, __pyx_t_5); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_6, 1);
   __pyx_t_6.memview = NULL; __pyx_t_6.data = NULL;
 
-  /* "cubic_spline_planner.pyx":160
+  /* "CubicSpline/cubic_spline_planner.pyx":156
  *         rk.append(sp.calc_curvature(i_s))
  * 
  *     plt.figure()             # <<<<<<<<<<<<<<
  *     # Convert memory views to NumPy arrays before plotting
  *     plt.plot(np.array(x), np.array(y), "xb", label="Data points")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_figure); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_figure); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -25493,30 +26386,30 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
     __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_8, 0+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cubic_spline_planner.pyx":162
+  /* "CubicSpline/cubic_spline_planner.pyx":158
  *     plt.figure()
  *     # Convert memory views to NumPy arrays before plotting
  *     plt.plot(np.array(x), np.array(y), "xb", label="Data points")             # <<<<<<<<<<<<<<
  *     plt.plot(rx, ry, "-r", label="Cubic spline path")
  *     plt.grid(True)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_x, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = NULL;
   __pyx_t_8 = 0;
@@ -25537,16 +26430,16 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_8, 1+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_y, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_15 = NULL;
   __pyx_t_8 = 0;
@@ -25567,74 +26460,74 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_8, 1+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5)) __PYX_ERR(0, 158, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error);
   __Pyx_INCREF(__pyx_n_u_xb);
   __Pyx_GIVEREF(__pyx_n_u_xb);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_n_u_xb)) __PYX_ERR(0, 162, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_n_u_xb)) __PYX_ERR(0, 158, __pyx_L1_error);
   __pyx_t_5 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_label, __pyx_kp_u_Data_points) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_label, __pyx_kp_u_Data_points) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cubic_spline_planner.pyx":163
+  /* "CubicSpline/cubic_spline_planner.pyx":159
  *     # Convert memory views to NumPy arrays before plotting
  *     plt.plot(np.array(x), np.array(y), "xb", label="Data points")
  *     plt.plot(rx, ry, "-r", label="Cubic spline path")             # <<<<<<<<<<<<<<
  *     plt.grid(True)
  *     plt.axis("equal")
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_rx);
   __Pyx_GIVEREF(__pyx_v_rx);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_rx)) __PYX_ERR(0, 163, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_rx)) __PYX_ERR(0, 159, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ry);
   __Pyx_GIVEREF(__pyx_v_ry);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_ry)) __PYX_ERR(0, 163, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_ry)) __PYX_ERR(0, 159, __pyx_L1_error);
   __Pyx_INCREF(__pyx_kp_u_r_2);
   __Pyx_GIVEREF(__pyx_kp_u_r_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_r_2)) __PYX_ERR(0, 163, __pyx_L1_error);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_r_2)) __PYX_ERR(0, 159, __pyx_L1_error);
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_label, __pyx_kp_u_Cubic_spline_path) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 163, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_label, __pyx_kp_u_Cubic_spline_path) < 0) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":164
+  /* "CubicSpline/cubic_spline_planner.pyx":160
  *     plt.plot(np.array(x), np.array(y), "xb", label="Data points")
  *     plt.plot(rx, ry, "-r", label="Cubic spline path")
  *     plt.grid(True)             # <<<<<<<<<<<<<<
  *     plt.axis("equal")
  *     plt.legend()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_grid); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_grid); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -25655,22 +26548,22 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     PyObject *__pyx_callargs[2] = {__pyx_t_2, Py_True};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_8, 1+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 164, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":165
+  /* "CubicSpline/cubic_spline_planner.pyx":161
  *     plt.plot(rx, ry, "-r", label="Cubic spline path")
  *     plt.grid(True)
  *     plt.axis("equal")             # <<<<<<<<<<<<<<
  *     plt.legend()
  *     plt.show()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 165, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 161, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_axis); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_axis); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 161, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -25691,22 +26584,22 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_n_u_equal};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_8, 1+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 161, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":166
+  /* "CubicSpline/cubic_spline_planner.pyx":162
  *     plt.grid(True)
  *     plt.axis("equal")
  *     plt.legend()             # <<<<<<<<<<<<<<
  *     plt.show()
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_legend); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_legend); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -25727,21 +26620,21 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_8, 0+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 166, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":167
+  /* "CubicSpline/cubic_spline_planner.pyx":163
  *     plt.axis("equal")
  *     plt.legend()
  *     plt.show()             # <<<<<<<<<<<<<<
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_show); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_show); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -25762,13 +26655,13 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
     PyObject *__pyx_callargs[2] = {__pyx_t_5, NULL};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_8, 0+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 167, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 163, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "cubic_spline_planner.pyx":142
+  /* "CubicSpline/cubic_spline_planner.pyx":138
  *     plt.show()
  * 
  * def main_2d():             # <<<<<<<<<<<<<<
@@ -25787,7 +26680,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_5);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_6, 1);
   __Pyx_XDECREF(__pyx_t_15);
-  __Pyx_AddTraceback("cubic_spline_planner.main_2d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.main_2d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_x, 1);
@@ -25810,15 +26703,15 @@ static PyObject *__pyx_pf_20cubic_spline_planner_2main_2d(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D = {"__pyx_unpickle_CubicSpline1D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D = {"__pyx_unpickle_CubicSpline1D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -25918,11 +26811,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.__pyx_unpickle_CubicSpline1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.__pyx_unpickle_CubicSpline1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -25935,7 +26828,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -26017,7 +26910,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(C
  *     if __pyx_state is not None:
  *         __pyx_unpickle_CubicSpline1D__set_state(<CubicSpline1D> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -26062,7 +26955,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(C
  * cdef __pyx_unpickle_CubicSpline1D__set_state(CubicSpline1D __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -26098,7 +26991,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(C
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cubic_spline_planner.__pyx_unpickle_CubicSpline1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.__pyx_unpickle_CubicSpline1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -26116,7 +27009,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_4__pyx_unpickle_CubicSpline1D(C
  *     if len(__pyx_state) > 7 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__set_state(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -26310,7 +27203,7 @@ static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__se
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("cubic_spline_planner.__pyx_unpickle_CubicSpline1D__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.__pyx_unpickle_CubicSpline1D__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -26325,15 +27218,15 @@ static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline1D__se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D = {"__pyx_unpickle_CubicSpline2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_11CubicSpline_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D = {"__pyx_unpickle_CubicSpline2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11CubicSpline_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -26433,11 +27326,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cubic_spline_planner.__pyx_unpickle_CubicSpline2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.__pyx_unpickle_CubicSpline2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_11CubicSpline_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -26450,7 +27343,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_11CubicSpline_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -26532,7 +27425,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(C
  *     if __pyx_state is not None:
  *         __pyx_unpickle_CubicSpline2D__set_state(<CubicSpline2D> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline2D), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -26577,7 +27470,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(C
  * cdef __pyx_unpickle_CubicSpline2D__set_state(CubicSpline2D __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -26613,7 +27506,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(C
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("cubic_spline_planner.__pyx_unpickle_CubicSpline2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.__pyx_unpickle_CubicSpline2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -26631,7 +27524,7 @@ static PyObject *__pyx_pf_20cubic_spline_planner_6__pyx_unpickle_CubicSpline2D(C
  *     if len(__pyx_state) > 3 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_11CubicSpline_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__set_state(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -26673,11 +27566,11 @@ static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__se
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_20cubic_spline_planner_CubicSpline1D))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->sx);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->sx);
-  __pyx_v___pyx_result->sx = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_t_1);
+  __pyx_v___pyx_result->sx = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_t_1);
   __pyx_t_1 = 0;
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -26685,11 +27578,11 @@ static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__se
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_20cubic_spline_planner_CubicSpline1D))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->sy);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->sy);
-  __pyx_v___pyx_result->sy = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)__pyx_t_1);
+  __pyx_v___pyx_result->sy = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)__pyx_t_1);
   __pyx_t_1 = 0;
 
   /* "(tree fragment)":13
@@ -26780,17 +27673,17 @@ static PyObject *__pyx_f_20cubic_spline_planner___pyx_unpickle_CubicSpline2D__se
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("cubic_spline_planner.__pyx_unpickle_CubicSpline2D__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("CubicSpline.cubic_spline_planner.__pyx_unpickle_CubicSpline2D__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline1D __pyx_vtable_20cubic_spline_planner_CubicSpline1D;
+static struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline1D __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
 
-static PyObject *__pyx_tp_new_20cubic_spline_planner_CubicSpline1D(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *p;
+static PyObject *__pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline1D(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -26803,8 +27696,8 @@ static PyObject *__pyx_tp_new_20cubic_spline_planner_CubicSpline1D(PyTypeObject 
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)o);
-  p->__pyx_vtab = __pyx_vtabptr_20cubic_spline_planner_CubicSpline1D;
+  p = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)o);
+  p->__pyx_vtab = __pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
   p->x.data = NULL;
   p->x.memview = NULL;
   p->y.data = NULL;
@@ -26820,11 +27713,11 @@ static PyObject *__pyx_tp_new_20cubic_spline_planner_CubicSpline1D(PyTypeObject 
   return o;
 }
 
-static void __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline1D(PyObject *o) {
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *p = (struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)o;
+static void __pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline1D(PyObject *o) {
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *p = (struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline1D) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline1D) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -26851,34 +27744,144 @@ static void __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline1D(PyObject *o) {
   #endif
 }
 
-static PyMethodDef __pyx_methods_20cubic_spline_planner_CubicSpline1D[] = {
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_nx(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_nx(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_2nx_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_x(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_x(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1x_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_y(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_y(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1y_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_a(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_a(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1a_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_b(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_b(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1b_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_c(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_c(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1c_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_d(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_d(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1d_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyMethodDef __pyx_methods_11CubicSpline_20cubic_spline_planner_CubicSpline1D[] = {
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
+
+static struct PyGetSetDef __pyx_getsets_11CubicSpline_20cubic_spline_planner_CubicSpline1D[] = {
+  {(char *)"nx", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_nx, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_nx, (char *)0, 0},
+  {(char *)"x", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_x, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_x, (char *)0, 0},
+  {(char *)"y", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_y, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_y, (char *)0, 0},
+  {(char *)"a", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_a, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_a, (char *)0, 0},
+  {(char *)"b", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_b, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_b, (char *)0, 0},
+  {(char *)"c", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_c, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_c, (char *)0, 0},
+  {(char *)"d", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_d, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_d, (char *)0, 0},
+  {0, 0, 0, 0, 0}
+};
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_20cubic_spline_planner_CubicSpline1D_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_20cubic_spline_planner_CubicSpline1D},
-  {Py_tp_methods, (void *)__pyx_methods_20cubic_spline_planner_CubicSpline1D},
-  {Py_tp_init, (void *)__pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_20cubic_spline_planner_CubicSpline1D},
+static PyType_Slot __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline1D},
+  {Py_tp_methods, (void *)__pyx_methods_11CubicSpline_20cubic_spline_planner_CubicSpline1D},
+  {Py_tp_getset, (void *)__pyx_getsets_11CubicSpline_20cubic_spline_planner_CubicSpline1D},
+  {Py_tp_init, (void *)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline1D},
   {0, 0},
 };
-static PyType_Spec __pyx_type_20cubic_spline_planner_CubicSpline1D_spec = {
-  "cubic_spline_planner.CubicSpline1D",
-  sizeof(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D),
+static PyType_Spec __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D_spec = {
+  "CubicSpline.cubic_spline_planner.CubicSpline1D",
+  sizeof(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE,
-  __pyx_type_20cubic_spline_planner_CubicSpline1D_slots,
+  __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_20cubic_spline_planner_CubicSpline1D = {
+static PyTypeObject __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cubic_spline_planner.""CubicSpline1D", /*tp_name*/
-  sizeof(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D), /*tp_basicsize*/
+  "CubicSpline.cubic_spline_planner.""CubicSpline1D", /*tp_name*/
+  sizeof(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline1D, /*tp_dealloc*/
+  __pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline1D, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -26911,9 +27914,9 @@ static PyTypeObject __pyx_type_20cubic_spline_planner_CubicSpline1D = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_20cubic_spline_planner_CubicSpline1D, /*tp_methods*/
+  __pyx_methods_11CubicSpline_20cubic_spline_planner_CubicSpline1D, /*tp_methods*/
   0, /*tp_members*/
-  0, /*tp_getset*/
+  __pyx_getsets_11CubicSpline_20cubic_spline_planner_CubicSpline1D, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -26921,9 +27924,9 @@ static PyTypeObject __pyx_type_20cubic_spline_planner_CubicSpline1D = {
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_20cubic_spline_planner_13CubicSpline1D_1__init__, /*tp_init*/
+  __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_20cubic_spline_planner_CubicSpline1D, /*tp_new*/
+  __pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline1D, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -26954,10 +27957,10 @@ static PyTypeObject __pyx_type_20cubic_spline_planner_CubicSpline1D = {
   #endif
 };
 #endif
-static struct __pyx_vtabstruct_20cubic_spline_planner_CubicSpline2D __pyx_vtable_20cubic_spline_planner_CubicSpline2D;
+static struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
 
-static PyObject *__pyx_tp_new_20cubic_spline_planner_CubicSpline2D(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *p;
+static PyObject *__pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline2D(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -26970,20 +27973,20 @@ static PyObject *__pyx_tp_new_20cubic_spline_planner_CubicSpline2D(PyTypeObject 
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)o);
-  p->__pyx_vtab = __pyx_vtabptr_20cubic_spline_planner_CubicSpline2D;
-  p->sx = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
-  p->sy = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
+  p = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)o);
+  p->__pyx_vtab = __pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
+  p->sx = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
+  p->sy = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
   p->s.data = NULL;
   p->s.memview = NULL;
   return o;
 }
 
-static void __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline2D(PyObject *o) {
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *p = (struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)o;
+static void __pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline2D(PyObject *o) {
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *p = (struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && !__Pyx_PyObject_GC_IsFinalized(o)) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline2D) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline2D) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -27003,9 +28006,9 @@ static void __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline2D(PyObject *o) {
   #endif
 }
 
-static int __pyx_tp_traverse_20cubic_spline_planner_CubicSpline2D(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_11CubicSpline_20cubic_spline_planner_CubicSpline2D(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *p = (struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)o;
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *p = (struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)o;
   if (p->sx) {
     e = (*v)(((PyObject *)p->sx), a); if (e) return e;
   }
@@ -27015,48 +28018,96 @@ static int __pyx_tp_traverse_20cubic_spline_planner_CubicSpline2D(PyObject *o, v
   return 0;
 }
 
-static int __pyx_tp_clear_20cubic_spline_planner_CubicSpline2D(PyObject *o) {
+static int __pyx_tp_clear_11CubicSpline_20cubic_spline_planner_CubicSpline2D(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *p = (struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *)o;
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *p = (struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)o;
   tmp = ((PyObject*)p->sx);
-  p->sx = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
+  p->sx = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->sy);
-  p->sy = ((struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
+  p->sy = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyMethodDef __pyx_methods_20cubic_spline_planner_CubicSpline2D[] = {
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sx(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sx(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sx_5__del__(o);
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sy(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sy(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_2sy_5__del__(o);
+  }
+}
+
+static PyObject *__pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_s(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_1__get__(o);
+}
+
+static int __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_s(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1s_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyMethodDef __pyx_methods_11CubicSpline_20cubic_spline_planner_CubicSpline2D[] = {
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
+
+static struct PyGetSetDef __pyx_getsets_11CubicSpline_20cubic_spline_planner_CubicSpline2D[] = {
+  {(char *)"sx", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sx, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sx, (char *)0, 0},
+  {(char *)"sy", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sy, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_sy, (char *)0, 0},
+  {(char *)"s", __pyx_getprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_s, __pyx_setprop_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_s, (char *)0, 0},
+  {0, 0, 0, 0, 0}
+};
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_20cubic_spline_planner_CubicSpline2D_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_20cubic_spline_planner_CubicSpline2D},
-  {Py_tp_traverse, (void *)__pyx_tp_traverse_20cubic_spline_planner_CubicSpline2D},
-  {Py_tp_clear, (void *)__pyx_tp_clear_20cubic_spline_planner_CubicSpline2D},
-  {Py_tp_methods, (void *)__pyx_methods_20cubic_spline_planner_CubicSpline2D},
-  {Py_tp_init, (void *)__pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_20cubic_spline_planner_CubicSpline2D},
+static PyType_Slot __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline2D},
+  {Py_tp_traverse, (void *)__pyx_tp_traverse_11CubicSpline_20cubic_spline_planner_CubicSpline2D},
+  {Py_tp_clear, (void *)__pyx_tp_clear_11CubicSpline_20cubic_spline_planner_CubicSpline2D},
+  {Py_tp_methods, (void *)__pyx_methods_11CubicSpline_20cubic_spline_planner_CubicSpline2D},
+  {Py_tp_getset, (void *)__pyx_getsets_11CubicSpline_20cubic_spline_planner_CubicSpline2D},
+  {Py_tp_init, (void *)__pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline2D},
   {0, 0},
 };
-static PyType_Spec __pyx_type_20cubic_spline_planner_CubicSpline2D_spec = {
-  "cubic_spline_planner.CubicSpline2D",
-  sizeof(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D),
+static PyType_Spec __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D_spec = {
+  "CubicSpline.cubic_spline_planner.CubicSpline2D",
+  sizeof(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
-  __pyx_type_20cubic_spline_planner_CubicSpline2D_slots,
+  __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_20cubic_spline_planner_CubicSpline2D = {
+static PyTypeObject __pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cubic_spline_planner.""CubicSpline2D", /*tp_name*/
-  sizeof(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D), /*tp_basicsize*/
+  "CubicSpline.cubic_spline_planner.""CubicSpline2D", /*tp_name*/
+  sizeof(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_20cubic_spline_planner_CubicSpline2D, /*tp_dealloc*/
+  __pyx_tp_dealloc_11CubicSpline_20cubic_spline_planner_CubicSpline2D, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -27083,15 +28134,15 @@ static PyTypeObject __pyx_type_20cubic_spline_planner_CubicSpline2D = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_20cubic_spline_planner_CubicSpline2D, /*tp_traverse*/
-  __pyx_tp_clear_20cubic_spline_planner_CubicSpline2D, /*tp_clear*/
+  __pyx_tp_traverse_11CubicSpline_20cubic_spline_planner_CubicSpline2D, /*tp_traverse*/
+  __pyx_tp_clear_11CubicSpline_20cubic_spline_planner_CubicSpline2D, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_20cubic_spline_planner_CubicSpline2D, /*tp_methods*/
+  __pyx_methods_11CubicSpline_20cubic_spline_planner_CubicSpline2D, /*tp_methods*/
   0, /*tp_members*/
-  0, /*tp_getset*/
+  __pyx_getsets_11CubicSpline_20cubic_spline_planner_CubicSpline2D, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -27099,9 +28150,9 @@ static PyTypeObject __pyx_type_20cubic_spline_planner_CubicSpline2D = {
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_20cubic_spline_planner_13CubicSpline2D_1__init__, /*tp_init*/
+  __pyx_pw_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_20cubic_spline_planner_CubicSpline2D, /*tp_new*/
+  __pyx_tp_new_11CubicSpline_20cubic_spline_planner_CubicSpline2D, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -27270,7 +28321,7 @@ static PyType_Slot __pyx_type___pyx_array_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_array_spec = {
-  "cubic_spline_planner.array",
+  "CubicSpline.cubic_spline_planner.array",
   sizeof(struct __pyx_array_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_SEQUENCE,
@@ -27316,7 +28367,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cubic_spline_planner.""array", /*tp_name*/
+  "CubicSpline.cubic_spline_planner.""array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -27476,7 +28527,7 @@ static PyType_Slot __pyx_type___pyx_MemviewEnum_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
-  "cubic_spline_planner.Enum",
+  "CubicSpline.cubic_spline_planner.Enum",
   sizeof(struct __pyx_MemviewEnum_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -27486,7 +28537,7 @@ static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cubic_spline_planner.""Enum", /*tp_name*/
+  "CubicSpline.cubic_spline_planner.""Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -27783,7 +28834,7 @@ static PyType_Slot __pyx_type___pyx_memoryview_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryview_spec = {
-  "cubic_spline_planner.memoryview",
+  "CubicSpline.cubic_spline_planner.memoryview",
   sizeof(struct __pyx_memoryview_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -27829,7 +28880,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cubic_spline_planner.""memoryview", /*tp_name*/
+  "CubicSpline.cubic_spline_planner.""memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -27981,7 +29032,7 @@ static PyType_Slot __pyx_type___pyx_memoryviewslice_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
-  "cubic_spline_planner._memoryviewslice",
+  "CubicSpline.cubic_spline_planner._memoryviewslice",
   sizeof(struct __pyx_memoryviewslice_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_SEQUENCE,
@@ -27991,7 +29042,7 @@ static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cubic_spline_planner.""_memoryviewslice", /*tp_name*/
+  "CubicSpline.cubic_spline_planner.""_memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -28120,6 +29171,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_CubicSpline2D_calc_yaw, __pyx_k_CubicSpline2D_calc_yaw, sizeof(__pyx_k_CubicSpline2D_calc_yaw), 0, 0, 1, 1},
     {&__pyx_kp_u_CubicSpline2D_test, __pyx_k_CubicSpline2D_test, sizeof(__pyx_k_CubicSpline2D_test), 0, 1, 0, 0},
     {&__pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_k_CubicSpline_cubic_spline_planner, sizeof(__pyx_k_CubicSpline_cubic_spline_planner), 0, 0, 1, 0},
+    {&__pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_k_CubicSpline_cubic_spline_planner_2, sizeof(__pyx_k_CubicSpline_cubic_spline_planner_2), 0, 0, 1, 1},
     {&__pyx_kp_u_Cubic_spline_interpolation, __pyx_k_Cubic_spline_interpolation, sizeof(__pyx_k_Cubic_spline_interpolation), 0, 1, 0, 0},
     {&__pyx_kp_u_Cubic_spline_path, __pyx_k_Cubic_spline_path, sizeof(__pyx_k_Cubic_spline_path), 0, 1, 0, 0},
     {&__pyx_kp_u_Data_points, __pyx_k_Data_points, sizeof(__pyx_k_Data_points), 0, 1, 0, 0},
@@ -28176,7 +29228,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_s_contiguous_and_direct, __pyx_k_contiguous_and_direct, sizeof(__pyx_k_contiguous_and_direct), 0, 0, 1, 0},
     {&__pyx_kp_s_contiguous_and_indirect, __pyx_k_contiguous_and_indirect, sizeof(__pyx_k_contiguous_and_indirect), 0, 0, 1, 0},
     {&__pyx_n_s_count, __pyx_k_count, sizeof(__pyx_k_count), 0, 0, 1, 1},
-    {&__pyx_n_s_cubic_spline_planner, __pyx_k_cubic_spline_planner, sizeof(__pyx_k_cubic_spline_planner), 0, 0, 1, 1},
     {&__pyx_n_s_cumsum, __pyx_k_cumsum, sizeof(__pyx_k_cumsum), 0, 0, 1, 1},
     {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
     {&__pyx_n_s_dict_2, __pyx_k_dict_2, sizeof(__pyx_k_dict_2), 0, 0, 1, 1},
@@ -28301,8 +29352,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 34, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 124, __pyx_L1_error)
   __pyx_builtin___import__ = __Pyx_GetBuiltinName(__pyx_n_s_import); if (!__pyx_builtin___import__) __PYX_ERR(1, 100, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 141, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 156, __pyx_L1_error)
@@ -28381,47 +29432,47 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "cubic_spline_planner.pyx":128
+  /* "CubicSpline/cubic_spline_planner.pyx":124
  * 
  * def main_1d():
  *     print("CubicSpline1D test")             # <<<<<<<<<<<<<<
  *     x = np.arange(5.0, dtype=np.float64)
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_CubicSpline1D_test); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_CubicSpline1D_test); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "cubic_spline_planner.pyx":129
+  /* "CubicSpline/cubic_spline_planner.pyx":125
  * def main_1d():
  *     print("CubicSpline1D test")
  *     x = np.arange(5.0, dtype=np.float64)             # <<<<<<<<<<<<<<
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)
  *     sp = CubicSpline1D(x, y)
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_float_5_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_float_5_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "cubic_spline_planner.pyx":132
+  /* "CubicSpline/cubic_spline_planner.pyx":128
  *     y = np.array([1.7, -6, 5, 6.5, 0.0], dtype=np.float64)
  *     sp = CubicSpline1D(x, y)
  *     xi = np.linspace(0.0, 5.0, 100)             # <<<<<<<<<<<<<<
  *     yi = [sp.calc_position(x) for x in xi]
  * 
  */
-  __pyx_tuple__13 = PyTuple_Pack(3, __pyx_float_0_0, __pyx_float_5_0, __pyx_int_100); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(3, __pyx_float_0_0, __pyx_float_5_0, __pyx_int_100); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "cubic_spline_planner.pyx":143
+  /* "CubicSpline/cubic_spline_planner.pyx":139
  * 
  * def main_2d():
  *     print("CubicSpline2D test")             # <<<<<<<<<<<<<<
  *     cdef double[:] x = np.array([-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0], dtype=np.float64)
  *     cdef double[:] y = np.array([0.7, -6, 5, 6.5, 0.0, 5.0, -2.0], dtype=np.float64)
  */
-  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_kp_u_CubicSpline2D_test); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 143, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_kp_u_CubicSpline2D_test); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
@@ -28540,7 +29591,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__26);
   __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(1, 1, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":4
+  /* "CubicSpline/cubic_spline_planner.pyx":4
  * 
  * from libc.math cimport pow, atan2
  * import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -28551,35 +29602,35 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
 
-  /* "cubic_spline_planner.pyx":48
+  /* "CubicSpline/cubic_spline_planner.pyx":46
  *             self.b[i] = (self.a[i + 1] - self.a[i]) / h[i] - h[i] * (2.0 * self.c[i] + self.c[i + 1]) / 3.0
  * 
  *     cpdef double calc_position(self, double x):             # <<<<<<<<<<<<<<
  *         cdef int i
  *         cdef double dx, position
  */
-  __pyx_tuple__29 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_x); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_tuple__29 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_x); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_position, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_position, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":60
+  /* "CubicSpline/cubic_spline_planner.pyx":58
  *         return position
  * 
  *     cpdef double calc_first_derivative(self, double x):             # <<<<<<<<<<<<<<
  *         cdef int i
  *         cdef double dx, dy
  */
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_first_derivative, 60, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_first_derivative, 58, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 58, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":72
+  /* "CubicSpline/cubic_spline_planner.pyx":70
  *         return dy
  * 
  *     cpdef double calc_second_derivative(self, double x):             # <<<<<<<<<<<<<<
  *         cdef int i
  *         cdef double dx, ddy
  */
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_second_derivative, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_second_derivative, 70, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 70, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -28602,35 +29653,35 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__35);
   __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":108
+  /* "CubicSpline/cubic_spline_planner.pyx":104
  *         return s
  * 
  *     cpdef tuple calc_position(self, double s):             # <<<<<<<<<<<<<<
  *         cdef double x = self.sx.calc_position(s)
  *         cdef double y = self.sy.calc_position(s)
  */
-  __pyx_tuple__37 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_s); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_s); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_position, 108, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_position, 104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 104, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":113
+  /* "CubicSpline/cubic_spline_planner.pyx":109
  *         return (x, y)
  * 
  *     cpdef double calc_curvature(self, double s):             # <<<<<<<<<<<<<<
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)
  */
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_curvature, 113, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_curvature, 109, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 109, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":122
+  /* "CubicSpline/cubic_spline_planner.pyx":118
  *         return (ddy * dx - ddx * dy) / pow(dx**2 + dy**2, 1.5)
  * 
  *     cpdef double calc_yaw(self, double s):             # <<<<<<<<<<<<<<
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)
  */
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_yaw, 122, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_calc_yaw, 118, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 118, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -28647,29 +29698,29 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  */
   __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":127
+  /* "CubicSpline/cubic_spline_planner.pyx":123
  *         return atan2(dy, dx)
  * 
  * def main_1d():             # <<<<<<<<<<<<<<
  *     print("CubicSpline1D test")
  *     x = np.arange(5.0, dtype=np.float64)
  */
-  __pyx_tuple__43 = PyTuple_Pack(6, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_sp, __pyx_n_s_xi, __pyx_n_s_yi, __pyx_n_s_x); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_tuple__43 = PyTuple_Pack(6, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_sp, __pyx_n_s_xi, __pyx_n_s_yi, __pyx_n_s_x); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__43);
   __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_main_1d, 127, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_main_1d, 123, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 123, __pyx_L1_error)
 
-  /* "cubic_spline_planner.pyx":142
+  /* "CubicSpline/cubic_spline_planner.pyx":138
  *     plt.show()
  * 
  * def main_2d():             # <<<<<<<<<<<<<<
  *     print("CubicSpline2D test")
  *     cdef double[:] x = np.array([-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0], dtype=np.float64)
  */
-  __pyx_tuple__45 = PyTuple_Pack(12, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_ds, __pyx_n_s_sp, __pyx_n_s_s, __pyx_n_s_rx, __pyx_n_s_ry, __pyx_n_s_ryaw, __pyx_n_s_rk, __pyx_n_s_ix, __pyx_n_s_iy, __pyx_n_s_i_s); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_tuple__45 = PyTuple_Pack(12, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_ds, __pyx_n_s_sp, __pyx_n_s_s, __pyx_n_s_rx, __pyx_n_s_ry, __pyx_n_s_ryaw, __pyx_n_s_rk, __pyx_n_s_ix, __pyx_n_s_iy, __pyx_n_s_i_s); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__45);
   __Pyx_GIVEREF(__pyx_tuple__45);
-  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_main_2d, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_CubicSpline_cubic_spline_planner, __pyx_n_s_main_2d, 138, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 138, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_CubicSpline1D(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
@@ -28798,70 +29849,70 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  __pyx_vtabptr_20cubic_spline_planner_CubicSpline1D = &__pyx_vtable_20cubic_spline_planner_CubicSpline1D;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline1D._CubicSpline1D__calc_coefficients = (void (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *))__pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_coefficients;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline1D.calc_position = (double (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch))__pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_position;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline1D.calc_first_derivative = (double (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch))__pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline1D.calc_second_derivative = (double (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch))__pyx_f_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline1D._CubicSpline1D__search_index = (int (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline1D *, double))__pyx_f_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search_index;
+  __pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline1D = &__pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline1D._CubicSpline1D__calc_coefficients = (void (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__calc_coefficients;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline1D.calc_position = (double (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_position;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline1D.calc_first_derivative = (double (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_first_derivative;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline1D.calc_second_derivative = (double (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double, int __pyx_skip_dispatch))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_calc_second_derivative;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline1D._CubicSpline1D__search_index = (int (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline1D *, double))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline1D__CubicSpline1D__search_index;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_20cubic_spline_planner_CubicSpline1D = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_20cubic_spline_planner_CubicSpline1D_spec, NULL); if (unlikely(!__pyx_ptype_20cubic_spline_planner_CubicSpline1D)) __PYX_ERR(0, 9, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_20cubic_spline_planner_CubicSpline1D_spec, __pyx_ptype_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D_spec, NULL); if (unlikely(!__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D)) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D_spec, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   #else
-  __pyx_ptype_20cubic_spline_planner_CubicSpline1D = &__pyx_type_20cubic_spline_planner_CubicSpline1D;
+  __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D = &__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline1D;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_20cubic_spline_planner_CubicSpline1D->tp_print = 0;
+  __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_20cubic_spline_planner_CubicSpline1D->tp_dictoffset && __pyx_ptype_20cubic_spline_planner_CubicSpline1D->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_20cubic_spline_planner_CubicSpline1D->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D->tp_dictoffset && __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_20cubic_spline_planner_CubicSpline1D, __pyx_vtabptr_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D, __pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CubicSpline1D, (PyObject *) __pyx_ptype_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CubicSpline1D, (PyObject *) __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   #endif
-  __pyx_vtabptr_20cubic_spline_planner_CubicSpline2D = &__pyx_vtable_20cubic_spline_planner_CubicSpline2D;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline2D._CubicSpline2D__calc_s = (__Pyx_memviewslice (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, __Pyx_memviewslice, __Pyx_memviewslice))__pyx_f_20cubic_spline_planner_13CubicSpline2D__CubicSpline2D__calc_s;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline2D.calc_position = (PyObject *(*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch))__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_position;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline2D.calc_curvature = (double (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch))__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_curvature;
-  __pyx_vtable_20cubic_spline_planner_CubicSpline2D.calc_yaw = (double (*)(struct __pyx_obj_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch))__pyx_f_20cubic_spline_planner_13CubicSpline2D_calc_yaw;
+  __pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline2D = &__pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline2D._CubicSpline2D__calc_s = (__Pyx_memviewslice (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, __Pyx_memviewslice, __Pyx_memviewslice))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D__CubicSpline2D__calc_s;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline2D.calc_position = (PyObject *(*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_position;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline2D.calc_curvature = (double (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_curvature;
+  __pyx_vtable_11CubicSpline_20cubic_spline_planner_CubicSpline2D.calc_yaw = (double (*)(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, int __pyx_skip_dispatch))__pyx_f_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_calc_yaw;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_20cubic_spline_planner_CubicSpline2D = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_20cubic_spline_planner_CubicSpline2D_spec, NULL); if (unlikely(!__pyx_ptype_20cubic_spline_planner_CubicSpline2D)) __PYX_ERR(0, 92, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_20cubic_spline_planner_CubicSpline2D_spec, __pyx_ptype_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
+  __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D_spec, NULL); if (unlikely(!__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D)) __PYX_ERR(0, 90, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D_spec, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
   #else
-  __pyx_ptype_20cubic_spline_planner_CubicSpline2D = &__pyx_type_20cubic_spline_planner_CubicSpline2D;
+  __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D = &__pyx_type_11CubicSpline_20cubic_spline_planner_CubicSpline2D;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_20cubic_spline_planner_CubicSpline2D->tp_print = 0;
+  __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_20cubic_spline_planner_CubicSpline2D->tp_dictoffset && __pyx_ptype_20cubic_spline_planner_CubicSpline2D->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_20cubic_spline_planner_CubicSpline2D->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D->tp_dictoffset && __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_20cubic_spline_planner_CubicSpline2D, __pyx_vtabptr_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, __pyx_vtabptr_11CubicSpline_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CubicSpline2D, (PyObject *) __pyx_ptype_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CubicSpline2D, (PyObject *) __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
   #endif
   __pyx_vtabptr_array = &__pyx_vtable_array;
   __pyx_vtable_array.get_memview = (PyObject *(*)(struct __pyx_array_obj *))__pyx_array_get_memview;
@@ -29019,7 +30070,7 @@ static int __Pyx_modinit_type_import_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_import_code", 0);
   /*--- Type import code ---*/
-  __pyx_t_1 = PyImport_ImportModule(__Pyx_BUILTIN_MODULE_NAME); if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 9, __pyx_L1_error)
+  __pyx_t_1 = PyImport_ImportModule(__Pyx_BUILTIN_MODULE_NAME); if (unlikely(!__pyx_t_1)) __PYX_ERR(4, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType_3_0_10(__pyx_t_1, __Pyx_BUILTIN_MODULE_NAME, "type", 
   #if defined(PYPY_VERSION_NUM) && PYPY_VERSION_NUM < 0x050B0000
@@ -29029,7 +30080,7 @@ static int __Pyx_modinit_type_import_code(void) {
   #else
   sizeof(PyHeapTypeObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyHeapTypeObject),
   #endif
-  __Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_7cpython_4type_type) __PYX_ERR(3, 9, __pyx_L1_error)
+  __Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_7cpython_4type_type) __PYX_ERR(4, 9, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = PyImport_ImportModule("numpy"); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -29329,14 +30380,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cubic_spline_planner) {
+  if (__pyx_module_is_main_CubicSpline__cubic_spline_planner) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cubic_spline_planner")) {
-      if (unlikely((PyDict_SetItemString(modules, "cubic_spline_planner", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "CubicSpline.cubic_spline_planner")) {
+      if (unlikely((PyDict_SetItemString(modules, "CubicSpline.cubic_spline_planner", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -29870,7 +30921,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_Enum, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "cubic_spline_planner.pyx":4
+  /* "CubicSpline/cubic_spline_planner.pyx":4
  * 
  * from libc.math cimport pow, atan2
  * import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -29882,7 +30933,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plt, __pyx_t_7) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "cubic_spline_planner.pyx":5
+  /* "CubicSpline/cubic_spline_planner.pyx":5
  * from libc.math cimport pow, atan2
  * import matplotlib.pyplot as plt
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -29894,55 +30945,55 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_7) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "cubic_spline_planner.pyx":48
+  /* "CubicSpline/cubic_spline_planner.pyx":46
  *             self.b[i] = (self.a[i + 1] - self.a[i]) / h[i] - h[i] * (2.0 * self.c[i] + self.c[i + 1]) / 3.0
  * 
  *     cpdef double calc_position(self, double x):             # <<<<<<<<<<<<<<
  *         cdef int i
  *         cdef double dx, position
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline1D_3calc_position, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D_calc_position, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_3calc_position, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D_calc_position, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_calc_position, __pyx_t_7) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_calc_position, __pyx_t_7) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline1D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
 
-  /* "cubic_spline_planner.pyx":60
+  /* "CubicSpline/cubic_spline_planner.pyx":58
  *         return position
  * 
  *     cpdef double calc_first_derivative(self, double x):             # <<<<<<<<<<<<<<
  *         cdef int i
  *         cdef double dx, dy
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D_calc_first_derivat, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D_calc_first_derivat, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_calc_first_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_calc_first_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline1D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
 
-  /* "cubic_spline_planner.pyx":72
+  /* "CubicSpline/cubic_spline_planner.pyx":70
  *         return dy
  * 
  *     cpdef double calc_second_derivative(self, double x):             # <<<<<<<<<<<<<<
  *         cdef int i
  *         cdef double dx, ddy
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D_calc_second_deriva, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D_calc_second_deriva, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_calc_second_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_calc_second_derivative, __pyx_t_7) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline1D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D___reduce_cython, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_9__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D___reduce_cython, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline1D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
 
   /* "(tree fragment)":16
  *     else:
@@ -29950,61 +31001,61 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_CubicSpline1D__set_state(self, __pyx_state)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D___setstate_cython, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline1D_11__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline1D___setstate_cython, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline1D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
 
-  /* "cubic_spline_planner.pyx":108
+  /* "CubicSpline/cubic_spline_planner.pyx":104
  *         return s
  * 
  *     cpdef tuple calc_position(self, double s):             # <<<<<<<<<<<<<<
  *         cdef double x = self.sx.calc_position(s)
  *         cdef double y = self.sy.calc_position(s)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline2D_3calc_position, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D_calc_position, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_3calc_position, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D_calc_position, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_calc_position, __pyx_t_7) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_calc_position, __pyx_t_7) < 0) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline2D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
 
-  /* "cubic_spline_planner.pyx":113
+  /* "CubicSpline/cubic_spline_planner.pyx":109
  *         return (x, y)
  * 
  *     cpdef double calc_curvature(self, double s):             # <<<<<<<<<<<<<<
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline2D_5calc_curvature, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D_calc_curvature, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_5calc_curvature, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D_calc_curvature, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_calc_curvature, __pyx_t_7) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_calc_curvature, __pyx_t_7) < 0) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline2D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
 
-  /* "cubic_spline_planner.pyx":122
+  /* "CubicSpline/cubic_spline_planner.pyx":118
  *         return (ddy * dx - ddx * dy) / pow(dx**2 + dy**2, 1.5)
  * 
  *     cpdef double calc_yaw(self, double s):             # <<<<<<<<<<<<<<
  *         cdef double dx = self.sx.calc_first_derivative(s)
  *         cdef double dy = self.sy.calc_first_derivative(s)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline2D_7calc_yaw, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D_calc_yaw, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_7calc_yaw, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D_calc_yaw, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_calc_yaw, __pyx_t_7) < 0) __PYX_ERR(0, 122, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_calc_yaw, __pyx_t_7) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline2D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D___reduce_cython, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_9__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D___reduce_cython, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline2D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
 
   /* "(tree fragment)":16
  *     else:
@@ -30012,34 +31063,34 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_CubicSpline2D__set_state(self, __pyx_state)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D___setstate_cython, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_13CubicSpline2D_11__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_CubicSpline2D___setstate_cython, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_20cubic_spline_planner_CubicSpline2D);
+  PyType_Modified(__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
 
-  /* "cubic_spline_planner.pyx":127
+  /* "CubicSpline/cubic_spline_planner.pyx":123
  *         return atan2(dy, dx)
  * 
  * def main_1d():             # <<<<<<<<<<<<<<
  *     print("CubicSpline1D test")
  *     x = np.arange(5.0, dtype=np.float64)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_1main_1d, 0, __pyx_n_s_main_1d, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_1main_1d, 0, __pyx_n_s_main_1d, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_1d, __pyx_t_7) < 0) __PYX_ERR(0, 127, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_1d, __pyx_t_7) < 0) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "cubic_spline_planner.pyx":142
+  /* "CubicSpline/cubic_spline_planner.pyx":138
  *     plt.show()
  * 
  * def main_2d():             # <<<<<<<<<<<<<<
  *     print("CubicSpline2D test")
  *     cdef double[:] x = np.array([-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0], dtype=np.float64)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_3main_2d, 0, __pyx_n_s_main_2d, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_3main_2d, 0, __pyx_n_s_main_2d, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2d, __pyx_t_7) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2d, __pyx_t_7) < 0) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "(tree fragment)":1
@@ -30047,7 +31098,7 @@ if (!__Pyx_RefNanny) {
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D, 0, __pyx_n_s_pyx_unpickle_CubicSpline1D, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_5__pyx_unpickle_CubicSpline1D, 0, __pyx_n_s_pyx_unpickle_CubicSpline1D, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_CubicSpline1D, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -30059,12 +31110,12 @@ if (!__Pyx_RefNanny) {
  *     __pyx_result.a = __pyx_state[0]; __pyx_result.b = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.d = __pyx_state[3]; __pyx_result.nx = __pyx_state[4]; __pyx_result.x = __pyx_state[5]; __pyx_result.y = __pyx_state[6]
  *     if len(__pyx_state) > 7 and hasattr(__pyx_result, '__dict__'):
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D, 0, __pyx_n_s_pyx_unpickle_CubicSpline2D, NULL, __pyx_n_s_cubic_spline_planner, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_11CubicSpline_20cubic_spline_planner_7__pyx_unpickle_CubicSpline2D, 0, __pyx_n_s_pyx_unpickle_CubicSpline2D, NULL, __pyx_n_s_CubicSpline_cubic_spline_planner_2, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_CubicSpline2D, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "cubic_spline_planner.pyx":1
+  /* "CubicSpline/cubic_spline_planner.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * 
  * from libc.math cimport pow, atan2
@@ -30083,7 +31134,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_7);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init cubic_spline_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init CubicSpline.cubic_spline_planner", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -30097,7 +31148,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cubic_spline_planner");
+    PyErr_SetString(PyExc_ImportError, "init CubicSpline.cubic_spline_planner");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

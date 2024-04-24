@@ -4,13 +4,18 @@ from setuptools import Extension, setup
 
 extensions = [
     Extension(
-        "cubic_spline_planner",
-        ["CubicSpline/cubic_spline_planner.pyx"],
+        "CubicSpline.cubic_spline_planner",
+        sources=["CubicSpline/cubic_spline_planner.pyx"],
         include_dirs=[np.get_include()],
     ),
     Extension(
-        "quintic_polynomials_planner",
-        ["QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx"],
+        "QuinticPolynomialsPlanner.quintic_polynomials_planner",
+        sources=["QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx"],
+        include_dirs=[np.get_include()],
+    ),
+    Extension(
+        "FrenetOptimalTrajectory.frenet_optimal_trajectory",
+        sources=["FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx"],
         include_dirs=[np.get_include()],
     ),
 ]
