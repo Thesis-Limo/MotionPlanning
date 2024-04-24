@@ -1,4 +1,4 @@
-import quintic_polynomial_planner
+import quintic_polynomials_planner
 
 import cubic_spline_planner
 
@@ -7,4 +7,4 @@ cubic_spline_planner.main_1d()
 cubic_spline_planner.main_2d()
 
 # Test Quintic Polynomial Planner
-quintic_polynomial_planner.main()
+quintic_polynomials_planner.main()

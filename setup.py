@@ -9,8 +9,8 @@ extensions = [
         include_dirs=[np.get_include()],
     ),
     Extension(
-        "quintic_polynomial_planner",
-        ["QuinticPolynomialsPlanner/quintic_polynomial_planner.pyx"],
+        "quintic_polynomials_planner",
+        ["QuinticPolynomialsPlanner/quintic_polynomials_planner.pyx"],
         include_dirs=[np.get_include()],
     ),
 ]
