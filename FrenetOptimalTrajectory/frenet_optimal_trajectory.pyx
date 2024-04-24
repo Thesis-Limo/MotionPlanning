@@ -174,8 +174,8 @@ cdef list check_paths(list fplist, cnp.ndarray[cnp.float64_t, ndim=2] ob):
 
     return [fplist[i] for i in ok_ind]
 
-cdef tuple generate_target_course(list wx, list wy):
-    csp = CubicSpline2D(np.array(wx), np.array(wy))
+cpdef tuple generate_target_course(list wx, list wy):
+    csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
     s = np.arange(0, csp.s[-1], 0.1)
 
     rx, ry, ryaw, rk = [], [], [], []
@@ -188,7 +188,7 @@ cdef tuple generate_target_course(list wx, list wy):
 
     return rx, ry, ryaw, rk, csp
 
-cdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
+cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
     fplist = calc_global_paths(fplist, csp)
     fplist = check_paths(fplist, ob)

@@ -1,13 +1,11 @@
 import math
+import time
 
 import matplotlib.pyplot as plt
 import numpy as np
 
+import FrenetOptimalTrajectory.frenet_optimal_trajectory as frenet_optimal_trajectory
 from Dubins.dubins_path_planner import plan_dubins_path
-from FrenetOptimalTrajectory.frenet_optimal_trajectory import (
-    frenet_optimal_planning,
-    generate_target_course,
-)
 
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
@@ -63,15 +61,17 @@ class MotionPlanner:
 
         return zip(path_x, path_y)
 
-    def calculate_frenet(self, path, show_animation=True):
+    def calculate_frenet(self, path, show_animation=False):
         wx, wy = zip(*path)
-        tx, ty, tyaw, tc, csp = generate_target_course(wx, wy)
+        tx, ty, tyaw, tc, csp = frenet_optimal_trajectory.generate_target_course(
+            list(np.array(wx)), list(np.array(wy))
+        )
 
         area = 5.0  # animation area length [m]
         state = self.initial_state
 
         for i in range(SIM_LOOP):
-            path = frenet_optimal_planning(
+            path = frenet_optimal_trajectory.frenet_optimal_planning(
                 csp,
                 state.s0,
                 state.c_speed,
@@ -152,7 +152,7 @@ def convert_lidar_data_to_2d_points(file_path):
                 if x.strip().replace(".", "", 1).isdigit()
             ]
 
-    points_2d = []
+    points_2d = [(2.0, 1.6)]
     current_angle = angle_min
 
     for range_value in ranges:
@@ -168,6 +168,8 @@ def convert_lidar_data_to_2d_points(file_path):
 
 if __name__ == "__main__":
 
+    start = time.time()
+
     file_path = "data/scan.txt"
 
     goal_pose = Pose(
@@ -180,3 +182,6 @@ if __name__ == "__main__":
 
     planner = MotionPlanner(goal_pose, obstacleList=obstacleList)
     planner.plan()
+
+    end = time.time()
+    print(f"Time Taken: {end - start} seconds")

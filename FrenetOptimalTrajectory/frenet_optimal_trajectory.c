@@ -3714,8 +3714,8 @@ static PyThread_type_lock __pyx_memoryview_thread_locks[8];
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_global_paths(PyObject *, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *); /*proto*/
 static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_collision(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *, PyArrayObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_paths(PyObject *, PyArrayObject *); /*proto*/
-static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(PyObject *, PyObject *); /*proto*/
-static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, double, double, double, double, double, PyArrayObject *); /*proto*/
+static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, double, double, double, double, double, PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_unpickle_QuarticPolynomial__set_state(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *, PyObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_unpickle_FrenetPath__set_state(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *, PyObject *); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
@@ -3805,7 +3805,7 @@ static const char __pyx_k_wx[] = "wx";
 static const char __pyx_k_wy[] = "wy";
 static const char __pyx_k_xk[] = "xk";
 static const char __pyx_k_xs[] = "xs";
-static const char __pyx_k__46[] = "?";
+static const char __pyx_k__50[] = "?";
 static const char __pyx_k_abc[] = "abc";
 static const char __pyx_k_and[] = " and ";
 static const char __pyx_k_axe[] = "axe";
@@ -3962,8 +3962,10 @@ static const char __pyx_k_contiguous_and_direct[] = "<contiguous and direct>";
 static const char __pyx_k_Cannot_index_with_type[] = "Cannot index with type '";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
 static const char __pyx_k_calc_second_derivative[] = "calc_second_derivative";
+static const char __pyx_k_generate_target_course[] = "generate_target_course";
 static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x>";
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
+static const char __pyx_k_frenet_optimal_planning[] = "frenet_optimal_planning";
 static const char __pyx_k_pyx_unpickle_FrenetPath[] = "__pyx_unpickle_FrenetPath";
 static const char __pyx_k_Dimension_d_is_not_direct[] = "Dimension %d is not direct";
 static const char __pyx_k_FrenetPath___reduce_cython[] = "FrenetPath.__reduce_cython__";
@@ -4118,9 +4120,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_3genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_6genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2generate_target_course(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_wx, PyObject *__pyx_v_wy); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -4280,7 +4284,7 @@ typedef struct {
   PyObject *__pyx_n_s_View_MemoryView;
   PyObject *__pyx_kp_u__2;
   PyObject *__pyx_n_s__3;
-  PyObject *__pyx_n_s__46;
+  PyObject *__pyx_n_s__50;
   PyObject *__pyx_kp_u__6;
   PyObject *__pyx_kp_u__7;
   PyObject *__pyx_n_s_abc;
@@ -4339,8 +4343,10 @@ typedef struct {
   PyObject *__pyx_n_s_fortran;
   PyObject *__pyx_n_u_fortran;
   PyObject *__pyx_n_s_fp;
+  PyObject *__pyx_n_s_frenet_optimal_planning;
   PyObject *__pyx_n_s_frenet_paths;
   PyObject *__pyx_kp_u_gc;
+  PyObject *__pyx_n_s_generate_target_course;
   PyObject *__pyx_n_s_genexpr;
   PyObject *__pyx_n_s_getstate;
   PyObject *__pyx_kp_u_got;
@@ -4511,6 +4517,8 @@ typedef struct {
   PyObject *__pyx_tuple__36;
   PyObject *__pyx_tuple__40;
   PyObject *__pyx_tuple__42;
+  PyObject *__pyx_tuple__44;
+  PyObject *__pyx_tuple__46;
   PyObject *__pyx_codeobj__27;
   PyObject *__pyx_codeobj__30;
   PyObject *__pyx_codeobj__31;
@@ -4522,8 +4530,10 @@ typedef struct {
   PyObject *__pyx_codeobj__39;
   PyObject *__pyx_codeobj__41;
   PyObject *__pyx_codeobj__43;
-  PyObject *__pyx_codeobj__44;
   PyObject *__pyx_codeobj__45;
+  PyObject *__pyx_codeobj__47;
+  PyObject *__pyx_codeobj__48;
+  PyObject *__pyx_codeobj__49;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -4660,7 +4670,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_View_MemoryView);
   Py_CLEAR(clear_module_state->__pyx_kp_u__2);
   Py_CLEAR(clear_module_state->__pyx_n_s__3);
-  Py_CLEAR(clear_module_state->__pyx_n_s__46);
+  Py_CLEAR(clear_module_state->__pyx_n_s__50);
   Py_CLEAR(clear_module_state->__pyx_kp_u__6);
   Py_CLEAR(clear_module_state->__pyx_kp_u__7);
   Py_CLEAR(clear_module_state->__pyx_n_s_abc);
@@ -4719,8 +4729,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_fortran);
   Py_CLEAR(clear_module_state->__pyx_n_u_fortran);
   Py_CLEAR(clear_module_state->__pyx_n_s_fp);
+  Py_CLEAR(clear_module_state->__pyx_n_s_frenet_optimal_planning);
   Py_CLEAR(clear_module_state->__pyx_n_s_frenet_paths);
   Py_CLEAR(clear_module_state->__pyx_kp_u_gc);
+  Py_CLEAR(clear_module_state->__pyx_n_s_generate_target_course);
   Py_CLEAR(clear_module_state->__pyx_n_s_genexpr);
   Py_CLEAR(clear_module_state->__pyx_n_s_getstate);
   Py_CLEAR(clear_module_state->__pyx_kp_u_got);
@@ -4891,6 +4903,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_tuple__36);
   Py_CLEAR(clear_module_state->__pyx_tuple__40);
   Py_CLEAR(clear_module_state->__pyx_tuple__42);
+  Py_CLEAR(clear_module_state->__pyx_tuple__44);
+  Py_CLEAR(clear_module_state->__pyx_tuple__46);
   Py_CLEAR(clear_module_state->__pyx_codeobj__27);
   Py_CLEAR(clear_module_state->__pyx_codeobj__30);
   Py_CLEAR(clear_module_state->__pyx_codeobj__31);
@@ -4902,8 +4916,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_codeobj__39);
   Py_CLEAR(clear_module_state->__pyx_codeobj__41);
   Py_CLEAR(clear_module_state->__pyx_codeobj__43);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__44);
   Py_CLEAR(clear_module_state->__pyx_codeobj__45);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__47);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__48);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__49);
   return 0;
 }
 #endif
@@ -5018,7 +5034,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_View_MemoryView);
   Py_VISIT(traverse_module_state->__pyx_kp_u__2);
   Py_VISIT(traverse_module_state->__pyx_n_s__3);
-  Py_VISIT(traverse_module_state->__pyx_n_s__46);
+  Py_VISIT(traverse_module_state->__pyx_n_s__50);
   Py_VISIT(traverse_module_state->__pyx_kp_u__6);
   Py_VISIT(traverse_module_state->__pyx_kp_u__7);
   Py_VISIT(traverse_module_state->__pyx_n_s_abc);
@@ -5077,8 +5093,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_fortran);
   Py_VISIT(traverse_module_state->__pyx_n_u_fortran);
   Py_VISIT(traverse_module_state->__pyx_n_s_fp);
+  Py_VISIT(traverse_module_state->__pyx_n_s_frenet_optimal_planning);
   Py_VISIT(traverse_module_state->__pyx_n_s_frenet_paths);
   Py_VISIT(traverse_module_state->__pyx_kp_u_gc);
+  Py_VISIT(traverse_module_state->__pyx_n_s_generate_target_course);
   Py_VISIT(traverse_module_state->__pyx_n_s_genexpr);
   Py_VISIT(traverse_module_state->__pyx_n_s_getstate);
   Py_VISIT(traverse_module_state->__pyx_kp_u_got);
@@ -5249,6 +5267,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_tuple__36);
   Py_VISIT(traverse_module_state->__pyx_tuple__40);
   Py_VISIT(traverse_module_state->__pyx_tuple__42);
+  Py_VISIT(traverse_module_state->__pyx_tuple__44);
+  Py_VISIT(traverse_module_state->__pyx_tuple__46);
   Py_VISIT(traverse_module_state->__pyx_codeobj__27);
   Py_VISIT(traverse_module_state->__pyx_codeobj__30);
   Py_VISIT(traverse_module_state->__pyx_codeobj__31);
@@ -5260,8 +5280,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_codeobj__39);
   Py_VISIT(traverse_module_state->__pyx_codeobj__41);
   Py_VISIT(traverse_module_state->__pyx_codeobj__43);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__44);
   Py_VISIT(traverse_module_state->__pyx_codeobj__45);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__47);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__48);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__49);
   return 0;
 }
 #endif
@@ -5412,7 +5434,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_View_MemoryView __pyx_mstate_global->__pyx_n_s_View_MemoryView
 #define __pyx_kp_u__2 __pyx_mstate_global->__pyx_kp_u__2
 #define __pyx_n_s__3 __pyx_mstate_global->__pyx_n_s__3
-#define __pyx_n_s__46 __pyx_mstate_global->__pyx_n_s__46
+#define __pyx_n_s__50 __pyx_mstate_global->__pyx_n_s__50
 #define __pyx_kp_u__6 __pyx_mstate_global->__pyx_kp_u__6
 #define __pyx_kp_u__7 __pyx_mstate_global->__pyx_kp_u__7
 #define __pyx_n_s_abc __pyx_mstate_global->__pyx_n_s_abc
@@ -5471,8 +5493,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_fortran __pyx_mstate_global->__pyx_n_s_fortran
 #define __pyx_n_u_fortran __pyx_mstate_global->__pyx_n_u_fortran
 #define __pyx_n_s_fp __pyx_mstate_global->__pyx_n_s_fp
+#define __pyx_n_s_frenet_optimal_planning __pyx_mstate_global->__pyx_n_s_frenet_optimal_planning
 #define __pyx_n_s_frenet_paths __pyx_mstate_global->__pyx_n_s_frenet_paths
 #define __pyx_kp_u_gc __pyx_mstate_global->__pyx_kp_u_gc
+#define __pyx_n_s_generate_target_course __pyx_mstate_global->__pyx_n_s_generate_target_course
 #define __pyx_n_s_genexpr __pyx_mstate_global->__pyx_n_s_genexpr
 #define __pyx_n_s_getstate __pyx_mstate_global->__pyx_n_s_getstate
 #define __pyx_kp_u_got __pyx_mstate_global->__pyx_kp_u_got
@@ -5643,6 +5667,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_tuple__36 __pyx_mstate_global->__pyx_tuple__36
 #define __pyx_tuple__40 __pyx_mstate_global->__pyx_tuple__40
 #define __pyx_tuple__42 __pyx_mstate_global->__pyx_tuple__42
+#define __pyx_tuple__44 __pyx_mstate_global->__pyx_tuple__44
+#define __pyx_tuple__46 __pyx_mstate_global->__pyx_tuple__46
 #define __pyx_codeobj__27 __pyx_mstate_global->__pyx_codeobj__27
 #define __pyx_codeobj__30 __pyx_mstate_global->__pyx_codeobj__30
 #define __pyx_codeobj__31 __pyx_mstate_global->__pyx_codeobj__31
@@ -5654,8 +5680,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__39 __pyx_mstate_global->__pyx_codeobj__39
 #define __pyx_codeobj__41 __pyx_mstate_global->__pyx_codeobj__41
 #define __pyx_codeobj__43 __pyx_mstate_global->__pyx_codeobj__43
-#define __pyx_codeobj__44 __pyx_mstate_global->__pyx_codeobj__44
 #define __pyx_codeobj__45 __pyx_mstate_global->__pyx_codeobj__45
+#define __pyx_codeobj__47 __pyx_mstate_global->__pyx_codeobj__47
+#define __pyx_codeobj__48 __pyx_mstate_global->__pyx_codeobj__48
+#define __pyx_codeobj__49 __pyx_mstate_global->__pyx_codeobj__49
 /* #### Code section: module_code ### */
 
 /* "View.MemoryView":131
@@ -28526,7 +28554,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  * 
  *     return [fplist[i] for i in ok_ind]             # <<<<<<<<<<<<<<
  * 
- * cdef tuple generate_target_course(list wx, list wy):
+ * cpdef tuple generate_target_course(list wx, list wy):
  */
   __Pyx_XDECREF(__pyx_r);
   { /* enter inner scope */
@@ -28603,12 +28631,19 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
 /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
  *     return [fplist[i] for i in ok_ind]
  * 
- * cdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
- *     csp = CubicSpline2D(np.array(wx), np.array(wy))
+ * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
+ *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)
  */
 
-static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(PyObject *__pyx_v_wx, PyObject *__pyx_v_wy) {
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(PyObject *__pyx_v_wx, PyObject *__pyx_v_wy, CYTHON_UNUSED int __pyx_skip_dispatch) {
   struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp = NULL;
   PyObject *__pyx_v_s = NULL;
   PyObject *__pyx_v_rx = NULL;
@@ -28623,14 +28658,16 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
-  int __pyx_t_4;
+  PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  Py_ssize_t __pyx_t_6;
+  PyObject *__pyx_t_6 = NULL;
   Py_ssize_t __pyx_t_7;
-  PyObject *(*__pyx_t_8)(PyObject *);
-  double __pyx_t_9;
-  int __pyx_t_10;
+  int __pyx_t_8;
+  Py_ssize_t __pyx_t_9;
+  PyObject *(*__pyx_t_10)(PyObject *);
   double __pyx_t_11;
+  int __pyx_t_12;
+  double __pyx_t_13;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -28638,129 +28675,123 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":178
  * 
- * cdef tuple generate_target_course(list wx, list wy):
- *     csp = CubicSpline2D(np.array(wx), np.array(wy))             # <<<<<<<<<<<<<<
+ * cpdef tuple generate_target_course(list wx, list wy):
+ *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))             # <<<<<<<<<<<<<<
  *     s = np.arange(0, csp.s[-1], 0.1)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_INCREF(__pyx_v_wx);
+  __Pyx_GIVEREF(__pyx_v_wx);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_wx)) __PYX_ERR(0, 178, __pyx_L1_error);
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = NULL;
-  __pyx_t_4 = 0;
-  #if CYTHON_UNPACK_METHODS
-  if (unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-      __pyx_t_4 = 1;
-    }
-  }
-  #endif
-  {
-    PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_wx};
-    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  }
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_array); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = NULL;
-  __pyx_t_4 = 0;
-  #if CYTHON_UNPACK_METHODS
-  if (unlikely(PyMethod_Check(__pyx_t_5))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_5);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_5, function);
-      __pyx_t_4 = 1;
-    }
-  }
-  #endif
-  {
-    PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_wy};
-    __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  }
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error);
-  __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error);
-  __pyx_t_1 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D), __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_t_3);
-  __pyx_t_3 = 0;
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_INCREF(__pyx_v_wy);
+  __Pyx_GIVEREF(__pyx_v_wy);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_wy)) __PYX_ERR(0, 178, __pyx_L1_error);
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_GIVEREF(__pyx_t_5);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error);
+  __Pyx_GIVEREF(__pyx_t_6);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error);
+  __pyx_t_5 = 0;
+  __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D), __pyx_t_2, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_t_6);
+  __pyx_t_6 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":179
- * cdef tuple generate_target_course(list wx, list wy):
- *     csp = CubicSpline2D(np.array(wx), np.array(wy))
+ * cpdef tuple generate_target_course(list wx, list wy):
+ *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)             # <<<<<<<<<<<<<<
  * 
  *     rx, ry, ryaw, rk = [], [], [], []
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_arange); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(!__pyx_v_csp->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 179, __pyx_L1_error)}
-  __pyx_t_6 = -1L;
-  __pyx_t_4 = -1;
-  if (__pyx_t_6 < 0) {
-    __pyx_t_6 += __pyx_v_csp->s.shape[0];
-    if (unlikely(__pyx_t_6 < 0)) __pyx_t_4 = 0;
-  } else if (unlikely(__pyx_t_6 >= __pyx_v_csp->s.shape[0])) __pyx_t_4 = 0;
-  if (unlikely(__pyx_t_4 != -1)) {
-    __Pyx_RaiseBufferIndexError(__pyx_t_4);
+  __pyx_t_7 = -1L;
+  __pyx_t_8 = -1;
+  if (__pyx_t_7 < 0) {
+    __pyx_t_7 += __pyx_v_csp->s.shape[0];
+    if (unlikely(__pyx_t_7 < 0)) __pyx_t_8 = 0;
+  } else if (unlikely(__pyx_t_7 >= __pyx_v_csp->s.shape[0])) __pyx_t_8 = 0;
+  if (unlikely(__pyx_t_8 != -1)) {
+    __Pyx_RaiseBufferIndexError(__pyx_t_8);
     __PYX_ERR(0, 179, __pyx_L1_error)
   }
-  __pyx_t_5 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_csp->s.data + __pyx_t_6 * __pyx_v_csp->s.strides[0]) )))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 179, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = NULL;
-  __pyx_t_4 = 0;
+  __pyx_t_2 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_csp->s.data + __pyx_t_7 * __pyx_v_csp->s.strides[0]) )))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  __pyx_t_8 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (unlikely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_2);
+  if (unlikely(PyMethod_Check(__pyx_t_5))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_5);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
-      __pyx_t_4 = 1;
+      __Pyx_DECREF_SET(__pyx_t_5, function);
+      __pyx_t_8 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[4] = {__pyx_t_2, __pyx_int_0, __pyx_t_5, __pyx_float_0_1};
-    __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    PyObject *__pyx_callargs[4] = {__pyx_t_3, __pyx_int_0, __pyx_t_2, __pyx_float_0_1};
+    __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_8, 3+__pyx_t_8);
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
-  __pyx_v_s = __pyx_t_3;
-  __pyx_t_3 = 0;
+  __pyx_v_s = __pyx_t_6;
+  __pyx_t_6 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":181
  *     s = np.arange(0, csp.s[-1], 0.1)
@@ -28769,22 +28800,22 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  *     for i_s in s:
  *         ix, iy = csp.calc_position(i_s)
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 181, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_v_rx = ((PyObject*)__pyx_t_3);
-  __pyx_t_3 = 0;
-  __pyx_v_ry = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
-  __pyx_v_ryaw = ((PyObject*)__pyx_t_5);
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_v_rx = ((PyObject*)__pyx_t_6);
+  __pyx_t_6 = 0;
+  __pyx_v_ry = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_v_rk = ((PyObject*)__pyx_t_2);
+  __pyx_v_ryaw = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
+  __pyx_v_rk = ((PyObject*)__pyx_t_3);
+  __pyx_t_3 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":182
  * 
@@ -28794,48 +28825,48 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  *         rx.append(ix)
  */
   if (likely(PyList_CheckExact(__pyx_v_s)) || PyTuple_CheckExact(__pyx_v_s)) {
-    __pyx_t_2 = __pyx_v_s; __Pyx_INCREF(__pyx_t_2);
-    __pyx_t_7 = 0;
-    __pyx_t_8 = NULL;
+    __pyx_t_3 = __pyx_v_s; __Pyx_INCREF(__pyx_t_3);
+    __pyx_t_9 = 0;
+    __pyx_t_10 = NULL;
   } else {
-    __pyx_t_7 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_v_s); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_8 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __pyx_t_9 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_10 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 182, __pyx_L1_error)
   }
   for (;;) {
-    if (likely(!__pyx_t_8)) {
-      if (likely(PyList_CheckExact(__pyx_t_2))) {
+    if (likely(!__pyx_t_10)) {
+      if (likely(PyList_CheckExact(__pyx_t_3))) {
         {
-          Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
+          Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
           if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
           #endif
-          if (__pyx_t_7 >= __pyx_temp) break;
+          if (__pyx_t_9 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely((0 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
         #else
-        __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 182, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_5);
+        __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         {
-          Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
+          Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
           if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
           #endif
-          if (__pyx_t_7 >= __pyx_temp) break;
+          if (__pyx_t_9 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely((0 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
         #else
-        __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 182, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_5);
+        __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
     } else {
-      __pyx_t_5 = __pyx_t_8(__pyx_t_2);
-      if (unlikely(!__pyx_t_5)) {
+      __pyx_t_2 = __pyx_t_10(__pyx_t_3);
+      if (unlikely(!__pyx_t_2)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
@@ -28843,10 +28874,10 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
         }
         break;
       }
-      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_GOTREF(__pyx_t_2);
     }
-    __Pyx_XDECREF_SET(__pyx_v_i_s, __pyx_t_5);
-    __pyx_t_5 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_i_s, __pyx_t_2);
+    __pyx_t_2 = 0;
 
     /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":183
  *     rx, ry, ryaw, rk = [], [], [], []
@@ -28855,11 +28886,11 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  *         rx.append(ix)
  *         ry.append(iy)
  */
-    __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 183, __pyx_L1_error)
-    __pyx_t_5 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_position(__pyx_v_csp, __pyx_t_9, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    if (likely(__pyx_t_5 != Py_None)) {
-      PyObject* sequence = __pyx_t_5;
+    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 183, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_position(__pyx_v_csp, __pyx_t_11, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 183, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    if (likely(__pyx_t_2 != Py_None)) {
+      PyObject* sequence = __pyx_t_2;
       Py_ssize_t size = __Pyx_PySequence_SIZE(sequence);
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
@@ -28867,24 +28898,24 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
         __PYX_ERR(0, 183, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
-      __pyx_t_3 = PyTuple_GET_ITEM(sequence, 1); 
-      __Pyx_INCREF(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_3);
+      __pyx_t_5 = PyTuple_GET_ITEM(sequence, 0); 
+      __pyx_t_6 = PyTuple_GET_ITEM(sequence, 1); 
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_6);
       #else
-      __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
       #endif
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else {
       __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 183, __pyx_L1_error)
     }
-    __Pyx_XDECREF_SET(__pyx_v_ix, __pyx_t_1);
-    __pyx_t_1 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_iy, __pyx_t_3);
-    __pyx_t_3 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_ix, __pyx_t_5);
+    __pyx_t_5 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_iy, __pyx_t_6);
+    __pyx_t_6 = 0;
 
     /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":184
  *     for i_s in s:
@@ -28893,7 +28924,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  *         ry.append(iy)
  *         ryaw.append(csp.calc_yaw(i_s))
  */
-    __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_v_ix); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 184, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_v_ix); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 184, __pyx_L1_error)
 
     /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":185
  *         ix, iy = csp.calc_position(i_s)
@@ -28902,7 +28933,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  *         ryaw.append(csp.calc_yaw(i_s))
  *         rk.append(csp.calc_curvature(i_s))
  */
-    __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_v_iy); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 185, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_v_iy); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 185, __pyx_L1_error)
 
     /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":186
  *         rx.append(ix)
@@ -28911,12 +28942,12 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  *         rk.append(csp.calc_curvature(i_s))
  * 
  */
-    __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
-    __pyx_t_11 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_yaw(__pyx_v_csp, __pyx_t_9, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_t_11); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 186, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_5); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 186, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_13 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_yaw(__pyx_v_csp, __pyx_t_11, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 186, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
     /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":187
  *         ry.append(iy)
@@ -28925,12 +28956,12 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  * 
  *     return rx, ry, ryaw, rk, csp
  */
-    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 187, __pyx_L1_error)
-    __pyx_t_9 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_curvature(__pyx_v_csp, __pyx_t_11, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 187, __pyx_L1_error)
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 187, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_rk, __pyx_t_5); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 187, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_11 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_curvature(__pyx_v_csp, __pyx_t_13, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_rk, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 187, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
     /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":182
  * 
@@ -28940,42 +28971,42 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  *         rx.append(ix)
  */
   }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":189
  *         rk.append(csp.calc_curvature(i_s))
  * 
  *     return rx, ry, ryaw, rk, csp             # <<<<<<<<<<<<<<
  * 
- * cdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = PyTuple_New(5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = PyTuple_New(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_rx);
   __Pyx_GIVEREF(__pyx_v_rx);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_rx)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_rx)) __PYX_ERR(0, 189, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ry);
   __Pyx_GIVEREF(__pyx_v_ry);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_ry)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_ry)) __PYX_ERR(0, 189, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ryaw);
   __Pyx_GIVEREF(__pyx_v_ryaw);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_v_ryaw)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_ryaw)) __PYX_ERR(0, 189, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_rk);
   __Pyx_GIVEREF(__pyx_v_rk);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 3, __pyx_v_rk)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_v_rk)) __PYX_ERR(0, 189, __pyx_L1_error);
   __Pyx_INCREF((PyObject *)__pyx_v_csp);
   __Pyx_GIVEREF((PyObject *)__pyx_v_csp);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 4, ((PyObject *)__pyx_v_csp))) __PYX_ERR(0, 189, __pyx_L1_error);
-  __pyx_r = ((PyObject*)__pyx_t_2);
-  __pyx_t_2 = 0;
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 4, ((PyObject *)__pyx_v_csp))) __PYX_ERR(0, 189, __pyx_L1_error);
+  __pyx_r = ((PyObject*)__pyx_t_3);
+  __pyx_t_3 = 0;
   goto __pyx_L0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
  *     return [fplist[i] for i in ok_ind]
  * 
- * cdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
- *     csp = CubicSpline2D(np.array(wx), np.array(wy))
+ * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
+ *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)
  */
 
@@ -28984,7 +29015,9 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
   __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.generate_target_course", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
@@ -29002,15 +29035,165 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
   return __pyx_r;
 }
 
+/* Python wrapper */
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course = {"generate_target_course", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  PyObject *__pyx_v_wx = 0;
+  PyObject *__pyx_v_wy = 0;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[2] = {0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("generate_target_course (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_wx,&__pyx_n_s_wy,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_wx)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_wy)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("generate_target_course", 1, 2, 2, 1); __PYX_ERR(0, 177, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "generate_target_course") < 0)) __PYX_ERR(0, 177, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 2)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+    }
+    __pyx_v_wx = ((PyObject*)values[0]);
+    __pyx_v_wy = ((PyObject*)values[1]);
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("generate_target_course", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 177, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.generate_target_course", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_wx), (&PyList_Type), 1, "wx", 1))) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_wy), (&PyList_Type), 1, "wy", 1))) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2generate_target_course(__pyx_self, __pyx_v_wx, __pyx_v_wy);
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  __pyx_L0:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2generate_target_course(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_wx, PyObject *__pyx_v_wy) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("generate_target_course", 1);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.generate_target_course", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
  *     return rx, ry, ryaw, rk, csp
  * 
- * cdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
  *     fplist = calc_global_paths(fplist, csp)
  */
 
-static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob) {
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyObject *__pyx_v_fplist = NULL;
   PyObject *__pyx_v_min_cost = NULL;
   PyObject *__pyx_v_best_path = NULL;
@@ -29048,7 +29231,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":192
  * 
- * cdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)             # <<<<<<<<<<<<<<
  *     fplist = calc_global_paths(fplist, csp)
  *     fplist = check_paths(fplist, ob)
@@ -29099,7 +29282,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   __pyx_t_1 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":193
- * cdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
  *     fplist = calc_global_paths(fplist, csp)             # <<<<<<<<<<<<<<
  *     fplist = check_paths(fplist, ob)
@@ -29249,7 +29432,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
  *     return rx, ry, ryaw, rk, csp
  * 
- * cdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
  *     fplist = calc_global_paths(fplist, csp)
  */
@@ -29286,6 +29469,259 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   return __pyx_r;
 }
 
+/* Python wrapper */
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning = {"frenet_optimal_planning", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp = 0;
+  double __pyx_v_s0;
+  double __pyx_v_c_speed;
+  double __pyx_v_c_accel;
+  double __pyx_v_c_d;
+  double __pyx_v_c_d_d;
+  double __pyx_v_c_d_dd;
+  PyArrayObject *__pyx_v_ob = 0;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[8] = {0,0,0,0,0,0,0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("frenet_optimal_planning (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_csp,&__pyx_n_s_s0,&__pyx_n_s_c_speed,&__pyx_n_s_c_accel,&__pyx_n_s_c_d,&__pyx_n_s_c_d_d,&__pyx_n_s_c_d_dd,&__pyx_n_s_ob,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  8: values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
+        CYTHON_FALLTHROUGH;
+        case  7: values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
+        CYTHON_FALLTHROUGH;
+        case  6: values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
+        CYTHON_FALLTHROUGH;
+        case  5: values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
+        CYTHON_FALLTHROUGH;
+        case  4: values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_csp)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_s0)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 1); __PYX_ERR(0, 191, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 2); __PYX_ERR(0, 191, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_accel)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 3); __PYX_ERR(0, 191, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  4:
+        if (likely((values[4] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 4); __PYX_ERR(0, 191, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  5:
+        if (likely((values[5] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d_d)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 5); __PYX_ERR(0, 191, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  6:
+        if (likely((values[6] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d_dd)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 6); __PYX_ERR(0, 191, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  7:
+        if (likely((values[7] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_ob)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[7]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 7); __PYX_ERR(0, 191, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "frenet_optimal_planning") < 0)) __PYX_ERR(0, 191, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 8)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+      values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+      values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+      values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
+      values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
+      values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
+      values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
+    }
+    __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)values[0]);
+    __pyx_v_s0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+    __pyx_v_c_speed = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_c_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+    __pyx_v_c_accel = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_c_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+    __pyx_v_c_d = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_c_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+    __pyx_v_c_d_d = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_c_d_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+    __pyx_v_c_d_dd = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_c_d_dd == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+    __pyx_v_ob = ((PyArrayObject *)values[7]);
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, __pyx_nargs); __PYX_ERR(0, 191, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.frenet_optimal_planning", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_csp), __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, 1, "csp", 0))) __PYX_ERR(0, 191, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ob), __pyx_ptype_5numpy_ndarray, 1, "ob", 0))) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(__pyx_self, __pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob);
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  __pyx_L0:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob) {
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_ob;
+  __Pyx_Buffer __pyx_pybuffer_ob;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("frenet_optimal_planning", 1);
+  __pyx_pybuffer_ob.pybuffer.buf = NULL;
+  __pyx_pybuffer_ob.refcount = 0;
+  __pyx_pybuffernd_ob.data = NULL;
+  __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.frenet_optimal_planning", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
  *     return best_path
  * 
@@ -29295,22 +29731,22 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3main = {"main", (PyCFunction)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3main, METH_NOARGS, 0};
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main = {"main", (PyCFunction)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main, METH_NOARGS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("main (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2main(__pyx_self);
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6main(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2main(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6main(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_v_wx = 0;
   PyObject *__pyx_v_wy = 0;
   PyArrayObject *__pyx_v_ob = 0;
@@ -29592,7 +30028,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *     cdef list tx = target_course[0]
  *     cdef list ty = target_course[1]
  */
-  __pyx_t_4 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_target_course = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
@@ -29764,7 +30200,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  * 
  *         # Update state
  */
-    __pyx_t_4 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, ((PyArrayObject *)__pyx_v_ob))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 240, __pyx_L1_error)
+    __pyx_t_4 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, ((PyArrayObject *)__pyx_v_ob), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 240, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_XDECREF_SET(__pyx_v_path, ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_4));
     __pyx_t_4 = 0;
@@ -30498,15 +30934,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5__pyx_unpickle_QuarticPolynomial = {"__pyx_unpickle_QuarticPolynomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5__pyx_unpickle_QuarticPolynomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial = {"__pyx_unpickle_QuarticPolynomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -30610,7 +31046,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4__pyx_unpickle_QuarticPolynomial(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_QuarticPolynomial(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -30623,7 +31059,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -30976,15 +31412,15 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_FrenetPath = {"__pyx_unpickle_FrenetPath", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_FrenetPath, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath = {"__pyx_unpickle_FrenetPath", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -31088,7 +31524,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6__pyx_unpickle_FrenetPath(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10__pyx_unpickle_FrenetPath(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -31101,7 +31537,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -34010,7 +34446,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_View_MemoryView, __pyx_k_View_MemoryView, sizeof(__pyx_k_View_MemoryView), 0, 0, 1, 1},
     {&__pyx_kp_u__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 1, 0, 0},
     {&__pyx_n_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 1},
-    {&__pyx_n_s__46, __pyx_k__46, sizeof(__pyx_k__46), 0, 0, 1, 1},
+    {&__pyx_n_s__50, __pyx_k__50, sizeof(__pyx_k__50), 0, 0, 1, 1},
     {&__pyx_kp_u__6, __pyx_k__6, sizeof(__pyx_k__6), 0, 1, 0, 0},
     {&__pyx_kp_u__7, __pyx_k__7, sizeof(__pyx_k__7), 0, 1, 0, 0},
     {&__pyx_n_s_abc, __pyx_k_abc, sizeof(__pyx_k_abc), 0, 0, 1, 1},
@@ -34069,8 +34505,10 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_fortran, __pyx_k_fortran, sizeof(__pyx_k_fortran), 0, 0, 1, 1},
     {&__pyx_n_u_fortran, __pyx_k_fortran, sizeof(__pyx_k_fortran), 0, 1, 0, 1},
     {&__pyx_n_s_fp, __pyx_k_fp, sizeof(__pyx_k_fp), 0, 0, 1, 1},
+    {&__pyx_n_s_frenet_optimal_planning, __pyx_k_frenet_optimal_planning, sizeof(__pyx_k_frenet_optimal_planning), 0, 0, 1, 1},
     {&__pyx_n_s_frenet_paths, __pyx_k_frenet_paths, sizeof(__pyx_k_frenet_paths), 0, 0, 1, 1},
     {&__pyx_kp_u_gc, __pyx_k_gc, sizeof(__pyx_k_gc), 0, 1, 0, 0},
+    {&__pyx_n_s_generate_target_course, __pyx_k_generate_target_course, sizeof(__pyx_k_generate_target_course), 0, 0, 1, 1},
     {&__pyx_n_s_genexpr, __pyx_k_genexpr, sizeof(__pyx_k_genexpr), 0, 0, 1, 1},
     {&__pyx_n_s_getstate, __pyx_k_getstate, sizeof(__pyx_k_getstate), 0, 0, 1, 1},
     {&__pyx_kp_u_got, __pyx_k_got, sizeof(__pyx_k_got), 0, 1, 0, 0},
@@ -34521,6 +34959,30 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__40);
   __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_frenet_paths, 82, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 82, __pyx_L1_error)
 
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
+ *     return [fplist[i] for i in ok_ind]
+ * 
+ * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
+ *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
+ *     s = np.arange(0, csp.s[-1], 0.1)
+ */
+  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_wx, __pyx_n_s_wy); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__42);
+  __Pyx_GIVEREF(__pyx_tuple__42);
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_generate_target_course, 177, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 177, __pyx_L1_error)
+
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
+ *     return rx, ry, ryaw, rk, csp
+ * 
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+ *     fplist = calc_global_paths(fplist, csp)
+ */
+  __pyx_tuple__44 = PyTuple_Pack(8, __pyx_n_s_csp, __pyx_n_s_s0, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_ob); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__44);
+  __Pyx_GIVEREF(__pyx_tuple__44);
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(8, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_frenet_optimal_planning, 191, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 191, __pyx_L1_error)
+
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
  *     return best_path
  * 
@@ -34528,18 +34990,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     print(__file__ + " start!!")
  * 
  */
-  __pyx_tuple__42 = PyTuple_Pack(18, __pyx_n_s_wx, __pyx_n_s_wy, __pyx_n_s_ob, __pyx_n_s_target_course, __pyx_n_s_tx, __pyx_n_s_ty, __pyx_n_s_tyaw, __pyx_n_s_tc, __pyx_n_s_csp, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_area, __pyx_n_s_path, __pyx_n_s_i); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 206, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__42);
-  __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_main_2, 206, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_tuple__46 = PyTuple_Pack(18, __pyx_n_s_wx, __pyx_n_s_wy, __pyx_n_s_ob, __pyx_n_s_target_course, __pyx_n_s_tx, __pyx_n_s_ty, __pyx_n_s_tyaw, __pyx_n_s_tc, __pyx_n_s_csp, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_area, __pyx_n_s_path, __pyx_n_s_i); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__46);
+  __Pyx_GIVEREF(__pyx_tuple__46);
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_main_2, 206, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 206, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_QuarticPolynomial(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_QuarticPolynomial, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_FrenetPath, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_QuarticPolynomial, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_FrenetPath, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -36139,6 +36601,30 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_frenet_paths, __pyx_t_4) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
+ *     return [fplist[i] for i in ok_ind]
+ * 
+ * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
+ *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
+ *     s = np.arange(0, csp.s[-1], 0.1)
+ */
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course, 0, __pyx_n_s_generate_target_course, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_generate_target_course, __pyx_t_4) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
+ *     return rx, ry, ryaw, rk, csp
+ * 
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+ *     fplist = calc_global_paths(fplist, csp)
+ */
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, 0, __pyx_n_s_frenet_optimal_planning, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_frenet_optimal_planning, __pyx_t_4) < 0) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
  *     return best_path
  * 
@@ -36146,7 +36632,7 @@ if (!__Pyx_RefNanny) {
  *     print(__file__ + " start!!")
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_4) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36188,7 +36674,7 @@ if (!__Pyx_RefNanny) {
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5__pyx_unpickle_QuarticPolynomial, 0, __pyx_n_s_pyx_unpickle_QuarticPolynomial, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial, 0, __pyx_n_s_pyx_unpickle_QuarticPolynomial, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_QuarticPolynomial, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -36200,7 +36686,7 @@ if (!__Pyx_RefNanny) {
  *     __pyx_result.a0 = __pyx_state[0]; __pyx_result.a1 = __pyx_state[1]; __pyx_result.a2 = __pyx_state[2]; __pyx_result.a3 = __pyx_state[3]; __pyx_result.a4 = __pyx_state[4]
  *     if len(__pyx_state) > 5 and hasattr(__pyx_result, '__dict__'):
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_FrenetPath, 0, __pyx_n_s_pyx_unpickle_FrenetPath, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath, 0, __pyx_n_s_pyx_unpickle_FrenetPath, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_FrenetPath, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -43530,7 +44016,7 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__46);
+        name = __Pyx_NewRef(__pyx_n_s__50);
     }
     return name;
 }
