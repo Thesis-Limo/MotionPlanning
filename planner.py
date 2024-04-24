@@ -53,7 +53,7 @@ class MotionPlanner:
 
     def get_dubins_path(self, curvature: float = 1.0 / 0.4):
 
-        step_size = 0.5
+        step_size = 1.0
         start = self.start_pose
         goal = self.goal_pose
 
