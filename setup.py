@@ -7,7 +7,12 @@ extensions = [
         "cubic_spline_planner",
         ["CubicSpline/cubic_spline_planner.pyx"],
         include_dirs=[np.get_include()],
-    )  # Ensure NumPy headers are included
+    ),
+    Extension(
+        "quintic_polynomial_planner",
+        ["QuinticPolynomialsPlanner/quintic_polynomial_planner.pyx"],
+        include_dirs=[np.get_include()],
+    ),
 ]
 
-setup(name="Cubic Spline Planner", ext_modules=cythonize(extensions))
+setup(name="Path Planning Library", ext_modules=cythonize(extensions))

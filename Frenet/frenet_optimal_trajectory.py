@@ -268,14 +268,14 @@ def main():
     tx, ty, tyaw, tc, csp = generate_target_course(wx, wy)
 
     # initial state
-    c_speed = 10.0 / 3.6  # current speed [m/s]
+    c_speed = 0.01  # current speed [m/s]
     c_accel = 0.0  # current acceleration [m/ss]
-    c_d = 2.0  # current lateral position [m]
+    c_d = 0.0  # current lateral position [m]
     c_d_d = 0.0  # current lateral speed [m/s]
     c_d_dd = 0.0  # current lateral acceleration [m/s]
     s0 = 0.0  # current course position
 
-    area = 20.0  # animation area length [m]
+    area = 5.0  # animation area length [m]
 
     for i in range(SIM_LOOP):
         path = frenet_optimal_planning(
