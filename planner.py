@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from Dubins.dubins_path_planner import plan_dubins_path
-from Frenet.frenet_optimal_trajectory import (
+from FrenetOptimalTrajectory.frenet_optimal_trajectory import (
     frenet_optimal_planning,
     generate_target_course,
 )
