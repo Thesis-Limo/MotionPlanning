@@ -47,7 +47,8 @@ class MotionPlanner:
 
     def plan(self):
         path = self.get_dubins_path()
-        self.calculate_frenet(path)
+        motion_plan = self.calculate_frenet(path)
+        self.plot(motion_plan)
 
     def get_dubins_path(self, curvature: float = 1.0 / 0.4):
 
@@ -67,8 +68,9 @@ class MotionPlanner:
             list(np.array(wx)), list(np.array(wy))
         )
 
-        area = 5.0  # animation area length [m]
         state = self.initial_state
+
+        motion_plan = []
 
         for i in range(SIM_LOOP):
             path = frenet_optimal_trajectory.frenet_optimal_planning(
@@ -91,43 +93,29 @@ class MotionPlanner:
                 s0=path.s[1],
             )
 
-            print(f"Time Step {i}")
-            speed = path.s_d[1]
-            curvature = path.c[1]
-            steering_angle = math.atan2(WHEELBASE * curvature, 1.0)
-
-            print(
-                f"Speed = {speed:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians"
-            )
+            motion_plan.append(path)
 
             if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
                 print("Goal")
                 break
 
-            if show_animation:  # pragma: no cover
-                plt.cla()
-                # for stopping simulation with the esc key.
-                plt.gcf().canvas.mpl_connect(
-                    "key_release_event",
-                    lambda event: [exit(0) if event.key == "escape" else None],
-                )
-                plt.plot(tx, ty)
-                for x, y in obstacleList:
-                    circle = plt.Circle((x, y), 0.2, color="k", fill=False)
-                    plt.gca().add_patch(circle)
-                plt.plot(path.x[1:], path.y[1:], "-or")
-                plt.plot(path.x[1], path.y[1], "vc")
-                plt.xlim(path.x[1] - area, path.x[1] + area)
-                plt.ylim(path.y[1] - area, path.y[1] + area)
-                plt.title("v[m/s]:" + str(state.c_speed)[0:4])
-                plt.grid(True)
-                plt.pause(0.0001)
+        return motion_plan
 
-        print("Finish")
-        if show_animation:  # pragma: no cover
+    def plot(self, motion_plan, area=5.0):
+        for path in motion_plan:
+            plt.cla()
+            for x, y in self.obstacleList:
+                circle = plt.Circle((x, y), 0.2, color="k", fill=False)
+                plt.gca().add_patch(circle)
+            plt.plot(path.x[1:], path.y[1:], "-or")
+            plt.plot(path.x[1], path.y[1], "vc")
+            plt.xlim(path.x[1] - area, path.x[1] + area)
+            plt.ylim(path.y[1] - area, path.y[1] + area)
+            plt.title("v[m/s]:" + str(path.s_d[1])[0:4])
             plt.grid(True)
             plt.pause(0.0001)
-            plt.show()
+
+        plt.show()
 
 
 def convert_lidar_data_to_2d_points(file_path):
@@ -168,8 +156,6 @@ def convert_lidar_data_to_2d_points(file_path):
 
 if __name__ == "__main__":
 
-    start = time.time()
-
     file_path = "data/scan.txt"
 
     goal_pose = Pose(
@@ -182,6 +168,3 @@ if __name__ == "__main__":
 
     planner = MotionPlanner(goal_pose, obstacleList=obstacleList)
     planner.plan()
-
-    end = time.time()
-    print(f"Time Taken: {end - start} seconds")
