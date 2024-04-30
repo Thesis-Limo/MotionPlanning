@@ -62,44 +62,52 @@ class MotionPlanner:
 
         return zip(path_x, path_y)
 
-    def calculate_frenet(self, path, show_animation=False):
+    def generate_course_and_state_initialization(self, path):
         wx, wy = zip(*path)
         tx, ty, tyaw, tc, csp = frenet_optimal_trajectory.generate_target_course(
             list(np.array(wx)), list(np.array(wy))
         )
+        return csp, tx, ty
 
-        state = self.initial_state
-
+    def calculate_frenet(self, path, state=None):
+        csp, tx, ty = self.generate_course_and_state_initialization(path)
+        state = state or self.initial_state
         motion_plan = []
 
-        for i in range(SIM_LOOP):
-            path = frenet_optimal_trajectory.frenet_optimal_planning(
-                csp,
-                state.s0,
-                state.c_speed,
-                state.c_accel,
-                state.c_d,
-                state.c_d_d,
-                state.c_d_dd,
-                self.obstacleList,
+        for _ in range(SIM_LOOP):
+            state, path, goal_reached = self.run_frenet_iteration(
+                csp, state, tx, ty, self.obstacleList
             )
-
-            state = FrenetState(
-                c_speed=path.s_d[1],
-                c_accel=path.s_dd[1],
-                c_d=path.d[1],
-                c_d_d=path.d_d[1],
-                c_d_dd=path.d_dd[1],
-                s0=path.s[1],
-            )
-
             motion_plan.append(path)
 
-            if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
-                print("Goal")
+            if goal_reached:
                 break
 
         return motion_plan
+
+    def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
+        path = frenet_optimal_trajectory.frenet_optimal_planning(
+            csp,
+            state.s0,
+            state.c_speed,
+            state.c_accel,
+            state.c_d,
+            state.c_d_d,
+            state.c_d_dd,
+            obstacles,
+        )
+
+        updated_state = FrenetState(
+            c_speed=path.s_d[1],
+            c_accel=path.s_dd[1],
+            c_d=path.d[1],
+            c_d_d=path.d_d[1],
+            c_d_dd=path.d_dd[1],
+            s0=path.s[1],
+        )
+
+        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0
+        return updated_state, path, goal_reached
 
     def plot(self, motion_plan, area=5.0):
         for path in motion_plan:
