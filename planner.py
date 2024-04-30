@@ -1,4 +1,5 @@
 import math
+import threading
 import time
 
 import matplotlib.pyplot as plt
@@ -13,7 +14,6 @@ SIM_LOOP = 500
 
 
 class Pose:
-
     def __init__(self, x: float, y: float, yaw: float):
         self.x = x
         self.y = y
@@ -21,7 +21,6 @@ class Pose:
 
 
 class FrenetState:
-
     def __init__(self, c_speed, c_accel, c_d, c_d_d, c_d_dd, s0):
         self.c_speed = c_speed
         self.c_accel = c_accel
@@ -32,7 +31,6 @@ class FrenetState:
 
 
 class MotionPlanner:
-
     def __init__(
         self,
         goal_pose: Pose,
@@ -44,14 +42,10 @@ class MotionPlanner:
         self.goal_pose = goal_pose
         self.obstacleList = obstacleList
         self.initial_state = initial_state
-
-    def plan(self):
-        path = self.get_dubins_path()
-        motion_plan = self.calculate_frenet(path)
-        self.plot(motion_plan)
+        self.motion_plan = []
+        self.planning_done = False
 
     def get_dubins_path(self, curvature: float = 1.0 / 0.4):
-
         step_size = 1.0
         start = self.start_pose
         goal = self.goal_pose
@@ -62,28 +56,20 @@ class MotionPlanner:
 
         return zip(path_x, path_y)
 
-    def generate_course_and_state_initialization(self, path):
-        wx, wy = zip(*path)
-        tx, ty, tyaw, tc, csp = frenet_optimal_trajectory.generate_target_course(
-            list(np.array(wx)), list(np.array(wy))
-        )
-        return csp, tx, ty
-
     def calculate_frenet(self, path, state=None):
         csp, tx, ty = self.generate_course_and_state_initialization(path)
         state = state or self.initial_state
-        motion_plan = []
 
         for _ in range(SIM_LOOP):
             state, path, goal_reached = self.run_frenet_iteration(
                 csp, state, tx, ty, self.obstacleList
             )
-            motion_plan.append(path)
+            self.motion_plan.append(path)
 
             if goal_reached:
                 break
 
-        return motion_plan
+        self.planning_done = True
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
         path = frenet_optimal_trajectory.frenet_optimal_planning(
@@ -109,6 +95,10 @@ class MotionPlanner:
         goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0
         return updated_state, path, goal_reached
 
+    def plan(self):
+        path = self.get_dubins_path()
+        threading.Thread(target=self.calculate_frenet, args=(path,)).start()
+
     def plot(self, motion_plan, goal_pose=None, area=5.0):
         goal_pose = goal_pose or self.goal_pose
         for path in motion_plan:
@@ -124,8 +114,14 @@ class MotionPlanner:
             plt.title("v[m/s]:" + str(path.s_d[1])[0:4])
             plt.grid(True)
             plt.pause(0.0001)
-
         plt.show()
+
+    def generate_course_and_state_initialization(self, path):
+        wx, wy = zip(*path)
+        tx, ty, tyaw, tc, csp = frenet_optimal_trajectory.generate_target_course(
+            list(np.array(wx)), list(np.array(wy))
+        )
+        return csp, tx, ty
 
 
 def convert_lidar_data_to_2d_points(file_path):
@@ -150,7 +146,7 @@ def convert_lidar_data_to_2d_points(file_path):
                 if x.strip().replace(".", "", 1).isdigit()
             ]
 
-    points_2d = [(2.0, 1.6)]
+    points_2d = []
     current_angle = angle_min
 
     for range_value in ranges:
@@ -165,16 +161,22 @@ def convert_lidar_data_to_2d_points(file_path):
 
 
 if __name__ == "__main__":
-
     file_path = "data/scan.txt"
-
-    goal_pose = Pose(
-        x=3.0,
-        y=2.5,
-        yaw=90,
-    )
-
+    goal_pose = Pose(x=3.0, y=2.5, yaw=90)
     obstacleList = np.array(convert_lidar_data_to_2d_points(file_path))
 
     planner = MotionPlanner(goal_pose, obstacleList=obstacleList)
     planner.plan()
+    time.sleep(0.2)
+
+    idx = 0
+    while not planner.planning_done or idx < len(planner.motion_plan):
+        if idx < len(planner.motion_plan):
+            path = planner.motion_plan[idx]
+            print(f"Path step {idx}: Position: ({path.x[1]}, {path.y[1]})")
+            idx += 1
+            time.sleep(0.2)
+        else:
+            raise Exception("Simulation is stuck")
+
+    planner.plot(planner.motion_plan)
