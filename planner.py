@@ -109,12 +109,14 @@ class MotionPlanner:
         goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0
         return updated_state, path, goal_reached
 
-    def plot(self, motion_plan, area=5.0):
+    def plot(self, motion_plan, goal_pose=None, area=5.0):
+        goal_pose = goal_pose or self.goal_pose
         for path in motion_plan:
             plt.cla()
             for x, y in self.obstacleList:
                 circle = plt.Circle((x, y), 0.2, color="k", fill=False)
                 plt.gca().add_patch(circle)
+            plt.plot(goal_pose.x, goal_pose.y, "xg")
             plt.plot(path.x[1:], path.y[1:], "-or")
             plt.plot(path.x[1], path.y[1], "vc")
             plt.xlim(path.x[1] - area, path.x[1] + area)
