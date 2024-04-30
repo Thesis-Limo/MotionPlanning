@@ -170,7 +170,7 @@ if __name__ == "__main__":
 
     planner = MotionPlanner(goal_pose, obstacleList=obstacleList)
     planner.plan()
-    time.sleep(0.2)
+    time.sleep(1.0)
 
     idx = 0
     while not planner.planning_done or idx < len(planner.motion_plan):
