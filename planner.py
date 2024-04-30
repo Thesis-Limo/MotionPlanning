@@ -60,6 +60,7 @@ class MotionPlanner:
         csp, tx, ty = self.generate_course_and_state_initialization(path)
         state = state or self.initial_state
 
+        start = time.time()
         for _ in range(SIM_LOOP):
             state, path, goal_reached = self.run_frenet_iteration(
                 csp, state, tx, ty, self.obstacleList
@@ -70,6 +71,8 @@ class MotionPlanner:
                 break
 
         self.planning_done = True
+        end = time.time()
+        print(f"Time taken to plan: {end - start:.2f} seconds")
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
         path = frenet_optimal_trajectory.frenet_optimal_planning(
@@ -162,7 +165,7 @@ def convert_lidar_data_to_2d_points(file_path):
 
 if __name__ == "__main__":
     file_path = "data/scan.txt"
-    goal_pose = Pose(x=3.0, y=2.5, yaw=90)
+    goal_pose = Pose(x=2.0, y=4.0, yaw=90)
     obstacleList = np.array(convert_lidar_data_to_2d_points(file_path))
 
     planner = MotionPlanner(goal_pose, obstacleList=obstacleList)
@@ -173,7 +176,15 @@ if __name__ == "__main__":
     while not planner.planning_done or idx < len(planner.motion_plan):
         if idx < len(planner.motion_plan):
             path = planner.motion_plan[idx]
-            print(f"Path step {idx}: Position: ({path.x[1]}, {path.y[1]})")
+            print(
+                f"Path step {idx}: Position: ({path.x[1]}, {path.y[1]}) Count: {len(path.x)}"
+            )
+            speed = path.s_d[1]
+            curvature = path.c[1]
+            steering_angle = math.atan2(WHEELBASE * curvature, 1.0)
+            print(
+                f"Speed = {speed:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians\n"
+            )
             idx += 1
             time.sleep(0.2)
         else:

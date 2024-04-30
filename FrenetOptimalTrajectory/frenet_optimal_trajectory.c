@@ -36352,7 +36352,7 @@ if (!__Pyx_RefNanny) {
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
  * cdef double MAX_ROAD_WIDTH = 7.0             # <<<<<<<<<<<<<<
  * cdef double D_ROAD_W = 1.0
- * cdef double DT = 0.2
+ * cdef double DT = 0.5
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH = 7.0;
 
@@ -36360,32 +36360,32 @@ if (!__Pyx_RefNanny) {
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
  * cdef double MAX_ROAD_WIDTH = 7.0
  * cdef double D_ROAD_W = 1.0             # <<<<<<<<<<<<<<
- * cdef double DT = 0.2
- * cdef double MAX_T = 5.0
+ * cdef double DT = 0.5
+ * cdef double MAX_T = 4.0
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_ROAD_W = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":18
  * cdef double MAX_ROAD_WIDTH = 7.0
  * cdef double D_ROAD_W = 1.0
- * cdef double DT = 0.2             # <<<<<<<<<<<<<<
- * cdef double MAX_T = 5.0
+ * cdef double DT = 0.5             # <<<<<<<<<<<<<<
+ * cdef double MAX_T = 4.0
  * cdef double MIN_T = 2.0
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT = 0.2;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT = 0.5;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":19
  * cdef double D_ROAD_W = 1.0
- * cdef double DT = 0.2
- * cdef double MAX_T = 5.0             # <<<<<<<<<<<<<<
+ * cdef double DT = 0.5
+ * cdef double MAX_T = 4.0             # <<<<<<<<<<<<<<
  * cdef double MIN_T = 2.0
  * cdef double TARGET_SPEED = 0.5
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T = 5.0;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T = 4.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":20
- * cdef double DT = 0.2
- * cdef double MAX_T = 5.0
+ * cdef double DT = 0.5
+ * cdef double MAX_T = 4.0
  * cdef double MIN_T = 2.0             # <<<<<<<<<<<<<<
  * cdef double TARGET_SPEED = 0.5
  * cdef double D_T_S = 5.0 / 3.6
@@ -36393,7 +36393,7 @@ if (!__Pyx_RefNanny) {
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T = 2.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":21
- * cdef double MAX_T = 5.0
+ * cdef double MAX_T = 4.0
  * cdef double MIN_T = 2.0
  * cdef double TARGET_SPEED = 0.5             # <<<<<<<<<<<<<<
  * cdef double D_T_S = 5.0 / 3.6
