@@ -22,13 +22,15 @@ class Pose:
 
 
 class FrenetState:
-    def __init__(self, c_speed, c_accel, c_d, c_d_d, c_d_dd, s0):
+    def __init__(self, c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, c_x=0.0, c_y=0.0):
         self.c_speed = c_speed
         self.c_accel = c_accel
         self.c_d = c_d
         self.c_d_d = c_d_d
         self.c_d_dd = c_d_dd
         self.s0 = s0
+        self.c_x = c_x
+        self.c_y = c_y
 
 
 class MotionPlanner:
@@ -76,6 +78,9 @@ class MotionPlanner:
         print(f"Time taken to plan: {end - start:.2f} seconds")
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
+        goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
+        print(f"Goal distance: {goal_dist:.2f}")
+
         path = frenet_optimal_trajectory.frenet_optimal_planning(
             csp,
             state.s0,
@@ -85,7 +90,7 @@ class MotionPlanner:
             state.c_d_d,
             state.c_d_dd,
             obstacles,
-            TARGET_SPEED,
+            TARGET_SPEED if goal_dist > 2.5 else TARGET_SPEED * (goal_dist / 2.5),
         )
 
         updated_state = FrenetState(
@@ -95,6 +100,8 @@ class MotionPlanner:
             c_d_d=path.d_d[1],
             c_d_dd=path.d_dd[1],
             s0=path.s[1],
+            c_x=path.x[1],
+            c_y=path.y[1],
         )
 
         goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0
