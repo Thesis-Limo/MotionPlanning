@@ -11,6 +11,7 @@ from Dubins.dubins_path_planner import plan_dubins_path
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
+TARGET_SPEED = 0.5  # [m/s]
 
 
 class Pose:
@@ -84,6 +85,7 @@ class MotionPlanner:
             state.c_d_d,
             state.c_d_dd,
             obstacles,
+            TARGET_SPEED,
         )
 
         updated_state = FrenetState(

@@ -18,7 +18,6 @@ cdef double D_ROAD_W = 1.0
 cdef double DT = 0.5
 cdef double MAX_T = 4.0
 cdef double MIN_T = 2.0
-cdef double TARGET_SPEED = 0.5
 cdef double D_T_S = 5.0 / 3.6
 cdef int N_S_SAMPLE = 1
 cdef double ROBOT_RADIUS = 0.2
@@ -79,7 +78,7 @@ cdef class FrenetPath:
 
 # Functions to generate Frenet paths, calculate global paths, and perform collision checks
 
-def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0):
+def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0, double target_speed):
     cdef list frenet_paths = []
     cdef double di, Ti
     cdef FrenetPath fp
@@ -101,7 +100,7 @@ def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, 
             fp.d_ddd = [lat_qp.calc_third_derivative(t) for t in fp.t]
 
             # Longitudinal motion planning (Velocity keeping)
-            for tv in np.arange(TARGET_SPEED - D_T_S * N_S_SAMPLE, TARGET_SPEED + D_T_S * N_S_SAMPLE, D_T_S):
+            for tv in np.arange(target_speed - D_T_S * N_S_SAMPLE, target_speed + D_T_S * N_S_SAMPLE, D_T_S):
                 tfp = deepcopy(fp)
                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)
 
@@ -111,7 +110,7 @@ def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, 
                 tfp.s_ddd = [lon_qp.calc_third_derivative(t) for t in fp.t]
 
                 tfp.cd = K_J * sum([pow(x, 2) for x in tfp.d_ddd]) + K_T * Ti + K_D * pow(tfp.d[-1], 2)
-                tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((TARGET_SPEED - tfp.s_d[-1]), 2)
+                tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((target_speed - tfp.s_d[-1]), 2)
                 tfp.cf = K_LAT * tfp.cd + K_LON * tfp.cv
 
                 frenet_paths.append(tfp)
@@ -188,8 +187,8 @@ cpdef tuple generate_target_course(list wx, list wy):
 
     return rx, ry, ryaw, rk, csp
 
-cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
-    fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):
+    fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
     fplist = calc_global_paths(fplist, csp)
     fplist = check_paths(fplist, ob)
 
@@ -217,6 +216,8 @@ def main():
                                                            [35.0, 8.0],
                                                            [50.0, 3.0]], dtype=np.float64)
 
+    cdef double target_speed = 0.5
+
     # Generate target course
     cdef tuple target_course = generate_target_course(wx, wy)
     cdef list tx = target_course[0]
@@ -237,7 +238,7 @@ def main():
     cdef FrenetPath path
 
     for i in range(SIM_LOOP):
-        path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob)
+        path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob, target_speed)
 
         # Update state
         s0 = path.s[1]

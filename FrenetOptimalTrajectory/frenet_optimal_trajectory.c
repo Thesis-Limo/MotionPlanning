@@ -2026,7 +2026,7 @@ struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPat
 };
 
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":157
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":156
  *     for i in range(len(ob)):
  *         d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2) for ix, iy in zip(fp.x, fp.y)]
  *         if any(di <= ROBOT_RADIUS ** 2 for di in d):             # <<<<<<<<<<<<<<
@@ -2040,7 +2040,7 @@ struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_sco
 };
 
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":165
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":164
  *     cdef int i
  *     for i in range(len(fplist)):
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check             # <<<<<<<<<<<<<<
@@ -2054,7 +2054,7 @@ struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_sco
 };
 
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":167
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":166
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check
  *             continue
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check             # <<<<<<<<<<<<<<
@@ -2068,7 +2068,7 @@ struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_sco
 };
 
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":169
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":168
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
  *             continue
  *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check             # <<<<<<<<<<<<<<
@@ -2211,7 +2211,7 @@ struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planne
 static struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *__pyx_vtabptr_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial;
 
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":35
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":34
  * cdef int SIM_LOOP = 500
  * 
  * cdef class QuarticPolynomial:             # <<<<<<<<<<<<<<
@@ -3692,7 +3692,6 @@ static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_RO
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T;
-static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_TARGET_SPEED;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S;
 static int __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS;
@@ -3715,7 +3714,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
 static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_collision(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *, PyArrayObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_paths(PyObject *, PyArrayObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
-static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, double, double, double, double, double, PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
+static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, double, double, double, double, double, PyArrayObject *, double, int __pyx_skip_dispatch); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_unpickle_QuarticPolynomial__set_state(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *, PyObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_unpickle_FrenetPath__set_state(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *, PyObject *); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
@@ -3935,6 +3934,7 @@ static const char __pyx_k_initializing[] = "_initializing";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_stringsource[] = "<stringsource>";
+static const char __pyx_k_target_speed[] = "target_speed";
 static const char __pyx_k_use_setstate[] = "use_setstate";
 static const char __pyx_k_version_info[] = "version_info";
 static const char __pyx_k_class_getitem[] = "__class_getitem__";
@@ -4115,13 +4115,13 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
 static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10FrenetPath_1c_4__del__(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10FrenetPath_2__reduce_cython__(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10FrenetPath_4__setstate_cython__(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_frenet_paths(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, double __pyx_v_s0); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_frenet_paths(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, double __pyx_v_s0, double __pyx_v_target_speed); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_15check_collision_genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_3genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_6genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2generate_target_course(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_wx, PyObject *__pyx_v_wy); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
@@ -4434,6 +4434,7 @@ typedef struct {
   PyObject *__pyx_n_s_sys;
   PyObject *__pyx_n_s_t;
   PyObject *__pyx_n_s_target_course;
+  PyObject *__pyx_n_s_target_speed;
   PyObject *__pyx_n_s_tc;
   PyObject *__pyx_n_s_test;
   PyObject *__pyx_n_s_tfp;
@@ -4820,6 +4821,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_sys);
   Py_CLEAR(clear_module_state->__pyx_n_s_t);
   Py_CLEAR(clear_module_state->__pyx_n_s_target_course);
+  Py_CLEAR(clear_module_state->__pyx_n_s_target_speed);
   Py_CLEAR(clear_module_state->__pyx_n_s_tc);
   Py_CLEAR(clear_module_state->__pyx_n_s_test);
   Py_CLEAR(clear_module_state->__pyx_n_s_tfp);
@@ -5184,6 +5186,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_sys);
   Py_VISIT(traverse_module_state->__pyx_n_s_t);
   Py_VISIT(traverse_module_state->__pyx_n_s_target_course);
+  Py_VISIT(traverse_module_state->__pyx_n_s_target_speed);
   Py_VISIT(traverse_module_state->__pyx_n_s_tc);
   Py_VISIT(traverse_module_state->__pyx_n_s_test);
   Py_VISIT(traverse_module_state->__pyx_n_s_tfp);
@@ -5584,6 +5587,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_sys __pyx_mstate_global->__pyx_n_s_sys
 #define __pyx_n_s_t __pyx_mstate_global->__pyx_n_s_t
 #define __pyx_n_s_target_course __pyx_mstate_global->__pyx_n_s_target_course
+#define __pyx_n_s_target_speed __pyx_mstate_global->__pyx_n_s_target_speed
 #define __pyx_n_s_tc __pyx_mstate_global->__pyx_n_s_tc
 #define __pyx_n_s_test __pyx_mstate_global->__pyx_n_s_test
 #define __pyx_n_s_tfp __pyx_mstate_global->__pyx_n_s_tfp
@@ -20574,7 +20578,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":37
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":36
  * cdef class QuarticPolynomial:
  * 
  *     def __init__(self, double xs, double vxs, double axs, double vxe, double axe, double time):             # <<<<<<<<<<<<<<
@@ -20633,7 +20637,7 @@ static int __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
           (void)__Pyx_Arg_NewRef_VARARGS(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -20641,9 +20645,9 @@ static int __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
           (void)__Pyx_Arg_NewRef_VARARGS(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 1); __PYX_ERR(0, 37, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 1); __PYX_ERR(0, 36, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -20651,9 +20655,9 @@ static int __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
           (void)__Pyx_Arg_NewRef_VARARGS(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 2); __PYX_ERR(0, 37, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 2); __PYX_ERR(0, 36, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -20661,9 +20665,9 @@ static int __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
           (void)__Pyx_Arg_NewRef_VARARGS(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 3); __PYX_ERR(0, 37, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 3); __PYX_ERR(0, 36, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -20671,9 +20675,9 @@ static int __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
           (void)__Pyx_Arg_NewRef_VARARGS(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 4); __PYX_ERR(0, 37, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 4); __PYX_ERR(0, 36, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -20681,14 +20685,14 @@ static int __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
           (void)__Pyx_Arg_NewRef_VARARGS(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 5); __PYX_ERR(0, 37, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, 5); __PYX_ERR(0, 36, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 37, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "__init__") < 0)) __PYX_ERR(0, 36, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 6)) {
       goto __pyx_L5_argtuple_error;
@@ -20700,16 +20704,16 @@ static int __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
       values[4] = __Pyx_Arg_VARARGS(__pyx_args, 4);
       values[5] = __Pyx_Arg_VARARGS(__pyx_args, 5);
     }
-    __pyx_v_xs = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_xs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
-    __pyx_v_vxs = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_vxs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
-    __pyx_v_axs = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_axs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
-    __pyx_v_vxe = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_vxe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
-    __pyx_v_axe = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_axe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
-    __pyx_v_time = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_time == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+    __pyx_v_xs = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_xs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
+    __pyx_v_vxs = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_vxs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
+    __pyx_v_axs = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_axs == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
+    __pyx_v_vxe = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_vxe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
+    __pyx_v_axe = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_axe == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
+    __pyx_v_time = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_time == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, __pyx_nargs); __PYX_ERR(0, 37, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 6, 6, __pyx_nargs); __PYX_ERR(0, 36, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -20756,7 +20760,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":38
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":37
  * 
  *     def __init__(self, double xs, double vxs, double axs, double vxe, double axe, double time):
  *         self.a0 = xs             # <<<<<<<<<<<<<<
@@ -20765,7 +20769,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
  */
   __pyx_v_self->a0 = __pyx_v_xs;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":39
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":38
  *     def __init__(self, double xs, double vxs, double axs, double vxe, double axe, double time):
  *         self.a0 = xs
  *         self.a1 = vxs             # <<<<<<<<<<<<<<
@@ -20774,7 +20778,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
  */
   __pyx_v_self->a1 = __pyx_v_vxs;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":40
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":39
  *         self.a0 = xs
  *         self.a1 = vxs
  *         self.a2 = axs / 2.0             # <<<<<<<<<<<<<<
@@ -20783,142 +20787,142 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
  */
   __pyx_v_self->a2 = (__pyx_v_axs / 2.0);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":41
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":40
  *         self.a1 = vxs
  *         self.a2 = axs / 2.0
  *         cdef double[:, :] A = np.array([[3 * time ** 2, 4 * time ** 3], [6 * time, 12 * time ** 2]], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double[:] b = np.array([vxe - self.a1 - 2 * self.a2 * time, axe - 2 * self.a2], dtype=np.float64)
  *         cdef double[:] x = np.linalg.solve(A, b)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyFloat_FromDouble((3.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((3.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyFloat_FromDouble((4.0 * pow(__pyx_v_time, 3.0))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble((4.0 * pow(__pyx_v_time, 3.0))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyFloat_FromDouble((6.0 * __pyx_v_time)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble((6.0 * __pyx_v_time)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyFloat_FromDouble((12.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((12.0 * pow(__pyx_v_time, 2.0))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_4)) __PYX_ERR(0, 40, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error);
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_3, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_3, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_A = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":42
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":41
  *         self.a2 = axs / 2.0
  *         cdef double[:, :] A = np.array([[3 * time ** 2, 4 * time ** 3], [6 * time, 12 * time ** 2]], dtype=np.float64)
  *         cdef double[:] b = np.array([vxe - self.a1 - 2 * self.a2 * time, axe - 2 * self.a2], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double[:] x = np.linalg.solve(A, b)
  *         self.a3 = x[0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyFloat_FromDouble(((__pyx_v_vxe - __pyx_v_self->a1) - ((2.0 * __pyx_v_self->a2) * __pyx_v_time))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(((__pyx_v_vxe - __pyx_v_self->a1) - ((2.0 * __pyx_v_self->a2) * __pyx_v_time))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = PyFloat_FromDouble((__pyx_v_axe - (2.0 * __pyx_v_self->a2))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_5 = PyFloat_FromDouble((__pyx_v_axe - (2.0 * __pyx_v_self->a2))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 0, __pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 0, __pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 1, __pyx_t_5)) __PYX_ERR(0, 42, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 1, __pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_b = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":43
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":42
  *         cdef double[:, :] A = np.array([[3 * time ** 2, 4 * time ** 3], [6 * time, 12 * time ** 2]], dtype=np.float64)
  *         cdef double[:] b = np.array([vxe - self.a1 - 2 * self.a2 * time, axe - 2 * self.a2], dtype=np.float64)
  *         cdef double[:] x = np.linalg.solve(A, b)             # <<<<<<<<<<<<<<
  *         self.a3 = x[0]
  *         self.a4 = x[1]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_linalg); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_linalg); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_solve); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_solve); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_A, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_A, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_b, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_b, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = NULL;
   __pyx_t_8 = 0;
@@ -20940,17 +20944,17 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 43, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_x = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":44
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":43
  *         cdef double[:] b = np.array([vxe - self.a1 - 2 * self.a2 * time, axe - 2 * self.a2], dtype=np.float64)
  *         cdef double[:] x = np.linalg.solve(A, b)
  *         self.a3 = x[0]             # <<<<<<<<<<<<<<
@@ -20965,11 +20969,11 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
   } else if (unlikely(__pyx_t_9 >= __pyx_v_x.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 44, __pyx_L1_error)
+    __PYX_ERR(0, 43, __pyx_L1_error)
   }
   __pyx_v_self->a3 = (*((double *) ( /* dim=0 */ (__pyx_v_x.data + __pyx_t_9 * __pyx_v_x.strides[0]) )));
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":45
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":44
  *         cdef double[:] x = np.linalg.solve(A, b)
  *         self.a3 = x[0]
  *         self.a4 = x[1]             # <<<<<<<<<<<<<<
@@ -20984,11 +20988,11 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
   } else if (unlikely(__pyx_t_9 >= __pyx_v_x.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 45, __pyx_L1_error)
+    __PYX_ERR(0, 44, __pyx_L1_error)
   }
   __pyx_v_self->a4 = (*((double *) ( /* dim=0 */ (__pyx_v_x.data + __pyx_t_9 * __pyx_v_x.strides[0]) )));
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":37
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":36
  * cdef class QuarticPolynomial:
  * 
  *     def __init__(self, double xs, double vxs, double axs, double vxe, double axe, double time):             # <<<<<<<<<<<<<<
@@ -21017,7 +21021,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Quar
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":47
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":46
  *         self.a4 = x[1]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
@@ -21055,10 +21059,10 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_point); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_point); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_3calc_point)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 47, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21080,11 +21084,11 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21103,7 +21107,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     #endif
   }
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":48
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":47
  * 
  *     cpdef double calc_point(self, double t):
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4             # <<<<<<<<<<<<<<
@@ -21113,7 +21117,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
   __pyx_r = ((((__pyx_v_self->a0 + (__pyx_v_self->a1 * __pyx_v_t)) + (__pyx_v_self->a2 * pow(__pyx_v_t, 2.0))) + (__pyx_v_self->a3 * pow(__pyx_v_t, 3.0))) + (__pyx_v_self->a4 * pow(__pyx_v_t, 4.0)));
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":47
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":46
  *         self.a4 = x[1]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
@@ -21188,23 +21192,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_point") < 0)) __PYX_ERR(0, 47, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_point") < 0)) __PYX_ERR(0, 46, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_point", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 47, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_point", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 46, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21241,8 +21245,8 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_point", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_point(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_point(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -21259,7 +21263,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":50
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":49
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21297,10 +21301,10 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_first_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_first_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_5calc_first_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21322,11 +21326,11 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21345,7 +21349,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     #endif
   }
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":51
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":50
  * 
  *     cpdef double calc_first_derivative(self, double t):
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3             # <<<<<<<<<<<<<<
@@ -21355,7 +21359,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
   __pyx_r = (((__pyx_v_self->a1 + ((2.0 * __pyx_v_self->a2) * __pyx_v_t)) + ((3.0 * __pyx_v_self->a3) * pow(__pyx_v_t, 2.0))) + ((4.0 * __pyx_v_self->a4) * pow(__pyx_v_t, 3.0)));
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":50
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":49
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21430,23 +21434,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_first_derivative") < 0)) __PYX_ERR(0, 50, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_first_derivative") < 0)) __PYX_ERR(0, 49, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_first_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 50, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_first_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 49, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21483,8 +21487,8 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_first_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_first_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_first_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -21501,7 +21505,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":53
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":52
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21539,10 +21543,10 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_second_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_second_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_7calc_second_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 53, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 52, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21564,11 +21568,11 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21587,7 +21591,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     #endif
   }
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":54
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":53
  * 
  *     cpdef double calc_second_derivative(self, double t):
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2             # <<<<<<<<<<<<<<
@@ -21597,7 +21601,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
   __pyx_r = (((2.0 * __pyx_v_self->a2) + ((6.0 * __pyx_v_self->a3) * __pyx_v_t)) + ((12.0 * __pyx_v_self->a4) * pow(__pyx_v_t, 2.0)));
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":53
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":52
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21672,23 +21676,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_second_derivative") < 0)) __PYX_ERR(0, 53, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_second_derivative") < 0)) __PYX_ERR(0, 52, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_second_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 53, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_second_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 52, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21725,8 +21729,8 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_second_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_second_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_second_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -21743,7 +21747,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":56
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":55
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21781,10 +21785,10 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_third_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_calc_third_derivative); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 55, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_9calc_third_derivative)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 55, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -21806,11 +21810,11 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 55, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L1_error)
+        __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 55, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -21829,7 +21833,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
     #endif
   }
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":57
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":56
  * 
  *     cpdef double calc_third_derivative(self, double t):
  *         return 6 * self.a3 + 24 * self.a4 * t             # <<<<<<<<<<<<<<
@@ -21839,7 +21843,7 @@ static double __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17Qu
   __pyx_r = ((6.0 * __pyx_v_self->a3) + ((24.0 * __pyx_v_self->a4) * __pyx_v_t));
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":56
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":55
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
@@ -21914,23 +21918,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 55, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_third_derivative") < 0)) __PYX_ERR(0, 56, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_third_derivative") < 0)) __PYX_ERR(0, 55, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 55, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_third_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 56, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_third_derivative", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 55, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21967,8 +21971,8 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_third_derivative", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_third_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_third_derivative(__pyx_v_self, __pyx_v_t, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -22796,7 +22800,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":61
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":60
  * cdef class FrenetPath:
  * 
  *     def __init__(self):             # <<<<<<<<<<<<<<
@@ -22837,14 +22841,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":62
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":61
  * 
  *     def __init__(self):
  *         self.t = []             # <<<<<<<<<<<<<<
  *         self.d = []
  *         self.d_d = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->t);
@@ -22852,14 +22856,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->t = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":63
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":62
  *     def __init__(self):
  *         self.t = []
  *         self.d = []             # <<<<<<<<<<<<<<
  *         self.d_d = []
  *         self.d_dd = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->d);
@@ -22867,14 +22871,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->d = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":64
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":63
  *         self.t = []
  *         self.d = []
  *         self.d_d = []             # <<<<<<<<<<<<<<
  *         self.d_dd = []
  *         self.d_ddd = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->d_d);
@@ -22882,14 +22886,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->d_d = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":65
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":64
  *         self.d = []
  *         self.d_d = []
  *         self.d_dd = []             # <<<<<<<<<<<<<<
  *         self.d_ddd = []
  *         self.s = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->d_dd);
@@ -22897,14 +22901,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->d_dd = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":66
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":65
  *         self.d_d = []
  *         self.d_dd = []
  *         self.d_ddd = []             # <<<<<<<<<<<<<<
  *         self.s = []
  *         self.s_d = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->d_ddd);
@@ -22912,14 +22916,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->d_ddd = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":67
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":66
  *         self.d_dd = []
  *         self.d_ddd = []
  *         self.s = []             # <<<<<<<<<<<<<<
  *         self.s_d = []
  *         self.s_dd = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->s);
@@ -22927,14 +22931,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->s = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":68
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":67
  *         self.d_ddd = []
  *         self.s = []
  *         self.s_d = []             # <<<<<<<<<<<<<<
  *         self.s_dd = []
  *         self.s_ddd = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->s_d);
@@ -22942,14 +22946,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->s_d = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":69
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":68
  *         self.s = []
  *         self.s_d = []
  *         self.s_dd = []             # <<<<<<<<<<<<<<
  *         self.s_ddd = []
  *         self.cd = 0.0
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->s_dd);
@@ -22957,14 +22961,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->s_dd = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":70
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":69
  *         self.s_d = []
  *         self.s_dd = []
  *         self.s_ddd = []             # <<<<<<<<<<<<<<
  *         self.cd = 0.0
  *         self.cv = 0.0
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->s_ddd);
@@ -22972,7 +22976,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->s_ddd = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":71
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":70
  *         self.s_dd = []
  *         self.s_ddd = []
  *         self.cd = 0.0             # <<<<<<<<<<<<<<
@@ -22981,7 +22985,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
  */
   __pyx_v_self->cd = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":72
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":71
  *         self.s_ddd = []
  *         self.cd = 0.0
  *         self.cv = 0.0             # <<<<<<<<<<<<<<
@@ -22990,7 +22994,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
  */
   __pyx_v_self->cv = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":73
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":72
  *         self.cd = 0.0
  *         self.cv = 0.0
  *         self.cf = 0.0             # <<<<<<<<<<<<<<
@@ -22999,14 +23003,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
  */
   __pyx_v_self->cf = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":74
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":73
  *         self.cv = 0.0
  *         self.cf = 0.0
  *         self.x = []             # <<<<<<<<<<<<<<
  *         self.y = []
  *         self.yaw = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->x);
@@ -23014,14 +23018,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->x = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":75
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":74
  *         self.cf = 0.0
  *         self.x = []
  *         self.y = []             # <<<<<<<<<<<<<<
  *         self.yaw = []
  *         self.ds = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->y);
@@ -23029,14 +23033,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->y = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":76
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":75
  *         self.x = []
  *         self.y = []
  *         self.yaw = []             # <<<<<<<<<<<<<<
  *         self.ds = []
  *         self.c = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->yaw);
@@ -23044,14 +23048,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->yaw = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":77
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":76
  *         self.y = []
  *         self.yaw = []
  *         self.ds = []             # <<<<<<<<<<<<<<
  *         self.c = []
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->ds);
@@ -23059,14 +23063,14 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->ds = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":78
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":77
  *         self.yaw = []
  *         self.ds = []
  *         self.c = []             # <<<<<<<<<<<<<<
  * 
  * # Functions to generate Frenet paths, calculate global paths, and perform collision checks
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->c);
@@ -23074,7 +23078,7 @@ static int __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10Fren
   __pyx_v_self->c = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":61
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":60
  * cdef class FrenetPath:
  * 
  *     def __init__(self):             # <<<<<<<<<<<<<<
@@ -25362,10 +25366,10 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":82
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":81
  * # Functions to generate Frenet paths, calculate global paths, and perform collision checks
  * 
- * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0):             # <<<<<<<<<<<<<<
+ * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0, double target_speed):             # <<<<<<<<<<<<<<
  *     cdef list frenet_paths = []
  *     cdef double di, Ti
  */
@@ -25392,11 +25396,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   double __pyx_v_c_d_d;
   double __pyx_v_c_d_dd;
   double __pyx_v_s0;
+  double __pyx_v_target_speed;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
-  PyObject* values[6] = {0,0,0,0,0,0};
+  PyObject* values[7] = {0,0,0,0,0,0,0};
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -25412,10 +25417,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_c_speed,&__pyx_n_s_c_accel,&__pyx_n_s_c_d,&__pyx_n_s_c_d_d,&__pyx_n_s_c_d_dd,&__pyx_n_s_s0,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_c_speed,&__pyx_n_s_c_accel,&__pyx_n_s_c_d,&__pyx_n_s_c_d_d,&__pyx_n_s_c_d_dd,&__pyx_n_s_s0,&__pyx_n_s_target_speed,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
+        case  7: values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
+        CYTHON_FALLTHROUGH;
         case  6: values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
         CYTHON_FALLTHROUGH;
         case  5: values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
@@ -25438,7 +25445,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -25446,9 +25453,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 6, 6, 1); __PYX_ERR(0, 82, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 7, 7, 1); __PYX_ERR(0, 81, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -25456,9 +25463,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 6, 6, 2); __PYX_ERR(0, 82, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 7, 7, 2); __PYX_ERR(0, 81, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -25466,9 +25473,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 6, 6, 3); __PYX_ERR(0, 82, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 7, 7, 3); __PYX_ERR(0, 81, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -25476,9 +25483,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 6, 6, 4); __PYX_ERR(0, 82, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 7, 7, 4); __PYX_ERR(0, 81, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -25486,16 +25493,26 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 6, 6, 5); __PYX_ERR(0, 82, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 7, 7, 5); __PYX_ERR(0, 81, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  6:
+        if (likely((values[6] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_target_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 7, 7, 6); __PYX_ERR(0, 81, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_frenet_paths") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "calc_frenet_paths") < 0)) __PYX_ERR(0, 81, __pyx_L3_error)
       }
-    } else if (unlikely(__pyx_nargs != 6)) {
+    } else if (unlikely(__pyx_nargs != 7)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
@@ -25504,17 +25521,19 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
       values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
       values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
+      values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
     }
-    __pyx_v_c_speed = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_c_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
-    __pyx_v_c_accel = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_c_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
-    __pyx_v_c_d = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_c_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
-    __pyx_v_c_d_d = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_c_d_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
-    __pyx_v_c_d_dd = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_c_d_dd == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
-    __pyx_v_s0 = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_s0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_c_speed = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_c_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+    __pyx_v_c_accel = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_c_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+    __pyx_v_c_d = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_c_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+    __pyx_v_c_d_d = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_c_d_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+    __pyx_v_c_d_dd = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_c_d_dd == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+    __pyx_v_s0 = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_s0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+    __pyx_v_target_speed = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_target_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 6, 6, __pyx_nargs); __PYX_ERR(0, 82, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_frenet_paths", 1, 7, 7, __pyx_nargs); __PYX_ERR(0, 81, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -25528,7 +25547,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_frenet_paths(__pyx_self, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_s0);
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_frenet_paths(__pyx_self, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_s0, __pyx_v_target_speed);
 
   /* function exit code */
   {
@@ -25541,7 +25560,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_frenet_paths(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, double __pyx_v_s0) {
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_frenet_paths(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, double __pyx_v_s0, double __pyx_v_target_speed) {
   PyObject *__pyx_v_frenet_paths = 0;
   double __pyx_v_di;
   double __pyx_v_Ti;
@@ -25587,35 +25606,35 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_frenet_paths", 1);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":83
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":82
  * 
- * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0):
+ * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0, double target_speed):
  *     cdef list frenet_paths = []             # <<<<<<<<<<<<<<
  *     cdef double di, Ti
  *     cdef FrenetPath fp
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_frenet_paths = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":91
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":90
  * 
  *     # Generate path to each offset goal
  *     for di in np.arange(-MAX_ROAD_WIDTH, MAX_ROAD_WIDTH, D_ROAD_W):             # <<<<<<<<<<<<<<
  *         # Lateral motion planning
  *         for Ti in np.arange(MIN_T, MAX_T, DT):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyFloat_FromDouble((-__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((-__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_ROAD_W); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_ROAD_W); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = NULL;
   __pyx_t_7 = 0;
@@ -25638,7 +25657,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
@@ -25647,9 +25666,9 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     __pyx_t_8 = 0;
     __pyx_t_9 = NULL;
   } else {
-    __pyx_t_8 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_8 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_9 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 90, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -25658,28 +25677,28 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 91, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 90, __pyx_L1_error)
           #endif
           if (__pyx_t_8 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 91, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 90, __pyx_L1_error)
         #else
-        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 91, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 90, __pyx_L1_error)
           #endif
           if (__pyx_t_8 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 91, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely((0 < 0))) __PYX_ERR(0, 90, __pyx_L1_error)
         #else
-        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -25689,33 +25708,33 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 91, __pyx_L1_error)
+          else __PYX_ERR(0, 90, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_1);
     }
-    __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 90, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_di = __pyx_t_10;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":93
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":92
  *     for di in np.arange(-MAX_ROAD_WIDTH, MAX_ROAD_WIDTH, D_ROAD_W):
  *         # Lateral motion planning
  *         for Ti in np.arange(MIN_T, MAX_T, DT):             # <<<<<<<<<<<<<<
  *             fp = FrenetPath()
  *             lat_qp = QuinticPolynomial(c_d, c_d_d, c_d_dd, di, 0.0, 0.0, Ti)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 92, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_arange); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_arange); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 92, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 92, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 92, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_11 = NULL;
     __pyx_t_7 = 0;
@@ -25738,7 +25757,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -25747,9 +25766,9 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __pyx_t_12 = 0;
       __pyx_t_13 = NULL;
     } else {
-      __pyx_t_12 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 93, __pyx_L1_error)
+      __pyx_t_12 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 92, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 93, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 92, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     for (;;) {
@@ -25758,28 +25777,28 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 92, __pyx_L1_error)
             #endif
             if (__pyx_t_12 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_12); __Pyx_INCREF(__pyx_t_1); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_12); __Pyx_INCREF(__pyx_t_1); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 92, __pyx_L1_error)
           #else
-          __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         } else {
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 92, __pyx_L1_error)
             #endif
             if (__pyx_t_12 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_12); __Pyx_INCREF(__pyx_t_1); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_12); __Pyx_INCREF(__pyx_t_1); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 92, __pyx_L1_error)
           #else
-          __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         }
@@ -25789,75 +25808,75 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 93, __pyx_L1_error)
+            else __PYX_ERR(0, 92, __pyx_L1_error)
           }
           break;
         }
         __Pyx_GOTREF(__pyx_t_1);
       }
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 93, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_v_Ti = __pyx_t_10;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":94
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":93
  *         # Lateral motion planning
  *         for Ti in np.arange(MIN_T, MAX_T, DT):
  *             fp = FrenetPath()             # <<<<<<<<<<<<<<
  *             lat_qp = QuinticPolynomial(c_d, c_d_d, c_d_dd, di, 0.0, 0.0, Ti)
  * 
  */
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_XDECREF_SET(__pyx_v_fp, ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_1));
       __pyx_t_1 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":95
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":94
  *         for Ti in np.arange(MIN_T, MAX_T, DT):
  *             fp = FrenetPath()
  *             lat_qp = QuinticPolynomial(c_d, c_d_d, c_d_dd, di, 0.0, 0.0, Ti)             # <<<<<<<<<<<<<<
  * 
  *             fp.t = [t for t in np.arange(0.0, Ti, DT)]
  */
-      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_c_d); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_c_d); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_c_d_d); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
+      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_c_d_d); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_c_d_dd); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
+      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_c_d_dd); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_di); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_di); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_11 = PyFloat_FromDouble(__pyx_v_Ti); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 95, __pyx_L1_error)
+      __pyx_t_11 = PyFloat_FromDouble(__pyx_v_Ti); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_14 = PyTuple_New(7); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 95, __pyx_L1_error)
+      __pyx_t_14 = PyTuple_New(7); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_GIVEREF(__pyx_t_1);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_6);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 1, __pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 1, __pyx_t_6)) __PYX_ERR(0, 94, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_2);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 2, __pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 2, __pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_5);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 3, __pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 3, __pyx_t_5)) __PYX_ERR(0, 94, __pyx_L1_error);
       __Pyx_INCREF(__pyx_float_0_0);
       __Pyx_GIVEREF(__pyx_float_0_0);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 4, __pyx_float_0_0)) __PYX_ERR(0, 95, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 4, __pyx_float_0_0)) __PYX_ERR(0, 94, __pyx_L1_error);
       __Pyx_INCREF(__pyx_float_0_0);
       __Pyx_GIVEREF(__pyx_float_0_0);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 5, __pyx_float_0_0)) __PYX_ERR(0, 95, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 5, __pyx_float_0_0)) __PYX_ERR(0, 94, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_11);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 6, __pyx_t_11)) __PYX_ERR(0, 95, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 6, __pyx_t_11)) __PYX_ERR(0, 94, __pyx_L1_error);
       __pyx_t_1 = 0;
       __pyx_t_6 = 0;
       __pyx_t_2 = 0;
       __pyx_t_5 = 0;
       __pyx_t_11 = 0;
-      __pyx_t_11 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial), __pyx_t_14, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 95, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial), __pyx_t_14, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_XDECREF_SET(__pyx_v_lat_qp, ((struct __pyx_obj_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_t_11));
       __pyx_t_11 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":97
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":96
  *             lat_qp = QuinticPolynomial(c_d, c_d_d, c_d_dd, di, 0.0, 0.0, Ti)
  * 
  *             fp.t = [t for t in np.arange(0.0, Ti, DT)]             # <<<<<<<<<<<<<<
@@ -25865,16 +25884,16 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *             fp.d_d = [lat_qp.calc_first_derivative(t) for t in fp.t]
  */
       { /* enter inner scope */
-        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 97, __pyx_L9_error)
+        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 96, __pyx_L9_error)
         __Pyx_GOTREF(__pyx_t_11);
-        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 97, __pyx_L9_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 96, __pyx_L9_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_arange); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L9_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_arange); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L9_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_Ti); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 97, __pyx_L9_error)
+        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_Ti); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 96, __pyx_L9_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 97, __pyx_L9_error)
+        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 96, __pyx_L9_error)
         __Pyx_GOTREF(__pyx_t_6);
         __pyx_t_1 = NULL;
         __pyx_t_7 = 0;
@@ -25896,7 +25915,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-          if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 97, __pyx_L9_error)
+          if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 96, __pyx_L9_error)
           __Pyx_GOTREF(__pyx_t_14);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         }
@@ -25905,9 +25924,9 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           __pyx_t_15 = 0;
           __pyx_t_16 = NULL;
         } else {
-          __pyx_t_15 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L9_error)
+          __pyx_t_15 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L9_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_16 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 97, __pyx_L9_error)
+          __pyx_t_16 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 96, __pyx_L9_error)
         }
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         for (;;) {
@@ -25916,28 +25935,28 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
               {
                 Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
                 #if !CYTHON_ASSUME_SAFE_MACROS
-                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 97, __pyx_L9_error)
+                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 96, __pyx_L9_error)
                 #endif
                 if (__pyx_t_15 >= __pyx_temp) break;
               }
               #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-              __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 97, __pyx_L9_error)
+              __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 96, __pyx_L9_error)
               #else
-              __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 97, __pyx_L9_error)
+              __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 96, __pyx_L9_error)
               __Pyx_GOTREF(__pyx_t_14);
               #endif
             } else {
               {
                 Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
                 #if !CYTHON_ASSUME_SAFE_MACROS
-                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 97, __pyx_L9_error)
+                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 96, __pyx_L9_error)
                 #endif
                 if (__pyx_t_15 >= __pyx_temp) break;
               }
               #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-              __pyx_t_14 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 97, __pyx_L9_error)
+              __pyx_t_14 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 96, __pyx_L9_error)
               #else
-              __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 97, __pyx_L9_error)
+              __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 96, __pyx_L9_error)
               __Pyx_GOTREF(__pyx_t_14);
               #endif
             }
@@ -25947,7 +25966,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
               PyObject* exc_type = PyErr_Occurred();
               if (exc_type) {
                 if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                else __PYX_ERR(0, 97, __pyx_L9_error)
+                else __PYX_ERR(0, 96, __pyx_L9_error)
               }
               break;
             }
@@ -25955,7 +25974,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           }
           __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_t, __pyx_t_14);
           __pyx_t_14 = 0;
-          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_7genexpr__pyx_v_t))) __PYX_ERR(0, 97, __pyx_L9_error)
+          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_7genexpr__pyx_v_t))) __PYX_ERR(0, 96, __pyx_L9_error)
         }
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_XDECREF(__pyx_7genexpr__pyx_v_t); __pyx_7genexpr__pyx_v_t = 0;
@@ -25971,7 +25990,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __pyx_v_fp->t = ((PyObject*)__pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":98
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":97
  * 
  *             fp.t = [t for t in np.arange(0.0, Ti, DT)]
  *             fp.d = [lat_qp.calc_point(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -25979,11 +25998,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *             fp.d_dd = [lat_qp.calc_second_derivative(t) for t in fp.t]
  */
       { /* enter inner scope */
-        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 98, __pyx_L16_error)
+        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 97, __pyx_L16_error)
         __Pyx_GOTREF(__pyx_t_11);
         if (unlikely(__pyx_v_fp->t == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-          __PYX_ERR(0, 98, __pyx_L16_error)
+          __PYX_ERR(0, 97, __pyx_L16_error)
         }
         __pyx_t_2 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_2);
         __pyx_t_15 = 0;
@@ -25991,23 +26010,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 98, __pyx_L16_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 97, __pyx_L16_error)
             #endif
             if (__pyx_t_15 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 98, __pyx_L16_error)
+          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 97, __pyx_L16_error)
           #else
-          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 98, __pyx_L16_error)
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 97, __pyx_L16_error)
           __Pyx_GOTREF(__pyx_t_14);
           #endif
           __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_t, __pyx_t_14);
           __pyx_t_14 = 0;
-          __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr1__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L16_error)
-          __pyx_t_17 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_point(__pyx_v_lat_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L16_error)
-          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 98, __pyx_L16_error)
+          __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr1__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L16_error)
+          __pyx_t_17 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_point(__pyx_v_lat_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L16_error)
+          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 97, __pyx_L16_error)
           __Pyx_GOTREF(__pyx_t_14);
-          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 98, __pyx_L16_error)
+          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 97, __pyx_L16_error)
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         }
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -26024,7 +26043,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __pyx_v_fp->d = ((PyObject*)__pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":99
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":98
  *             fp.t = [t for t in np.arange(0.0, Ti, DT)]
  *             fp.d = [lat_qp.calc_point(t) for t in fp.t]
  *             fp.d_d = [lat_qp.calc_first_derivative(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -26032,11 +26051,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *             fp.d_ddd = [lat_qp.calc_third_derivative(t) for t in fp.t]
  */
       { /* enter inner scope */
-        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 99, __pyx_L23_error)
+        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 98, __pyx_L23_error)
         __Pyx_GOTREF(__pyx_t_11);
         if (unlikely(__pyx_v_fp->t == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-          __PYX_ERR(0, 99, __pyx_L23_error)
+          __PYX_ERR(0, 98, __pyx_L23_error)
         }
         __pyx_t_2 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_2);
         __pyx_t_15 = 0;
@@ -26044,23 +26063,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 99, __pyx_L23_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 98, __pyx_L23_error)
             #endif
             if (__pyx_t_15 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 99, __pyx_L23_error)
+          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 98, __pyx_L23_error)
           #else
-          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 99, __pyx_L23_error)
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 98, __pyx_L23_error)
           __Pyx_GOTREF(__pyx_t_14);
           #endif
           __Pyx_XDECREF_SET(__pyx_8genexpr2__pyx_v_t, __pyx_t_14);
           __pyx_t_14 = 0;
-          __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr2__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L23_error)
-          __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_first_derivative(__pyx_v_lat_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L23_error)
-          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 99, __pyx_L23_error)
+          __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr2__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L23_error)
+          __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_first_derivative(__pyx_v_lat_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L23_error)
+          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 98, __pyx_L23_error)
           __Pyx_GOTREF(__pyx_t_14);
-          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 99, __pyx_L23_error)
+          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 98, __pyx_L23_error)
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         }
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -26077,7 +26096,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __pyx_v_fp->d_d = ((PyObject*)__pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":100
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":99
  *             fp.d = [lat_qp.calc_point(t) for t in fp.t]
  *             fp.d_d = [lat_qp.calc_first_derivative(t) for t in fp.t]
  *             fp.d_dd = [lat_qp.calc_second_derivative(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -26085,11 +26104,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  * 
  */
       { /* enter inner scope */
-        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 100, __pyx_L30_error)
+        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 99, __pyx_L30_error)
         __Pyx_GOTREF(__pyx_t_11);
         if (unlikely(__pyx_v_fp->t == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-          __PYX_ERR(0, 100, __pyx_L30_error)
+          __PYX_ERR(0, 99, __pyx_L30_error)
         }
         __pyx_t_2 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_2);
         __pyx_t_15 = 0;
@@ -26097,23 +26116,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 100, __pyx_L30_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 99, __pyx_L30_error)
             #endif
             if (__pyx_t_15 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 100, __pyx_L30_error)
+          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 99, __pyx_L30_error)
           #else
-          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 100, __pyx_L30_error)
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 99, __pyx_L30_error)
           __Pyx_GOTREF(__pyx_t_14);
           #endif
           __Pyx_XDECREF_SET(__pyx_8genexpr3__pyx_v_t, __pyx_t_14);
           __pyx_t_14 = 0;
-          __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr3__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L30_error)
-          __pyx_t_17 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_second_derivative(__pyx_v_lat_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L30_error)
-          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 100, __pyx_L30_error)
+          __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr3__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L30_error)
+          __pyx_t_17 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_second_derivative(__pyx_v_lat_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L30_error)
+          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 99, __pyx_L30_error)
           __Pyx_GOTREF(__pyx_t_14);
-          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 100, __pyx_L30_error)
+          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 99, __pyx_L30_error)
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         }
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -26130,7 +26149,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __pyx_v_fp->d_dd = ((PyObject*)__pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":101
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":100
  *             fp.d_d = [lat_qp.calc_first_derivative(t) for t in fp.t]
  *             fp.d_dd = [lat_qp.calc_second_derivative(t) for t in fp.t]
  *             fp.d_ddd = [lat_qp.calc_third_derivative(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -26138,11 +26157,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *             # Longitudinal motion planning (Velocity keeping)
  */
       { /* enter inner scope */
-        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 101, __pyx_L37_error)
+        __pyx_t_11 = PyList_New(0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 100, __pyx_L37_error)
         __Pyx_GOTREF(__pyx_t_11);
         if (unlikely(__pyx_v_fp->t == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-          __PYX_ERR(0, 101, __pyx_L37_error)
+          __PYX_ERR(0, 100, __pyx_L37_error)
         }
         __pyx_t_2 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_2);
         __pyx_t_15 = 0;
@@ -26150,23 +26169,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 101, __pyx_L37_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 100, __pyx_L37_error)
             #endif
             if (__pyx_t_15 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 101, __pyx_L37_error)
+          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_15); __Pyx_INCREF(__pyx_t_14); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 100, __pyx_L37_error)
           #else
-          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 101, __pyx_L37_error)
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 100, __pyx_L37_error)
           __Pyx_GOTREF(__pyx_t_14);
           #endif
           __Pyx_XDECREF_SET(__pyx_8genexpr4__pyx_v_t, __pyx_t_14);
           __pyx_t_14 = 0;
-          __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr4__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 101, __pyx_L37_error)
-          __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_third_derivative(__pyx_v_lat_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 101, __pyx_L37_error)
-          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 101, __pyx_L37_error)
+          __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr4__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L37_error)
+          __pyx_t_10 = ((struct __pyx_vtabstruct_25QuinticPolynomialsPlanner_27quintic_polynomials_planner_QuinticPolynomial *)__pyx_v_lat_qp->__pyx_vtab)->calc_third_derivative(__pyx_v_lat_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L37_error)
+          __pyx_t_14 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 100, __pyx_L37_error)
           __Pyx_GOTREF(__pyx_t_14);
-          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 101, __pyx_L37_error)
+          if (unlikely(__Pyx_ListComp_Append(__pyx_t_11, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 100, __pyx_L37_error)
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         }
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -26183,23 +26202,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __pyx_v_fp->d_ddd = ((PyObject*)__pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":104
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":103
  * 
  *             # Longitudinal motion planning (Velocity keeping)
- *             for tv in np.arange(TARGET_SPEED - D_T_S * N_S_SAMPLE, TARGET_SPEED + D_T_S * N_S_SAMPLE, D_T_S):             # <<<<<<<<<<<<<<
+ *             for tv in np.arange(target_speed - D_T_S * N_S_SAMPLE, target_speed + D_T_S * N_S_SAMPLE, D_T_S):             # <<<<<<<<<<<<<<
  *                 tfp = deepcopy(fp)
  *                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_TARGET_SPEED - (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S * __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __pyx_t_2 = PyFloat_FromDouble((__pyx_v_target_speed - (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S * __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_TARGET_SPEED + (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S * __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __pyx_t_6 = PyFloat_FromDouble((__pyx_v_target_speed + (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S * __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_1 = NULL;
       __pyx_t_7 = 0;
@@ -26222,7 +26241,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 104, __pyx_L1_error)
+        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 103, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       }
@@ -26231,9 +26250,9 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __pyx_t_15 = 0;
         __pyx_t_16 = NULL;
       } else {
-        __pyx_t_15 = -1; __pyx_t_14 = PyObject_GetIter(__pyx_t_11); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 104, __pyx_L1_error)
+        __pyx_t_15 = -1; __pyx_t_14 = PyObject_GetIter(__pyx_t_11); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 103, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_16 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_14); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 104, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_14); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 103, __pyx_L1_error)
       }
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       for (;;) {
@@ -26242,28 +26261,28 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_14);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 104, __pyx_L1_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 103, __pyx_L1_error)
               #endif
               if (__pyx_t_15 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_11 = PyList_GET_ITEM(__pyx_t_14, __pyx_t_15); __Pyx_INCREF(__pyx_t_11); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 104, __pyx_L1_error)
+            __pyx_t_11 = PyList_GET_ITEM(__pyx_t_14, __pyx_t_15); __Pyx_INCREF(__pyx_t_11); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 103, __pyx_L1_error)
             #else
-            __pyx_t_11 = __Pyx_PySequence_ITEM(__pyx_t_14, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 104, __pyx_L1_error)
+            __pyx_t_11 = __Pyx_PySequence_ITEM(__pyx_t_14, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 103, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_11);
             #endif
           } else {
             {
               Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_14);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 104, __pyx_L1_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 103, __pyx_L1_error)
               #endif
               if (__pyx_t_15 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_11 = PyTuple_GET_ITEM(__pyx_t_14, __pyx_t_15); __Pyx_INCREF(__pyx_t_11); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 104, __pyx_L1_error)
+            __pyx_t_11 = PyTuple_GET_ITEM(__pyx_t_14, __pyx_t_15); __Pyx_INCREF(__pyx_t_11); __pyx_t_15++; if (unlikely((0 < 0))) __PYX_ERR(0, 103, __pyx_L1_error)
             #else
-            __pyx_t_11 = __Pyx_PySequence_ITEM(__pyx_t_14, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 104, __pyx_L1_error)
+            __pyx_t_11 = __Pyx_PySequence_ITEM(__pyx_t_14, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 103, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_11);
             #endif
           }
@@ -26273,7 +26292,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
               if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-              else __PYX_ERR(0, 104, __pyx_L1_error)
+              else __PYX_ERR(0, 103, __pyx_L1_error)
             }
             break;
           }
@@ -26282,14 +26301,14 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __Pyx_XDECREF_SET(__pyx_v_tv, __pyx_t_11);
         __pyx_t_11 = 0;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":105
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":104
  *             # Longitudinal motion planning (Velocity keeping)
- *             for tv in np.arange(TARGET_SPEED - D_T_S * N_S_SAMPLE, TARGET_SPEED + D_T_S * N_S_SAMPLE, D_T_S):
+ *             for tv in np.arange(target_speed - D_T_S * N_S_SAMPLE, target_speed + D_T_S * N_S_SAMPLE, D_T_S):
  *                 tfp = deepcopy(fp)             # <<<<<<<<<<<<<<
  *                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)
  * 
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_deepcopy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 105, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_deepcopy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __pyx_t_6 = NULL;
         __pyx_t_7 = 0;
@@ -26309,56 +26328,56 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           PyObject *__pyx_callargs[2] = {__pyx_t_6, ((PyObject *)__pyx_v_fp)};
           __pyx_t_11 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
           __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 105, __pyx_L1_error)
+          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 104, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         }
-        if (!(likely(((__pyx_t_11) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_11, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 105, __pyx_L1_error)
+        if (!(likely(((__pyx_t_11) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_11, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 104, __pyx_L1_error)
         __Pyx_XDECREF_SET(__pyx_v_tfp, ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_11));
         __pyx_t_11 = 0;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":106
- *             for tv in np.arange(TARGET_SPEED - D_T_S * N_S_SAMPLE, TARGET_SPEED + D_T_S * N_S_SAMPLE, D_T_S):
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":105
+ *             for tv in np.arange(target_speed - D_T_S * N_S_SAMPLE, target_speed + D_T_S * N_S_SAMPLE, D_T_S):
  *                 tfp = deepcopy(fp)
  *                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)             # <<<<<<<<<<<<<<
  * 
  *                 tfp.s = [lon_qp.calc_point(t) for t in fp.t]
  */
-        __pyx_t_11 = PyFloat_FromDouble(__pyx_v_s0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 106, __pyx_L1_error)
+        __pyx_t_11 = PyFloat_FromDouble(__pyx_v_s0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 105, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
-        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_c_speed); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error)
+        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_c_speed); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 105, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_c_accel); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 106, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_c_accel); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 105, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_Ti); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_Ti); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = PyTuple_New(6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_New(6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GIVEREF(__pyx_t_11);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_11)) __PYX_ERR(0, 106, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_11)) __PYX_ERR(0, 105, __pyx_L1_error);
         __Pyx_GIVEREF(__pyx_t_5);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_5)) __PYX_ERR(0, 105, __pyx_L1_error);
         __Pyx_GIVEREF(__pyx_t_6);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_t_6)) __PYX_ERR(0, 106, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_t_6)) __PYX_ERR(0, 105, __pyx_L1_error);
         __Pyx_INCREF(__pyx_v_tv);
         __Pyx_GIVEREF(__pyx_v_tv);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_v_tv)) __PYX_ERR(0, 106, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_v_tv)) __PYX_ERR(0, 105, __pyx_L1_error);
         __Pyx_INCREF(__pyx_float_0_0);
         __Pyx_GIVEREF(__pyx_float_0_0);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_float_0_0)) __PYX_ERR(0, 106, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_float_0_0)) __PYX_ERR(0, 105, __pyx_L1_error);
         __Pyx_GIVEREF(__pyx_t_2);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 5, __pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 5, __pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error);
         __pyx_t_11 = 0;
         __pyx_t_5 = 0;
         __pyx_t_6 = 0;
         __pyx_t_2 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF_SET(__pyx_v_lon_qp, ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_t_2));
         __pyx_t_2 = 0;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":108
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":107
  *                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)
  * 
  *                 tfp.s = [lon_qp.calc_point(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -26366,11 +26385,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *                 tfp.s_dd = [lon_qp.calc_second_derivative(t) for t in fp.t]
  */
         { /* enter inner scope */
-          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L46_error)
+          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L46_error)
           __Pyx_GOTREF(__pyx_t_2);
           if (unlikely(__pyx_v_fp->t == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-            __PYX_ERR(0, 108, __pyx_L46_error)
+            __PYX_ERR(0, 107, __pyx_L46_error)
           }
           __pyx_t_1 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_1);
           __pyx_t_18 = 0;
@@ -26378,23 +26397,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 108, __pyx_L46_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 107, __pyx_L46_error)
               #endif
               if (__pyx_t_18 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 108, __pyx_L46_error)
+            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 107, __pyx_L46_error)
             #else
-            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 108, __pyx_L46_error)
+            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 107, __pyx_L46_error)
             __Pyx_GOTREF(__pyx_t_6);
             #endif
             __Pyx_XDECREF_SET(__pyx_8genexpr5__pyx_v_t, __pyx_t_6);
             __pyx_t_6 = 0;
-            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr5__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L46_error)
-            __pyx_t_17 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_point(__pyx_v_lon_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L46_error)
-            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 108, __pyx_L46_error)
+            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr5__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 107, __pyx_L46_error)
+            __pyx_t_17 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_point(__pyx_v_lon_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 107, __pyx_L46_error)
+            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 107, __pyx_L46_error)
             __Pyx_GOTREF(__pyx_t_6);
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 108, __pyx_L46_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 107, __pyx_L46_error)
             __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -26411,7 +26430,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __pyx_v_tfp->s = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":109
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":108
  * 
  *                 tfp.s = [lon_qp.calc_point(t) for t in fp.t]
  *                 tfp.s_d = [lon_qp.calc_first_derivative(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -26419,11 +26438,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *                 tfp.s_ddd = [lon_qp.calc_third_derivative(t) for t in fp.t]
  */
         { /* enter inner scope */
-          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L53_error)
+          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L53_error)
           __Pyx_GOTREF(__pyx_t_2);
           if (unlikely(__pyx_v_fp->t == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-            __PYX_ERR(0, 109, __pyx_L53_error)
+            __PYX_ERR(0, 108, __pyx_L53_error)
           }
           __pyx_t_1 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_1);
           __pyx_t_18 = 0;
@@ -26431,23 +26450,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 109, __pyx_L53_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 108, __pyx_L53_error)
               #endif
               if (__pyx_t_18 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 109, __pyx_L53_error)
+            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 108, __pyx_L53_error)
             #else
-            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 109, __pyx_L53_error)
+            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 108, __pyx_L53_error)
             __Pyx_GOTREF(__pyx_t_6);
             #endif
             __Pyx_XDECREF_SET(__pyx_8genexpr6__pyx_v_t, __pyx_t_6);
             __pyx_t_6 = 0;
-            __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr6__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L53_error)
-            __pyx_t_10 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_first_derivative(__pyx_v_lon_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L53_error)
-            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 109, __pyx_L53_error)
+            __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr6__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L53_error)
+            __pyx_t_10 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_first_derivative(__pyx_v_lon_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L53_error)
+            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 108, __pyx_L53_error)
             __Pyx_GOTREF(__pyx_t_6);
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 109, __pyx_L53_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 108, __pyx_L53_error)
             __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -26464,7 +26483,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __pyx_v_tfp->s_d = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":110
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":109
  *                 tfp.s = [lon_qp.calc_point(t) for t in fp.t]
  *                 tfp.s_d = [lon_qp.calc_first_derivative(t) for t in fp.t]
  *                 tfp.s_dd = [lon_qp.calc_second_derivative(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -26472,11 +26491,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  * 
  */
         { /* enter inner scope */
-          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L60_error)
+          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L60_error)
           __Pyx_GOTREF(__pyx_t_2);
           if (unlikely(__pyx_v_fp->t == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-            __PYX_ERR(0, 110, __pyx_L60_error)
+            __PYX_ERR(0, 109, __pyx_L60_error)
           }
           __pyx_t_1 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_1);
           __pyx_t_18 = 0;
@@ -26484,23 +26503,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 110, __pyx_L60_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 109, __pyx_L60_error)
               #endif
               if (__pyx_t_18 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 110, __pyx_L60_error)
+            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 109, __pyx_L60_error)
             #else
-            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 110, __pyx_L60_error)
+            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 109, __pyx_L60_error)
             __Pyx_GOTREF(__pyx_t_6);
             #endif
             __Pyx_XDECREF_SET(__pyx_8genexpr7__pyx_v_t, __pyx_t_6);
             __pyx_t_6 = 0;
-            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr7__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L60_error)
-            __pyx_t_17 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_second_derivative(__pyx_v_lon_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L60_error)
-            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 110, __pyx_L60_error)
+            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr7__pyx_v_t); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L60_error)
+            __pyx_t_17 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_second_derivative(__pyx_v_lon_qp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L60_error)
+            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_17); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 109, __pyx_L60_error)
             __Pyx_GOTREF(__pyx_t_6);
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 110, __pyx_L60_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 109, __pyx_L60_error)
             __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -26517,7 +26536,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __pyx_v_tfp->s_dd = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":111
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":110
  *                 tfp.s_d = [lon_qp.calc_first_derivative(t) for t in fp.t]
  *                 tfp.s_dd = [lon_qp.calc_second_derivative(t) for t in fp.t]
  *                 tfp.s_ddd = [lon_qp.calc_third_derivative(t) for t in fp.t]             # <<<<<<<<<<<<<<
@@ -26525,11 +26544,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  *                 tfp.cd = K_J * sum([pow(x, 2) for x in tfp.d_ddd]) + K_T * Ti + K_D * pow(tfp.d[-1], 2)
  */
         { /* enter inner scope */
-          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L67_error)
+          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L67_error)
           __Pyx_GOTREF(__pyx_t_2);
           if (unlikely(__pyx_v_fp->t == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-            __PYX_ERR(0, 111, __pyx_L67_error)
+            __PYX_ERR(0, 110, __pyx_L67_error)
           }
           __pyx_t_1 = __pyx_v_fp->t; __Pyx_INCREF(__pyx_t_1);
           __pyx_t_18 = 0;
@@ -26537,23 +26556,23 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 111, __pyx_L67_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 110, __pyx_L67_error)
               #endif
               if (__pyx_t_18 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 111, __pyx_L67_error)
+            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_18); __Pyx_INCREF(__pyx_t_6); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 110, __pyx_L67_error)
             #else
-            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 111, __pyx_L67_error)
+            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 110, __pyx_L67_error)
             __Pyx_GOTREF(__pyx_t_6);
             #endif
             __Pyx_XDECREF_SET(__pyx_8genexpr8__pyx_v_t, __pyx_t_6);
             __pyx_t_6 = 0;
-            __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr8__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L67_error)
-            __pyx_t_10 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_third_derivative(__pyx_v_lon_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L67_error)
-            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 111, __pyx_L67_error)
+            __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_8genexpr8__pyx_v_t); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L67_error)
+            __pyx_t_10 = ((struct __pyx_vtabstruct_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *)__pyx_v_lon_qp->__pyx_vtab)->calc_third_derivative(__pyx_v_lon_qp, __pyx_t_17, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L67_error)
+            __pyx_t_6 = PyFloat_FromDouble(__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 110, __pyx_L67_error)
             __Pyx_GOTREF(__pyx_t_6);
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 111, __pyx_L67_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 110, __pyx_L67_error)
             __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -26570,21 +26589,21 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __pyx_v_tfp->s_ddd = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":113
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":112
  *                 tfp.s_ddd = [lon_qp.calc_third_derivative(t) for t in fp.t]
  * 
  *                 tfp.cd = K_J * sum([pow(x, 2) for x in tfp.d_ddd]) + K_T * Ti + K_D * pow(tfp.d[-1], 2)             # <<<<<<<<<<<<<<
- *                 tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((TARGET_SPEED - tfp.s_d[-1]), 2)
+ *                 tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((target_speed - tfp.s_d[-1]), 2)
  *                 tfp.cf = K_LAT * tfp.cd + K_LON * tfp.cv
  */
-        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         { /* enter inner scope */
-          __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L74_error)
+          __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L74_error)
           __Pyx_GOTREF(__pyx_t_1);
           if (unlikely(__pyx_v_tfp->d_ddd == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-            __PYX_ERR(0, 113, __pyx_L74_error)
+            __PYX_ERR(0, 112, __pyx_L74_error)
           }
           __pyx_t_6 = __pyx_v_tfp->d_ddd; __Pyx_INCREF(__pyx_t_6);
           __pyx_t_18 = 0;
@@ -26592,22 +26611,22 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_6);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 113, __pyx_L74_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 112, __pyx_L74_error)
               #endif
               if (__pyx_t_18 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_5 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_18); __Pyx_INCREF(__pyx_t_5); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 113, __pyx_L74_error)
+            __pyx_t_5 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_18); __Pyx_INCREF(__pyx_t_5); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 112, __pyx_L74_error)
             #else
-            __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_6, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L74_error)
+            __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_6, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 112, __pyx_L74_error)
             __Pyx_GOTREF(__pyx_t_5);
             #endif
             __Pyx_XDECREF_SET(__pyx_8genexpr9__pyx_v_x, __pyx_t_5);
             __pyx_t_5 = 0;
-            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr9__pyx_v_x); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L74_error)
-            __pyx_t_5 = PyFloat_FromDouble(pow(__pyx_t_10, 2.0)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L74_error)
+            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_8genexpr9__pyx_v_x); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L74_error)
+            __pyx_t_5 = PyFloat_FromDouble(pow(__pyx_t_10, 2.0)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 112, __pyx_L74_error)
             __Pyx_GOTREF(__pyx_t_5);
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 113, __pyx_L74_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 112, __pyx_L74_error)
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           }
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -26618,52 +26637,52 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           goto __pyx_L1_error;
           __pyx_L78_exit_scope:;
         } /* exit inner scope */
-        __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyNumber_Multiply(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_1 = PyNumber_Multiply(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_6 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T * __pyx_v_Ti)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T * __pyx_v_Ti)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         if (unlikely(__pyx_v_tfp->d == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 113, __pyx_L1_error)
+          __PYX_ERR(0, 112, __pyx_L1_error)
         }
-        __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_tfp->d, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_tfp->d, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_6); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_6); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_6 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D * pow(__pyx_t_10, 2.0))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D * pow(__pyx_t_10, 2.0))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
+        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_v_tfp->cd = __pyx_t_10;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":114
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":113
  * 
  *                 tfp.cd = K_J * sum([pow(x, 2) for x in tfp.d_ddd]) + K_T * Ti + K_D * pow(tfp.d[-1], 2)
- *                 tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((TARGET_SPEED - tfp.s_d[-1]), 2)             # <<<<<<<<<<<<<<
+ *                 tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((target_speed - tfp.s_d[-1]), 2)             # <<<<<<<<<<<<<<
  *                 tfp.cf = K_LAT * tfp.cd + K_LON * tfp.cv
  * 
  */
-        __pyx_t_1 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         { /* enter inner scope */
-          __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L81_error)
+          __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L81_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (unlikely(__pyx_v_tfp->s_ddd == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-            __PYX_ERR(0, 114, __pyx_L81_error)
+            __PYX_ERR(0, 113, __pyx_L81_error)
           }
           __pyx_t_2 = __pyx_v_tfp->s_ddd; __Pyx_INCREF(__pyx_t_2);
           __pyx_t_18 = 0;
@@ -26671,22 +26690,22 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 114, __pyx_L81_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 113, __pyx_L81_error)
               #endif
               if (__pyx_t_18 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_5 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_18); __Pyx_INCREF(__pyx_t_5); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 114, __pyx_L81_error)
+            __pyx_t_5 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_18); __Pyx_INCREF(__pyx_t_5); __pyx_t_18++; if (unlikely((0 < 0))) __PYX_ERR(0, 113, __pyx_L81_error)
             #else
-            __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 114, __pyx_L81_error)
+            __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_18); __pyx_t_18++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L81_error)
             __Pyx_GOTREF(__pyx_t_5);
             #endif
             __Pyx_XDECREF_SET(__pyx_9genexpr10__pyx_v_x, __pyx_t_5);
             __pyx_t_5 = 0;
-            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_9genexpr10__pyx_v_x); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L81_error)
-            __pyx_t_5 = PyFloat_FromDouble(pow(__pyx_t_10, 2.0)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 114, __pyx_L81_error)
+            __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_9genexpr10__pyx_v_x); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L81_error)
+            __pyx_t_5 = PyFloat_FromDouble(pow(__pyx_t_10, 2.0)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L81_error)
             __Pyx_GOTREF(__pyx_t_5);
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_6, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 114, __pyx_L81_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_6, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 113, __pyx_L81_error)
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           }
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -26697,72 +26716,72 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
           goto __pyx_L1_error;
           __pyx_L85_exit_scope:;
         } /* exit inner scope */
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_6 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_6 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T * __pyx_v_Ti)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T * __pyx_v_Ti)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_TARGET_SPEED); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_target_speed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         if (unlikely(__pyx_v_tfp->s_d == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 114, __pyx_L1_error)
+          __PYX_ERR(0, 113, __pyx_L1_error)
         }
-        __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_tfp->s_d, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_tfp->s_d, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_5 = PyNumber_Subtract(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_5 = PyNumber_Subtract(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D * pow(__pyx_t_10, 2.0))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_5 = PyFloat_FromDouble((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D * pow(__pyx_t_10, 2.0))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = PyNumber_Add(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_6 = PyNumber_Add(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_6); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
+        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_6); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_v_tfp->cv = __pyx_t_10;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":115
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":114
  *                 tfp.cd = K_J * sum([pow(x, 2) for x in tfp.d_ddd]) + K_T * Ti + K_D * pow(tfp.d[-1], 2)
- *                 tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((TARGET_SPEED - tfp.s_d[-1]), 2)
+ *                 tfp.cv = K_J * sum([pow(x, 2) for x in tfp.s_ddd]) + K_T * Ti + K_D * pow((target_speed - tfp.s_d[-1]), 2)
  *                 tfp.cf = K_LAT * tfp.cd + K_LON * tfp.cv             # <<<<<<<<<<<<<<
  * 
  *                 frenet_paths.append(tfp)
  */
         __pyx_v_tfp->cf = ((__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LAT * __pyx_v_tfp->cd) + (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LON * __pyx_v_tfp->cv));
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":117
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":116
  *                 tfp.cf = K_LAT * tfp.cd + K_LON * tfp.cv
  * 
  *                 frenet_paths.append(tfp)             # <<<<<<<<<<<<<<
  * 
  *     return frenet_paths
  */
-        __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_frenet_paths, ((PyObject *)__pyx_v_tfp)); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 117, __pyx_L1_error)
+        __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_frenet_paths, ((PyObject *)__pyx_v_tfp)); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 116, __pyx_L1_error)
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":104
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":103
  * 
  *             # Longitudinal motion planning (Velocity keeping)
- *             for tv in np.arange(TARGET_SPEED - D_T_S * N_S_SAMPLE, TARGET_SPEED + D_T_S * N_S_SAMPLE, D_T_S):             # <<<<<<<<<<<<<<
+ *             for tv in np.arange(target_speed - D_T_S * N_S_SAMPLE, target_speed + D_T_S * N_S_SAMPLE, D_T_S):             # <<<<<<<<<<<<<<
  *                 tfp = deepcopy(fp)
  *                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)
  */
       }
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":93
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":92
  *     for di in np.arange(-MAX_ROAD_WIDTH, MAX_ROAD_WIDTH, D_ROAD_W):
  *         # Lateral motion planning
  *         for Ti in np.arange(MIN_T, MAX_T, DT):             # <<<<<<<<<<<<<<
@@ -26772,7 +26791,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":91
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":90
  * 
  *     # Generate path to each offset goal
  *     for di in np.arange(-MAX_ROAD_WIDTH, MAX_ROAD_WIDTH, D_ROAD_W):             # <<<<<<<<<<<<<<
@@ -26782,7 +26801,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":119
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":118
  *                 frenet_paths.append(tfp)
  * 
  *     return frenet_paths             # <<<<<<<<<<<<<<
@@ -26794,10 +26813,10 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __pyx_r = __pyx_v_frenet_paths;
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":82
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":81
  * # Functions to generate Frenet paths, calculate global paths, and perform collision checks
  * 
- * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0):             # <<<<<<<<<<<<<<
+ * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0, double target_speed):             # <<<<<<<<<<<<<<
  *     cdef list frenet_paths = []
  *     cdef double di, Ti
  */
@@ -26837,7 +26856,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":121
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":120
  *     return frenet_paths
  * 
  * cdef list calc_global_paths(list fplist, CubicSpline2D csp):             # <<<<<<<<<<<<<<
@@ -26874,7 +26893,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_global_paths", 1);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":125
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":124
  *     cdef int i
  *     cdef double ix, iy, i_yaw, di, fx, fy
  *     for fp in fplist:             # <<<<<<<<<<<<<<
@@ -26883,7 +26902,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
   if (unlikely(__pyx_v_fplist == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 125, __pyx_L1_error)
+    __PYX_ERR(0, 124, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_v_fplist; __Pyx_INCREF(__pyx_t_1);
   __pyx_t_2 = 0;
@@ -26891,21 +26910,21 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
       #if !CYTHON_ASSUME_SAFE_MACROS
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 125, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 124, __pyx_L1_error)
       #endif
       if (__pyx_t_2 >= __pyx_temp) break;
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 125, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 124, __pyx_L1_error)
     #else
-    __pyx_t_3 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 125, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 124, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 125, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 124, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_fp, ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":127
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":126
  *     for fp in fplist:
  *         # Calculate global positions
  *         for i in range(len(fp.s)):             # <<<<<<<<<<<<<<
@@ -26916,15 +26935,15 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
     __Pyx_INCREF(__pyx_t_3);
     if (unlikely(__pyx_t_3 == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 127, __pyx_L1_error)
+      __PYX_ERR(0, 126, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 127, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 126, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_5 = __pyx_t_4;
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":128
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":127
  *         # Calculate global positions
  *         for i in range(len(fp.s)):
  *             ix, iy = csp.calc_position(fp.s[i])             # <<<<<<<<<<<<<<
@@ -26933,13 +26952,13 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->s == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 128, __pyx_L1_error)
+        __PYX_ERR(0, 127, __pyx_L1_error)
       }
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->s, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->s, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_position(__pyx_v_csp, __pyx_t_7, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
+      __pyx_t_3 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_position(__pyx_v_csp, __pyx_t_7, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       if (likely(__pyx_t_3 != Py_None)) {
         PyObject* sequence = __pyx_t_3;
@@ -26947,7 +26966,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 128, __pyx_L1_error)
+          __PYX_ERR(0, 127, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         __pyx_t_8 = PyTuple_GET_ITEM(sequence, 0); 
@@ -26955,36 +26974,36 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
         __Pyx_INCREF(__pyx_t_8);
         __Pyx_INCREF(__pyx_t_9);
         #else
-        __pyx_t_8 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 128, __pyx_L1_error)
+        __pyx_t_8 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 127, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
-        __pyx_t_9 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 128, __pyx_L1_error)
+        __pyx_t_9 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 127, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         #endif
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else {
-        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 128, __pyx_L1_error)
+        __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 127, __pyx_L1_error)
       }
-      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_8); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_8); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_v_ix = __pyx_t_7;
       __pyx_v_iy = __pyx_t_10;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":129
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":128
  *         for i in range(len(fp.s)):
  *             ix, iy = csp.calc_position(fp.s[i])
  *             if ix is None:             # <<<<<<<<<<<<<<
  *                 continue
  *             i_yaw = csp.calc_yaw(fp.s[i])
  */
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_ix); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 129, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_ix); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_11 = (__pyx_t_3 == Py_None);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_11) {
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":130
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":129
  *             ix, iy = csp.calc_position(fp.s[i])
  *             if ix is None:
  *                 continue             # <<<<<<<<<<<<<<
@@ -26993,7 +27012,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
         goto __pyx_L5_continue;
 
-        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":129
+        /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":128
  *         for i in range(len(fp.s)):
  *             ix, iy = csp.calc_position(fp.s[i])
  *             if ix is None:             # <<<<<<<<<<<<<<
@@ -27002,7 +27021,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       }
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":131
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":130
  *             if ix is None:
  *                 continue
  *             i_yaw = csp.calc_yaw(fp.s[i])             # <<<<<<<<<<<<<<
@@ -27011,16 +27030,16 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->s == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 131, __pyx_L1_error)
+        __PYX_ERR(0, 130, __pyx_L1_error)
       }
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->s, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 131, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->s, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 130, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 131, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_yaw(__pyx_v_csp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 131, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_yaw(__pyx_v_csp, __pyx_t_10, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L1_error)
       __pyx_v_i_yaw = __pyx_t_7;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":132
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":131
  *                 continue
  *             i_yaw = csp.calc_yaw(fp.s[i])
  *             di = fp.d[i]             # <<<<<<<<<<<<<<
@@ -27029,15 +27048,15 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->d == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 132, __pyx_L1_error)
+        __PYX_ERR(0, 131, __pyx_L1_error)
       }
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->d, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 132, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->d, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 131, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 131, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_v_di = __pyx_t_7;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":133
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":132
  *             i_yaw = csp.calc_yaw(fp.s[i])
  *             di = fp.d[i]
  *             fx = ix + di * cos(i_yaw + pi / 2.0)             # <<<<<<<<<<<<<<
@@ -27046,7 +27065,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       __pyx_v_fx = (__pyx_v_ix + (__pyx_v_di * cos((__pyx_v_i_yaw + (((double)M_PI) / 2.0)))));
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":134
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":133
  *             di = fp.d[i]
  *             fx = ix + di * cos(i_yaw + pi / 2.0)
  *             fy = iy + di * sin(i_yaw + pi / 2.0)             # <<<<<<<<<<<<<<
@@ -27055,7 +27074,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       __pyx_v_fy = (__pyx_v_iy + (__pyx_v_di * sin((__pyx_v_i_yaw + (((double)M_PI) / 2.0)))));
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":135
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":134
  *             fx = ix + di * cos(i_yaw + pi / 2.0)
  *             fy = iy + di * sin(i_yaw + pi / 2.0)
  *             fp.x.append(fx)             # <<<<<<<<<<<<<<
@@ -27064,14 +27083,14 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->x == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "append");
-        __PYX_ERR(0, 135, __pyx_L1_error)
+        __PYX_ERR(0, 134, __pyx_L1_error)
       }
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_fx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 135, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_fx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 134, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->x, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 135, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->x, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 134, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":136
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":135
  *             fy = iy + di * sin(i_yaw + pi / 2.0)
  *             fp.x.append(fx)
  *             fp.y.append(fy)             # <<<<<<<<<<<<<<
@@ -27080,16 +27099,16 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->y == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "append");
-        __PYX_ERR(0, 136, __pyx_L1_error)
+        __PYX_ERR(0, 135, __pyx_L1_error)
       }
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_fy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 136, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_fy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 135, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->y, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 136, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->y, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 135, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_L5_continue:;
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":139
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":138
  * 
  *         # Calculate yaw and ds
  *         for i in range(len(fp.x) - 1):             # <<<<<<<<<<<<<<
@@ -27100,16 +27119,16 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
     __Pyx_INCREF(__pyx_t_3);
     if (unlikely(__pyx_t_3 == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 139, __pyx_L1_error)
+      __PYX_ERR(0, 138, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 138, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_5 = (__pyx_t_4 - 1);
     __pyx_t_4 = __pyx_t_5;
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_4; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":140
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":139
  *         # Calculate yaw and ds
  *         for i in range(len(fp.x) - 1):
  *             fp.yaw.append(atan2(fp.y[i + 1] - fp.y[i], fp.x[i + 1] - fp.x[i]))             # <<<<<<<<<<<<<<
@@ -27118,52 +27137,52 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->yaw == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "append");
-        __PYX_ERR(0, 140, __pyx_L1_error)
+        __PYX_ERR(0, 139, __pyx_L1_error)
       }
       if (unlikely(__pyx_v_fp->y == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 140, __pyx_L1_error)
+        __PYX_ERR(0, 139, __pyx_L1_error)
       }
       __pyx_t_13 = (__pyx_v_i + 1);
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       if (unlikely(__pyx_v_fp->y == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 140, __pyx_L1_error)
+        __PYX_ERR(0, 139, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_8 = PyNumber_Subtract(__pyx_t_3, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_8 = PyNumber_Subtract(__pyx_t_3, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_8); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_8); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       if (unlikely(__pyx_v_fp->x == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 140, __pyx_L1_error)
+        __PYX_ERR(0, 139, __pyx_L1_error)
       }
       __pyx_t_13 = (__pyx_v_i + 1);
-      __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (unlikely(__pyx_v_fp->x == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 140, __pyx_L1_error)
+        __PYX_ERR(0, 139, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_3 = PyNumber_Subtract(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_3 = PyNumber_Subtract(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyFloat_FromDouble(atan2(__pyx_t_7, __pyx_t_10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(atan2(__pyx_t_7, __pyx_t_10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->yaw, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->yaw, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":141
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":140
  *         for i in range(len(fp.x) - 1):
  *             fp.yaw.append(atan2(fp.y[i + 1] - fp.y[i], fp.x[i + 1] - fp.x[i]))
  *             fp.ds.append(sqrt(pow(fp.x[i + 1] - fp.x[i], 2) + pow(fp.y[i + 1] - fp.y[i], 2)))             # <<<<<<<<<<<<<<
@@ -27172,53 +27191,53 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->ds == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "append");
-        __PYX_ERR(0, 141, __pyx_L1_error)
+        __PYX_ERR(0, 140, __pyx_L1_error)
       }
       if (unlikely(__pyx_v_fp->x == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 141, __pyx_L1_error)
+        __PYX_ERR(0, 140, __pyx_L1_error)
       }
       __pyx_t_13 = (__pyx_v_i + 1);
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       if (unlikely(__pyx_v_fp->x == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 141, __pyx_L1_error)
+        __PYX_ERR(0, 140, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->x, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_8 = PyNumber_Subtract(__pyx_t_3, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_8 = PyNumber_Subtract(__pyx_t_3, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_8); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_8); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       if (unlikely(__pyx_v_fp->y == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 141, __pyx_L1_error)
+        __PYX_ERR(0, 140, __pyx_L1_error)
       }
       __pyx_t_13 = (__pyx_v_i + 1);
-      __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (unlikely(__pyx_v_fp->y == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 141, __pyx_L1_error)
+        __PYX_ERR(0, 140, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->y, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_3 = PyNumber_Subtract(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_3 = PyNumber_Subtract(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyFloat_FromDouble(sqrt((pow(__pyx_t_10, 2.0) + pow(__pyx_t_7, 2.0)))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(sqrt((pow(__pyx_t_10, 2.0) + pow(__pyx_t_7, 2.0)))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->ds, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->ds, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 140, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":143
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":142
  *             fp.ds.append(sqrt(pow(fp.x[i + 1] - fp.x[i], 2) + pow(fp.y[i + 1] - fp.y[i], 2)))
  * 
  *         fp.yaw.append(fp.yaw[-1])             # <<<<<<<<<<<<<<
@@ -27227,18 +27246,18 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     if (unlikely(__pyx_v_fp->yaw == Py_None)) {
       PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "append");
-      __PYX_ERR(0, 143, __pyx_L1_error)
+      __PYX_ERR(0, 142, __pyx_L1_error)
     }
     if (unlikely(__pyx_v_fp->yaw == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 143, __pyx_L1_error)
+      __PYX_ERR(0, 142, __pyx_L1_error)
     }
-    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->yaw, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->yaw, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 142, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->yaw, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->yaw, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 142, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":144
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":143
  * 
  *         fp.yaw.append(fp.yaw[-1])
  *         fp.ds.append(fp.ds[-1])             # <<<<<<<<<<<<<<
@@ -27247,18 +27266,18 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     if (unlikely(__pyx_v_fp->ds == Py_None)) {
       PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "append");
-      __PYX_ERR(0, 144, __pyx_L1_error)
+      __PYX_ERR(0, 143, __pyx_L1_error)
     }
     if (unlikely(__pyx_v_fp->ds == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 144, __pyx_L1_error)
+      __PYX_ERR(0, 143, __pyx_L1_error)
     }
-    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->ds, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->ds, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->ds, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->ds, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":147
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":146
  * 
  *         # Calculate curvature
  *         for i in range(len(fp.yaw) - 1):             # <<<<<<<<<<<<<<
@@ -27269,16 +27288,16 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
     __Pyx_INCREF(__pyx_t_3);
     if (unlikely(__pyx_t_3 == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 147, __pyx_L1_error)
+      __PYX_ERR(0, 146, __pyx_L1_error)
     }
-    __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 146, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_4 = (__pyx_t_5 - 1);
     __pyx_t_5 = __pyx_t_4;
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":148
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":147
  *         # Calculate curvature
  *         for i in range(len(fp.yaw) - 1):
  *             fp.c.append((fp.yaw[i + 1] - fp.yaw[i]) / fp.ds[i])             # <<<<<<<<<<<<<<
@@ -27287,40 +27306,40 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       if (unlikely(__pyx_v_fp->c == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "append");
-        __PYX_ERR(0, 148, __pyx_L1_error)
+        __PYX_ERR(0, 147, __pyx_L1_error)
       }
       if (unlikely(__pyx_v_fp->yaw == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 148, __pyx_L1_error)
+        __PYX_ERR(0, 147, __pyx_L1_error)
       }
       __pyx_t_13 = (__pyx_v_i + 1);
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->yaw, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fp->yaw, __pyx_t_13, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       if (unlikely(__pyx_v_fp->yaw == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 148, __pyx_L1_error)
+        __PYX_ERR(0, 147, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->yaw, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 148, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->yaw, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 147, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_8 = PyNumber_Subtract(__pyx_t_3, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 148, __pyx_L1_error)
+      __pyx_t_8 = PyNumber_Subtract(__pyx_t_3, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 147, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       if (unlikely(__pyx_v_fp->ds == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 148, __pyx_L1_error)
+        __PYX_ERR(0, 147, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->ds, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 148, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fp->ds, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 147, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->c, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 148, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_fp->c, __pyx_t_3); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 147, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":125
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":124
  *     cdef int i
  *     cdef double ix, iy, i_yaw, di, fx, fy
  *     for fp in fplist:             # <<<<<<<<<<<<<<
@@ -27330,7 +27349,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":150
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":149
  *             fp.c.append((fp.yaw[i + 1] - fp.yaw[i]) / fp.ds[i])
  * 
  *     return fplist             # <<<<<<<<<<<<<<
@@ -27342,7 +27361,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
   __pyx_r = __pyx_v_fplist;
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":121
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":120
  *     return frenet_paths
  * 
  * cdef list calc_global_paths(list fplist, CubicSpline2D csp):             # <<<<<<<<<<<<<<
@@ -27366,7 +27385,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
 }
 static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_15check_collision_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":157
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":156
  *     for i in range(len(ob)):
  *         d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2) for ix, iy in zip(fp.x, fp.y)]
  *         if any(di <= ROBOT_RADIUS ** 2 for di in d):             # <<<<<<<<<<<<<<
@@ -27386,7 +27405,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 157, __pyx_L1_error)
+    __PYX_ERR(0, 156, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
@@ -27394,7 +27413,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_15check_collision_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_collision_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_15check_collision_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_collision_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -27431,33 +27450,33 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 157, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 157, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 156, __pyx_L1_error) }
   __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
   __pyx_t_2 = 0;
   for (;;) {
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
       #if !CYTHON_ASSUME_SAFE_MACROS
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 157, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
       #endif
       if (__pyx_t_2 >= __pyx_temp) break;
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
     #else
-    __pyx_t_3 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_di);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_di, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_3 = PyFloat_FromDouble(pow(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS, 2.0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_3 = PyFloat_FromDouble(pow(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS, 2.0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_di, __pyx_t_3, Py_LE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_di, __pyx_t_3, Py_LE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_5) {
       __Pyx_XDECREF(__pyx_r);
@@ -27495,7 +27514,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":152
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":151
  *     return fplist
  * 
  * cdef bint check_collision(FrenetPath fp, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
@@ -27543,23 +27562,23 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
   __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 152, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 151, __pyx_L1_error)
   }
   __pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":155
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":154
  *     cdef int i
  *     cdef double ix, iy, di
  *     for i in range(len(ob)):             # <<<<<<<<<<<<<<
  *         d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2) for ix, iy in zip(fp.x, fp.y)]
  *         if any(di <= ROBOT_RADIUS ** 2 for di in d):
  */
-  __pyx_t_1 = PyObject_Length(((PyObject *)__pyx_v_ob)); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(((PyObject *)__pyx_v_ob)); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 154, __pyx_L1_error)
   __pyx_t_2 = __pyx_t_1;
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":156
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":155
  *     cdef double ix, iy, di
  *     for i in range(len(ob)):
  *         d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2) for ix, iy in zip(fp.x, fp.y)]             # <<<<<<<<<<<<<<
@@ -27567,17 +27586,17 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
  *             return False
  */
     { /* enter inner scope */
-      __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
+      __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 155, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 155, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_v_fp->x);
       __Pyx_GIVEREF(__pyx_v_fp->x);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_fp->x)) __PYX_ERR(0, 156, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_fp->x)) __PYX_ERR(0, 155, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_fp->y);
       __Pyx_GIVEREF(__pyx_v_fp->y);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_fp->y)) __PYX_ERR(0, 156, __pyx_L1_error);
-      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_fp->y)) __PYX_ERR(0, 155, __pyx_L1_error);
+      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (likely(PyList_CheckExact(__pyx_t_6)) || PyTuple_CheckExact(__pyx_t_6)) {
@@ -27585,9 +27604,9 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
         __pyx_t_7 = 0;
         __pyx_t_8 = NULL;
       } else {
-        __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
+        __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 155, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_8 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 156, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 155, __pyx_L1_error)
       }
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       for (;;) {
@@ -27596,28 +27615,28 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_5);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 155, __pyx_L1_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
+            __pyx_t_6 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 155, __pyx_L1_error)
             #else
-            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_6);
             #endif
           } else {
             {
               Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_5);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 155, __pyx_L1_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
+            __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely((0 < 0))) __PYX_ERR(0, 155, __pyx_L1_error)
             #else
-            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+            __pyx_t_6 = __Pyx_PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_6);
             #endif
           }
@@ -27627,7 +27646,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
               if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-              else __PYX_ERR(0, 156, __pyx_L1_error)
+              else __PYX_ERR(0, 155, __pyx_L1_error)
             }
             break;
           }
@@ -27639,7 +27658,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
           if (unlikely(size != 2)) {
             if (size > 2) __Pyx_RaiseTooManyValuesError(2);
             else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-            __PYX_ERR(0, 156, __pyx_L1_error)
+            __PYX_ERR(0, 155, __pyx_L1_error)
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
           if (likely(PyTuple_CheckExact(sequence))) {
@@ -27652,15 +27671,15 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
           __Pyx_INCREF(__pyx_t_9);
           __Pyx_INCREF(__pyx_t_10);
           #else
-          __pyx_t_9 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 156, __pyx_L1_error)
+          __pyx_t_9 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 155, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
-          __pyx_t_10 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 156, __pyx_L1_error)
+          __pyx_t_10 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 155, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_10);
           #endif
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         } else {
           Py_ssize_t index = -1;
-          __pyx_t_11 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 156, __pyx_L1_error)
+          __pyx_t_11 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 155, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_12 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_11);
@@ -27668,7 +27687,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
           __Pyx_GOTREF(__pyx_t_9);
           index = 1; __pyx_t_10 = __pyx_t_12(__pyx_t_11); if (unlikely(!__pyx_t_10)) goto __pyx_L7_unpacking_failed;
           __Pyx_GOTREF(__pyx_t_10);
-          if (__Pyx_IternextUnpackEndCheck(__pyx_t_12(__pyx_t_11), 2) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
+          if (__Pyx_IternextUnpackEndCheck(__pyx_t_12(__pyx_t_11), 2) < 0) __PYX_ERR(0, 155, __pyx_L1_error)
           __pyx_t_12 = NULL;
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           goto __pyx_L8_unpacking_done;
@@ -27676,12 +27695,12 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           __pyx_t_12 = NULL;
           if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-          __PYX_ERR(0, 156, __pyx_L1_error)
+          __PYX_ERR(0, 155, __pyx_L1_error)
           __pyx_L8_unpacking_done:;
         }
-        __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L1_error)
+        __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 155, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_t_10); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L1_error)
+        __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_t_10); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 155, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __pyx_9genexpr11__pyx_v_ix = __pyx_t_13;
         __pyx_9genexpr11__pyx_v_iy = __pyx_t_14;
@@ -27698,7 +27717,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
         } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_ob.diminfo[1].shape)) __pyx_t_17 = 1;
         if (unlikely(__pyx_t_17 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_17);
-          __PYX_ERR(0, 156, __pyx_L1_error)
+          __PYX_ERR(0, 155, __pyx_L1_error)
         }
         __pyx_t_18 = __pyx_v_i;
         __pyx_t_19 = 1;
@@ -27713,11 +27732,11 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
         } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_ob.diminfo[1].shape)) __pyx_t_17 = 1;
         if (unlikely(__pyx_t_17 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_17);
-          __PYX_ERR(0, 156, __pyx_L1_error)
+          __PYX_ERR(0, 155, __pyx_L1_error)
         }
-        __pyx_t_6 = PyFloat_FromDouble((pow((__pyx_9genexpr11__pyx_v_ix - (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ob.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_ob.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_ob.diminfo[1].strides))), 2.0) + pow((__pyx_9genexpr11__pyx_v_iy - (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ob.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_ob.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_ob.diminfo[1].strides))), 2.0))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble((pow((__pyx_9genexpr11__pyx_v_ix - (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ob.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_ob.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_ob.diminfo[1].strides))), 2.0) + pow((__pyx_9genexpr11__pyx_v_iy - (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ob.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_ob.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_ob.diminfo[1].strides))), 2.0))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 156, __pyx_L1_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 155, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -27725,23 +27744,23 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
     __Pyx_XDECREF_SET(__pyx_v_d, ((PyObject*)__pyx_t_4));
     __pyx_t_4 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":157
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":156
  *     for i in range(len(ob)):
  *         d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2) for ix, iy in zip(fp.x, fp.y)]
  *         if any(di <= ROBOT_RADIUS ** 2 for di in d):             # <<<<<<<<<<<<<<
  *             return False
  *     return True
  */
-    __pyx_t_4 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_15check_collision_genexpr(NULL, __pyx_v_d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_4 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_15check_collision_genexpr(NULL, __pyx_v_d); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_Generator_Next(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_Generator_Next(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_20 < 0))) __PYX_ERR(0, 157, __pyx_L1_error)
+    __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_20 < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_20) {
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":158
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":157
  *         d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2) for ix, iy in zip(fp.x, fp.y)]
  *         if any(di <= ROBOT_RADIUS ** 2 for di in d):
  *             return False             # <<<<<<<<<<<<<<
@@ -27751,7 +27770,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
       __pyx_r = 0;
       goto __pyx_L0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":157
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":156
  *     for i in range(len(ob)):
  *         d = [((ix - ob[i, 0]) ** 2 + (iy - ob[i, 1]) ** 2) for ix, iy in zip(fp.x, fp.y)]
  *         if any(di <= ROBOT_RADIUS ** 2 for di in d):             # <<<<<<<<<<<<<<
@@ -27761,7 +27780,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
     }
   }
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":159
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":158
  *         if any(di <= ROBOT_RADIUS ** 2 for di in d):
  *             return False
  *     return True             # <<<<<<<<<<<<<<
@@ -27771,7 +27790,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":152
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":151
  *     return fplist
  * 
  * cdef bint check_collision(FrenetPath fp, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
@@ -27806,7 +27825,7 @@ static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_c
 }
 static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":165
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":164
  *     cdef int i
  *     for i in range(len(fplist)):
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check             # <<<<<<<<<<<<<<
@@ -27826,7 +27845,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 165, __pyx_L1_error)
+    __PYX_ERR(0, 164, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
@@ -27834,7 +27853,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_2generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_paths_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_2generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_paths_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -27872,16 +27891,16 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 165, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 165, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 164, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
     __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
@@ -27889,28 +27908,28 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
         #else
-        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 164, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
         #else
-        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 164, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -27920,7 +27939,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 165, __pyx_L1_error)
+          else __PYX_ERR(0, 164, __pyx_L1_error)
         }
         break;
       }
@@ -27930,11 +27949,11 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_v, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_SPEED); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_SPEED); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_v, __pyx_t_4, Py_GT); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_5 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_v, __pyx_t_4, Py_GT); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_6) {
       __Pyx_XDECREF(__pyx_r);
@@ -27973,7 +27992,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
 }
 static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_5generator2(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":167
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":166
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check
  *             continue
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check             # <<<<<<<<<<<<<<
@@ -27993,7 +28012,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 167, __pyx_L1_error)
+    __PYX_ERR(0, 166, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
@@ -28001,7 +28020,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_5generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_paths_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_5generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_paths_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -28039,16 +28058,16 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 167, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 167, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 166, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
     __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
@@ -28056,28 +28075,28 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
         #else
-        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 166, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
         #else
-        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 166, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -28087,7 +28106,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 167, __pyx_L1_error)
+          else __PYX_ERR(0, 166, __pyx_L1_error)
         }
         break;
       }
@@ -28097,7 +28116,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_a, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_cur_scope->__pyx_v_a); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_cur_scope->__pyx_v_a); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L1_error)
     __pyx_t_6 = (fabs(__pyx_t_5) > __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ACCEL);
     if (__pyx_t_6) {
       __Pyx_XDECREF(__pyx_r);
@@ -28135,7 +28154,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
 }
 static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_8generator3(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":169
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":168
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
  *             continue
  *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check             # <<<<<<<<<<<<<<
@@ -28155,7 +28174,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 169, __pyx_L1_error)
+    __PYX_ERR(0, 168, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
@@ -28163,7 +28182,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_8generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_paths_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_8generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_check_paths_locals_genexpr, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -28201,16 +28220,16 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 169, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 169, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 168, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 168, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
     __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
@@ -28218,28 +28237,28 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 169, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 168, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 168, __pyx_L1_error)
         #else
-        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 168, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 169, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 168, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 168, __pyx_L1_error)
         #else
-        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 168, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -28249,7 +28268,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 169, __pyx_L1_error)
+          else __PYX_ERR(0, 168, __pyx_L1_error)
         }
         break;
       }
@@ -28259,7 +28278,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_c, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_cur_scope->__pyx_v_c); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_cur_scope->__pyx_v_c); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L1_error)
     __pyx_t_6 = (fabs(__pyx_t_5) > __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_CURVATURE);
     if (__pyx_t_6) {
       __Pyx_XDECREF(__pyx_r);
@@ -28296,7 +28315,7 @@ static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":161
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":160
  *     return True
  * 
  * cdef list check_paths(list fplist, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
@@ -28334,23 +28353,23 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
   __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 161, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 160, __pyx_L1_error)
   }
   __pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":162
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":161
  * 
  * cdef list check_paths(list fplist, cnp.ndarray[cnp.float64_t, ndim=2] ob):
  *     cdef list ok_ind = []             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(len(fplist)):
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_ok_ind = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":164
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":163
  *     cdef list ok_ind = []
  *     cdef int i
  *     for i in range(len(fplist)):             # <<<<<<<<<<<<<<
@@ -28359,14 +28378,14 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
   if (unlikely(__pyx_v_fplist == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 164, __pyx_L1_error)
+    __PYX_ERR(0, 163, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyList_GET_SIZE(__pyx_v_fplist); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyList_GET_SIZE(__pyx_v_fplist); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 163, __pyx_L1_error)
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":165
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":164
  *     cdef int i
  *     for i in range(len(fplist)):
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check             # <<<<<<<<<<<<<<
@@ -28375,33 +28394,33 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     if (unlikely(__pyx_v_fplist == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 165, __pyx_L1_error)
+      __PYX_ERR(0, 164, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_s_d); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_s_d); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_genexpr(NULL, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_1 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_genexpr(NULL, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_Generator_Next(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_Generator_Next(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_6) {
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":166
- *     for i in range(len(fplist)):
- *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check
- *             continue             # <<<<<<<<<<<<<<
- *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
- *             continue
- */
-      goto __pyx_L3_continue;
 
       /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":165
+ *     for i in range(len(fplist)):
+ *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check
+ *             continue             # <<<<<<<<<<<<<<
+ *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
+ *             continue
+ */
+      goto __pyx_L3_continue;
+
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":164
  *     cdef int i
  *     for i in range(len(fplist)):
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check             # <<<<<<<<<<<<<<
@@ -28410,7 +28429,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":167
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":166
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check
  *             continue
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check             # <<<<<<<<<<<<<<
@@ -28419,33 +28438,33 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     if (unlikely(__pyx_v_fplist == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 167, __pyx_L1_error)
+      __PYX_ERR(0, 166, __pyx_L1_error)
     }
-    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_s_dd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_s_dd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_3genexpr(NULL, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_5 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_3genexpr(NULL, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_Generator_Next(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_Generator_Next(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_6) {
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":168
- *             continue
- *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
- *             continue             # <<<<<<<<<<<<<<
- *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check
- *             continue
- */
-      goto __pyx_L3_continue;
 
       /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":167
+ *             continue
+ *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
+ *             continue             # <<<<<<<<<<<<<<
+ *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check
+ *             continue
+ */
+      goto __pyx_L3_continue;
+
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":166
  *         if any(v > MAX_SPEED for v in fplist[i].s_d):  # Max speed check
  *             continue
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check             # <<<<<<<<<<<<<<
@@ -28454,7 +28473,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":169
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":168
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
  *             continue
  *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check             # <<<<<<<<<<<<<<
@@ -28463,24 +28482,24 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     if (unlikely(__pyx_v_fplist == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 169, __pyx_L1_error)
+      __PYX_ERR(0, 168, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_c); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_c); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_6genexpr(NULL, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_1 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_6genexpr(NULL, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_Generator_Next(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_Generator_Next(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 168, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_6) {
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":170
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":169
  *             continue
  *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check
  *             continue             # <<<<<<<<<<<<<<
@@ -28489,7 +28508,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       goto __pyx_L3_continue;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":169
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":168
  *         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
  *             continue
  *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check             # <<<<<<<<<<<<<<
@@ -28498,7 +28517,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":171
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":170
  *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check
  *             continue
  *         elif not check_collision(fplist[i], ob):             # <<<<<<<<<<<<<<
@@ -28507,17 +28526,17 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     if (unlikely(__pyx_v_fplist == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 171, __pyx_L1_error)
+      __PYX_ERR(0, 170, __pyx_L1_error)
     }
-    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 171, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 171, __pyx_L1_error)
-    __pyx_t_6 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_collision(((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_5), ((PyArrayObject *)__pyx_v_ob)); if (unlikely(__pyx_t_6 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_6 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_collision(((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_5), ((PyArrayObject *)__pyx_v_ob)); if (unlikely(__pyx_t_6 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_7 = (!__pyx_t_6);
     if (__pyx_t_7) {
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":172
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":171
  *             continue
  *         elif not check_collision(fplist[i], ob):
  *             continue             # <<<<<<<<<<<<<<
@@ -28526,7 +28545,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
       goto __pyx_L3_continue;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":171
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":170
  *         elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check
  *             continue
  *         elif not check_collision(fplist[i], ob):             # <<<<<<<<<<<<<<
@@ -28535,21 +28554,21 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":173
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":172
  *         elif not check_collision(fplist[i], ob):
  *             continue
  *         ok_ind.append(i)             # <<<<<<<<<<<<<<
  * 
  *     return [fplist[i] for i in ok_ind]
  */
-    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_ok_ind, __pyx_t_5); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_ok_ind, __pyx_t_5); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_L3_continue:;
   }
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":175
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":174
  *         ok_ind.append(i)
  * 
  *     return [fplist[i] for i in ok_ind]             # <<<<<<<<<<<<<<
@@ -28558,7 +28577,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
  */
   __Pyx_XDECREF(__pyx_r);
   { /* enter inner scope */
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 175, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_1 = __pyx_v_ok_ind; __Pyx_INCREF(__pyx_t_1);
     __pyx_t_2 = 0;
@@ -28566,26 +28585,26 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
       {
         Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
         #if !CYTHON_ASSUME_SAFE_MACROS
-        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 174, __pyx_L1_error)
         #endif
         if (__pyx_t_2 >= __pyx_temp) break;
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_9 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_9); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_9 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_9); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 174, __pyx_L1_error)
       #else
-      __pyx_t_9 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 174, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       #endif
-      __pyx_t_4 = __Pyx_PyInt_As_int(__pyx_t_9); if (unlikely((__pyx_t_4 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyInt_As_int(__pyx_t_9); if (unlikely((__pyx_t_4 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 174, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_9genexpr16__pyx_v_i = __pyx_t_4;
       if (unlikely(__pyx_v_fplist == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 175, __pyx_L1_error)
+        __PYX_ERR(0, 174, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_9genexpr16__pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_fplist, __pyx_9genexpr16__pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 174, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (unlikely(__Pyx_ListComp_Append(__pyx_t_5, (PyObject*)__pyx_t_9))) __PYX_ERR(0, 175, __pyx_L1_error)
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_5, (PyObject*)__pyx_t_9))) __PYX_ERR(0, 174, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -28594,7 +28613,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":161
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":160
  *     return True
  * 
  * cdef list check_paths(list fplist, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
@@ -28628,7 +28647,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":176
  *     return [fplist[i] for i in ok_ind]
  * 
  * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
@@ -28673,88 +28692,88 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("generate_target_course", 1);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":178
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
  * 
  * cpdef tuple generate_target_course(list wx, list wy):
  *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))             # <<<<<<<<<<<<<<
  *     s = np.arange(0, csp.s[-1], 0.1)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_wx);
   __Pyx_GIVEREF(__pyx_v_wx);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_wx)) __PYX_ERR(0, 178, __pyx_L1_error);
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_wx)) __PYX_ERR(0, 177, __pyx_L1_error);
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_wy);
   __Pyx_GIVEREF(__pyx_v_wy);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_wy)) __PYX_ERR(0, 178, __pyx_L1_error);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_wy)) __PYX_ERR(0, 177, __pyx_L1_error);
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5)) __PYX_ERR(0, 177, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_6);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error);
   __pyx_t_5 = 0;
   __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D), __pyx_t_2, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D), __pyx_t_2, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":179
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":178
  * cpdef tuple generate_target_course(list wx, list wy):
  *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)             # <<<<<<<<<<<<<<
  * 
  *     rx, ry, ryaw, rk = [], [], [], []
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_arange); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_v_csp->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 179, __pyx_L1_error)}
+  if (unlikely(!__pyx_v_csp->s.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 178, __pyx_L1_error)}
   __pyx_t_7 = -1L;
   __pyx_t_8 = -1;
   if (__pyx_t_7 < 0) {
@@ -28763,9 +28782,9 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
   } else if (unlikely(__pyx_t_7 >= __pyx_v_csp->s.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 179, __pyx_L1_error)
+    __PYX_ERR(0, 178, __pyx_L1_error)
   }
-  __pyx_t_2 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_csp->s.data + __pyx_t_7 * __pyx_v_csp->s.strides[0]) )))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_csp->s.data + __pyx_t_7 * __pyx_v_csp->s.strides[0]) )))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_8 = 0;
@@ -28786,27 +28805,27 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
     __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_8, 3+__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 179, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __pyx_v_s = __pyx_t_6;
   __pyx_t_6 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":181
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":180
  *     s = np.arange(0, csp.s[-1], 0.1)
  * 
  *     rx, ry, ryaw, rk = [], [], [], []             # <<<<<<<<<<<<<<
  *     for i_s in s:
  *         ix, iy = csp.calc_position(i_s)
  */
-  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_rx = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
@@ -28817,7 +28836,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
   __pyx_v_rk = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":182
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":181
  * 
  *     rx, ry, ryaw, rk = [], [], [], []
  *     for i_s in s:             # <<<<<<<<<<<<<<
@@ -28829,9 +28848,9 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
     __pyx_t_9 = 0;
     __pyx_t_10 = NULL;
   } else {
-    __pyx_t_9 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __pyx_t_9 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_s); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_10 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 181, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_10)) {
@@ -28839,28 +28858,28 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 181, __pyx_L1_error)
           #endif
           if (__pyx_t_9 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely((0 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely((0 < 0))) __PYX_ERR(0, 181, __pyx_L1_error)
         #else
-        __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_3);
           #if !CYTHON_ASSUME_SAFE_MACROS
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 181, __pyx_L1_error)
           #endif
           if (__pyx_t_9 >= __pyx_temp) break;
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely((0 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_9); __Pyx_INCREF(__pyx_t_2); __pyx_t_9++; if (unlikely((0 < 0))) __PYX_ERR(0, 181, __pyx_L1_error)
         #else
-        __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -28870,7 +28889,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 182, __pyx_L1_error)
+          else __PYX_ERR(0, 181, __pyx_L1_error)
         }
         break;
       }
@@ -28879,15 +28898,15 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
     __Pyx_XDECREF_SET(__pyx_v_i_s, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":183
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":182
  *     rx, ry, ryaw, rk = [], [], [], []
  *     for i_s in s:
  *         ix, iy = csp.calc_position(i_s)             # <<<<<<<<<<<<<<
  *         rx.append(ix)
  *         ry.append(iy)
  */
-    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 183, __pyx_L1_error)
-    __pyx_t_2 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_position(__pyx_v_csp, __pyx_t_11, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 183, __pyx_L1_error)
+    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 182, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_position(__pyx_v_csp, __pyx_t_11, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     if (likely(__pyx_t_2 != Py_None)) {
       PyObject* sequence = __pyx_t_2;
@@ -28895,7 +28914,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 183, __pyx_L1_error)
+        __PYX_ERR(0, 182, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       __pyx_t_5 = PyTuple_GET_ITEM(sequence, 0); 
@@ -28903,67 +28922,67 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
       __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_t_6);
       #else
-      __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 182, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 182, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else {
-      __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 182, __pyx_L1_error)
     }
     __Pyx_XDECREF_SET(__pyx_v_ix, __pyx_t_5);
     __pyx_t_5 = 0;
     __Pyx_XDECREF_SET(__pyx_v_iy, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":184
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":183
  *     for i_s in s:
  *         ix, iy = csp.calc_position(i_s)
  *         rx.append(ix)             # <<<<<<<<<<<<<<
  *         ry.append(iy)
  *         ryaw.append(csp.calc_yaw(i_s))
  */
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_v_ix); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 184, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_rx, __pyx_v_ix); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 183, __pyx_L1_error)
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":185
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":184
  *         ix, iy = csp.calc_position(i_s)
  *         rx.append(ix)
  *         ry.append(iy)             # <<<<<<<<<<<<<<
  *         ryaw.append(csp.calc_yaw(i_s))
  *         rk.append(csp.calc_curvature(i_s))
  */
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_v_iy); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 185, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_ry, __pyx_v_iy); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 184, __pyx_L1_error)
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":186
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":185
  *         rx.append(ix)
  *         ry.append(iy)
  *         ryaw.append(csp.calc_yaw(i_s))             # <<<<<<<<<<<<<<
  *         rk.append(csp.calc_curvature(i_s))
  * 
  */
-    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
-    __pyx_t_13 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_yaw(__pyx_v_csp, __pyx_t_11, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L1_error)
+    __pyx_t_13 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_yaw(__pyx_v_csp, __pyx_t_11, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 185, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 185, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_ryaw, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 185, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":187
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":186
  *         ry.append(iy)
  *         ryaw.append(csp.calc_yaw(i_s))
  *         rk.append(csp.calc_curvature(i_s))             # <<<<<<<<<<<<<<
  * 
  *     return rx, ry, ryaw, rk, csp
  */
-    __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 187, __pyx_L1_error)
-    __pyx_t_11 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_curvature(__pyx_v_csp, __pyx_t_13, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 187, __pyx_L1_error)
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_i_s); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_11 = ((struct __pyx_vtabstruct_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_v_csp->__pyx_vtab)->calc_curvature(__pyx_v_csp, __pyx_t_13, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_rk, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_rk, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 186, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":182
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":181
  * 
  *     rx, ry, ryaw, rk = [], [], [], []
  *     for i_s in s:             # <<<<<<<<<<<<<<
@@ -28973,36 +28992,36 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":189
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":188
  *         rk.append(csp.calc_curvature(i_s))
  * 
  *     return rx, ry, ryaw, rk, csp             # <<<<<<<<<<<<<<
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = PyTuple_New(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_rx);
   __Pyx_GIVEREF(__pyx_v_rx);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_rx)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_rx)) __PYX_ERR(0, 188, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ry);
   __Pyx_GIVEREF(__pyx_v_ry);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_ry)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_ry)) __PYX_ERR(0, 188, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_ryaw);
   __Pyx_GIVEREF(__pyx_v_ryaw);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_ryaw)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_ryaw)) __PYX_ERR(0, 188, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_rk);
   __Pyx_GIVEREF(__pyx_v_rk);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_v_rk)) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_v_rk)) __PYX_ERR(0, 188, __pyx_L1_error);
   __Pyx_INCREF((PyObject *)__pyx_v_csp);
   __Pyx_GIVEREF((PyObject *)__pyx_v_csp);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 4, ((PyObject *)__pyx_v_csp))) __PYX_ERR(0, 189, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 4, ((PyObject *)__pyx_v_csp))) __PYX_ERR(0, 188, __pyx_L1_error);
   __pyx_r = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":176
  *     return [fplist[i] for i in ok_ind]
  * 
  * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
@@ -29091,7 +29110,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 176, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -29099,14 +29118,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 176, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("generate_target_course", 1, 2, 2, 1); __PYX_ERR(0, 177, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("generate_target_course", 1, 2, 2, 1); __PYX_ERR(0, 176, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "generate_target_course") < 0)) __PYX_ERR(0, 177, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "generate_target_course") < 0)) __PYX_ERR(0, 176, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -29119,7 +29138,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("generate_target_course", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 177, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("generate_target_course", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 176, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -29133,8 +29152,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_wx), (&PyList_Type), 1, "wx", 1))) __PYX_ERR(0, 177, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_wy), (&PyList_Type), 1, "wy", 1))) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_wx), (&PyList_Type), 1, "wx", 1))) __PYX_ERR(0, 176, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_wy), (&PyList_Type), 1, "wy", 1))) __PYX_ERR(0, 176, __pyx_L1_error)
   __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2generate_target_course(__pyx_self, __pyx_v_wx, __pyx_v_wy);
 
   /* function exit code */
@@ -29161,7 +29180,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("generate_target_course", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -29178,11 +29197,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
- *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
 
@@ -29193,7 +29212,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyObject *__pyx_v_fplist = NULL;
   PyObject *__pyx_v_min_cost = NULL;
   PyObject *__pyx_v_best_path = NULL;
@@ -29211,10 +29230,11 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
   PyObject *__pyx_t_9 = NULL;
-  int __pyx_t_10;
-  double __pyx_t_11;
-  Py_ssize_t __pyx_t_12;
-  int __pyx_t_13;
+  PyObject *__pyx_t_10 = NULL;
+  int __pyx_t_11;
+  double __pyx_t_12;
+  Py_ssize_t __pyx_t_13;
+  int __pyx_t_14;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -29225,102 +29245,105 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 190, __pyx_L1_error)
   }
   __pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":192
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
- *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)             # <<<<<<<<<<<<<<
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)             # <<<<<<<<<<<<<<
  *     fplist = calc_global_paths(fplist, csp)
  *     fplist = check_paths(fplist, ob)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_calc_frenet_paths); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_calc_frenet_paths); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_c_speed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_c_speed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_c_accel); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_c_accel); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_c_d); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_c_d); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_c_d_d); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_c_d_d); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_c_d_dd); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_c_d_dd); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_s0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_s0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = NULL;
-  __pyx_t_10 = 0;
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_target_speed); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_9);
+  __pyx_t_10 = NULL;
+  __pyx_t_11 = 0;
   #if CYTHON_UNPACK_METHODS
   if (unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_9)) {
+    __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_10)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_9);
+      __Pyx_INCREF(__pyx_t_10);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_2, function);
-      __pyx_t_10 = 1;
+      __pyx_t_11 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[7] = {__pyx_t_9, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8};
-    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_10, 6+__pyx_t_10);
-    __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+    PyObject *__pyx_callargs[8] = {__pyx_t_10, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, __pyx_t_9};
+    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_11, 7+__pyx_t_11);
+    __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __pyx_v_fplist = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":193
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):
- *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":192
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)             # <<<<<<<<<<<<<<
  *     fplist = check_paths(fplist, ob)
  * 
  */
-  if (!(likely(PyList_CheckExact(__pyx_v_fplist))||((__pyx_v_fplist) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_fplist))) __PYX_ERR(0, 193, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_global_paths(((PyObject*)__pyx_v_fplist), __pyx_v_csp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_v_fplist))||((__pyx_v_fplist) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_fplist))) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_calc_global_paths(((PyObject*)__pyx_v_fplist), __pyx_v_csp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF_SET(__pyx_v_fplist, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":194
- *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":193
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  *     fplist = check_paths(fplist, ob)             # <<<<<<<<<<<<<<
  * 
  *     # find minimum cost path
  */
-  if (!(likely(PyList_CheckExact(__pyx_v_fplist))||((__pyx_v_fplist) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_fplist))) __PYX_ERR(0, 194, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_paths(((PyObject*)__pyx_v_fplist), ((PyArrayObject *)__pyx_v_ob)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_v_fplist))||((__pyx_v_fplist) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_fplist))) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_paths(((PyObject*)__pyx_v_fplist), ((PyArrayObject *)__pyx_v_ob)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF_SET(__pyx_v_fplist, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":197
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":196
  * 
  *     # find minimum cost path
  *     min_cost = float("inf")             # <<<<<<<<<<<<<<
  *     best_path = None
  *     for fp in fplist:
  */
-  __pyx_t_11 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_inf); if (unlikely(__pyx_t_11 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 197, __pyx_L1_error)
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_inf); if (unlikely(__pyx_t_12 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_t_12); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_min_cost = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":198
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":197
  *     # find minimum cost path
  *     min_cost = float("inf")
  *     best_path = None             # <<<<<<<<<<<<<<
@@ -29330,7 +29353,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   __Pyx_INCREF(Py_None);
   __pyx_v_best_path = Py_None;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":199
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":198
  *     min_cost = float("inf")
  *     best_path = None
  *     for fp in fplist:             # <<<<<<<<<<<<<<
@@ -29339,55 +29362,55 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
  */
   if (unlikely(__pyx_v_fplist == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 199, __pyx_L1_error)
+    __PYX_ERR(0, 198, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_v_fplist; __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_12 = 0;
+  __pyx_t_13 = 0;
   for (;;) {
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
       #if !CYTHON_ASSUME_SAFE_MACROS
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 199, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 198, __pyx_L1_error)
       #endif
-      if (__pyx_t_12 >= __pyx_temp) break;
+      if (__pyx_t_13 >= __pyx_temp) break;
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_13); __Pyx_INCREF(__pyx_t_2); __pyx_t_13++; if (unlikely((0 < 0))) __PYX_ERR(0, 198, __pyx_L1_error)
     #else
-    __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_13); __pyx_t_13++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_fp, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":200
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":199
  *     best_path = None
  *     for fp in fplist:
  *         if min_cost >= fp.cf:             # <<<<<<<<<<<<<<
  *             min_cost = fp.cf
  *             best_path = fp
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_8 = PyObject_RichCompare(__pyx_v_min_cost, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 200, __pyx_L1_error)
+    __pyx_t_9 = PyObject_RichCompare(__pyx_v_min_cost, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_13 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 200, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (__pyx_t_13) {
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 199, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    if (__pyx_t_14) {
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":201
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":200
  *     for fp in fplist:
  *         if min_cost >= fp.cf:
  *             min_cost = fp.cf             # <<<<<<<<<<<<<<
  *             best_path = fp
  * 
  */
-      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 201, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF_SET(__pyx_v_min_cost, __pyx_t_8);
-      __pyx_t_8 = 0;
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 200, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF_SET(__pyx_v_min_cost, __pyx_t_9);
+      __pyx_t_9 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":202
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":201
  *         if min_cost >= fp.cf:
  *             min_cost = fp.cf
  *             best_path = fp             # <<<<<<<<<<<<<<
@@ -29397,7 +29420,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
       __Pyx_INCREF(__pyx_v_fp);
       __Pyx_DECREF_SET(__pyx_v_best_path, __pyx_v_fp);
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":200
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":199
  *     best_path = None
  *     for fp in fplist:
  *         if min_cost >= fp.cf:             # <<<<<<<<<<<<<<
@@ -29406,7 +29429,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
  */
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":199
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":198
  *     min_cost = float("inf")
  *     best_path = None
  *     for fp in fplist:             # <<<<<<<<<<<<<<
@@ -29416,7 +29439,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":204
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":203
  *             best_path = fp
  * 
  *     return best_path             # <<<<<<<<<<<<<<
@@ -29424,16 +29447,16 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
  * def main():
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
-  if (!(likely(((__pyx_v_best_path) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_best_path, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (!(likely(((__pyx_v_best_path) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_best_path, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_INCREF(__pyx_v_best_path);
   __pyx_r = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_v_best_path);
   goto __pyx_L0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
- *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
 
@@ -29448,6 +29471,7 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_10);
   { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
@@ -29493,11 +29517,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   double __pyx_v_c_d_d;
   double __pyx_v_c_d_dd;
   PyArrayObject *__pyx_v_ob = 0;
+  double __pyx_v_target_speed;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
-  PyObject* values[8] = {0,0,0,0,0,0,0,0};
+  PyObject* values[9] = {0,0,0,0,0,0,0,0,0};
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -29513,10 +29538,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_csp,&__pyx_n_s_s0,&__pyx_n_s_c_speed,&__pyx_n_s_c_accel,&__pyx_n_s_c_d,&__pyx_n_s_c_d_d,&__pyx_n_s_c_d_dd,&__pyx_n_s_ob,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_csp,&__pyx_n_s_s0,&__pyx_n_s_c_speed,&__pyx_n_s_c_accel,&__pyx_n_s_c_d,&__pyx_n_s_c_d_d,&__pyx_n_s_c_d_dd,&__pyx_n_s_ob,&__pyx_n_s_target_speed,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
+        case  9: values[8] = __Pyx_Arg_FASTCALL(__pyx_args, 8);
+        CYTHON_FALLTHROUGH;
         case  8: values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
         CYTHON_FALLTHROUGH;
         case  7: values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
@@ -29543,7 +29570,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -29551,9 +29578,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 1); __PYX_ERR(0, 191, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 1); __PYX_ERR(0, 190, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -29561,9 +29588,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 2); __PYX_ERR(0, 191, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 2); __PYX_ERR(0, 190, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -29571,9 +29598,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 3); __PYX_ERR(0, 191, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 3); __PYX_ERR(0, 190, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -29581,9 +29608,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 4); __PYX_ERR(0, 191, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 4); __PYX_ERR(0, 190, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -29591,9 +29618,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 5); __PYX_ERR(0, 191, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 5); __PYX_ERR(0, 190, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
@@ -29601,9 +29628,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 6); __PYX_ERR(0, 191, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 6); __PYX_ERR(0, 190, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
@@ -29611,16 +29638,26 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[7]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, 7); __PYX_ERR(0, 191, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 7); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  8:
+        if (likely((values[8] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_target_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[8]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 8); __PYX_ERR(0, 190, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "frenet_optimal_planning") < 0)) __PYX_ERR(0, 191, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "frenet_optimal_planning") < 0)) __PYX_ERR(0, 190, __pyx_L3_error)
       }
-    } else if (unlikely(__pyx_nargs != 8)) {
+    } else if (unlikely(__pyx_nargs != 9)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
@@ -29631,19 +29668,21 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
       values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
       values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
+      values[8] = __Pyx_Arg_FASTCALL(__pyx_args, 8);
     }
     __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)values[0]);
-    __pyx_v_s0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
-    __pyx_v_c_speed = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_c_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
-    __pyx_v_c_accel = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_c_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
-    __pyx_v_c_d = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_c_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
-    __pyx_v_c_d_d = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_c_d_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
-    __pyx_v_c_d_dd = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_c_d_dd == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
+    __pyx_v_s0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_speed = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_c_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_accel = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_c_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_d = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_c_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_d_d = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_c_d_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_d_dd = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_c_d_dd == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
     __pyx_v_ob = ((PyArrayObject *)values[7]);
+    __pyx_v_target_speed = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_target_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 8, 8, __pyx_nargs); __PYX_ERR(0, 191, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, __pyx_nargs); __PYX_ERR(0, 190, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -29657,9 +29696,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_csp), __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, 1, "csp", 0))) __PYX_ERR(0, 191, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ob), __pyx_ptype_5numpy_ndarray, 1, "ob", 0))) __PYX_ERR(0, 191, __pyx_L1_error)
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(__pyx_self, __pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_csp), __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, 1, "csp", 0))) __PYX_ERR(0, 190, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ob), __pyx_ptype_5numpy_ndarray, 1, "ob", 0))) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(__pyx_self, __pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob, __pyx_v_target_speed);
 
   /* function exit code */
   goto __pyx_L0;
@@ -29676,7 +29715,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob) {
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_ob;
   __Pyx_Buffer __pyx_pybuffer_ob;
   PyObject *__pyx_r = NULL;
@@ -29692,11 +29731,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 190, __pyx_L1_error)
   }
   __pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob, __pyx_v_target_speed, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -29722,7 +29761,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   return __pyx_r;
 }
 
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
  *     return best_path
  * 
  * def main():             # <<<<<<<<<<<<<<
@@ -29750,6 +29789,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   PyObject *__pyx_v_wx = 0;
   PyObject *__pyx_v_wy = 0;
   PyArrayObject *__pyx_v_ob = 0;
+  double __pyx_v_target_speed;
   PyObject *__pyx_v_target_course = 0;
   PyObject *__pyx_v_tx = 0;
   PyObject *__pyx_v_ty = 0;
@@ -29792,228 +29832,228 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __pyx_pybuffernd_ob.data = NULL;
   __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":207
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
  * 
  * def main():
  *     print(__file__ + " start!!")             # <<<<<<<<<<<<<<
  * 
  *     # Waypoints
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_file); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_file); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_start_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_start_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":210
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":209
  * 
  *     # Waypoints
  *     cdef list wx = [0.0, 10.0, 20.5, 35.0, 70.5]             # <<<<<<<<<<<<<<
  *     cdef list wy = [0.0, -6.0, 5.0, 6.5, 0.0]
  * 
  */
-  __pyx_t_1 = PyList_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_float_0_0);
   __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_0_0)) __PYX_ERR(0, 210, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_0_0)) __PYX_ERR(0, 209, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_10_0);
   __Pyx_GIVEREF(__pyx_float_10_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_10_0)) __PYX_ERR(0, 210, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_10_0)) __PYX_ERR(0, 209, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_20_5);
   __Pyx_GIVEREF(__pyx_float_20_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_20_5)) __PYX_ERR(0, 210, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_20_5)) __PYX_ERR(0, 209, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_35_0);
   __Pyx_GIVEREF(__pyx_float_35_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_35_0)) __PYX_ERR(0, 210, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_35_0)) __PYX_ERR(0, 209, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_70_5);
   __Pyx_GIVEREF(__pyx_float_70_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_70_5)) __PYX_ERR(0, 210, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_70_5)) __PYX_ERR(0, 209, __pyx_L1_error);
   __pyx_v_wx = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":211
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":210
  *     # Waypoints
  *     cdef list wx = [0.0, 10.0, 20.5, 35.0, 70.5]
  *     cdef list wy = [0.0, -6.0, 5.0, 6.5, 0.0]             # <<<<<<<<<<<<<<
  * 
  *     # Obstacle lists
  */
-  __pyx_t_1 = PyList_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_float_0_0);
   __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_0_0)) __PYX_ERR(0, 211, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_0_0)) __PYX_ERR(0, 210, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_neg_6_0);
   __Pyx_GIVEREF(__pyx_float_neg_6_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_neg_6_0)) __PYX_ERR(0, 211, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_neg_6_0)) __PYX_ERR(0, 210, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_5_0);
   __Pyx_GIVEREF(__pyx_float_5_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_5_0)) __PYX_ERR(0, 211, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_5_0)) __PYX_ERR(0, 210, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_6_5);
   __Pyx_GIVEREF(__pyx_float_6_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_6_5)) __PYX_ERR(0, 211, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_6_5)) __PYX_ERR(0, 210, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_0_0);
   __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_0_0)) __PYX_ERR(0, 211, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_0_0)) __PYX_ERR(0, 210, __pyx_L1_error);
   __pyx_v_wy = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":214
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
  * 
  *     # Obstacle lists
  *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],             # <<<<<<<<<<<<<<
  *                                                            [30.0, 6.0],
  *                                                            [30.0, 8.0],
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_float_20_0);
   __Pyx_GIVEREF(__pyx_float_20_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_20_0)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_20_0)) __PYX_ERR(0, 213, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_10_0);
   __Pyx_GIVEREF(__pyx_float_10_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_10_0)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_10_0)) __PYX_ERR(0, 213, __pyx_L1_error);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":215
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":214
  *     # Obstacle lists
  *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],
  *                                                            [30.0, 6.0],             # <<<<<<<<<<<<<<
  *                                                            [30.0, 8.0],
  *                                                            [35.0, 8.0],
  */
-  __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_float_30_0);
   __Pyx_GIVEREF(__pyx_float_30_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_30_0)) __PYX_ERR(0, 215, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_30_0)) __PYX_ERR(0, 214, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_6_0);
   __Pyx_GIVEREF(__pyx_float_6_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 1, __pyx_float_6_0)) __PYX_ERR(0, 215, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 1, __pyx_float_6_0)) __PYX_ERR(0, 214, __pyx_L1_error);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":216
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":215
  *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],
  *                                                            [30.0, 6.0],
  *                                                            [30.0, 8.0],             # <<<<<<<<<<<<<<
  *                                                            [35.0, 8.0],
  *                                                            [50.0, 3.0]], dtype=np.float64)
  */
-  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_float_30_0);
   __Pyx_GIVEREF(__pyx_float_30_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_float_30_0)) __PYX_ERR(0, 216, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_float_30_0)) __PYX_ERR(0, 215, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_8_0);
   __Pyx_GIVEREF(__pyx_float_8_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_float_8_0)) __PYX_ERR(0, 216, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_float_8_0)) __PYX_ERR(0, 215, __pyx_L1_error);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":217
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":216
  *                                                            [30.0, 6.0],
  *                                                            [30.0, 8.0],
  *                                                            [35.0, 8.0],             # <<<<<<<<<<<<<<
  *                                                            [50.0, 3.0]], dtype=np.float64)
  * 
  */
-  __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_float_35_0);
   __Pyx_GIVEREF(__pyx_float_35_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_float_35_0)) __PYX_ERR(0, 217, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_float_35_0)) __PYX_ERR(0, 216, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_8_0);
   __Pyx_GIVEREF(__pyx_float_8_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_float_8_0)) __PYX_ERR(0, 217, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_float_8_0)) __PYX_ERR(0, 216, __pyx_L1_error);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":218
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":217
  *                                                            [30.0, 8.0],
  *                                                            [35.0, 8.0],
  *                                                            [50.0, 3.0]], dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
- *     # Generate target course
+ *     cdef double target_speed = 0.5
  */
-  __pyx_t_6 = PyList_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_INCREF(__pyx_float_50_0);
   __Pyx_GIVEREF(__pyx_float_50_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 0, __pyx_float_50_0)) __PYX_ERR(0, 218, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 0, __pyx_float_50_0)) __PYX_ERR(0, 217, __pyx_L1_error);
   __Pyx_INCREF(__pyx_float_3_0);
   __Pyx_GIVEREF(__pyx_float_3_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 1, __pyx_float_3_0)) __PYX_ERR(0, 218, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 1, __pyx_float_3_0)) __PYX_ERR(0, 217, __pyx_L1_error);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":214
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
  * 
  *     # Obstacle lists
  *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],             # <<<<<<<<<<<<<<
  *                                                            [30.0, 6.0],
  *                                                            [30.0, 8.0],
  */
-  __pyx_t_7 = PyList_New(5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_7 = PyList_New(5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_3)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 2, __pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 2, __pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 3, __pyx_t_5)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 3, __pyx_t_5)) __PYX_ERR(0, 213, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_6);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 4, __pyx_t_6)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 4, __pyx_t_6)) __PYX_ERR(0, 213, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
   __pyx_t_6 = 0;
-  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7)) __PYX_ERR(0, 214, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7)) __PYX_ERR(0, 213, __pyx_L1_error);
   __pyx_t_7 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":218
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":217
  *                                                            [30.0, 8.0],
  *                                                            [35.0, 8.0],
  *                                                            [50.0, 3.0]], dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
- *     # Generate target course
+ *     cdef double target_speed = 0.5
  */
-  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":214
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
  * 
  *     # Obstacle lists
  *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],             # <<<<<<<<<<<<<<
  *                                                            [30.0, 6.0],
  *                                                            [30.0, 8.0],
  */
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 214, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 213, __pyx_L1_error)
   __pyx_t_8 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_t_8, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_ob = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_ob.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 214, __pyx_L1_error)
+      __PYX_ERR(0, 213, __pyx_L1_error)
     } else {__pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
     }
   }
@@ -30021,19 +30061,28 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   __pyx_v_ob = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":221
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":219
+ *                                                            [50.0, 3.0]], dtype=np.float64)
+ * 
+ *     cdef double target_speed = 0.5             # <<<<<<<<<<<<<<
+ * 
+ *     # Generate target course
+ */
+  __pyx_v_target_speed = 0.5;
+
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":222
  * 
  *     # Generate target course
  *     cdef tuple target_course = generate_target_course(wx, wy)             # <<<<<<<<<<<<<<
  *     cdef list tx = target_course[0]
  *     cdef list ty = target_course[1]
  */
-  __pyx_t_4 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_target_course = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":222
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":223
  *     # Generate target course
  *     cdef tuple target_course = generate_target_course(wx, wy)
  *     cdef list tx = target_course[0]             # <<<<<<<<<<<<<<
@@ -30042,15 +30091,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   if (unlikely(__pyx_v_target_course == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 222, __pyx_L1_error)
+    __PYX_ERR(0, 223, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 223, __pyx_L1_error)
   __pyx_v_tx = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":223
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":224
  *     cdef tuple target_course = generate_target_course(wx, wy)
  *     cdef list tx = target_course[0]
  *     cdef list ty = target_course[1]             # <<<<<<<<<<<<<<
@@ -30059,15 +30108,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   if (unlikely(__pyx_v_target_course == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 223, __pyx_L1_error)
+    __PYX_ERR(0, 224, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 223, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 224, __pyx_L1_error)
   __pyx_v_ty = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":224
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":225
  *     cdef list tx = target_course[0]
  *     cdef list ty = target_course[1]
  *     cdef list tyaw = target_course[2]             # <<<<<<<<<<<<<<
@@ -30076,15 +30125,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   if (unlikely(__pyx_v_target_course == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 224, __pyx_L1_error)
+    __PYX_ERR(0, 225, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 224, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 224, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 225, __pyx_L1_error)
   __pyx_v_tyaw = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":225
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":226
  *     cdef list ty = target_course[1]
  *     cdef list tyaw = target_course[2]
  *     cdef list tc = target_course[3]             # <<<<<<<<<<<<<<
@@ -30093,15 +30142,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   if (unlikely(__pyx_v_target_course == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 225, __pyx_L1_error)
+    __PYX_ERR(0, 226, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 225, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 225, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 226, __pyx_L1_error)
   __pyx_v_tc = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":226
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":227
  *     cdef list tyaw = target_course[2]
  *     cdef list tc = target_course[3]
  *     cdef CubicSpline2D csp = target_course[4]             # <<<<<<<<<<<<<<
@@ -30110,15 +30159,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   if (unlikely(__pyx_v_target_course == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 226, __pyx_L1_error)
+    __PYX_ERR(0, 227, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D))))) __PYX_ERR(0, 226, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D))))) __PYX_ERR(0, 227, __pyx_L1_error)
   __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":229
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":230
  * 
  *     # Initial state
  *     cdef double c_speed = 0.01  # current speed [m/s]             # <<<<<<<<<<<<<<
@@ -30127,7 +30176,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_v_c_speed = 0.01;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":230
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":231
  *     # Initial state
  *     cdef double c_speed = 0.01  # current speed [m/s]
  *     cdef double c_accel = 0.0  # current acceleration [m/ss]             # <<<<<<<<<<<<<<
@@ -30136,7 +30185,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_v_c_accel = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":231
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":232
  *     cdef double c_speed = 0.01  # current speed [m/s]
  *     cdef double c_accel = 0.0  # current acceleration [m/ss]
  *     cdef double c_d = 0.0  # current lateral position [m]             # <<<<<<<<<<<<<<
@@ -30145,7 +30194,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_v_c_d = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":232
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":233
  *     cdef double c_accel = 0.0  # current acceleration [m/ss]
  *     cdef double c_d = 0.0  # current lateral position [m]
  *     cdef double c_d_d = 0.0  # current lateral speed [m/s]             # <<<<<<<<<<<<<<
@@ -30154,7 +30203,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_v_c_d_d = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":233
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":234
  *     cdef double c_d = 0.0  # current lateral position [m]
  *     cdef double c_d_d = 0.0  # current lateral speed [m/s]
  *     cdef double c_d_dd = 0.0  # current lateral acceleration [m/s]             # <<<<<<<<<<<<<<
@@ -30163,7 +30212,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_v_c_d_dd = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":234
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":235
  *     cdef double c_d_d = 0.0  # current lateral speed [m/s]
  *     cdef double c_d_dd = 0.0  # current lateral acceleration [m/s]
  *     cdef double s0 = 0.0  # current course position             # <<<<<<<<<<<<<<
@@ -30172,7 +30221,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_v_s0 = 0.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":236
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":237
  *     cdef double s0 = 0.0  # current course position
  * 
  *     cdef double area = 5.0  # animation area length [m]             # <<<<<<<<<<<<<<
@@ -30181,11 +30230,11 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_v_area = 5.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":239
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":240
  *     cdef FrenetPath path
  * 
  *     for i in range(SIM_LOOP):             # <<<<<<<<<<<<<<
- *         path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob)
+ *         path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob, target_speed)
  * 
  */
   __pyx_t_9 = __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_SIM_LOOP;
@@ -30193,19 +30242,19 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_i = __pyx_t_11;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":240
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":241
  * 
  *     for i in range(SIM_LOOP):
- *         path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob)             # <<<<<<<<<<<<<<
+ *         path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob, target_speed)             # <<<<<<<<<<<<<<
  * 
  *         # Update state
  */
-    __pyx_t_4 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, ((PyArrayObject *)__pyx_v_ob), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 240, __pyx_L1_error)
+    __pyx_t_4 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, ((PyArrayObject *)__pyx_v_ob), __pyx_v_target_speed, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 241, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_XDECREF_SET(__pyx_v_path, ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_4));
     __pyx_t_4 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":243
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":244
  * 
  *         # Update state
  *         s0 = path.s[1]             # <<<<<<<<<<<<<<
@@ -30214,15 +30263,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     if (unlikely(__pyx_v_path->s == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 243, __pyx_L1_error)
+      __PYX_ERR(0, 244, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 244, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 243, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_s0 = __pyx_t_12;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":244
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":245
  *         # Update state
  *         s0 = path.s[1]
  *         c_d = path.d[1]             # <<<<<<<<<<<<<<
@@ -30231,15 +30280,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     if (unlikely(__pyx_v_path->d == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 244, __pyx_L1_error)
+      __PYX_ERR(0, 245, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 244, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_c_d = __pyx_t_12;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":245
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":246
  *         s0 = path.s[1]
  *         c_d = path.d[1]
  *         c_d_d = path.d_d[1]             # <<<<<<<<<<<<<<
@@ -30248,15 +30297,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     if (unlikely(__pyx_v_path->d_d == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 245, __pyx_L1_error)
+      __PYX_ERR(0, 246, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d_d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 245, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d_d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 246, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 245, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_c_d_d = __pyx_t_12;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":246
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":247
  *         c_d = path.d[1]
  *         c_d_d = path.d_d[1]
  *         c_d_dd = path.d_dd[1]             # <<<<<<<<<<<<<<
@@ -30265,15 +30314,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     if (unlikely(__pyx_v_path->d_dd == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 246, __pyx_L1_error)
+      __PYX_ERR(0, 247, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d_dd, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 246, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d_dd, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 247, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_c_d_dd = __pyx_t_12;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":247
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":248
  *         c_d_d = path.d_d[1]
  *         c_d_dd = path.d_dd[1]
  *         c_speed = path.s_d[1]             # <<<<<<<<<<<<<<
@@ -30282,15 +30331,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     if (unlikely(__pyx_v_path->s_d == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 247, __pyx_L1_error)
+      __PYX_ERR(0, 248, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s_d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s_d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 248, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 247, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 248, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_c_speed = __pyx_t_12;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":248
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":249
  *         c_d_dd = path.d_dd[1]
  *         c_speed = path.s_d[1]
  *         c_accel = path.s_dd[1]             # <<<<<<<<<<<<<<
@@ -30299,55 +30348,55 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     if (unlikely(__pyx_v_path->s_dd == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 248, __pyx_L1_error)
+      __PYX_ERR(0, 249, __pyx_L1_error)
     }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s_dd, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 248, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s_dd, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 249, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 248, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 249, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_c_accel = __pyx_t_12;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":250
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":251
  *         c_accel = path.s_dd[1]
  * 
  *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:             # <<<<<<<<<<<<<<
  *             print("Goal reached")
  *             break
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_hypot); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_hypot); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     if (unlikely(__pyx_v_path->x == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 250, __pyx_L1_error)
+      __PYX_ERR(0, 251, __pyx_L1_error)
     }
-    __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (unlikely(__pyx_v_tx == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 250, __pyx_L1_error)
+      __PYX_ERR(0, 251, __pyx_L1_error)
     }
-    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_tx, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_tx, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = PyNumber_Subtract(__pyx_t_7, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_Subtract(__pyx_t_7, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (unlikely(__pyx_v_path->y == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 250, __pyx_L1_error)
+      __PYX_ERR(0, 251, __pyx_L1_error)
     }
-    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     if (unlikely(__pyx_v_ty == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 250, __pyx_L1_error)
+      __PYX_ERR(0, 251, __pyx_L1_error)
     }
-    __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_ty, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_ty, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_3 = PyNumber_Subtract(__pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Subtract(__pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -30371,28 +30420,28 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 250, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 251, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
-    __pyx_t_6 = PyObject_RichCompare(__pyx_t_4, __pyx_float_1_0, Py_LE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_6 = PyObject_RichCompare(__pyx_t_4, __pyx_float_1_0, Py_LE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 251, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (__pyx_t_14) {
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":251
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":252
  * 
  *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
  *             print("Goal reached")             # <<<<<<<<<<<<<<
  *             break
  * 
  */
-      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 251, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 252, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":252
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":253
  *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
  *             print("Goal reached")
  *             break             # <<<<<<<<<<<<<<
@@ -30401,7 +30450,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
       goto __pyx_L4_break;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":250
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":251
  *         c_accel = path.s_dd[1]
  * 
  *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:             # <<<<<<<<<<<<<<
@@ -30410,7 +30459,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":254
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":255
  *             break
  * 
  *         if show_animation:             # <<<<<<<<<<<<<<
@@ -30419,16 +30468,16 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
     if (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_show_animation) {
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":255
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":256
  * 
  *         if show_animation:
  *             plt.cla()             # <<<<<<<<<<<<<<
  *             plt.plot(tx, ty, label="Course")
  *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 255, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 256, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_cla); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_cla); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 256, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -30449,157 +30498,157 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         PyObject *__pyx_callargs[2] = {__pyx_t_4, NULL};
         __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_13, 0+__pyx_t_13);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 255, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 256, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":256
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":257
  *         if show_animation:
  *             plt.cla()
  *             plt.plot(tx, ty, label="Course")             # <<<<<<<<<<<<<<
  *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
  *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 256, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_plot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 256, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_plot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 257, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 256, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_INCREF(__pyx_v_tx);
       __Pyx_GIVEREF(__pyx_v_tx);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_tx)) __PYX_ERR(0, 256, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_tx)) __PYX_ERR(0, 257, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_ty);
       __Pyx_GIVEREF(__pyx_v_ty);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_v_ty)) __PYX_ERR(0, 256, __pyx_L1_error);
-      __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 256, __pyx_L1_error)
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_v_ty)) __PYX_ERR(0, 257, __pyx_L1_error);
+      __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_label, __pyx_n_u_Course) < 0) __PYX_ERR(0, 256, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 256, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_label, __pyx_n_u_Course) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":257
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":258
  *             plt.cla()
  *             plt.plot(tx, ty, label="Course")
  *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")             # <<<<<<<<<<<<<<
  *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
  *             plt.xlim(path.x[1] - area, path.x[1] + area)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__12); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__12); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__13); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__13); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GIVEREF(__pyx_t_5);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_6);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error);
       __Pyx_INCREF(__pyx_n_u_xk);
       __Pyx_GIVEREF(__pyx_n_u_xk);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_n_u_xk)) __PYX_ERR(0, 257, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_n_u_xk)) __PYX_ERR(0, 258, __pyx_L1_error);
       __pyx_t_5 = 0;
       __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_label, __pyx_n_u_Obstacles) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_label, __pyx_n_u_Obstacles) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":258
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":259
  *             plt.plot(tx, ty, label="Course")
  *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
  *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")             # <<<<<<<<<<<<<<
  *             plt.xlim(path.x[1] - area, path.x[1] + area)
  *             plt.ylim(path.y[1] - area, path.y[1] + area)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 259, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (unlikely(__pyx_v_path->x == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 258, __pyx_L1_error)
+        __PYX_ERR(0, 259, __pyx_L1_error)
       }
-      __pyx_t_5 = __Pyx_PyList_GetSlice(__pyx_v_path->x, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyList_GetSlice(__pyx_v_path->x, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       if (unlikely(__pyx_v_path->y == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 258, __pyx_L1_error)
+        __PYX_ERR(0, 259, __pyx_L1_error)
       }
-      __pyx_t_3 = __Pyx_PyList_GetSlice(__pyx_v_path->y, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyList_GetSlice(__pyx_v_path->y, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 259, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_5);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_3);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error);
       __Pyx_INCREF(__pyx_kp_u_or);
       __Pyx_GIVEREF(__pyx_kp_u_or);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_kp_u_or)) __PYX_ERR(0, 258, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_kp_u_or)) __PYX_ERR(0, 259, __pyx_L1_error);
       __pyx_t_5 = 0;
       __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_label, __pyx_n_u_Trajectory) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_label, __pyx_n_u_Trajectory) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":259
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":260
  *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
  *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
  *             plt.xlim(path.x[1] - area, path.x[1] + area)             # <<<<<<<<<<<<<<
  *             plt.ylim(path.y[1] - area, path.y[1] + area)
  *             plt.title(f"Time Step: {i}")
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_plt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_plt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_xlim); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_xlim); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (unlikely(__pyx_v_path->x == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 259, __pyx_L1_error)
+        __PYX_ERR(0, 260, __pyx_L1_error)
       }
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_7 = PyNumber_Subtract(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_7 = PyNumber_Subtract(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (unlikely(__pyx_v_path->x == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 259, __pyx_L1_error)
+        __PYX_ERR(0, 260, __pyx_L1_error)
       }
-      __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = PyNumber_Add(__pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 259, __pyx_L1_error)
+      __pyx_t_2 = PyNumber_Add(__pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -30623,45 +30672,45 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 260, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":260
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":261
  *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
  *             plt.xlim(path.x[1] - area, path.x[1] + area)
  *             plt.ylim(path.y[1] - area, path.y[1] + area)             # <<<<<<<<<<<<<<
  *             plt.title(f"Time Step: {i}")
  *             plt.pause(0.001)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_ylim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_ylim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (unlikely(__pyx_v_path->y == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 260, __pyx_L1_error)
+        __PYX_ERR(0, 261, __pyx_L1_error)
       }
-      __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_7 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_7 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_3 = PyNumber_Subtract(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_3 = PyNumber_Subtract(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (unlikely(__pyx_v_path->y == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 260, __pyx_L1_error)
+        __PYX_ERR(0, 261, __pyx_L1_error)
       }
-      __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_4 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_4 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = PyNumber_Add(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_6 = PyNumber_Add(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 261, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -30685,27 +30734,27 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 260, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":261
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":262
  *             plt.xlim(path.x[1] - area, path.x[1] + area)
  *             plt.ylim(path.y[1] - area, path.y[1] + area)
  *             plt.title(f"Time Step: {i}")             # <<<<<<<<<<<<<<
  *             plt.pause(0.001)
  *             plt.legend()
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyUnicode_From_int(__pyx_v_i, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyUnicode_From_int(__pyx_v_i, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_Time_Step, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_Time_Step, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = NULL;
@@ -30727,22 +30776,22 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_6, __pyx_callargs+1-__pyx_t_13, 1+__pyx_t_13);
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":262
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":263
  *             plt.ylim(path.y[1] - area, path.y[1] + area)
  *             plt.title(f"Time Step: {i}")
  *             plt.pause(0.001)             # <<<<<<<<<<<<<<
  *             plt.legend()
  * 
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 262, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 263, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_pause); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_pause); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 263, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_t_6 = NULL;
@@ -30763,22 +30812,22 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         PyObject *__pyx_callargs[2] = {__pyx_t_6, __pyx_float_0_001};
         __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_13, 1+__pyx_t_13);
         __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":263
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":264
  *             plt.title(f"Time Step: {i}")
  *             plt.pause(0.001)
  *             plt.legend()             # <<<<<<<<<<<<<<
  * 
  *     print("Finish")
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_plt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 263, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_plt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_legend); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 263, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_legend); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
@@ -30799,13 +30848,13 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
         PyObject *__pyx_callargs[2] = {__pyx_t_3, NULL};
         __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_6, __pyx_callargs+1-__pyx_t_13, 0+__pyx_t_13);
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 263, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":254
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":255
  *             break
  * 
  *         if show_animation:             # <<<<<<<<<<<<<<
@@ -30816,18 +30865,18 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
   }
   __pyx_L4_break:;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":265
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":266
  *             plt.legend()
  * 
  *     print("Finish")             # <<<<<<<<<<<<<<
  *     if show_animation:
  *         plt.show()
  */
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 265, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":266
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":267
  * 
  *     print("Finish")
  *     if show_animation:             # <<<<<<<<<<<<<<
@@ -30836,16 +30885,16 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   if (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_show_animation) {
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":267
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":268
  *     print("Finish")
  *     if show_animation:
  *         plt.show()             # <<<<<<<<<<<<<<
  * 
  * if __name__ == "__main__":
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 267, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_show); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 267, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_show); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -30866,13 +30915,13 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
       PyObject *__pyx_callargs[2] = {__pyx_t_6, NULL};
       __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_9, 0+__pyx_t_9);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 267, __pyx_L1_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 268, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":266
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":267
  * 
  *     print("Finish")
  *     if show_animation:             # <<<<<<<<<<<<<<
@@ -30881,7 +30930,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   }
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
  *     return best_path
  * 
  * def main():             # <<<<<<<<<<<<<<
@@ -34596,6 +34645,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_sys, __pyx_k_sys, sizeof(__pyx_k_sys), 0, 0, 1, 1},
     {&__pyx_n_s_t, __pyx_k_t, sizeof(__pyx_k_t), 0, 0, 1, 1},
     {&__pyx_n_s_target_course, __pyx_k_target_course, sizeof(__pyx_k_target_course), 0, 0, 1, 1},
+    {&__pyx_n_s_target_speed, __pyx_k_target_speed, sizeof(__pyx_k_target_speed), 0, 0, 1, 1},
     {&__pyx_n_s_tc, __pyx_k_tc, sizeof(__pyx_k_tc), 0, 0, 1, 1},
     {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
     {&__pyx_n_s_tfp, __pyx_k_tfp, sizeof(__pyx_k_tfp), 0, 0, 1, 1},
@@ -34628,10 +34678,10 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 113, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 127, __pyx_L1_error)
-  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 156, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 206, __pyx_L1_error)
   __pyx_builtin___import__ = __Pyx_GetBuiltinName(__pyx_n_s_import); if (!__pyx_builtin___import__) __PYX_ERR(1, 100, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 141, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 156, __pyx_L1_error)
@@ -34710,39 +34760,39 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":251
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":252
  * 
  *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
  *             print("Goal reached")             # <<<<<<<<<<<<<<
  *             break
  * 
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_Goal_reached); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_Goal_reached); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 252, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":257
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":258
  *             plt.cla()
  *             plt.plot(tx, ty, label="Course")
  *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")             # <<<<<<<<<<<<<<
  *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
  *             plt.xlim(path.x[1] - area, path.x[1] + area)
  */
-  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 257, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 258, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_1); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 257, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_1); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 258, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":265
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":266
  *             plt.legend()
  * 
  *     print("Finish")             # <<<<<<<<<<<<<<
  *     if show_animation:
  *         plt.show()
  */
-  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_n_u_Finish); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 265, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_n_u_Finish); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
@@ -34872,44 +34922,44 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":47
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":46
  *         self.a4 = x[1]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  */
-  __pyx_tuple__29 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_t); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_tuple__29 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_t); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_point, 47, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_point, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":50
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":49
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  */
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_first_derivative, 50, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_first_derivative, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 49, __pyx_L1_error)
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":53
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":52
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  */
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_second_derivative, 53, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_second_derivative, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 52, __pyx_L1_error)
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":56
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":55
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return 6 * self.a3 + 24 * self.a4 * t
  * 
  */
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_third_derivative, 56, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_third_derivative, 55, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 55, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -34947,53 +34997,53 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  */
   __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":82
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":81
  * # Functions to generate Frenet paths, calculate global paths, and perform collision checks
  * 
- * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0):             # <<<<<<<<<<<<<<
+ * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0, double target_speed):             # <<<<<<<<<<<<<<
  *     cdef list frenet_paths = []
  *     cdef double di, Ti
  */
-  __pyx_tuple__40 = PyTuple_Pack(25, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_frenet_paths, __pyx_n_s_di, __pyx_n_s_Ti, __pyx_n_s_fp, __pyx_n_s_lat_qp, __pyx_n_s_lon_qp, __pyx_n_s_tfp, __pyx_n_s_tv, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_x, __pyx_n_s_x); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_tuple__40 = PyTuple_Pack(26, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_target_speed, __pyx_n_s_frenet_paths, __pyx_n_s_di, __pyx_n_s_Ti, __pyx_n_s_fp, __pyx_n_s_lat_qp, __pyx_n_s_lon_qp, __pyx_n_s_tfp, __pyx_n_s_tv, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_x, __pyx_n_s_x); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_frenet_paths, 82, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_frenet_paths, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 81, __pyx_L1_error)
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":176
  *     return [fplist[i] for i in ok_ind]
  * 
  * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
  *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)
  */
-  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_wx, __pyx_n_s_wy); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_wx, __pyx_n_s_wy); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 176, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_generate_target_course, 177, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_generate_target_course, 176, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 176, __pyx_L1_error)
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
- *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
-  __pyx_tuple__44 = PyTuple_Pack(8, __pyx_n_s_csp, __pyx_n_s_s0, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_ob); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_tuple__44 = PyTuple_Pack(9, __pyx_n_s_csp, __pyx_n_s_s0, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_ob, __pyx_n_s_target_speed); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__44);
   __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(8, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_frenet_optimal_planning, 191, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(9, 0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_frenet_optimal_planning, 190, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 190, __pyx_L1_error)
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
  *     return best_path
  * 
  * def main():             # <<<<<<<<<<<<<<
  *     print(__file__ + " start!!")
  * 
  */
-  __pyx_tuple__46 = PyTuple_Pack(18, __pyx_n_s_wx, __pyx_n_s_wy, __pyx_n_s_ob, __pyx_n_s_target_course, __pyx_n_s_tx, __pyx_n_s_ty, __pyx_n_s_tyaw, __pyx_n_s_tc, __pyx_n_s_csp, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_area, __pyx_n_s_path, __pyx_n_s_i); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_tuple__46 = PyTuple_Pack(19, __pyx_n_s_wx, __pyx_n_s_wy, __pyx_n_s_ob, __pyx_n_s_target_speed, __pyx_n_s_target_course, __pyx_n_s_tx, __pyx_n_s_ty, __pyx_n_s_tyaw, __pyx_n_s_tc, __pyx_n_s_csp, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_area, __pyx_n_s_path, __pyx_n_s_i); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__46);
   __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_main_2, 206, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_main_2, 205, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 205, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_QuarticPolynomial(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
@@ -35131,15 +35181,15 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial.calc_second_derivative = (double (*)(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_second_derivative;
   __pyx_vtable_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial.calc_third_derivative = (double (*)(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *, double, int __pyx_skip_dispatch))__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_calc_third_derivative;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial)) __PYX_ERR(0, 35, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial)) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   #else
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial = &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial->tp_print = 0;
@@ -35149,24 +35199,24 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_vtabptr_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_vtabptr_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_QuarticPolynomial, (PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_QuarticPolynomial, (PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath)) __PYX_ERR(0, 59, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath)) __PYX_ERR(0, 58, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   #else
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath = &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath->tp_print = 0;
@@ -35176,20 +35226,20 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_FrenetPath, (PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_FrenetPath, (PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr)) __PYX_ERR(0, 157, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr)) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
   #else
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr = &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr->tp_print = 0;
@@ -35200,15 +35250,15 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr)) __PYX_ERR(0, 165, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr) < 0) __PYX_ERR(0, 165, __pyx_L1_error)
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr)) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
   #else
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr = &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr) < 0) __PYX_ERR(0, 165, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr->tp_print = 0;
@@ -35219,15 +35269,15 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr)) __PYX_ERR(0, 167, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr)) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
   #else
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr = &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr->tp_print = 0;
@@ -35238,15 +35288,15 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr)) __PYX_ERR(0, 169, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr)) __PYX_ERR(0, 168, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
   #else
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr = &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr->tp_print = 0;
@@ -36379,7 +36429,7 @@ if (!__Pyx_RefNanny) {
  * cdef double DT = 0.5
  * cdef double MAX_T = 4.0             # <<<<<<<<<<<<<<
  * cdef double MIN_T = 2.0
- * cdef double TARGET_SPEED = 0.5
+ * cdef double D_T_S = 5.0 / 3.6
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T = 4.0;
 
@@ -36387,31 +36437,22 @@ if (!__Pyx_RefNanny) {
  * cdef double DT = 0.5
  * cdef double MAX_T = 4.0
  * cdef double MIN_T = 2.0             # <<<<<<<<<<<<<<
- * cdef double TARGET_SPEED = 0.5
  * cdef double D_T_S = 5.0 / 3.6
+ * cdef int N_S_SAMPLE = 1
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T = 2.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":21
  * cdef double MAX_T = 4.0
  * cdef double MIN_T = 2.0
- * cdef double TARGET_SPEED = 0.5             # <<<<<<<<<<<<<<
- * cdef double D_T_S = 5.0 / 3.6
- * cdef int N_S_SAMPLE = 1
- */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_TARGET_SPEED = 0.5;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":22
- * cdef double MIN_T = 2.0
- * cdef double TARGET_SPEED = 0.5
  * cdef double D_T_S = 5.0 / 3.6             # <<<<<<<<<<<<<<
  * cdef int N_S_SAMPLE = 1
  * cdef double ROBOT_RADIUS = 0.2
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S = (5.0 / 3.6);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":23
- * cdef double TARGET_SPEED = 0.5
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":22
+ * cdef double MIN_T = 2.0
  * cdef double D_T_S = 5.0 / 3.6
  * cdef int N_S_SAMPLE = 1             # <<<<<<<<<<<<<<
  * cdef double ROBOT_RADIUS = 0.2
@@ -36419,7 +36460,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE = 1;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":24
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":23
  * cdef double D_T_S = 5.0 / 3.6
  * cdef int N_S_SAMPLE = 1
  * cdef double ROBOT_RADIUS = 0.2             # <<<<<<<<<<<<<<
@@ -36428,7 +36469,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS = 0.2;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":26
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":25
  * cdef double ROBOT_RADIUS = 0.2
  * 
  * cdef double K_J = 0.1             # <<<<<<<<<<<<<<
@@ -36437,7 +36478,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J = 0.1;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":27
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":26
  * 
  * cdef double K_J = 0.1
  * cdef double K_T = 0.1             # <<<<<<<<<<<<<<
@@ -36446,7 +36487,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T = 0.1;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":28
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":27
  * cdef double K_J = 0.1
  * cdef double K_T = 0.1
  * cdef double K_D = 1.0             # <<<<<<<<<<<<<<
@@ -36455,7 +36496,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D = 1.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":29
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":28
  * cdef double K_T = 0.1
  * cdef double K_D = 1.0
  * cdef double K_LAT = 1.0             # <<<<<<<<<<<<<<
@@ -36464,7 +36505,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LAT = 1.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":30
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":29
  * cdef double K_D = 1.0
  * cdef double K_LAT = 1.0
  * cdef double K_LON = 1.0             # <<<<<<<<<<<<<<
@@ -36473,7 +36514,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LON = 1.0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":32
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":31
  * cdef double K_LON = 1.0
  * 
  * cdef bint show_animation = True             # <<<<<<<<<<<<<<
@@ -36482,7 +36523,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_show_animation = 1;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":33
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":32
  * 
  * cdef bint show_animation = True
  * cdef int SIM_LOOP = 500             # <<<<<<<<<<<<<<
@@ -36491,55 +36532,55 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_SIM_LOOP = 0x1F4;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":47
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":46
  *         self.a4 = x[1]
  * 
  *     cpdef double calc_point(self, double t):             # <<<<<<<<<<<<<<
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_3calc_point, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_point, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_3calc_point, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_point, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_point, __pyx_t_4) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_point, __pyx_t_4) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   PyType_Modified(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":50
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":49
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  *     cpdef double calc_first_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_first_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_first_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_first_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_first_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   PyType_Modified(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":53
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":52
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  *     cpdef double calc_second_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_second_de, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_second_de, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_second_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_second_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   PyType_Modified(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":56
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":55
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  *     cpdef double calc_third_derivative(self, double t):             # <<<<<<<<<<<<<<
  *         return 6 * self.a3 + 24 * self.a4 * t
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_9calc_third_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_third_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_9calc_third_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_third_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_third_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_third_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   PyType_Modified(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial);
 
@@ -36589,79 +36630,79 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   PyType_Modified(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":82
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":81
  * # Functions to generate Frenet paths, calculate global paths, and perform collision checks
  * 
- * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0):             # <<<<<<<<<<<<<<
+ * def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0, double target_speed):             # <<<<<<<<<<<<<<
  *     cdef list frenet_paths = []
  *     cdef double di, Ti
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_1calc_frenet_paths, 0, __pyx_n_s_calc_frenet_paths, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_1calc_frenet_paths, 0, __pyx_n_s_calc_frenet_paths, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_frenet_paths, __pyx_t_4) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_frenet_paths, __pyx_t_4) < 0) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":177
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":176
  *     return [fplist[i] for i in ok_ind]
  * 
  * cpdef tuple generate_target_course(list wx, list wy):             # <<<<<<<<<<<<<<
  *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course, 0, __pyx_n_s_generate_target_course, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course, 0, __pyx_n_s_generate_target_course, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_generate_target_course, __pyx_t_4) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_generate_target_course, __pyx_t_4) < 0) __PYX_ERR(0, 176, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob):             # <<<<<<<<<<<<<<
- *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0)
+ * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, 0, __pyx_n_s_frenet_optimal_planning, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, 0, __pyx_n_s_frenet_optimal_planning, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_frenet_optimal_planning, __pyx_t_4) < 0) __PYX_ERR(0, 191, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_frenet_optimal_planning, __pyx_t_4) < 0) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
  *     return best_path
  * 
  * def main():             # <<<<<<<<<<<<<<
  *     print(__file__ + " start!!")
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_4) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_4) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":269
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":270
  *         plt.show()
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
  *     main()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_name_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_name_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = (__Pyx_PyUnicode_Equals(__pyx_t_4, __pyx_n_u_main, Py_EQ)); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_6 = (__Pyx_PyUnicode_Equals(__pyx_t_4, __pyx_n_u_main, Py_EQ)); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_6) {
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":270
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":271
  * 
  * if __name__ == "__main__":
  *     main()             # <<<<<<<<<<<<<<
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_main_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_main_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":269
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":270
  *         plt.show()
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
