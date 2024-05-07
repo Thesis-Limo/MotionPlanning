@@ -1,5 +1,7 @@
+#!/usr/bin/env python3.6
 import math
 import threading
+import rospy
 import time
 
 import matplotlib.pyplot as plt
@@ -7,6 +9,7 @@ import numpy as np
 
 import FrenetOptimalTrajectory.frenet_optimal_trajectory as frenet_optimal_trajectory
 from Dubins.dubins_path_planner import plan_dubins_path
+from sensor_msgs.msg import LaserScan
 
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
@@ -65,6 +68,7 @@ class MotionPlanner:
 
         start = time.time()
         for _ in range(SIM_LOOP):
+            step_start = time.time()
             state, path, goal_reached = self.run_frenet_iteration(
                 csp, state, tx, ty, self.obstacleList
             )
@@ -72,6 +76,8 @@ class MotionPlanner:
 
             if goal_reached:
                 break
+            step_end = time.time()
+            print("Time for step is ", step_end - step_start)
 
         self.planning_done = True
         end = time.time()
@@ -79,7 +85,6 @@ class MotionPlanner:
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
         goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
-        print(f"Goal distance: {goal_dist:.2f}")
 
         path = frenet_optimal_trajectory.frenet_optimal_planning(
             csp,
@@ -171,32 +176,54 @@ def convert_lidar_data_to_2d_points(file_path):
 
     return points_2d
 
+tick = True
+
+def callback(lidar_msg):
+    global tick
+    if tick:
+        print("Calculating for timestamp:", lidar_msg.header.stamp)
+        tick = False
+        obstacles = []
+        s = time.time()
+
+        min_dist = lidar_msg.range_min
+        max_dist = lidar_msg.range_max
+
+        for i, distance in enumerate(lidar_msg.ranges):
+            if min_dist < distance < max_dist:
+                angle = lidar_msg.angle_min + i * lidar_msg.angle_increment
+                x = distance * np.cos(angle)
+                y = distance * np.sin(angle)
+                obstacles.append((x,y))
+        obstacles = np.array(obstacles)
+        print("Map creation took", time.time() - s)
+
+        goal_pose = Pose(x=1.0, y=1.0, yaw=0.0)
+        planner = MotionPlanner(goal_pose, obstacleList=obstacles)
+        planner.plan()
+        time.sleep(1.0)
+
+        idx = 0
+        while not planner.planning_done or idx < len(planner.motion_plan):
+            if idx < len(planner.motion_plan):
+                path = planner.motion_plan[idx]
+                print(
+                    f"Path step {idx}: Position: ({path.x[1]}, {path.y[1]}) Count: {len(path.x)}"
+                )
+                speed = path.s_d[1]
+                curvature = path.c[1]
+                steering_angle = math.atan2(WHEELBASE * curvature, 1.0)
+                print(
+                    f"Speed = {speed:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians\n"
+                )
+                idx += 1
+                time.sleep(0.25)
+            else:
+                raise Exception("Simulation is stuck")
+        tick = True
 
 if __name__ == "__main__":
-    file_path = "data/scan.txt"
-    goal_pose = Pose(x=2.0, y=4.0, yaw=90)
-    obstacleList = np.array(convert_lidar_data_to_2d_points(file_path))
-
-    planner = MotionPlanner(goal_pose, obstacleList=obstacleList)
-    planner.plan()
-    time.sleep(1.0)
-
-    idx = 0
-    while not planner.planning_done or idx < len(planner.motion_plan):
-        if idx < len(planner.motion_plan):
-            path = planner.motion_plan[idx]
-            print(
-                f"Path step {idx}: Position: ({path.x[1]}, {path.y[1]}) Count: {len(path.x)}"
-            )
-            speed = path.s_d[1]
-            curvature = path.c[1]
-            steering_angle = math.atan2(WHEELBASE * curvature, 1.0)
-            print(
-                f"Speed = {speed:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians\n"
-            )
-            idx += 1
-            time.sleep(0.2)
-        else:
-            raise Exception("Simulation is stuck")
-
-    planner.plot(planner.motion_plan)
+    rospy.init_node("motion_planner")
+    s = rospy.Subscriber("/scan", LaserScan, callback)
+    rospy.spin()
+    #planner.plot(planner.motion_plan)
