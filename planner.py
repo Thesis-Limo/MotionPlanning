@@ -1,13 +1,12 @@
 #!/usr/bin/env python3.6
 import math
 import threading
-import rospy
 import time
 
+import FrenetOptimalTrajectory.frenet_optimal_trajectory as frenet_optimal_trajectory
 import matplotlib.pyplot as plt
 import numpy as np
-
-import FrenetOptimalTrajectory.frenet_optimal_trajectory as frenet_optimal_trajectory
+import rospy
 from Dubins.dubins_path_planner import plan_dubins_path
 from sensor_msgs.msg import LaserScan
 
@@ -15,6 +14,27 @@ ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
 TARGET_SPEED = 0.5  # [m/s]
+
+
+class FrenetPath:
+    def __init__(self):
+        self.t = []
+        self.d = []
+        self.d_d = []
+        self.d_dd = []
+        self.d_ddd = []
+        self.s = []
+        self.s_d = []
+        self.s_dd = []
+        self.s_ddd = []
+        self.cd = 0.0
+        self.cv = 0.0
+        self.cf = 0.0
+        self.x = []
+        self.y = []
+        self.yaw = []
+        self.ds = []
+        self.c = []
 
 
 class Pose:
@@ -69,9 +89,15 @@ class MotionPlanner:
         start = time.time()
         for _ in range(SIM_LOOP):
             step_start = time.time()
-            state, path, goal_reached = self.run_frenet_iteration(
-                csp, state, tx, ty, self.obstacleList
-            )
+            try:
+                state, path, goal_reached = self.run_frenet_iteration(
+                    csp, state, tx, ty, self.obstacleList
+                )
+            except AttributeError:
+                self.motion_plan = []
+                self.planning_done = True
+                return
+
             self.motion_plan.append(path)
 
             if goal_reached:
@@ -95,7 +121,7 @@ class MotionPlanner:
             state.c_d_d,
             state.c_d_dd,
             obstacles,
-            TARGET_SPEED if goal_dist > 2.5 else TARGET_SPEED * (goal_dist / 2.5),
+            TARGET_SPEED if goal_dist > 1 else TARGET_SPEED * (goal_dist / 1),
         )
 
         updated_state = FrenetState(
@@ -140,7 +166,50 @@ class MotionPlanner:
         )
         return csp, tx, ty
 
+
+def add_to_motion_plan(motion_plan, path, final=False):
+    if not final:
+        motion_plan.t.append(path.t[1])
+        motion_plan.d.append(path.d[1])
+        motion_plan.d_d.append(path.d_d[1])
+        motion_plan.d_dd.append(path.d_dd[1])
+        motion_plan.d_ddd.append(path.d_ddd[1])
+        motion_plan.s.append(path.s[1])
+        motion_plan.s_d.append(path.s_d[1])
+        motion_plan.s_dd.append(path.s_dd[1])
+        motion_plan.s_ddd.append(path.s_ddd[1])
+        motion_plan.cd = path.cd
+        motion_plan.cv = path.cv
+        motion_plan.cf = path.cf
+        motion_plan.x.append(path.x[1])
+        motion_plan.y.append(path.y[1])
+        motion_plan.yaw.append(path.yaw[1])
+        motion_plan.ds.append(path.ds[1])
+        motion_plan.c.append(path.c[1])
+    else:
+        motion_plan.t.extend(path.t[2:])
+        motion_plan.d.extend(path.d[2:])
+        motion_plan.d_d.extend(path.d_d[2:])
+        motion_plan.d_dd.extend(path.d_dd[2:])
+        motion_plan.d_ddd.extend(path.d_ddd[2:])
+        motion_plan.s.extend(path.s[2:])
+        motion_plan.s_d.extend(path.s_d[2:])
+        motion_plan.s_dd.extend(path.s_dd[2:])
+        motion_plan.s_ddd.extend(path.s_ddd[2:])
+        motion_plan.cd = path.cd
+        motion_plan.cv = path.cv
+        motion_plan.cf = path.cf
+        motion_plan.x.extend(path.x[2:])
+        motion_plan.y.extend(path.y[2:])
+        motion_plan.yaw.extend(path.yaw[2:])
+        motion_plan.ds.extend(path.ds[2:])
+        motion_plan.c.extend(path.c[2:])
+
+    return motion_plan
+
+
 tick = True
+
 
 def callback(lidar_msg):
     global tick
@@ -158,36 +227,33 @@ def callback(lidar_msg):
                 angle = lidar_msg.angle_min + i * lidar_msg.angle_increment
                 x = distance * np.cos(angle)
                 y = distance * np.sin(angle)
-                obstacles.append((x,y))
+                obstacles.append((x, y))
         obstacles = np.array(obstacles)
-        print("Map creation took", time.time() - s)
 
-        goal_pose = Pose(x=1.0, y=1.0, yaw=0.0)
+        goal_pose = Pose(x=2.0, y=2.0, yaw=0.0)
         planner = MotionPlanner(goal_pose, obstacleList=obstacles)
         planner.plan()
         time.sleep(1.0)
 
+        motion_plan = FrenetPath()
         idx = 0
         while not planner.planning_done or idx < len(planner.motion_plan):
             if idx < len(planner.motion_plan):
                 path = planner.motion_plan[idx]
-                print(
-                    f"Path step {idx}: Position: ({path.x[1]}, {path.y[1]}) Count: {len(path.x)}"
-                )
-                speed = path.s_d[1]
-                curvature = path.c[1]
-                steering_angle = math.atan2(WHEELBASE * curvature, 1.0)
-                print(
-                    f"Speed = {speed:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians\n"
-                )
+                motion_plan = add_to_motion_plan(motion_plan, path)
                 idx += 1
-                time.sleep(0.25)
-            else:
-                raise Exception("Simulation is stuck")
+
+        motion_plan = add_to_motion_plan(motion_plan, path, final=True)
+        plan = [
+            (motion_plan.s_d[i], math.atan2(WHEELBASE * motion_plan.c[i], 1.0))
+            for i in range(len(motion_plan.t) - 1)
+        ]
+        print(plan)
         tick = True
+
 
 if __name__ == "__main__":
     rospy.init_node("motion_planner")
     s = rospy.Subscriber("/scan", LaserScan, callback)
     rospy.spin()
-    #planner.plot(planner.motion_plan)
+    # planner.plot(planner.motion_plan)
