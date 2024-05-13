@@ -140,42 +140,6 @@ class MotionPlanner:
         )
         return csp, tx, ty
 
-
-def convert_lidar_data_to_2d_points(file_path):
-    with open(file_path, "r") as file:
-        lines = file.readlines()
-
-    angle_min = angle_increment = 0.0
-    ranges = []
-
-    for line in lines:
-        if "angle_min:" in line:
-            angle_min = float(line.split(":")[1].strip())
-        elif "angle_max:" in line:
-            angle_max = float(line.split(":")[1].strip())
-        elif "angle_increment:" in line:
-            angle_increment = float(line.split(":")[1].strip())
-        elif "ranges:" in line:
-            ranges_str = line.split(":", 1)[1].strip().strip("[]")
-            ranges = [
-                float(x)
-                for x in ranges_str.split(",")
-                if x.strip().replace(".", "", 1).isdigit()
-            ]
-
-    points_2d = []
-    current_angle = angle_min
-
-    for range_value in ranges:
-        if range_value > 0:
-            x = range_value * math.cos(current_angle)
-            y = range_value * math.sin(current_angle)
-            points_2d.append((x, y))
-
-        current_angle += angle_increment
-
-    return points_2d
-
 tick = True
 
 def callback(lidar_msg):
